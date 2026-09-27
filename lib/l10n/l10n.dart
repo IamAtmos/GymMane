@@ -215,9 +215,6 @@ extension GymL10n on AppLocalizations {
   String weekdayInitial(int w) =>
       _dates((l) => DateFormat('', l)).dateSymbols.NARROWWEEKDAYS[w % 7];
 
-  int get firstWeekday =>
-      _dates((l) => DateFormat('', l)).dateSymbols.FIRSTDAYOFWEEK + 1;
-
   String monthInitial(int m) =>
       _dates((l) => DateFormat('', l)).dateSymbols.NARROWMONTHS[m - 1];
 

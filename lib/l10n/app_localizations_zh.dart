@@ -272,9 +272,6 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get saveAndExit => '保存并退出';
-
-  @override
   String get duration => '时长';
 
   @override
@@ -1141,9 +1138,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get cantOpenLink => '无法打开该链接';
 
   @override
-  String get preferences => '偏好设置';
-
-  @override
   String get theme => '外观主题';
 
   @override
@@ -1203,9 +1197,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get alarmChangedDefault => '已恢复为默认提示音';
 
   @override
-  String get homeWidgets => '桌面微件';
-
-  @override
   String get addActivityWidget => '添加今日动态微件';
 
   @override
@@ -1225,9 +1216,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get bgGrid => '网格';
-
-  @override
-  String get data => '数据备份与导入';
 
   @override
   String get exportCsv => '导出训练记录 (CSV)';
@@ -2534,9 +2522,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get dontSuggest => '不再推荐';
 
   @override
-  String get noLongerSuggested => '之后不会再推荐';
-
-  @override
   String get onbPlaceTitle => '你在哪里训练？';
 
   @override
@@ -2863,6 +2848,153 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get gamificationSetting => '勋章和等级';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n 次', one: '$n 次');
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => '最佳一组';
+
+  @override
+  String get weekStartSetting => '每周开始于';
+
+  @override
+  String get stepOutOfWorkout => '暂停并离开';
+
+  @override
+  String get saveToRoutine => '将更改保存到训练计划';
+
+  @override
+  String get routineUpdated => '训练计划已更新';
+
+  @override
+  String saveChangesTitle(String name) {
+    return '将更改保存到$name？';
+  }
+
+  @override
+  String get saveChangesBody => '下次这个训练计划会按这样开始。';
+
+  @override
+  String get routineOrderChanged => '新的动作顺序';
+
+  @override
+  String get mineOnly => '我创建的';
+
+  @override
+  String createNamed(String name) {
+    return '没有？创建“$name”';
+  }
+
+  @override
+  String get orStartWith => '或者从这里开始';
+
+  @override
+  String get warmupFocus => '热身';
+
+  @override
+  String get warmupFocusHint => '有无器械都能做的灵活性与激活';
+
+  @override
+  String get cardioFocus => '有氧';
+
+  @override
+  String get cardioFocusHint => '跑步、骑行、划船或跳绳，按距离和时间记录';
+
+  @override
+  String get homeRecommended => '首页推荐';
+
+  @override
+  String get archivedFilter => '已归档';
+
+  @override
+  String get archiveExercise => '归档动作';
+
+  @override
+  String get restoreExercise => '恢复';
+
+  @override
+  String get archivedToast => '动作已归档';
+
+  @override
+  String get archivedToastHint => '可在 动作 › 已归档 中找到';
+
+  @override
+  String get archivedBanner => '已归档：不会出现在列表和推荐中，训练记录会保留。';
+
+  @override
+  String get videoMarksHint => '在某一步暂停并点图钉，下次可直接跳到这里。';
+
+  @override
+  String get videoMarkHere => '把这一步标记在这里';
+
+  @override
+  String get sectionGeneral => '通用';
+
+  @override
+  String get sectionTraining => '训练';
+
+  @override
+  String get sectionAlerts => '提醒与闹钟';
+
+  @override
+  String get sectionHome => '首页';
+
+  @override
+  String get sectionWidgets => '小组件';
+
+  @override
+  String get sectionData => '数据与备份';
+
+  @override
+  String get multiPlanSetting => '一天多个训练计划';
+
+  @override
+  String get multiPlanHint => '点选这一天的每个计划，按添加顺序进行。';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return '今天第 $n/$total 个';
+  }
+
+  @override
+  String get planAboutMe => '关于我：';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex，$age 岁，身高 $height，体重 $weight。';
+  }
+
+  @override
+  String planDays(int n) {
+    return '我想每周训练 $n 天。';
+  }
+
+  @override
+  String get planNoHistory => '还没有训练记录：请把我当作新手，训练量和重量要保守。';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '最近 30 天训练了 $n 次。',
+      one: '最近 30 天训练了 1 次。',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => '最近的最佳组';
+
+  @override
+  String get planAskFirst => '如果你不知道我的目标（力量、增肌、减脂或一般体能）或每次能练多久，请先用一条简短消息问我。知道后只用 JSON 回答。';
+
+  @override
+  String get backToTop => '回到顶部';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -3131,9 +3263,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
     String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n 個新紀錄', one: '$n 個新紀錄');
     return '$_temp0';
   }
-
-  @override
-  String get saveAndExit => '儲存並離開';
 
   @override
   String get duration => '時長';
@@ -4002,9 +4131,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get cantOpenLink => '無法開啟連結';
 
   @override
-  String get preferences => '偏好設定';
-
-  @override
   String get theme => '主題';
 
   @override
@@ -4064,9 +4190,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get alarmChangedDefault => '已恢復預設聲音';
 
   @override
-  String get homeWidgets => '主畫面';
-
-  @override
   String get addActivityWidget => '新增活動小工具';
 
   @override
@@ -4086,9 +4209,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get bgGrid => '格線';
-
-  @override
-  String get data => '資料';
 
   @override
   String get exportCsv => '匯出訓練（CSV）';
@@ -5416,9 +5536,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get dontSuggest => '不再推薦';
 
   @override
-  String get noLongerSuggested => '之後不會再推薦';
-
-  @override
   String get onbPlaceTitle => '你在哪裡訓練？';
 
   @override
@@ -5747,4 +5864,151 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get gamificationSetting => '獎牌和等級';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n 次', one: '$n 次');
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => '最佳一組';
+
+  @override
+  String get weekStartSetting => '每週開始於';
+
+  @override
+  String get stepOutOfWorkout => '暫停並離開';
+
+  @override
+  String get saveToRoutine => '將變更儲存到課表';
+
+  @override
+  String get routineUpdated => '課表已更新';
+
+  @override
+  String saveChangesTitle(String name) {
+    return '將變更儲存到$name？';
+  }
+
+  @override
+  String get saveChangesBody => '下次這個課表會照這樣開始。';
+
+  @override
+  String get routineOrderChanged => '新的動作順序';
+
+  @override
+  String get mineOnly => '我建立的';
+
+  @override
+  String createNamed(String name) {
+    return '沒有？建立「$name」';
+  }
+
+  @override
+  String get orStartWith => '或者從這裡開始';
+
+  @override
+  String get warmupFocus => '熱身';
+
+  @override
+  String get warmupFocusHint => '有無器材都能做的靈活度與啟動';
+
+  @override
+  String get cardioFocus => '有氧';
+
+  @override
+  String get cardioFocusHint => '跑步、騎車、划船或跳繩，按距離和時間記錄';
+
+  @override
+  String get homeRecommended => '首頁推薦';
+
+  @override
+  String get archivedFilter => '已封存';
+
+  @override
+  String get archiveExercise => '封存動作';
+
+  @override
+  String get restoreExercise => '還原';
+
+  @override
+  String get archivedToast => '動作已封存';
+
+  @override
+  String get archivedToastHint => '可在 動作 › 已封存 中找到';
+
+  @override
+  String get archivedBanner => '已封存：不會出現在清單和推薦中，訓練紀錄會保留。';
+
+  @override
+  String get videoMarksHint => '在某一步暫停並點圖釘，下次可直接跳到這裡。';
+
+  @override
+  String get videoMarkHere => '把這一步標記在這裡';
+
+  @override
+  String get sectionGeneral => '一般';
+
+  @override
+  String get sectionTraining => '訓練';
+
+  @override
+  String get sectionAlerts => '提醒與鬧鐘';
+
+  @override
+  String get sectionHome => '首頁';
+
+  @override
+  String get sectionWidgets => '小工具';
+
+  @override
+  String get sectionData => '資料與備份';
+
+  @override
+  String get multiPlanSetting => '一天多個課表';
+
+  @override
+  String get multiPlanHint => '點選這一天的每個課表，依加入順序進行。';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return '今天第 $n/$total 個';
+  }
+
+  @override
+  String get planAboutMe => '關於我：';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex，$age 歲，身高 $height，體重 $weight。';
+  }
+
+  @override
+  String planDays(int n) {
+    return '我想每週訓練 $n 天。';
+  }
+
+  @override
+  String get planNoHistory => '還沒有訓練紀錄：請把我當作新手，訓練量和重量要保守。';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '最近 30 天訓練了 $n 次。',
+      one: '最近 30 天訓練了 1 次。',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => '最近的最佳組';
+
+  @override
+  String get planAskFirst => '如果你不知道我的目標（力量、增肌、減脂或一般體能）或每次能練多久，請先用一則簡短訊息問我。知道後只用 JSON 回答。';
+
+  @override
+  String get backToTop => '回到頂端';
 }

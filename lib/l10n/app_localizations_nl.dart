@@ -282,9 +282,6 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
-  String get saveAndExit => 'OPSLAAN EN AFSLUITEN';
-
-  @override
   String get duration => 'DUUR';
 
   @override
@@ -1197,9 +1194,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String get cantOpenLink => 'Kon de link niet openen';
 
   @override
-  String get preferences => 'VOORKEUREN';
-
-  @override
   String get theme => 'Thema';
 
   @override
@@ -1259,9 +1253,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String get alarmChangedDefault => 'Standaardgeluid hersteld';
 
   @override
-  String get homeWidgets => 'STARTSCHERM';
-
-  @override
   String get addActivityWidget => 'Activiteitswidget toevoegen';
 
   @override
@@ -1281,9 +1272,6 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get bgGrid => 'Raster';
-
-  @override
-  String get data => 'GEGEVENS';
 
   @override
   String get exportCsv => 'Trainingen exporteren (CSV)';
@@ -2655,9 +2643,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String get dontSuggest => 'Niet meer voorstellen';
 
   @override
-  String get noLongerSuggested => 'Wordt niet meer voorgesteld';
-
-  @override
   String get onbPlaceTitle => 'Waar train je?';
 
   @override
@@ -2999,4 +2984,156 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get gamificationSetting => 'Medailles en niveaus';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n herh.', one: '$n herh.');
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => 'Beste set';
+
+  @override
+  String get weekStartSetting => 'Week begint op';
+
+  @override
+  String get stepOutOfWorkout => 'Pauzeren en verlaten';
+
+  @override
+  String get saveToRoutine => 'WIJZIGINGEN OPSLAAN IN ROUTINE';
+
+  @override
+  String get routineUpdated => 'Routine bijgewerkt';
+
+  @override
+  String saveChangesTitle(String name) {
+    return 'Wijzigingen opslaan in $name?';
+  }
+
+  @override
+  String get saveChangesBody => 'De volgende keer start deze routine zo.';
+
+  @override
+  String get routineOrderChanged => 'Nieuwe volgorde van oefeningen';
+
+  @override
+  String get mineOnly => 'Door jou gemaakt';
+
+  @override
+  String createNamed(String name) {
+    return 'Staat er niet bij? Maak „$name”';
+  }
+
+  @override
+  String get orStartWith => 'Of begin met';
+
+  @override
+  String get warmupFocus => 'Warming-up';
+
+  @override
+  String get warmupFocusHint => 'Mobiliteit en activatie, met of zonder materiaal';
+
+  @override
+  String get cardioFocus => 'Cardio';
+
+  @override
+  String get cardioFocusHint => 'Hardlopen, fietsen, roeien of touwtjespringen, op afstand en tijd';
+
+  @override
+  String get homeRecommended => 'Aanbevolen op start';
+
+  @override
+  String get archivedFilter => 'Gearchiveerd';
+
+  @override
+  String get archiveExercise => 'Oefening archiveren';
+
+  @override
+  String get restoreExercise => 'Herstellen';
+
+  @override
+  String get archivedToast => 'Oefening gearchiveerd';
+
+  @override
+  String get archivedToastHint => 'Je vindt hem bij Oefeningen › Gearchiveerd';
+
+  @override
+  String get archivedBanner =>
+      'Gearchiveerd. Hij staat niet meer in lijsten en suggesties; je geschiedenis blijft bewaard.';
+
+  @override
+  String get videoMarksHint =>
+      'Pauzeer bij een stap en tik op de punaise om er de volgende keer naartoe te springen.';
+
+  @override
+  String get videoMarkHere => 'Deze stap hier markeren';
+
+  @override
+  String get sectionGeneral => 'Algemeen';
+
+  @override
+  String get sectionTraining => 'Training';
+
+  @override
+  String get sectionAlerts => 'Herinneringen en alarm';
+
+  @override
+  String get sectionHome => 'Start';
+
+  @override
+  String get sectionWidgets => 'Widgets';
+
+  @override
+  String get sectionData => 'Gegevens en back-up';
+
+  @override
+  String get multiPlanSetting => 'Meerdere routines per dag';
+
+  @override
+  String get multiPlanHint =>
+      'Tik elke routine voor deze dag aan. Ze volgen de volgorde waarin je ze toevoegt.';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return '$n van $total vandaag';
+  }
+
+  @override
+  String get planAboutMe => 'Over mij:';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex, $age jaar, $height lang, $weight.';
+  }
+
+  @override
+  String planDays(int n) {
+    return 'Ik wil $n dagen per week trainen.';
+  }
+
+  @override
+  String get planNoHistory =>
+      'Nog geen trainingen gelogd: behandel me als beginner en houd volume en gewichten voorzichtig.';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n trainingen in de laatste 30 dagen.',
+      one: '1 training in de laatste 30 dagen.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => 'Beste recente sets';
+
+  @override
+  String get planAskFirst =>
+      'Als je mijn doel (kracht, spiermassa, vetverlies of algemene fitheid) of de duur van een sessie niet weet, vraag het me eerst in één kort bericht. Antwoord daarna alleen met JSON.';
+
+  @override
+  String get backToTop => 'Naar boven';
 }

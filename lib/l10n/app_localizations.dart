@@ -596,12 +596,6 @@ abstract class AppLocalizations {
   /// **'{n, plural, =1{{n} new record} other{{n} new records}}'**
   String prCount(int n);
 
-  /// No description provided for @saveAndExit.
-  ///
-  /// In en, this message translates to:
-  /// **'SAVE AND EXIT'**
-  String get saveAndExit;
-
   /// No description provided for @duration.
   ///
   /// In en, this message translates to:
@@ -2132,12 +2126,6 @@ abstract class AppLocalizations {
   /// **'Couldn\'t open the link'**
   String get cantOpenLink;
 
-  /// No description provided for @preferences.
-  ///
-  /// In en, this message translates to:
-  /// **'PREFERENCES'**
-  String get preferences;
-
   /// No description provided for @theme.
   ///
   /// In en, this message translates to:
@@ -2252,12 +2240,6 @@ abstract class AppLocalizations {
   /// **'Back to the default sound'**
   String get alarmChangedDefault;
 
-  /// No description provided for @homeWidgets.
-  ///
-  /// In en, this message translates to:
-  /// **'HOME SCREEN'**
-  String get homeWidgets;
-
   /// No description provided for @addActivityWidget.
   ///
   /// In en, this message translates to:
@@ -2299,12 +2281,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Grid'**
   String get bgGrid;
-
-  /// No description provided for @data.
-  ///
-  /// In en, this message translates to:
-  /// **'DATA'**
-  String get data;
 
   /// No description provided for @exportCsv.
   ///
@@ -4754,12 +4730,6 @@ abstract class AppLocalizations {
   /// **'Don\'t suggest it again'**
   String get dontSuggest;
 
-  /// No description provided for @noLongerSuggested.
-  ///
-  /// In en, this message translates to:
-  /// **'It won\'t be suggested again'**
-  String get noLongerSuggested;
-
   /// No description provided for @onbPlaceTitle.
   ///
   /// In en, this message translates to:
@@ -5365,6 +5335,258 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Medals and levels'**
   String get gamificationSetting;
+
+  /// No description provided for @repCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{n, plural, =1{{n} rep} other{{n} reps}}'**
+  String repCount(int n);
+
+  /// No description provided for @prBestSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Best set'**
+  String get prBestSet;
+
+  /// No description provided for @weekStartSetting.
+  ///
+  /// In en, this message translates to:
+  /// **'Week starts on'**
+  String get weekStartSetting;
+
+  /// No description provided for @stepOutOfWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause and leave'**
+  String get stepOutOfWorkout;
+
+  /// No description provided for @saveToRoutine.
+  ///
+  /// In en, this message translates to:
+  /// **'SAVE CHANGES TO ROUTINE'**
+  String get saveToRoutine;
+
+  /// No description provided for @routineUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Routine updated'**
+  String get routineUpdated;
+
+  /// No description provided for @saveChangesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes to {name}?'**
+  String saveChangesTitle(String name);
+
+  /// No description provided for @saveChangesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Next time this routine starts like this.'**
+  String get saveChangesBody;
+
+  /// No description provided for @routineOrderChanged.
+  ///
+  /// In en, this message translates to:
+  /// **'New exercise order'**
+  String get routineOrderChanged;
+
+  /// No description provided for @mineOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'Created by you'**
+  String get mineOnly;
+
+  /// No description provided for @createNamed.
+  ///
+  /// In en, this message translates to:
+  /// **'Not here? Create “{name}”'**
+  String createNamed(String name);
+
+  /// No description provided for @orStartWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Or start with'**
+  String get orStartWith;
+
+  /// No description provided for @warmupFocus.
+  ///
+  /// In en, this message translates to:
+  /// **'Warm-up'**
+  String get warmupFocus;
+
+  /// No description provided for @warmupFocusHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobility and activation, with or without kit'**
+  String get warmupFocusHint;
+
+  /// No description provided for @cardioFocus.
+  ///
+  /// In en, this message translates to:
+  /// **'Cardio'**
+  String get cardioFocus;
+
+  /// No description provided for @cardioFocusHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Run, bike, row or skip, by distance and time'**
+  String get cardioFocusHint;
+
+  /// No description provided for @homeRecommended.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommended on home'**
+  String get homeRecommended;
+
+  /// No description provided for @archivedFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'Archived'**
+  String get archivedFilter;
+
+  /// No description provided for @archiveExercise.
+  ///
+  /// In en, this message translates to:
+  /// **'Archive exercise'**
+  String get archiveExercise;
+
+  /// No description provided for @restoreExercise.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore'**
+  String get restoreExercise;
+
+  /// No description provided for @archivedToast.
+  ///
+  /// In en, this message translates to:
+  /// **'Exercise archived'**
+  String get archivedToast;
+
+  /// No description provided for @archivedToastHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Find it under Exercises › Archived'**
+  String get archivedToastHint;
+
+  /// No description provided for @archivedBanner.
+  ///
+  /// In en, this message translates to:
+  /// **'Archived. It stays out of lists and suggestions; your history is kept.'**
+  String get archivedBanner;
+
+  /// No description provided for @videoMarksHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause on a step and tap the pin to jump there next time.'**
+  String get videoMarksHint;
+
+  /// No description provided for @videoMarkHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark this step here'**
+  String get videoMarkHere;
+
+  /// No description provided for @sectionGeneral.
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get sectionGeneral;
+
+  /// No description provided for @sectionTraining.
+  ///
+  /// In en, this message translates to:
+  /// **'Training'**
+  String get sectionTraining;
+
+  /// No description provided for @sectionAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminders & alarm'**
+  String get sectionAlerts;
+
+  /// No description provided for @sectionHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get sectionHome;
+
+  /// No description provided for @sectionWidgets.
+  ///
+  /// In en, this message translates to:
+  /// **'Widgets'**
+  String get sectionWidgets;
+
+  /// No description provided for @sectionData.
+  ///
+  /// In en, this message translates to:
+  /// **'Data & backup'**
+  String get sectionData;
+
+  /// No description provided for @multiPlanSetting.
+  ///
+  /// In en, this message translates to:
+  /// **'Several routines a day'**
+  String get multiPlanSetting;
+
+  /// No description provided for @multiPlanHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap every routine for this day. They go in the order you add them.'**
+  String get multiPlanHint;
+
+  /// No description provided for @routineOfDay.
+  ///
+  /// In en, this message translates to:
+  /// **'{n} of {total} today'**
+  String routineOfDay(int n, int total);
+
+  /// No description provided for @planAboutMe.
+  ///
+  /// In en, this message translates to:
+  /// **'About me:'**
+  String get planAboutMe;
+
+  /// No description provided for @planBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{sex}, {age} years old, {height} tall, {weight}.'**
+  String planBody(String sex, int age, String height, String weight);
+
+  /// No description provided for @planDays.
+  ///
+  /// In en, this message translates to:
+  /// **'I want to train {n} days a week.'**
+  String planDays(int n);
+
+  /// No description provided for @planNoHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'No workouts logged yet: treat me as a beginner and keep volume and weights conservative.'**
+  String get planNoHistory;
+
+  /// No description provided for @planHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'{n, plural, =1{1 workout logged in the last 30 days.} other{{n} workouts logged in the last 30 days.}}'**
+  String planHistory(int n);
+
+  /// No description provided for @planBestLifts.
+  ///
+  /// In en, this message translates to:
+  /// **'Best recent sets'**
+  String get planBestLifts;
+
+  /// No description provided for @planAskFirst.
+  ///
+  /// In en, this message translates to:
+  /// **'If you don’t know my goal (strength, muscle, fat loss or general fitness) or how long each session can last, ask me first in one short message. Once you have it, answer with JSON only.'**
+  String get planAskFirst;
+
+  /// No description provided for @backToTop.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to top'**
+  String get backToTop;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

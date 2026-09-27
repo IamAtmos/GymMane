@@ -282,9 +282,6 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
-  String get saveAndExit => 'GUARDAR Y SALIR';
-
-  @override
   String get duration => 'DURACIÓN';
 
   @override
@@ -1194,9 +1191,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get cantOpenLink => 'No he podido abrir el enlace';
 
   @override
-  String get preferences => 'PREFERENCIAS';
-
-  @override
   String get theme => 'Tema';
 
   @override
@@ -1256,9 +1250,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get alarmChangedDefault => 'De vuelta al sonido de fábrica';
 
   @override
-  String get homeWidgets => 'PANTALLA DE INICIO';
-
-  @override
   String get addActivityWidget => 'Añadir widget de actividad';
 
   @override
@@ -1278,9 +1269,6 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get bgGrid => 'Rejilla';
-
-  @override
-  String get data => 'DATOS';
 
   @override
   String get exportCsv => 'Exportar entrenos (CSV)';
@@ -2646,9 +2634,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get dontSuggest => 'No volver a sugerirlo';
 
   @override
-  String get noLongerSuggested => 'Ya no se sugerirá';
-
-  @override
   String get onbPlaceTitle => '¿Dónde entrenas?';
 
   @override
@@ -2991,4 +2976,153 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get gamificationSetting => 'Medallas y niveles';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n reps', one: '$n rep');
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => 'Mejor serie';
+
+  @override
+  String get weekStartSetting => 'La semana empieza el';
+
+  @override
+  String get stepOutOfWorkout => 'Pausar y salir';
+
+  @override
+  String get saveToRoutine => 'GUARDAR CAMBIOS EN LA RUTINA';
+
+  @override
+  String get routineUpdated => 'Rutina actualizada';
+
+  @override
+  String saveChangesTitle(String name) {
+    return '¿Guardar cambios en $name?';
+  }
+
+  @override
+  String get saveChangesBody => 'La próxima vez esta rutina empezará así.';
+
+  @override
+  String get routineOrderChanged => 'Nuevo orden de ejercicios';
+
+  @override
+  String get mineOnly => 'Creados por ti';
+
+  @override
+  String createNamed(String name) {
+    return '¿No está? Crear «$name»';
+  }
+
+  @override
+  String get orStartWith => 'O empieza con';
+
+  @override
+  String get warmupFocus => 'Calentamiento';
+
+  @override
+  String get warmupFocusHint => 'Movilidad y activación, con o sin material';
+
+  @override
+  String get cardioFocus => 'Cardio';
+
+  @override
+  String get cardioFocusHint => 'Correr, bici, remo o comba, por distancia y tiempo';
+
+  @override
+  String get homeRecommended => 'Recomendados en inicio';
+
+  @override
+  String get archivedFilter => 'Archivados';
+
+  @override
+  String get archiveExercise => 'Archivar ejercicio';
+
+  @override
+  String get restoreExercise => 'Restaurar';
+
+  @override
+  String get archivedToast => 'Ejercicio archivado';
+
+  @override
+  String get archivedToastHint => 'Lo tienes en Ejercicios › Archivados';
+
+  @override
+  String get archivedBanner => 'Archivado. No sale en listas ni sugerencias; tu historial se conserva.';
+
+  @override
+  String get videoMarksHint => 'Pausa en un paso y toca la chincheta para saltar ahí la próxima vez.';
+
+  @override
+  String get videoMarkHere => 'Marcar este paso aquí';
+
+  @override
+  String get sectionGeneral => 'General';
+
+  @override
+  String get sectionTraining => 'Entreno';
+
+  @override
+  String get sectionAlerts => 'Avisos y alarma';
+
+  @override
+  String get sectionHome => 'Inicio';
+
+  @override
+  String get sectionWidgets => 'Widgets';
+
+  @override
+  String get sectionData => 'Datos y copia de seguridad';
+
+  @override
+  String get multiPlanSetting => 'Varias rutinas al día';
+
+  @override
+  String get multiPlanHint => 'Toca cada rutina de este día. Van en el orden en que las añadas.';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return '$n de $total hoy';
+  }
+
+  @override
+  String get planAboutMe => 'Sobre mí:';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex, $age años, $height de altura, $weight.';
+  }
+
+  @override
+  String planDays(int n) {
+    return 'Quiero entrenar $n días a la semana.';
+  }
+
+  @override
+  String get planNoHistory =>
+      'Aún no he registrado entrenos: trátame como principiante y sé prudente con el volumen y los pesos.';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n entrenos registrados en los últimos 30 días.',
+      one: '1 entreno registrado en los últimos 30 días.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => 'Mejores series recientes';
+
+  @override
+  String get planAskFirst =>
+      'Si no sabes mi objetivo (fuerza, músculo, perder grasa o forma general) o cuánto puede durar cada sesión, pregúntamelo primero en un mensaje corto. Cuando lo tengas, responde solo con JSON.';
+
+  @override
+  String get backToTop => 'Volver arriba';
 }

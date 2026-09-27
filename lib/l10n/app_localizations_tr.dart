@@ -282,9 +282,6 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get saveAndExit => 'KAYDET VE ÇIK';
-
-  @override
   String get duration => 'SÜRE';
 
   @override
@@ -1196,9 +1193,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get cantOpenLink => 'Bağlantı açılamadı';
 
   @override
-  String get preferences => 'TERCİHLER';
-
-  @override
   String get theme => 'Tema';
 
   @override
@@ -1258,9 +1252,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get alarmChangedDefault => 'Varsayılan sese dönüldü';
 
   @override
-  String get homeWidgets => 'ANA EKRAN';
-
-  @override
   String get addActivityWidget => 'Etkinlik widget\'ı ekle';
 
   @override
@@ -1280,9 +1271,6 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get bgGrid => 'Izgara';
-
-  @override
-  String get data => 'VERİLER';
 
   @override
   String get exportCsv => 'Antrenmanları dışa aktar (CSV)';
@@ -2650,9 +2638,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get dontSuggest => 'Bir daha önerme';
 
   @override
-  String get noLongerSuggested => 'Artık önerilmeyecek';
-
-  @override
   String get onbPlaceTitle => 'Nerede antrenman yapıyorsun?';
 
   @override
@@ -2994,4 +2979,153 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get gamificationSetting => 'Madalyalar ve seviyeler';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n tekrar', one: '$n tekrar');
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => 'En iyi set';
+
+  @override
+  String get weekStartSetting => 'Hafta başlangıcı';
+
+  @override
+  String get stepOutOfWorkout => 'Duraklat ve çık';
+
+  @override
+  String get saveToRoutine => 'DEĞİŞİKLİKLERİ PROGRAMA KAYDET';
+
+  @override
+  String get routineUpdated => 'Program güncellendi';
+
+  @override
+  String saveChangesTitle(String name) {
+    return 'Değişiklikler $name programına kaydedilsin mi?';
+  }
+
+  @override
+  String get saveChangesBody => 'Program bir dahaki sefere böyle başlayacak.';
+
+  @override
+  String get routineOrderChanged => 'Yeni egzersiz sırası';
+
+  @override
+  String get mineOnly => 'Senin oluşturdukların';
+
+  @override
+  String createNamed(String name) {
+    return 'Yok mu? “$name” oluştur';
+  }
+
+  @override
+  String get orStartWith => 'Ya da şununla başla';
+
+  @override
+  String get warmupFocus => 'Isınma';
+
+  @override
+  String get warmupFocusHint => 'Ekipmanlı ya da ekipmansız mobilite ve aktivasyon';
+
+  @override
+  String get cardioFocus => 'Kardiyo';
+
+  @override
+  String get cardioFocusHint => 'Koşu, bisiklet, kürek ya da ip, mesafe ve süreyle';
+
+  @override
+  String get homeRecommended => 'Ana ekranda öneriler';
+
+  @override
+  String get archivedFilter => 'Arşivlenenler';
+
+  @override
+  String get archiveExercise => 'Egzersizi arşivle';
+
+  @override
+  String get restoreExercise => 'Geri al';
+
+  @override
+  String get archivedToast => 'Egzersiz arşivlendi';
+
+  @override
+  String get archivedToastHint => 'Egzersizler › Arşivlenenler altında';
+
+  @override
+  String get archivedBanner => 'Arşivlendi. Listelerde ve önerilerde çıkmaz; geçmişin korunur.';
+
+  @override
+  String get videoMarksHint => 'Bir adımda duraklat ve bir dahaki sefere oraya atlamak için raptiyeye dokun.';
+
+  @override
+  String get videoMarkHere => 'Bu adımı burada işaretle';
+
+  @override
+  String get sectionGeneral => 'Genel';
+
+  @override
+  String get sectionTraining => 'Antrenman';
+
+  @override
+  String get sectionAlerts => 'Hatırlatıcılar ve alarm';
+
+  @override
+  String get sectionHome => 'Ana sayfa';
+
+  @override
+  String get sectionWidgets => 'Widget’lar';
+
+  @override
+  String get sectionData => 'Veriler ve yedek';
+
+  @override
+  String get multiPlanSetting => 'Günde birden fazla program';
+
+  @override
+  String get multiPlanHint => 'Bu günün her programına dokun. Eklediğin sırayla gelirler.';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return 'Bugün $n/$total';
+  }
+
+  @override
+  String get planAboutMe => 'Hakkımda:';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex, $age yaşında, boy $height, kilo $weight.';
+  }
+
+  @override
+  String planDays(int n) {
+    return 'Haftada $n gün antrenman yapmak istiyorum.';
+  }
+
+  @override
+  String get planNoHistory =>
+      'Henüz kayıtlı antrenmanım yok: beni yeni başlayan olarak düşün, hacim ve ağırlıklarda temkinli ol.';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Son 30 günde $n antrenman.',
+      one: 'Son 30 günde 1 antrenman.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => 'Son en iyi setler';
+
+  @override
+  String get planAskFirst =>
+      'Hedefimi (güç, kas, yağ yakımı ya da genel form) veya bir seansın ne kadar sürebileceğini bilmiyorsan önce bana kısa bir mesajla sor. Sonra yalnızca JSON ile cevap ver.';
+
+  @override
+  String get backToTop => 'Başa dön';
 }

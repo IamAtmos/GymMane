@@ -272,9 +272,6 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get saveAndExit => '저장 후 종료';
-
-  @override
   String get duration => '시간';
 
   @override
@@ -1164,9 +1161,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get cantOpenLink => '링크를 열 수 없습니다';
 
   @override
-  String get preferences => '환경설정';
-
-  @override
   String get theme => '테마';
 
   @override
@@ -1226,9 +1220,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get alarmChangedDefault => '기본 소리로 돌아갔습니다';
 
   @override
-  String get homeWidgets => '홈 화면';
-
-  @override
   String get addActivityWidget => '활동 위젯 추가';
 
   @override
@@ -1248,9 +1239,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get bgGrid => '그리드';
-
-  @override
-  String get data => '데이터';
 
   @override
   String get exportCsv => '운동 내보내기(CSV)';
@@ -2585,9 +2573,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dontSuggest => '다시 추천하지 않기';
 
   @override
-  String get noLongerSuggested => '더 이상 추천하지 않아요';
-
-  @override
   String get onbPlaceTitle => '어디서 운동하나요?';
 
   @override
@@ -2917,4 +2902,152 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get gamificationSetting => '메달과 레벨';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n회', one: '$n회');
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => '최고 세트';
+
+  @override
+  String get weekStartSetting => '한 주의 시작';
+
+  @override
+  String get stepOutOfWorkout => '일시정지하고 나가기';
+
+  @override
+  String get saveToRoutine => '루틴에 변경 사항 저장';
+
+  @override
+  String get routineUpdated => '루틴을 업데이트했어요';
+
+  @override
+  String saveChangesTitle(String name) {
+    return '$name에 변경 사항을 저장할까요?';
+  }
+
+  @override
+  String get saveChangesBody => '다음부터 이 루틴은 이렇게 시작돼요.';
+
+  @override
+  String get routineOrderChanged => '새 운동 순서';
+
+  @override
+  String get mineOnly => '내가 만든 운동';
+
+  @override
+  String createNamed(String name) {
+    return '없나요? “$name” 만들기';
+  }
+
+  @override
+  String get orStartWith => '또는 이렇게 시작';
+
+  @override
+  String get warmupFocus => '워밍업';
+
+  @override
+  String get warmupFocusHint => '기구 유무와 상관없는 가동성·활성화';
+
+  @override
+  String get cardioFocus => '유산소';
+
+  @override
+  String get cardioFocusHint => '달리기, 자전거, 로잉, 줄넘기를 거리와 시간으로';
+
+  @override
+  String get homeRecommended => '홈 추천';
+
+  @override
+  String get archivedFilter => '보관됨';
+
+  @override
+  String get archiveExercise => '운동 보관';
+
+  @override
+  String get restoreExercise => '복원';
+
+  @override
+  String get archivedToast => '운동을 보관했어요';
+
+  @override
+  String get archivedToastHint => '운동 › 보관됨에서 찾을 수 있어요';
+
+  @override
+  String get archivedBanner => '보관됨. 목록과 추천에 나오지 않고 기록은 그대로 남아요.';
+
+  @override
+  String get videoMarksHint => '단계에서 일시정지하고 핀을 누르면 다음에 그 지점으로 이동해요.';
+
+  @override
+  String get videoMarkHere => '이 단계를 여기로 표시';
+
+  @override
+  String get sectionGeneral => '일반';
+
+  @override
+  String get sectionTraining => '운동';
+
+  @override
+  String get sectionAlerts => '알림과 알람';
+
+  @override
+  String get sectionHome => '홈';
+
+  @override
+  String get sectionWidgets => '위젯';
+
+  @override
+  String get sectionData => '데이터와 백업';
+
+  @override
+  String get multiPlanSetting => '하루에 여러 루틴';
+
+  @override
+  String get multiPlanHint => '이날 할 루틴을 모두 누르세요. 추가한 순서대로 진행돼요.';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return '오늘 $n/$total';
+  }
+
+  @override
+  String get planAboutMe => '나에 대해:';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex, $age세, 키 $height, 몸무게 $weight.';
+  }
+
+  @override
+  String planDays(int n) {
+    return '주 $n일 운동하고 싶어요.';
+  }
+
+  @override
+  String get planNoHistory => '아직 운동 기록이 없어요. 초보자로 보고 볼륨과 무게를 보수적으로 잡아 주세요.';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '최근 30일 운동 $n회.',
+      one: '최근 30일 운동 1회.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => '최근 최고 세트';
+
+  @override
+  String get planAskFirst =>
+      '내 목표(근력, 근육, 체지방 감량, 전반적 체력)나 한 번에 운동할 수 있는 시간을 모르면 먼저 짧게 물어봐 주세요. 알게 되면 JSON으로만 답해 주세요.';
+
+  @override
+  String get backToTop => '맨 위로';
 }

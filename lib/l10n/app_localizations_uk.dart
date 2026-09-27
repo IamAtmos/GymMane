@@ -282,9 +282,6 @@ class AppLocalizationsUk extends AppLocalizations {
   }
 
   @override
-  String get saveAndExit => 'ЗБЕРЕГТИ Й ВИЙТИ';
-
-  @override
   String get duration => 'ТРИВАЛІСТЬ';
 
   @override
@@ -1195,9 +1192,6 @@ class AppLocalizationsUk extends AppLocalizations {
   String get cantOpenLink => 'Не вдалося відкрити посилання';
 
   @override
-  String get preferences => 'ПАРАМЕТРИ';
-
-  @override
   String get theme => 'Тема';
 
   @override
@@ -1257,9 +1251,6 @@ class AppLocalizationsUk extends AppLocalizations {
   String get alarmChangedDefault => 'Відновлено стандартний звук';
 
   @override
-  String get homeWidgets => 'ГОЛОВНИЙ ЕКРАН';
-
-  @override
   String get addActivityWidget => 'Додати віджет активності';
 
   @override
@@ -1279,9 +1270,6 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get bgGrid => 'Сітка';
-
-  @override
-  String get data => 'ДАНІ';
 
   @override
   String get exportCsv => 'Експорт тренувань (CSV)';
@@ -2647,9 +2635,6 @@ class AppLocalizationsUk extends AppLocalizations {
   String get dontSuggest => 'Більше не пропонувати';
 
   @override
-  String get noLongerSuggested => 'Більше не пропонуватиметься';
-
-  @override
   String get onbPlaceTitle => 'Де ви тренуєтеся?';
 
   @override
@@ -2997,4 +2982,162 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get gamificationSetting => 'Медалі та рівні';
+
+  @override
+  String repCount(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n повтору',
+      many: '$n повторів',
+      few: '$n повтори',
+      one: '$n повтор',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get prBestSet => 'Найкращий підхід';
+
+  @override
+  String get weekStartSetting => 'Тиждень починається з';
+
+  @override
+  String get stepOutOfWorkout => 'Пауза й вихід';
+
+  @override
+  String get saveToRoutine => 'ЗБЕРЕГТИ ЗМІНИ В ПРОГРАМІ';
+
+  @override
+  String get routineUpdated => 'Програму оновлено';
+
+  @override
+  String saveChangesTitle(String name) {
+    return 'Зберегти зміни в $name?';
+  }
+
+  @override
+  String get saveChangesBody => 'Наступного разу програма почнеться так.';
+
+  @override
+  String get routineOrderChanged => 'Новий порядок вправ';
+
+  @override
+  String get mineOnly => 'Створені вами';
+
+  @override
+  String createNamed(String name) {
+    return 'Немає? Створити «$name»';
+  }
+
+  @override
+  String get orStartWith => 'Або почніть з';
+
+  @override
+  String get warmupFocus => 'Розминка';
+
+  @override
+  String get warmupFocusHint => 'Рухливість і активація, з інвентарем чи без';
+
+  @override
+  String get cardioFocus => 'Кардіо';
+
+  @override
+  String get cardioFocusHint => 'Біг, велосипед, веслування чи скакалка — за дистанцією і часом';
+
+  @override
+  String get homeRecommended => 'Рекомендації на головній';
+
+  @override
+  String get archivedFilter => 'Архів';
+
+  @override
+  String get archiveExercise => 'Архівувати вправу';
+
+  @override
+  String get restoreExercise => 'Відновити';
+
+  @override
+  String get archivedToast => 'Вправу заархівовано';
+
+  @override
+  String get archivedToastHint => 'Вона в розділі Вправи › Архів';
+
+  @override
+  String get archivedBanner => 'В архіві. Не з’являється у списках і підказках; історія зберігається.';
+
+  @override
+  String get videoMarksHint =>
+      'Поставте паузу на кроці й торкніться шпильки, щоб наступного разу перейти туди.';
+
+  @override
+  String get videoMarkHere => 'Позначити цей крок тут';
+
+  @override
+  String get sectionGeneral => 'Загальні';
+
+  @override
+  String get sectionTraining => 'Тренування';
+
+  @override
+  String get sectionAlerts => 'Нагадування і сигнал';
+
+  @override
+  String get sectionHome => 'Головна';
+
+  @override
+  String get sectionWidgets => 'Віджети';
+
+  @override
+  String get sectionData => 'Дані й резервна копія';
+
+  @override
+  String get multiPlanSetting => 'Кілька програм на день';
+
+  @override
+  String get multiPlanHint => 'Позначте кожну програму на цей день. Вони йдуть у порядку додавання.';
+
+  @override
+  String routineOfDay(int n, int total) {
+    return '$n з $total сьогодні';
+  }
+
+  @override
+  String get planAboutMe => 'Про мене:';
+
+  @override
+  String planBody(String sex, int age, String height, String weight) {
+    return '$sex, $age років, зріст $height, вага $weight.';
+  }
+
+  @override
+  String planDays(int n) {
+    return 'Хочу тренуватися $n днів на тиждень.';
+  }
+
+  @override
+  String get planNoHistory => 'Тренувань ще немає: вважай мене новачком і будь обережним з обсягом і вагами.';
+
+  @override
+  String planHistory(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n тренування за останні 30 днів.',
+      many: '$n тренувань за останні 30 днів.',
+      few: '$n тренування за останні 30 днів.',
+      one: '$n тренування за останні 30 днів.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get planBestLifts => 'Найкращі нещодавні підходи';
+
+  @override
+  String get planAskFirst =>
+      'Якщо ти не знаєш моєї мети (сила, м’язи, схуднення чи загальна форма) або тривалості тренування, спершу спитай мене одним коротким повідомленням. Потім відповідай лише JSON.';
+
+  @override
+  String get backToTop => 'Угору';
 }
