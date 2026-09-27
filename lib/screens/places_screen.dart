@@ -392,36 +392,13 @@ class PlacesScreen extends StatelessWidget {
   }
 
   Future<void> _rename(BuildContext context, GymPlace? place) async {
-    final gc = context.gc;
-    final controller = TextEditingController(text: place?.name ?? '');
-    final name = await showAppDialog<String>(
-      context: context,
-      builder: (dctx) => appDialog(
-        gc,
-        title: Text(place == null ? t.placeNew : t.editEntry,
-            style: AppTheme.d(18, weight: FontWeight.w700, color: gc.text)),
-        content: TextField(
-          controller: controller,
-          autofocus: true,
-          textCapitalization: TextCapitalization.sentences,
-          style: AppTheme.s(15, color: gc.text),
-          cursorColor: gc.accent,
-          decoration: InputDecoration(
-            hintText: t.placeNamePlaceholder,
-            hintStyle: AppTheme.s(15, color: gc.textTertiary),
-            enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: gc.border)),
-            focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: gc.accent)),
-          ),
-          onSubmitted: (v) => Navigator.of(dctx).pop(v),
-        ),
-        actions: [
-          dialogAction(t.cancel, gc.textSecondary, () => Navigator.of(dctx).pop(), strong: false),
-          dialogAction(t.save, gc.accent, () => Navigator.of(dctx).pop(controller.text)),
-        ],
-      ),
+    final name = await askText(
+      context,
+      title: place == null ? t.placeNew : t.editEntry,
+      initial: place?.name ?? '',
+      hint: t.placeNamePlaceholder,
     );
-    controller.dispose();
-    if (name == null || name.trim().isEmpty) return;
+    if (name == null) return;
     if (place == null) {
       fit.setActivePlace(fit.addPlace(name));
     } else {
