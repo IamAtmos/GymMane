@@ -3,11 +3,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../l10n/l10n.dart';
 import '../state/fit_state.dart';
+import '../theme/app_colors.dart';
 import '../theme/app_theme.dart';
 import 'app_shell.dart';
 
 class GymManeApp extends StatelessWidget {
   const GymManeApp({super.key});
+
+  static const maxTextScale = 1.15;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +30,37 @@ class GymManeApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+        builder: (context, child) => MediaQuery.withClampedTextScaling(
+          maxScaleFactor: maxTextScale,
+          child: _ButtonNavScrim(child: child!),
+        ),
         home: const AppShell(),
       ),
+    );
+  }
+}
+
+class _ButtonNavScrim extends StatelessWidget {
+  const _ButtonNavScrim({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final bar = MediaQuery.viewPaddingOf(context).bottom;
+    final buttons = MediaQuery.systemGestureInsetsOf(context).left == 0;
+    return Stack(
+      children: [
+        child,
+        if (buttons && bar > 0)
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: bar,
+            child: IgnorePointer(child: ColoredBox(color: context.gc.bg)),
+          ),
+      ],
     );
   }
 }

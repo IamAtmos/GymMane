@@ -72,8 +72,9 @@ class _RollingTextState extends State<RollingText> {
     final chars = widget.text.characters.toList();
     final n = chars.length;
     final reduce = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
-    final line = (widget.style.fontSize ?? 14) * (widget.style.height ?? 1.2);
-    final digit = digitCell(widget.style, MediaQuery.textScalerOf(context));
+    final scaler = MediaQuery.textScalerOf(context);
+    final line = scaler.scale(widget.style.fontSize ?? 14) * (widget.style.height ?? 1.2);
+    final digit = digitCell(widget.style, scaler);
     final row = Row(
       mainAxisSize: MainAxisSize.min,
       children: [

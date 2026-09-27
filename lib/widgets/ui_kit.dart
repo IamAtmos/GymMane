@@ -475,6 +475,20 @@ String sentenceCase(String s) {
   return s[0] + s.substring(1).toLowerCase();
 }
 
+class FitText extends StatelessWidget {
+  const FitText(this.text, {super.key, required this.style});
+
+  final String text;
+  final TextStyle style;
+
+  @override
+  Widget build(BuildContext context) => FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(text, maxLines: 1, style: style),
+      );
+}
+
 String titleCase(String s) {
   if (s.isEmpty || s != s.toUpperCase()) return s;
   if (s.length <= 4 && !s.contains(' ')) return s;

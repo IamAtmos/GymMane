@@ -41,6 +41,7 @@ import '../widgets/dialogs.dart';
 import '../widgets/glass.dart';
 import '../widgets/liquid_notch.dart';
 import '../widgets/start_countdown.dart';
+import '../widgets/ui_kit.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
@@ -65,6 +66,7 @@ class _AppShellState extends State<AppShell> with WidgetsBindingObserver {
     'tools-detail',
   };
 
+  static const _pillSpace = 68.0;
   static const _firstAwardWait = Duration(milliseconds: 4000);
   static const _nextAwardWait = Duration(milliseconds: 6000);
 
@@ -186,6 +188,7 @@ class _AppShellState extends State<AppShell> with WidgetsBindingObserver {
       animation: fit,
       builder: (context, _) {
         if (!fit.onboarded) return const OnboardingScreen();
+        final parked = fit.sessionParked && fit.showNav;
 
         return PopScope(
           canPop: false,
@@ -221,7 +224,8 @@ class _AppShellState extends State<AppShell> with WidgetsBindingObserver {
                 Scaffold(
                   backgroundColor: Colors.transparent,
                   body: Padding(
-                    padding: EdgeInsets.only(bottom: MediaQuery.viewPaddingOf(context).bottom),
+                    padding: EdgeInsets.only(
+                        bottom: MediaQuery.viewPaddingOf(context).bottom + (parked ? _pillSpace : 0)),
                     child: NotificationListener<ScrollNotification>(
                       onNotification: _onScroll,
                       child: _animatedScreen(),
@@ -243,15 +247,35 @@ class _AppShellState extends State<AppShell> with WidgetsBindingObserver {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    child: EdgeBlur(top: false, height: 128 + MediaQuery.viewPaddingOf(context).bottom),
+                    child: EdgeBlur(
+                        top: false, height: 128 + MediaQuery.viewPaddingOf(context).bottom + (parked ? _pillSpace : 0)),
                   ),
-                if (fit.showNav && MediaQuery.viewInsetsOf(context).bottom < 60)
+                if (fit.showNav && MediaQuery.viewInsetsOf(context).bottom < 60) ...[
                   Positioned(
                     left: 18,
                     right: 18,
                     bottom: 18 + MediaQuery.viewPaddingOf(context).bottom,
                     child: Directionality(textDirection: TextDirection.ltr, child: _NavBar()),
                   ),
+                  Positioned(
+                    left: 18,
+                    right: 18,
+                    bottom: 18 + _NavBarState.height + 10 + MediaQuery.viewPaddingOf(context).bottom,
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 320),
+                      switchInCurve: Curves.easeOutCubic,
+                      switchOutCurve: Curves.easeInCubic,
+                      transitionBuilder: (child, a) => FadeTransition(
+                        opacity: a,
+                        child: SlideTransition(
+                          position: Tween(begin: const Offset(0, 0.4), end: Offset.zero).animate(a),
+                          child: child,
+                        ),
+                      ),
+                      child: parked ? const _ParkedPill() : const SizedBox(width: double.infinity),
+                    ),
+                  ),
+                ],
                 if (fit.countdownUntil != null && fit.session != null)
                   Positioned.fill(
                     child: StartCountdown(key: ValueKey(fit.countdownUntil), until: fit.countdownUntil!),
@@ -406,6 +430,65 @@ final _overlayLight = _overlayBase.copyWith(
   systemNavigationBarIconBrightness: Brightness.dark,
 );
 
+class _ParkedPill extends StatelessWidget {
+  const _ParkedPill();
+
+  @override
+  Widget build(BuildContext context) {
+    final gc = context.gc;
+    final ex = fit.currentExercise;
+    return Pressable(
+      onTap: fit.stepBackIntoSession,
+      scale: 0.97,
+      child: Semantics(
+        button: true,
+        label: t.resumeWorkout,
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(22),
+            boxShadow: const [BoxShadow(color: Color(0x40000000), blurRadius: 24, offset: Offset(0, 10))],
+          ),
+          child: GlassSurface(
+            radius: 22,
+            blur: 16,
+            padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
+            child: Material(
+              type: MaterialType.transparency,
+              child: Row(children: [
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(t.paused,
+                        style: AppTheme.f(10.5,
+                            weight: FontWeight.w700, color: gc.textTertiary, letterSpacing: 1.2)),
+                    const SizedBox(height: 2),
+                    Text(ex == null ? '' : t.catalogName(ex.id, ex.name),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTheme.f(14.5, weight: FontWeight.w700, color: gc.text)),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 12),
+              Text(fit.elapsedLabel, style: AppTheme.f(14, weight: FontWeight.w700, color: gc.textSecondary)),
+              const SizedBox(width: 12),
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(color: gc.ember, shape: BoxShape.circle),
+                child: Icon(PhosphorIconsFill.play, size: 16, color: gc.onEmber),
+              ),
+              ]),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _NavBar extends StatefulWidget {
   const _NavBar();
 
@@ -414,6 +497,7 @@ class _NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<_NavBar> {
+  static const height = 74.0;
   static const _iw = 58.0;
   static const _fabW = 54.0;
   static const _routes = ['home', 'progress', 'exercises', 'settings'];
@@ -469,7 +553,7 @@ class _NavBarState extends State<_NavBar> {
     final gc = context.gc;
 
     return SizedBox(
-      height: 74,
+      height: height,
       child: LayoutBuilder(
         builder: (context, c) {
           _slotW = c.maxWidth - 16;
@@ -605,6 +689,10 @@ class _NavBarState extends State<_NavBar> {
   }
 
   void _play(BuildContext context) {
+    if (fit.sessionParked) {
+      fit.stepBackIntoSession();
+      return;
+    }
     final planned = fit.todayRoutine;
     if (planned != null && planned.exerciseIds.isNotEmpty) {
       fit.startRoutine(planned);

@@ -24,6 +24,7 @@ class ToolsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final gc = context.gc;
+    final scale = MediaQuery.textScalerOf(context).scale(1);
     return SafeArea(
       bottom: false,
       child: SingleChildScrollView(
@@ -45,8 +46,8 @@ class ToolsScreen extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: 1.12,
-              children: [for (final tool in kToolMeta) _card(gc, tool)],
+              childAspectRatio: 1.12 / scale,
+              children: [for (final tool in kToolMeta) _card(gc, tool, scale)],
             ),
           ],
         ),
@@ -54,7 +55,7 @@ class ToolsScreen extends StatelessWidget {
     );
   }
 
-  Widget _card(GymColors gc, ToolMeta tool) {
+  Widget _card(GymColors gc, ToolMeta tool, double scale) {
     return GestureDetector(
       onTap: () => fit.openTool(tool.id),
       child: Container(
@@ -81,7 +82,7 @@ class ToolsScreen extends StatelessWidget {
                 style: AppTheme.f(14.5, weight: FontWeight.w700, color: gc.text)),
             const SizedBox(height: 2),
             SizedBox(
-              height: 31,
+              height: 31 * scale,
               child: Text(t.toolDesc(tool.id),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
