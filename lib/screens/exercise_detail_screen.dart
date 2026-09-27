@@ -11,8 +11,10 @@ import '../theme/app_theme.dart';
 import '../widgets/charts.dart';
 import '../widgets/entrance.dart';
 import '../widgets/exercise_media.dart';
+import '../widgets/exercise_preview.dart';
 import '../widgets/ruler_picker.dart';
 import '../widgets/glass.dart';
+import '../widgets/liquid_notch.dart';
 import '../widgets/stopwatch_card.dart';
 import '../widgets/svg_icon.dart';
 import '../widgets/timer_panel.dart';
@@ -47,13 +49,14 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
     final secondary =
         ex.secondary.map(muscleLabel).join(', ').isEmpty ? t.none : ex.secondary.map(muscleLabel).join(', ');
     final steps = fit.activeExerciseSteps(ex);
-    final pr = fit.exercisePr(ex.id);
+    final pr = fit.exerciseRecord(ex.id);
     final oneRm = fit.oneRmSeries(ex.id);
     final history = fit.exerciseHistory(ex.id);
     final hasMedia = fit.hasCustomMedia(ex.id);
     final repsOnly = fit.isRepsOnly(ex.id);
     final mode = fit.modeOf(ex.id);
     final custom = fit.isCustom(ex.id);
+    final archived = fit.isArchived(ex.id);
 
     return RiseScope(
       id: 'exercise',
@@ -93,6 +96,13 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                       const SizedBox(width: 10),
                     ],
                     RoundAction(
+                      label: archived ? t.restoreExercise : t.archiveExercise,
+                      onTap: () => _toggleArchived(context, ex),
+                      child: Icon(archived ? PhosphorIconsFill.archive : PhosphorIconsRegular.archive,
+                          size: 16, color: archived ? gc.accent : gc.textSecondary),
+                    ),
+                    const SizedBox(width: 10),
+                    RoundAction(
                       onTap: () => fit.toggleFavorite(ex.id),
                       child: _star(gc, fav),
                     ),
@@ -104,10 +114,13 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Stack(
                 children: [
-                  SizedBox(
-                    width: double.infinity,
-                    child: ExerciseMedia(
-                        ex: ex, height: 220, radius: 22, live: true, bordered: false),
+                  GestureDetector(
+                    onTap: () => showExercisePreview(context, ex),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ExerciseMedia(
+                          ex: ex, height: 220, radius: 22, live: true, bordered: false),
+                    ),
                   ),
                   Positioned(
                     bottom: 10,
@@ -136,6 +149,14 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  AnimatedSize(
+                    duration: const Duration(milliseconds: 260),
+                    curve: Curves.easeOutCubic,
+                    alignment: Alignment.topCenter,
+                    child: archived
+                        ? Padding(padding: const EdgeInsets.only(bottom: 16), child: _archivedBanner(gc, ex))
+                        : const SizedBox(width: double.infinity),
+                  ),
                   Text(exerciseName(ex),
                       style: AppTheme.f(26, weight: FontWeight.w800, color: gc.text, height: 1.1)),
                   const SizedBox(height: 18),
@@ -177,7 +198,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                   const SizedBox(height: 20),
                   const StopwatchCard(),
                   const SizedBox(height: 20),
-                  if (pr != null && mode.isEmpty) ...[
+                  if (pr != null) ...[
                     Container(
                       padding: const EdgeInsets.all(18),
                       decoration: BoxDecoration(
@@ -196,18 +217,18 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                                   children: [
                                     _cardLabel(gc, t.personalRecord),
                                     const SizedBox(height: 8),
-                                    Text(fit.weightLabel(pr.topWeight),
+                                    Text(fit.recordLabel(pr),
                                         style: AppTheme.f(30,
                                             weight: FontWeight.w800, color: gc.text, height: 1)),
                                   ],
                                 ),
                               ),
-                              Text(t.oneRmEst(fit.weightLabel(pr.oneRm)),
+                              Text(fit.recordDetail(pr),
                                   style: AppTheme.f(12,
                                       weight: FontWeight.w500, color: gc.textSecondary)),
                             ],
                           ),
-                          if (oneRm.length > 2) ...[
+                          if (pr.kind == PrKind.weight && oneRm.length > 2) ...[
                             const SizedBox(height: 16),
                             TrendChart(values: [for (final v in oneRm) fit.toDisplayWeight(v)], height: 84, scale: fmt),
                           ],
@@ -500,6 +521,43 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
       ),
     );
   }
+
+  void _toggleArchived(BuildContext context, Exercise ex) {
+    fit.toggleArchived(ex.id);
+    if (!fit.isArchived(ex.id)) return;
+    showNotchToast(
+      context,
+      t.archivedToast,
+      subtitle: t.archivedToastHint,
+      icon: PhosphorIconsFill.archive,
+      accent: context.gc.accent,
+      action: t.undo,
+      onTap: () => fit.toggleArchived(ex.id),
+      duration: const Duration(milliseconds: 3600),
+    );
+  }
+
+  Widget _archivedBanner(GymColors gc, Exercise ex) => Container(
+        padding: const EdgeInsets.fromLTRB(16, 12, 8, 12),
+        decoration: BoxDecoration(color: gc.accentSoft, borderRadius: BorderRadius.circular(16)),
+        child: Row(children: [
+          Icon(PhosphorIconsFill.archive, size: 17, color: gc.accent),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(t.archivedBanner,
+                style: AppTheme.f(12.5, weight: FontWeight.w600, color: gc.text, height: 1.35)),
+          ),
+          GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () => fit.toggleArchived(ex.id),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              child: Text(t.restoreExercise,
+                  style: AppTheme.f(13, weight: FontWeight.w700, color: gc.accent)),
+            ),
+          ),
+        ]),
+      );
 
   Widget _cardLabel(GymColors gc, String label) => Text(label.toUpperCase(),
       style: AppTheme.f(10.5, weight: FontWeight.w700, color: gc.textTertiary, letterSpacing: 1.3));

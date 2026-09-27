@@ -9,6 +9,24 @@ mixin LibraryState on FitCore {
   int _customSeq = 0;
   List<Exercise> get allExercises => [...kExercises, ...customExercises];
 
+  bool fitsHere(Exercise ex) => true;
+
+  bool exArchivedOnly = false;
+
+  bool isArchived(String id) => archived.contains(id);
+
+  void toggleArchived(String id) {
+    if (!archived.remove(id)) archived.add(id);
+    if (archived.isEmpty) exArchivedOnly = false;
+    _persist();
+    notifyListeners();
+  }
+
+  void toggleArchivedFilter() {
+    exArchivedOnly = !exArchivedOnly;
+    notifyListeners();
+  }
+
   Exercise? exerciseById(String id) {
     for (final e in allExercises) {
       if (e.id == id) return e;
@@ -40,6 +58,7 @@ mixin LibraryState on FitCore {
     exDifficultyFilter = null;
     exEquipmentFilter = null;
     exFavouritesOnly = false;
+    exArchivedOnly = false;
     notifyListeners();
   }
 
@@ -72,6 +91,7 @@ mixin LibraryState on FitCore {
   List<Exercise> exercisesMatching(String query) {
     final matchesSearch = exerciseSearch(query);
     final list = allExercises.where((ex) {
+      if (isArchived(ex.id) != exArchivedOnly) return false;
       if (exFavouritesOnly && favorites[ex.id] != true) return false;
       if (!matchesSearch(ex)) return false;
       if (exMuscleFilter != null &&
@@ -209,17 +229,33 @@ mixin LibraryState on FitCore {
 
   bool hasCustomMedia(String id) => mediaFor(id).isNotEmpty;
 
+  int? videoMark(String id, int step) => videoMarks[id]?[step];
+
+  void setVideoMark(String id, int step, int? ms) {
+    final marks = videoMarks.putIfAbsent(id, () => {});
+    if (ms == null) {
+      marks.remove(step);
+    } else {
+      marks[step] = ms;
+    }
+    if (marks.isEmpty) videoMarks.remove(id);
+    _persist();
+    notifyListeners();
+  }
+
   Future<void> attachExerciseMedia(String id, String srcPath) async {
     final base = await MediaStore.importFor(id, srcPath);
     if (base == null) return;
     final old = mediaFor(id);
     if (old.isNotEmpty && old != base) await MediaStore.delete(old);
     exerciseMedia[id] = base;
+    videoMarks.remove(id);
     _persist();
     notifyListeners();
   }
 
   void clearExerciseMedia(String id) {
+    videoMarks.remove(id);
     final old = exerciseMedia.remove(id);
     if (old != null && old.isNotEmpty) MediaStore.delete(old);
     _persist();

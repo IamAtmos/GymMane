@@ -4449,16 +4449,16 @@ const List<Exercise> kExercises = [
   ),
   Exercise(
     id: 'c8f5cSY',
-    name: 'Side Lying Hip Adduction',
-    primary: 'quads',
-    secondary: ['glutes', 'hamstrings'],
+    name: 'Side Lying Hip Abduction',
+    primary: 'glutes',
+    secondary: ['obliques'],
     equipment: 'Bodyweight',
     difficulty: 'Intermediate',
     art: 'side-lying-hip-abduction',
     steps: [
       'Lie on your side with your legs straight and stacked on top of each other.',
       'Place your bottom arm under your head for support.',
-      'Engage your adductors and lift your top leg as high as possible without rotating your hips or leaning backward.',
+      'Squeeze the side of your glutes and lift your top leg as high as you can without rotating your hips or leaning backward.',
       'Pause for a moment at the top, then slowly lower your leg back down to the starting position.',
       'Repeat for the desired number of repetitions, then switch sides.',
     ],
@@ -4483,16 +4483,16 @@ const List<Exercise> kExercises = [
     id: 'VO2qeJg',
     name: 'Side Plank Hip Adduction',
     primary: 'obliques',
-    secondary: ['glutes', 'quads'],
+    secondary: ['quads'],
     equipment: 'Bodyweight',
     difficulty: 'Intermediate',
     art: 'copenhagen-plank',
     steps: [
-      'Start by lying on your side with your legs extended and stacked on top of each other.',
-      'Prop yourself up on your forearm, keeping your elbow directly below your shoulder.',
-      'Engage your core and lift your hips off the ground, creating a straight line from your head to your feet.',
-      'While maintaining the side plank position, lift your top leg towards the ceiling, keeping it straight.',
-      'Slowly lower your leg back down to the starting position.',
+      'Lie on your side next to a bench, propped on your forearm with your elbow directly under your shoulder.',
+      'Rest the inside of your top leg on the bench, at the knee to make it easier or at the ankle to make it harder, with your bottom leg on the floor under it.',
+      'Brace your core and lift your hips until your body forms a straight line from head to feet.',
+      'Press your top leg down into the bench and raise your bottom leg until it touches the underside of the bench.',
+      'Lower the bottom leg towards the floor with control, keeping your hips up, and switch sides after the set.',
     ],
   ),
   Exercise(
@@ -8009,14 +8009,14 @@ const List<Exercise> kExercises = [
     primary: 'hamstrings',
     secondary: ['glutes', 'calves'],
     equipment: 'Bodyweight',
-    difficulty: 'Beginner',
+    difficulty: 'Intermediate',
     art: 'nordic-hamstring-curl',
     steps: [
-      'Lie flat on your back on a mat or bench with your legs extended.',
-      'Place your hands by your sides or under your glutes for support.',
-      'Bend your knees and lift your feet off the ground, bringing your thighs towards your chest.',
-      'Pause for a moment at the top, then slowly lower your legs back to the starting position.',
-      'Repeat for the desired number of repetitions.',
+      'Kneel on a pad with your ankles anchored under a bench, a sturdy bar or a partner’s hands.',
+      'Keep your body straight from knees to head, squeeze your glutes and hold your hands in front of your chest.',
+      'Lean forward slowly from the knees, resisting with your hamstrings for as long as you can.',
+      'When you can no longer control the descent, catch yourself with your hands in a push-up position.',
+      'Give a light push off the floor and pull yourself back up to kneeling with your hamstrings.',
     ],
   ),
   Exercise(
@@ -8821,6 +8821,31 @@ const List<String> kFilterEquipment = [
   'Bodyweight', 'Dumbbell', 'Barbell', 'Machine', 'Cable', 'Band', 'Kettlebell', 'Rings', 'Weighted'
 ];
 
+const Set<String> kNeedsKit = {
+  '9WTm7dq', 'lBDjFxJ', 'T2mxWqc', 'X6C6i5Y', '72BC5Za', 'GaSzzuh', 'mExgrF9', 'neutral-grip-pull-up',
+  'active-hang', 'negative-pull-up', 'commando-pull-up', 'l-sit-pull-up', 'towel-pull-up', 'XgWyAiA',
+  'LQFOrMn', 'uWpxD4v', 'PXTIwgu', 'l-sit-hold', '50BETrz', 'guT8YnS', '7xeukSt', 'uTBt1HV', 'dead-hang-hold',
+  'TFqbd8t', 'XVDdcoj', '3xK09Sk', 'v2DfH14', 'tig3PXb', 'xbkPfaw', 'prone-t-raise', 'reverse-snow-angel',
+  'decline-push-up', 'seal-jack', 'feet-elevated-pike-push-up', 'handstand-push-up', '2gPfomN', 'Hy9D21L',
+  'NAkmgdx', 'dragon-flag', 'mweqJin', 'VO2qeJg', 'xdYPUtE', '9E25EOx', 'assisted-pistol-squat', 'shrimp-squat',
+  'single-leg-box-squat', 'sJFIDIp', 'gscGLOU', 'RrLske5', '9RT8oQW', 'u27Kcdz', '6sYyrRX', 'clamshell',
+  'hip-airplane', 'bJYHBIN', 'iPm26QU', 'u5ESqzH', '0jp9Rlz', 'LNE3wfo', 'GwYwElT', 'C5jncD2',
+  'lying-hamstring-walkout', 'hamstring-stretch', 'outdoor-run', 'outdoor-walk', 'outdoor-hike',
+};
+
+const List<String> kWarmupIds = [
+  'jumping-jack', 'high-knees', 'cat-cow-stretch', 'worlds-greatest-stretch', 'leg-swings-stretch', 'inchworm',
+  'QChZi3x', 'scapular-push-up', 'hip-airplane', 'glute-bridge', 'bird-dog', 'dead-bug', 'fire-hydrant',
+  'clamshell', 'kneeling-hip-flexor-stretch', 'RtyAsy1', '5BZHW9s', '6YUfHPL', 'jump-rope', 'band-pull-apart',
+];
+
+const Set<String> kCardioExtras = {
+  'jump-rope', 'battle-ropes', 'burpee', 'half-burpee', 'mountain-climber', 'high-knees', 'jumping-jack',
+  'skater-hop', 'squat-thrust', 'sprawl', 'lateral-shuffle', 'plank-jack',
+};
+
+bool isNoKit(Exercise ex) => ex.equipment == 'Bodyweight' && !kNeedsKit.contains(ex.id);
+
 const Map<String, String> kExerciseModes = {
   'running': 'cardio',
   'walking': 'cardio',
@@ -8830,6 +8855,7 @@ const Map<String, String> kExerciseModes = {
   'elliptical': 'cardio',
   'rowing': 'cardio',
   'stair-climber': 'cardio',
+  'skierg': 'cardio',
   'jump-rope': 'time',
   'battle-ropes': 'time',
   'VBAWRPG': 'time',

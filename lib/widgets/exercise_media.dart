@@ -157,7 +157,7 @@ class _VideoTileState extends State<_VideoTile> {
     Widget child;
     if (_ok && _c != null) {
       child = FittedBox(
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
         clipBehavior: Clip.hardEdge,
         child: SizedBox(
           width: _c!.value.size.width,

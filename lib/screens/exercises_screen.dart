@@ -24,10 +24,25 @@ class ExercisesScreen extends StatefulWidget {
 
 class _ExercisesScreenState extends State<ExercisesScreen> {
   late final TextEditingController _c = TextEditingController(text: fit.exSearch);
+  final ScrollController _scroll = ScrollController();
+  final ValueNotifier<bool> _deep = ValueNotifier(false);
+
+  @override
+  void initState() {
+    super.initState();
+    _scroll.addListener(_track);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _track());
+  }
+
+  void _track() {
+    if (_scroll.hasClients) _deep.value = _scroll.offset > 900;
+  }
 
   @override
   void dispose() {
     _c.dispose();
+    _scroll.dispose();
+    _deep.dispose();
     super.dispose();
   }
 
@@ -46,7 +61,11 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
             child: _header(context, gc, list.length),
           ),
           Expanded(
-            child: ListView.builder(
+            child: Stack(children: [
+              Positioned.fill(
+                child: ListView.builder(
+              key: const PageStorageKey('exercises'),
+              controller: _scroll,
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 110),
               itemCount: list.isEmpty ? 1 : list.length,
               itemBuilder: (context, i) {
@@ -72,7 +91,36 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
                   ],
                 );
               },
-            ),
+                ),
+              ),
+              Positioned(
+                right: 20,
+                bottom: 112,
+                child: ValueListenableBuilder<bool>(
+                  valueListenable: _deep,
+                  builder: (context, deep, _) => IgnorePointer(
+                    ignoring: !deep,
+                    child: AnimatedScale(
+                      scale: deep ? 1 : 0.6,
+                      duration: const Duration(milliseconds: 220),
+                      curve: Curves.easeOutCubic,
+                      child: AnimatedOpacity(
+                        opacity: deep ? 1 : 0,
+                        duration: const Duration(milliseconds: 220),
+                        child: RoundAction(
+                          size: 44,
+                          filled: true,
+                          label: t.backToTop,
+                          onTap: () => _scroll.animateTo(0,
+                              duration: const Duration(milliseconds: 520), curve: Curves.easeOutCubic),
+                          child: Icon(PhosphorIconsBold.arrowUp, size: 18, color: gc.onEmber),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
           ),
         ],
       ),
@@ -110,7 +158,7 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
             RoundAction(
               size: 40,
               label: t.newExercise,
-              onTap: () => showCreateExerciseSheet(context),
+              onTap: () => showCreateExerciseSheet(context, initialName: _c.text),
               child: Icon(PhosphorIconsRegular.plus, size: 17, color: gc.text),
             ),
           ],
@@ -125,9 +173,10 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
 
   Widget _quickChips(BuildContext context, GymColors gc) {
     final active = _activeFilters;
-    final anyOn = active > 0 || fit.exNoGearOnly || fit.exFavouritesOnly;
+    final anyOn = active > 0 || fit.exNoGearOnly || fit.exFavouritesOnly || fit.exMineOnly || fit.exArchivedOnly;
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      clipBehavior: Clip.none,
       child: Row(children: [
         Pill(
           label: active > 0 ? '${t.filters} · $active' : t.filters,
@@ -160,6 +209,30 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
           vPad: 7,
           fontSize: 12.5,
         ),
+        if (fit.customExercises.isNotEmpty || fit.exMineOnly) ...[
+          const SizedBox(width: 8),
+          Pill(
+            label: t.mineOnly,
+            bg: fit.exMineOnly ? gc.ember : gc.bgRaised2,
+            fg: fit.exMineOnly ? gc.onEmber : gc.textSecondary,
+            onTap: fit.toggleMineFilter,
+            hPad: 14,
+            vPad: 7,
+            fontSize: 12.5,
+          ),
+        ],
+        if (fit.archived.isNotEmpty) ...[
+          const SizedBox(width: 8),
+          Pill(
+            label: '${t.archivedFilter} · ${fit.archived.length}',
+            bg: fit.exArchivedOnly ? gc.ember : gc.bgRaised2,
+            fg: fit.exArchivedOnly ? gc.onEmber : gc.textSecondary,
+            onTap: fit.toggleArchivedFilter,
+            hPad: 14,
+            vPad: 7,
+            fontSize: 12.5,
+          ),
+        ],
         if (anyOn) ...[
           const SizedBox(width: 8),
           Pill(
@@ -292,9 +365,9 @@ class _FilterChipData {
 }
 
 void showCreateExerciseSheet(BuildContext context,
-    {void Function(String id)? onCreated, Exercise? editing}) {
+    {void Function(String id)? onCreated, Exercise? editing, String initialName = ''}) {
   final gc = context.gc;
-  final nameCtrl = TextEditingController(text: editing?.name ?? '');
+  final nameCtrl = TextEditingController(text: editing?.name ?? initialName.trim());
   final stepsCtrl = TextEditingController(text: editing?.steps.join('\n') ?? '');
   String muscle = editing?.primary ?? kMuscles.first.id;
   String equipment = editing?.equipment ?? kEquipment.first;
