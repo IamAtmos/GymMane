@@ -34,9 +34,52 @@ mixin RoutinesState on FitCore, LibraryState {
 
   Routine? get todayRoutine => routineOn(DateTime.now());
 
+  List<String> planIdsOn(int weekday) => [
+        ?weeklyPlan[weekday],
+        if (multiPlan) ...?planExtras[weekday],
+      ];
+
+  List<Routine> routinesOn(DateTime day) => [for (final id in planIdsOn(day.weekday)) ?_routine(id)];
+
+  bool plannedOn(int weekday, String routineId) => planIdsOn(weekday).contains(routineId);
+
   Routine? routineOn(DateTime day) {
-    final id = weeklyPlan[day.weekday];
-    return id == null ? null : _routine(id);
+    final list = routinesOn(day);
+    if (list.isEmpty) return null;
+    final key = _dayKey(day);
+    final done = sessions.where((s) => _dayKey(s.date) == key).length;
+    return list[math.min(done, list.length - 1)];
+  }
+
+  void toggleMultiPlan() {
+    multiPlan = !multiPlan;
+    _persist();
+    _refreshWidgets();
+    syncTrainReminder();
+    notifyListeners();
+  }
+
+  void togglePlanDay(int weekday, String routineId) {
+    if (!multiPlan) return assignRoutineToDay(weekday, plannedOn(weekday, routineId) ? null : routineId);
+    final extras = planExtras.putIfAbsent(weekday, () => []);
+    if (weeklyPlan[weekday] == routineId) {
+      if (extras.isEmpty) {
+        weeklyPlan.remove(weekday);
+      } else {
+        weeklyPlan[weekday] = extras.removeAt(0);
+      }
+    } else if (!extras.remove(routineId)) {
+      if (weeklyPlan[weekday] == null) {
+        weeklyPlan[weekday] = routineId;
+      } else {
+        extras.add(routineId);
+      }
+    }
+    if (extras.isEmpty) planExtras.remove(weekday);
+    _persist();
+    _refreshWidgets();
+    syncTrainReminder();
+    notifyListeners();
   }
 
   String createRoutine([String name = '']) {
@@ -102,6 +145,16 @@ mixin RoutinesState on FitCore, LibraryState {
   void deleteRoutine(String id) {
     routines.removeWhere((r) => r.id == id);
     weeklyPlan.removeWhere((_, v) => v == id);
+    for (final extras in planExtras.values) {
+      extras.remove(id);
+    }
+    planExtras.removeWhere((_, v) => v.isEmpty);
+    for (final day in [...planExtras.keys]) {
+      if (weeklyPlan[day] != null) continue;
+      final extras = planExtras[day]!;
+      weeklyPlan[day] = extras.removeAt(0);
+      if (extras.isEmpty) planExtras.remove(day);
+    }
     if (activeRoutineId == id) activeRoutineId = null;
     _persist();
     notifyListeners();
@@ -228,6 +281,7 @@ mixin RoutinesState on FitCore, LibraryState {
   }
 
   void assignRoutineToDay(int weekday, String? routineId) {
+    planExtras.remove(weekday);
     if (routineId == null) {
       weeklyPlan.remove(weekday);
     } else {

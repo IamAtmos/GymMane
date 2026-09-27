@@ -11,6 +11,7 @@ import '../theme/app_colors.dart';
 import '../theme/app_theme.dart';
 import '../widgets/dialogs.dart';
 import '../widgets/exercise_media.dart';
+import '../widgets/exercise_preview.dart';
 import '../widgets/ruler_picker.dart';
 import '../widgets/glass.dart';
 import '../widgets/routine_folder.dart';
@@ -50,6 +51,28 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
     setState(() => _q = '');
   }
 
+  void _createExercise() => showCreateExerciseSheet(
+        context,
+        initialName: _q,
+        onCreated: (id) {
+          fit.toggleRoutineExercise(_id, id);
+          _clearSearch();
+        },
+      );
+
+  Widget _createLink(GymColors gc) => Center(
+        child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: _createExercise,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            child: Text(t.createNamed(_q.trim()),
+                textAlign: TextAlign.center,
+                style: AppTheme.f(13, weight: FontWeight.w600, color: gc.accent)),
+          ),
+        ),
+      );
+
   @override
   Widget build(BuildContext context) {
     final gc = context.gc;
@@ -59,6 +82,7 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
     }
     final list = _filtered;
     final start = routine.exerciseIds.isNotEmpty;
+    final create = _q.trim().isNotEmpty && list.isNotEmpty;
     return SafeArea(
       bottom: false,
       child: Stack(
@@ -66,10 +90,11 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
           Positioned.fill(
             child: ListView.builder(
               padding: EdgeInsets.fromLTRB(20, 12, 20, start ? 104 : 20),
-              itemCount: (list.isEmpty ? 1 : list.length) + 1,
+              itemCount: (list.isEmpty ? 1 : list.length) + (create ? 2 : 1),
               itemBuilder: (context, i) {
                 if (i == 0) return _header(gc, routine.exerciseIds.length);
                 if (list.isEmpty) return _noMatches(gc);
+                if (i > list.length) return _createLink(gc);
                 return _pickRow(gc, list[i - 1]);
               },
             ),
@@ -297,11 +322,14 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
         (fit.exDifficultyFilter == null ? 0 : 1);
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      clipBehavior: Clip.none,
       child: Row(children: [
         chip(picked > 0 ? '${t.filters} · $picked' : t.filters, picked > 0,
             () => showExerciseFilters(context, onClear: _clearSearch)),
         chip(t.favouritesOnly, fit.exFavouritesOnly, fit.toggleFavouritesFilter),
         chip(t.noGearOnly, fit.exNoGearOnly, fit.toggleNoGearFilter),
+        if (fit.customExercises.isNotEmpty || fit.exMineOnly)
+          chip(t.mineOnly, fit.exMineOnly, fit.toggleMineFilter),
         for (final id in kFilterMuscles)
           chip(muscleLabel(id), fit.exMuscleFilter == id, () => fit.setMuscleFilter(id)),
       ]),
@@ -332,10 +360,7 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
                 label: t.newExercise,
                 bg: gc.bgRaised2,
                 fg: gc.textSecondary,
-                onTap: () => showCreateExerciseSheet(
-                  context,
-                  onCreated: (id) => fit.toggleRoutineExercise(_id, id),
-                ),
+                onTap: _createExercise,
               ),
             ],
           ),
@@ -345,10 +370,10 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
   }
 
   Widget _dayToggle(GymColors gc, int i) {
-    final weekday = i + 1;
-    final on = fit.weeklyPlan[weekday] == _id;
+    final weekday = fit.weekdayAt(i);
+    final on = fit.plannedOn(weekday, _id);
     return GestureDetector(
-      onTap: () => fit.assignRoutineToDay(weekday, on ? null : _id),
+      onTap: () => fit.togglePlanDay(weekday, _id),
       child: Container(
         width: 38,
         height: 38,
@@ -357,7 +382,7 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
           shape: BoxShape.circle,
         ),
         alignment: Alignment.center,
-        child: Text(t.weekdayInitial(i + 1),
+        child: Text(t.weekdayInitial(weekday),
             style: AppTheme.f(14, weight: FontWeight.w700, color: on ? gc.onEmber : gc.textSecondary)),
       ),
     );
@@ -637,6 +662,7 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
     final inRoutine = fit.routineHas(_id, ex.id);
     return GestureDetector(
       onTap: () => fit.toggleRoutineExercise(_id, ex.id),
+      onLongPress: () => showExercisePreview(context, ex),
       behavior: HitTestBehavior.opaque,
       child: Container(
         margin: const EdgeInsets.only(bottom: 8),
@@ -647,7 +673,10 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
           borderRadius: BorderRadius.circular(14),
         ),
         child: Row(children: [
-          SizedBox(width: 44, child: ExerciseMedia(ex: ex, height: 44, radius: 10)),
+          GestureDetector(
+            onTap: () => showExercisePreview(context, ex),
+            child: SizedBox(width: 44, child: ExerciseMedia(ex: ex, height: 44, radius: 10)),
+          ),
           const SizedBox(width: 12),
           Expanded(
             child: Column(

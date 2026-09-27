@@ -112,7 +112,7 @@ class RoutinesScreen extends StatelessWidget {
 
   void _shareMenu(BuildContext context) {
     final gc = context.gc;
-    final planned = fit.routines.where((r) => fit.weeklyPlan.containsValue(r.id)).toList();
+    final planned = fit.routines.where((r) => [for (var d = 1; d <= 7; d++) ...fit.planIdsOn(d)].contains(r.id)).toList();
     showAppSheet<void>(
       context: context,
       backgroundColor: Colors.transparent,
@@ -283,9 +283,9 @@ class RoutinesScreen extends StatelessWidget {
   }
 
   Widget _dayRow(BuildContext context, GymColors gc, int i) {
-    final weekday = i + 1;
-    final r = fit.routines.where((x) => x.id == fit.weeklyPlan[weekday]);
-    final assigned = r.isNotEmpty ? r.first : null;
+    final weekday = fit.weekdayAt(i);
+    final day = fit.dateForWeekday(i);
+    final assigned = fit.routinesOn(day);
     final isToday = DateTime.now().weekday == weekday;
     return GestureDetector(
       onTap: () => _pickRoutine(context, weekday),
@@ -300,11 +300,11 @@ class RoutinesScreen extends StatelessWidget {
                 style: AppTheme.f(14, weight: FontWeight.w600, color: isToday ? gc.ember : gc.text)),
             const SizedBox(width: 14),
             Expanded(
-              child: Text(assigned == null ? t.restDayShort : fit.routineTitle(assigned),
+              child: Text(assigned.isEmpty ? t.restDayShort : assigned.map(fit.routineTitle).join(' + '),
                   textAlign: TextAlign.right,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTheme.f(14, weight: FontWeight.w500, color: assigned != null ? gc.text : gc.textTertiary)),
+                  style: AppTheme.f(14, weight: FontWeight.w500, color: assigned.isNotEmpty ? gc.text : gc.textTertiary)),
             ),
             const SizedBox(width: 8),
             SvgPathIcon(Ic.chevronRight, size: 14, color: gc.textTertiary),
@@ -416,7 +416,9 @@ class RoutinesScreen extends StatelessWidget {
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (sheet) => Container(
+      builder: (sheet) => AnimatedBuilder(
+        animation: fit,
+        builder: (sheet, _) => Container(
         constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(sheet).height * 0.72),
         padding: sheetPad(sheet),
         decoration: BoxDecoration(
@@ -430,6 +432,10 @@ class RoutinesScreen extends StatelessWidget {
             const SheetHandle(),
             const SizedBox(height: 16),
             SheetTitle(titleCase(t.setDay(t.weekday(weekday).toUpperCase()))),
+            if (fit.multiPlan) ...[
+              const SizedBox(height: 4),
+              Text(t.multiPlanHint, style: AppTheme.f(12.5, weight: FontWeight.w500, color: gc.textSecondary)),
+            ],
             const SizedBox(height: 14),
             Flexible(
               child: OptionGroup(
@@ -438,7 +444,7 @@ class RoutinesScreen extends StatelessWidget {
                   OptionItem(
                     t.restDayShort,
                     icon: PhosphorIconsRegular.moonStars,
-                    selected: fit.weeklyPlan[weekday] == null,
+                    selected: fit.planIdsOn(weekday).isEmpty,
                     onTap: () {
                       fit.assignRoutineToDay(weekday, null);
                       Navigator.pop(sheet);
@@ -448,8 +454,9 @@ class RoutinesScreen extends StatelessWidget {
                     OptionItem(
                       fit.routineTitle(r),
                       detail: r.group.isEmpty ? null : r.group,
-                      selected: fit.weeklyPlan[weekday] == r.id,
+                      selected: fit.plannedOn(weekday, r.id),
                       onTap: () {
+                        if (fit.multiPlan) return fit.togglePlanDay(weekday, r.id);
                         fit.assignRoutineToDay(weekday, r.id);
                         Navigator.pop(sheet);
                       },
@@ -459,6 +466,7 @@ class RoutinesScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }
