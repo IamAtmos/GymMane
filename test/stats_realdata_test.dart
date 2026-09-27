@@ -95,11 +95,11 @@ void main() {
   test('personal records are the best set ever, not the last one', () {
     final prs = {for (final p in fit.personalRecords) p.name: p};
 
-    expect(prs['Barbell Deadlift']!.topWeight, 120);
+    expect(prs['Barbell Deadlift']!.best, 120);
     expect(prs['Barbell Deadlift']!.oneRm, closeTo(152, 1));
-    expect(prs['Barbell Full Squat']!.topWeight, 110);
-    expect(prs['Barbell Bench Press']!.topWeight, 77.5);
-    expect(prs['Barbell Curl']!.topWeight, 32.5);
+    expect(prs['Barbell Full Squat']!.best, 110);
+    expect(prs['Barbell Bench Press']!.best, 77.5);
+    expect(prs['Barbell Curl']!.best, 32.5);
 
     expect(fit.personalRecords.first.name, 'Barbell Deadlift');
   });

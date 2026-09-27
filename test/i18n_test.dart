@@ -7,6 +7,7 @@ import 'package:gymmane/catalog/exercise_catalog.dart';
 import 'package:gymmane/l10n/catalog_es.dart';
 import 'package:gymmane/l10n/l10n.dart';
 import 'package:gymmane/models/exercise.dart';
+import 'package:gymmane/models/workout.dart';
 import 'package:gymmane/services/local_store.dart';
 import 'package:gymmane/state/fit_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -50,7 +51,7 @@ void main() {
       expect(t.catalogName(e.id, e.name), kExerciseNameEs[e.id],
           reason: 'catalogName es lo que tienen que llamar las pantallas, no e.name');
     }
-    expect(fit.personalRecords, isA<List<({String id, String name, double topWeight, double oneRm})>>());
+    expect(fit.personalRecords, isA<List<PersonalRecord>>());
   });
 
   test('an unknown language falls back to English instead of crashing', () {

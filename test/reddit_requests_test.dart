@@ -335,7 +335,7 @@ void main() {
       fit.bumpRoutineSets(r.id, bench(), 1);
       fit.startRoutine(r);
 
-      final id = fit.saveSessionAsRoutine();
+      final id = fit.saveSessionAsRoutine('Copy');
       final made = fit.routines.firstWhere((x) => x.id == id);
       expect(made.exerciseIds, [bench()]);
       expect(fit.routineSets(made, bench()), 4);
