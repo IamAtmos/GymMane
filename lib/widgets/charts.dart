@@ -17,7 +17,12 @@ class GoalRing extends StatelessWidget {
     return SizedBox(
       width: size,
       height: size,
-      child: CustomPaint(painter: _RingPainter(pct, gc.bgRaised2, gc.accent)),
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: 0, end: pct),
+        duration: const Duration(milliseconds: 700),
+        curve: Curves.easeOutCubic,
+        builder: (context, v, _) => CustomPaint(painter: _RingPainter(v, gc.bgRaised2, gc.accent)),
+      ),
     );
   }
 }

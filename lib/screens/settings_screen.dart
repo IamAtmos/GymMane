@@ -59,216 +59,241 @@ class SettingsScreen extends StatelessWidget {
           children: riseAll([
             ScreenHeader(title: t.settings, onBack: fit.backFromPreferences),
             const SizedBox(height: 20),
-            _sectionLabel(gc, t.preferences),
-            const SizedBox(height: 8),
-            SoftCard(
-              radius: 20,
-              borderColor: Colors.transparent,
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                children: [
-                  _choiceRow(
-                    context,
-                    gc,
-                    PhosphorIconsRegular.moon,
-                    t.theme,
-                    [
-                      ('system', t.themeAuto, PhosphorIconsRegular.circleHalf),
-                      ('dark', t.darkTheme, PhosphorIconsRegular.moon),
-                      ('light', t.lightTheme, PhosphorIconsRegular.sun),
-                    ],
-                    () => fit.themePref,
-                    fit.setThemePref,
-                    hint: t.themeAutoHint,
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => _editLanguage(context),
-                    child: _prefRow(
-                      gc,
-                      PhosphorIconsRegular.translate,
-                      t.languageLabel,
-                      Row(mainAxisSize: MainAxisSize.min, children: [
-                        Text(
-                          languageNameOf(fit.language),
-                          style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary),
-                        ),
-                        const SizedBox(width: 6),
-                        Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
-                      ]),
-                    ),
-                  ),
-                  _prefRow(gc, PhosphorIconsRegular.scales, t.unitsLabel, SegToggle([
-                    SegOption('kg', fit.units == 'kg', () => fit.setUnits('kg')),
-                    SegOption('lb', fit.units == 'lb', () => fit.setUnits('lb')),
-                  ])),
-                  _prefRow(
-                    gc,
-                    PhosphorIconsRegular.timer,
-                    t.restTimer,
-                    StepperControl(
-                      value: fit.restSeconds == 0 ? t.restOff : '${fit.restSeconds}s',
-                      minWidth: 48,
-                      btnSize: 28,
-                      gap: 10,
-                      fontSize: 14,
-                      onDec: () => fit.setRestSeconds(fit.restSeconds - 15),
-                      onInc: () => fit.setRestSeconds(fit.restSeconds + 15),
-                      onEdit: () async {
-                        final v = await askRuler(context,
-                            title: t.restTimer,
-                            value: fit.restSeconds.toDouble(),
-                            min: 0,
-                            max: 600,
-                            step: 5,
-                            majorEvery: 6,
-                            format: (v) => clockLabel(v.round()),
-                            tickLabel: (v) => clockLabel(v.round()));
-                        if (v != null) fit.setRestSeconds(v.round());
-                      },
-                    ),
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => _editTrainReminder(context),
-                    child: _prefRow(
-                      gc,
-                      PhosphorIconsRegular.bellSimple,
-                      t.trainReminder,
-                      Row(mainAxisSize: MainAxisSize.min, children: [
-                        Flexible(
-                          child: Text(
-                            _reminderValue(context),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.right,
-                            style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary),
-                          ),
-                        ),
-                        const SizedBox(width: 6),
-                        Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
-                      ]),
-                    ),
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => _editAlarmSound(context),
-                    child: _prefRow(
-                      gc,
-                      PhosphorIconsRegular.speakerHigh,
-                      t.alarmSound,
-                      Row(mainAxisSize: MainAxisSize.min, children: [
-                        ConstrainedBox(
-                          constraints: const BoxConstraints(maxWidth: 128),
-                          child: Text(
-                            fit.alarmSoundName ?? t.alarmDefaultName,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.right,
-                            style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary),
-                          ),
-                        ),
-                        const SizedBox(width: 6),
-                        Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
-                      ]),
-                    ),
-                  ),
-                  _choiceRow(
-                    context,
-                    gc,
-                    PhosphorIconsRegular.vibrate,
-                    t.alarmStyleTitle,
-                    [
-                      ('loud', t.alarmStyleLoud, PhosphorIconsRegular.bellRinging),
-                      ('quiet', t.alarmStyleQuiet, PhosphorIconsRegular.bellSimpleSlash),
-                      ('vibrate', t.alarmStyleVibrate, PhosphorIconsRegular.vibrate),
-                    ],
-                    () => fit.alarmStyle,
-                    fit.setAlarmStyle,
-                    hint: t.alarmStyleHint,
-                  ),
-                  if (!fit.alarmAllowed) ...[
-                    const SizedBox(height: 14),
-                    _alarmWarning(context, gc),
-                  ],
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: fit.toggleFocusCard,
-                    child: _prefRow(gc, PhosphorIconsRegular.target, t.focusCard,
-                        TinySwitch(on: fit.showFocus)),
-                  ),
-                  _choiceRow(
-                    context,
-                    gc,
-                    PhosphorIconsRegular.gauge,
-                    t.effortSetting,
-                    [
-                      ('', t.restOff, PhosphorIconsRegular.prohibit),
-                      ('rpe', 'RPE', PhosphorIconsRegular.gauge),
-                      ('rir', 'RIR', PhosphorIconsRegular.arrowCounterClockwise),
-                    ],
-                    () => fit.effortMode,
-                    fit.setEffortMode,
-                    hint: t.effortHint,
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: fit.toggleAutoAdvance,
-                    child: _prefRow(gc, PhosphorIconsRegular.skipForward, t.autoAdvance,
-                        TinySwitch(on: fit.autoAdvance)),
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: fit.toggleStartCountdown,
-                    child: _prefRow(gc, PhosphorIconsRegular.timer, t.countdownSetting,
-                        TinySwitch(on: fit.startCountdown)),
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: fit.toggleKeepScreenOn,
-                    child: _prefRow(gc, PhosphorIconsRegular.sun, t.keepScreenOn,
-                        TinySwitch(on: fit.keepScreenOn)),
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: fit.toggleGamification,
-                    child: _prefRow(gc, PhosphorIconsRegular.medal, t.gamificationSetting,
-                        TinySwitch(on: fit.gamification)),
-                  ),
-                  _choiceRow(
-                    context,
-                    gc,
-                    PhosphorIconsRegular.filmStrip,
-                    t.demoSizeTitle,
-                    [
-                      ('large', t.demoLarge, PhosphorIconsRegular.rectangle),
-                      ('small', t.demoSmall, PhosphorIconsRegular.square),
-                      ('off', t.demoOff, PhosphorIconsRegular.eyeSlash),
-                    ],
-                    () => fit.demoSize,
-                    fit.setDemoSize,
-                  ),
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
-                    onTap: () => _editBackground(context),
-                    child: _prefRow(
-                      gc,
-                      PhosphorIconsRegular.image,
-                      t.background,
-                      Row(mainAxisSize: MainAxisSize.min, children: [
-                        Text(_bgName(fit.bgPattern),
-                            style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary)),
-                        const SizedBox(width: 6),
-                        Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
-                      ]),
-                    ),
-                  ),
+            _group(gc, t.sectionGeneral, [
+              _choiceRow(
+                context,
+                gc,
+                PhosphorIconsRegular.moon,
+                t.theme,
+                [
+                  ('system', t.themeAuto, PhosphorIconsRegular.circleHalf),
+                  ('dark', t.darkTheme, PhosphorIconsRegular.moon),
+                  ('light', t.lightTheme, PhosphorIconsRegular.sun),
                 ],
+                () => fit.themePref,
+                fit.setThemePref,
+                hint: t.themeAutoHint,
               ),
-            ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => _editLanguage(context),
+                child: _prefRow(
+                  gc,
+                  PhosphorIconsRegular.translate,
+                  t.languageLabel,
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    Text(
+                      languageNameOf(fit.language),
+                      style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary),
+                    ),
+                    const SizedBox(width: 6),
+                    Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
+                  ]),
+                ),
+              ),
+              _prefRow(gc, PhosphorIconsRegular.scales, t.unitsLabel, SegToggle([
+                SegOption('kg', fit.units == 'kg', () => fit.setUnits('kg')),
+                SegOption('lb', fit.units == 'lb', () => fit.setUnits('lb')),
+              ])),
+              _choiceRow(
+                context,
+                gc,
+                PhosphorIconsRegular.calendarBlank,
+                t.weekStartSetting,
+                [for (final d in SettingsState.weekStarts) ('$d', t.weekday(d), PhosphorIconsRegular.calendarBlank)],
+                () => '${fit.weekStartDay}',
+                (v) => fit.setWeekStart(int.parse(v)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => _editBackground(context),
+                child: _prefRow(
+                  gc,
+                  PhosphorIconsRegular.image,
+                  t.background,
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    Text(_bgName(fit.bgPattern),
+                        style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary)),
+                    const SizedBox(width: 6),
+                    Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
+                  ]),
+                ),
+              ),
+            ]),
+            const SizedBox(height: 18),
+            _group(gc, t.sectionTraining, [
+              _prefRow(
+                gc,
+                PhosphorIconsRegular.timer,
+                t.restTimer,
+                StepperControl(
+                  value: fit.restSeconds == 0 ? t.restOff : '${fit.restSeconds}s',
+                  minWidth: 48,
+                  btnSize: 28,
+                  gap: 10,
+                  fontSize: 14,
+                  onDec: () => fit.setRestSeconds(fit.restSeconds - 15),
+                  onInc: () => fit.setRestSeconds(fit.restSeconds + 15),
+                  onEdit: () async {
+                    final v = await askRuler(context,
+                        title: t.restTimer,
+                        value: fit.restSeconds.toDouble(),
+                        min: 0,
+                        max: 600,
+                        step: 5,
+                        majorEvery: 6,
+                        format: (v) => clockLabel(v.round()),
+                        tickLabel: (v) => clockLabel(v.round()));
+                    if (v != null) fit.setRestSeconds(v.round());
+                  },
+                ),
+              ),
+              _choiceRow(
+                context,
+                gc,
+                PhosphorIconsRegular.gauge,
+                t.effortSetting,
+                [
+                  ('', t.restOff, PhosphorIconsRegular.prohibit),
+                  ('rpe', 'RPE', PhosphorIconsRegular.gauge),
+                  ('rir', 'RIR', PhosphorIconsRegular.arrowCounterClockwise),
+                ],
+                () => fit.effortMode,
+                fit.setEffortMode,
+                hint: t.effortHint,
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleAutoAdvance,
+                child: _prefRow(gc, PhosphorIconsRegular.skipForward, t.autoAdvance,
+                    TinySwitch(on: fit.autoAdvance)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleStartCountdown,
+                child: _prefRow(gc, PhosphorIconsRegular.timer, t.countdownSetting,
+                    TinySwitch(on: fit.startCountdown)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleKeepScreenOn,
+                child: _prefRow(gc, PhosphorIconsRegular.sun, t.keepScreenOn,
+                    TinySwitch(on: fit.keepScreenOn)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleMultiPlan,
+                child: _prefRow(gc, PhosphorIconsRegular.stack, t.multiPlanSetting,
+                    TinySwitch(on: fit.multiPlan)),
+              ),
+              _choiceRow(
+                context,
+                gc,
+                PhosphorIconsRegular.filmStrip,
+                t.demoSizeTitle,
+                [
+                  ('large', t.demoLarge, PhosphorIconsRegular.rectangle),
+                  ('small', t.demoSmall, PhosphorIconsRegular.square),
+                  ('off', t.demoOff, PhosphorIconsRegular.eyeSlash),
+                ],
+                () => fit.demoSize,
+                fit.setDemoSize,
+              ),
+            ]),
+            const SizedBox(height: 18),
+            _linkGroup(gc, [
+              (PhosphorIconsRegular.mapPin, t.placesLabel, fit.goPlaces),
+            ]),
+            const SizedBox(height: 18),
+            _group(gc, t.sectionAlerts, [
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => _editTrainReminder(context),
+                child: _prefRow(
+                  gc,
+                  PhosphorIconsRegular.bellSimple,
+                  t.trainReminder,
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    Flexible(
+                      child: Text(
+                        _reminderValue(context),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.right,
+                        style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
+                  ]),
+                ),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () => _editAlarmSound(context),
+                child: _prefRow(
+                  gc,
+                  PhosphorIconsRegular.speakerHigh,
+                  t.alarmSound,
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 128),
+                      child: Text(
+                        fit.alarmSoundName ?? t.alarmDefaultName,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.right,
+                        style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Icon(PhosphorIconsRegular.caretRight, size: 15, color: gc.textTertiary),
+                  ]),
+                ),
+              ),
+              _choiceRow(
+                context,
+                gc,
+                PhosphorIconsRegular.vibrate,
+                t.alarmStyleTitle,
+                [
+                  ('loud', t.alarmStyleLoud, PhosphorIconsRegular.bellRinging),
+                  ('quiet', t.alarmStyleQuiet, PhosphorIconsRegular.bellSimpleSlash),
+                  ('vibrate', t.alarmStyleVibrate, PhosphorIconsRegular.vibrate),
+                ],
+                () => fit.alarmStyle,
+                fit.setAlarmStyle,
+                hint: t.alarmStyleHint,
+              ),
+              if (!fit.alarmAllowed) ...[
+                const SizedBox(height: 14),
+                _alarmWarning(context, gc),
+              ],
+            ]),
+            const SizedBox(height: 18),
+            _group(gc, t.sectionHome, [
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleFocusCard,
+                child: _prefRow(gc, PhosphorIconsRegular.target, t.focusCard,
+                    TinySwitch(on: fit.showFocus)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleRecommended,
+                child: _prefRow(gc, PhosphorIconsRegular.sparkle, t.homeRecommended,
+                    TinySwitch(on: fit.showRecommended)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleGamification,
+                child: _prefRow(gc, PhosphorIconsRegular.medal, t.gamificationSetting,
+                    TinySwitch(on: fit.gamification)),
+              ),
+            ]),
             const SizedBox(height: 18),
             if (Platform.isAndroid || Platform.isIOS) ...[
-              _sectionLabel(gc, t.homeWidgets),
+              _sectionLabel(gc, t.sectionWidgets),
               const SizedBox(height: 8),
               _linkGroup(gc, [
                 (PhosphorIconsRegular.squaresFour, t.addActivityWidget, () => _addWidget(context, 'HeatmapWidgetProvider')),
@@ -279,11 +304,7 @@ class SettingsScreen extends StatelessWidget {
               ]),
               const SizedBox(height: 18),
             ],
-            _linkGroup(gc, [
-              (PhosphorIconsRegular.mapPin, t.placesLabel, fit.goPlaces),
-            ]),
-            const SizedBox(height: 18),
-            _sectionLabel(gc, t.data),
+            _sectionLabel(gc, t.sectionData),
             const SizedBox(height: 8),
             _linkGroup(gc, [
               (PhosphorIconsRegular.fileCsv, t.exportCsv, () => _exportCsv(context)),
@@ -311,6 +332,20 @@ class SettingsScreen extends StatelessWidget {
       ),
     );
   }
+
+  Widget _group(GymColors gc, String label, List<Widget> rows) => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _sectionLabel(gc, label),
+          const SizedBox(height: 8),
+          SoftCard(
+            radius: 20,
+            borderColor: Colors.transparent,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(children: rows),
+          ),
+        ],
+      );
 
   Widget _sectionLabel(GymColors gc, String t) =>
       Text(t.toUpperCase(),

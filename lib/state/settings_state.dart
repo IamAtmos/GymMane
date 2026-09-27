@@ -28,6 +28,7 @@ mixin SettingsState on FitCore, ToolsState, LibraryState {
   String bgPattern = 'dots';
   double bgDim = 0.55;
   bool showFocus = true;
+  bool showRecommended = true;
   bool autoAdvance = true;
   bool keepScreenOn = true;
   bool startCountdown = true;
@@ -335,6 +336,22 @@ mixin SettingsState on FitCore, ToolsState, LibraryState {
   void toggleFocusCard() {
     showFocus = !showFocus;
     _persist();
+    notifyListeners();
+  }
+
+  void toggleRecommended() {
+    showRecommended = !showRecommended;
+    _persist();
+    notifyListeners();
+  }
+
+  static const weekStarts = [DateTime.monday, DateTime.saturday, DateTime.sunday];
+
+  void setWeekStart(int weekday) {
+    if (!weekStarts.contains(weekday)) return;
+    weekStartDay = weekday;
+    _persist();
+    _refreshWidgets();
     notifyListeners();
   }
 

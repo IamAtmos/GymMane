@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
       child: SafeArea(
       bottom: false,
       child: SingleChildScrollView(
+        key: const PageStorageKey('home'),
         clipBehavior: Clip.none,
         padding: const EdgeInsets.fromLTRB(20, 14, 20, 116),
         child: Column(
@@ -35,8 +36,10 @@ class HomeScreen extends StatelessWidget {
           children: riseAll([
             _topBar(gc),
             const SizedBox(height: 20),
-            _hero(context, gc),
-            const SizedBox(height: 14),
+            if (fit.showFocus || fit.todayRoutine?.exerciseIds.isNotEmpty == true) ...[
+              _hero(context, gc),
+              const SizedBox(height: 14),
+            ],
             _weekCard(context, gc),
             if (fit.photoDue) ...[
               const SizedBox(height: 14),
@@ -57,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                 onTapDay: (i) => showDaySheet(context, fit.heatmapDate(i)),
               ),
             ),
-            if (recommended.isNotEmpty) ...[
+            if (fit.showRecommended && recommended.isNotEmpty) ...[
               const SizedBox(height: 30),
               _heading(gc, t.recommended, onMore: fit.goExercises),
               const SizedBox(height: 14),
@@ -173,8 +176,12 @@ class HomeScreen extends StatelessWidget {
     final isRoutine = routine != null && routine.exerciseIds.isNotEmpty;
     final label = isRoutine ? t.todaysRoutine : t.todaysFocus;
     final title = isRoutine ? fit.routineTitle(routine) : focus.title;
+    final today = fit.routinesOn(DateTime.now());
     final subtitle = isRoutine
-        ? t.exerciseCount(routine.exerciseIds.length)
+        ? [
+            t.exerciseCount(routine.exerciseIds.length),
+            if (today.length > 1) t.routineOfDay(today.indexOf(routine) + 1, today.length),
+          ].join(' · ')
         : (fit.hasData
             ? '${focus.subtitle} · ${t.exerciseCount(fit.getFilteredExercises(focus.muscles).length)}'
             : t.firstSessionHint);
@@ -280,7 +287,7 @@ class HomeScreen extends StatelessWidget {
         opacity: isFuture ? 0.5 : 1,
         child: Column(
           children: [
-            Text(t.weekdayInitial(i + 1),
+            Text(t.weekdayInitial(fit.weekdayAt(i)),
                 style: AppTheme.f(10,
                     weight: FontWeight.w700,
                     color: isToday ? gc.text : gc.textTertiary,
@@ -331,7 +338,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 GoalRing(pct: fit.goalPct.toDouble(), size: 44),
                 const SizedBox(height: 7),
-                Text('${fit.sessionsThisWeek}/${fit.weeklyTarget}',
+                Text('${fit.daysDoneThisWeek}/${fit.weeklyTarget}',
                     style: AppTheme.f(11, weight: FontWeight.w700, color: gc.textSecondary)),
               ],
             ),
@@ -342,12 +349,12 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _stat(GymColors gc, String label, String value, {String unit = ''}) {
-    return Column(
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(end: 8),
+      child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label.toUpperCase(),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+        FitText(label.toUpperCase(),
             style: AppTheme.f(9.5,
                 weight: FontWeight.w600, color: gc.textTertiary, letterSpacing: 0.9)),
         const SizedBox(height: 6),
@@ -370,6 +377,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ],
+      ),
     );
   }
 
