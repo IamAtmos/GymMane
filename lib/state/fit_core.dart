@@ -46,6 +46,8 @@ abstract class FitCore extends ChangeNotifier {
   final Set<String> checkins = {};
   final List<Routine> routines = [];
   final Map<int, String> weeklyPlan = {};
+  final Map<int, List<String>> planExtras = {};
+  bool multiPlan = false;
   final List<Exercise> customExercises = [];
   final List<GymPlace> places = [];
 
@@ -62,6 +64,10 @@ abstract class FitCore extends ChangeNotifier {
   final Set<String> repsOnlyOff = {};
 
   final Set<String> noSuggest = {};
+
+  final Set<String> archived = {};
+
+  final Map<String, Map<int, int>> videoMarks = {};
 
   final Map<String, String> modeOverride = {};
   VoidCallback? onWidgetsShouldUpdate;
@@ -81,6 +87,7 @@ abstract class FitCore extends ChangeNotifier {
   double? get placeBarKg => null;
 
   String units = 'kg';
+  int weekStartDay = DateTime.monday;
   bool _loading = false;
   Timer? _saveDebounce;
 

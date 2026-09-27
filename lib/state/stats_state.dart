@@ -3,7 +3,7 @@ part of 'fit_state.dart';
 mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
   List<Exercise> recommendedExercises(int n) {
     final muscles = suggestedFocus.muscles;
-    final pool = kExercises.where((e) => !noSuggest.contains(e.id));
+    final pool = kExercises.where((e) => !noSuggest.contains(e.id) && !isArchived(e.id) && fitsHere(e));
     final picks = [
       for (final m in muscles) ...pool.where((e) => e.primary == m).take(1),
     ];
@@ -35,14 +35,13 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     notifyListeners();
   }
 
-  int get todayIndex => DateTime.now().weekday - 1;
+  int get todayIndex => (DateTime.now().weekday - weekStartDay + 7) % 7;
+
+  int weekdayAt(int i) => (weekStartDay - 1 + i) % 7 + 1;
 
   DateTime get weekStartDate => _weekStart;
 
-  DateTime get _weekStart {
-    final t = _dayKey(DateTime.now());
-    return shiftDays(t, 1 - t.weekday);
-  }
+  DateTime get _weekStart => shiftDays(_dayKey(DateTime.now()), -todayIndex);
 
   Iterable<LoggedSession> get _thisWeekSessions {
     final start = _weekStart;
@@ -173,7 +172,13 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
   List<int> get heatmapLevels => heatmapLevelsFor(kHeatmapDays);
 
   List<int> heatmapLevelsFor(int days) {
-    final daily = _dailyVolumes(days);
+    final load = <DateTime, double>{for (final d in _checkinDays) d: 1};
+    for (final s in sessions) {
+      final k = _dayKey(s.date);
+      load[k] = (load[k] ?? 0) + math.max(1, s.setCount);
+    }
+    final today = _dayKey(DateTime.now());
+    final daily = List.generate(days, (i) => load[shiftDays(today, i - (days - 1))] ?? 0.0);
     final maxV = daily.fold(0.0, (m, v) => v > m ? v : m);
     if (maxV <= 0) return List.filled(days, 0);
     return daily.map((v) => heatLevel(v / maxV)).toList();
@@ -284,24 +289,29 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     );
   }
 
-  int get currentStreak {
-    final days = sessions.map((s) => _dayKey(s.date)).toSet();
+  Iterable<DateTime> get _checkinDays sync* {
     for (final id in checkins) {
       final p = id.split('-');
-      if (p.length == 3) {
-        final y = int.tryParse(p[0]), m = int.tryParse(p[1]), d = int.tryParse(p[2]);
-        if (y != null && m != null && d != null) days.add(DateTime(y, m, d));
-      }
+      if (p.length != 3) continue;
+      final y = int.tryParse(p[0]), m = int.tryParse(p[1]), d = int.tryParse(p[2]);
+      if (y != null && m != null && d != null) yield DateTime(y, m, d);
     }
+  }
+
+  int get currentStreak {
+    final days = {...sessions.map((s) => _dayKey(s.date)), ..._checkinDays};
     if (days.isEmpty) return 0;
+    final first = days.reduce((a, b) => a.isBefore(b) ? a : b);
+    bool rest(DateTime d) => weeklyPlan.isNotEmpty && !weeklyPlan.containsKey(d.weekday);
     var cursor = _dayKey(DateTime.now());
-    if (!days.contains(cursor)) {
-      cursor = shiftDays(cursor, -1);
-      if (!days.contains(cursor)) return 0;
-    }
+    if (!days.contains(cursor)) cursor = shiftDays(cursor, -1);
     var n = 0;
-    while (days.contains(cursor)) {
-      n++;
+    while (!cursor.isBefore(first)) {
+      if (days.contains(cursor)) {
+        n++;
+      } else if (!rest(cursor)) {
+        break;
+      }
       cursor = shiftDays(cursor, -1);
     }
     return n;
@@ -360,35 +370,60 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
 
   int get weeklyTarget => profile.weeklyGoal <= 0 ? 4 : profile.weeklyGoal;
 
-  int get goalPct => ((sessionsThisWeek / weeklyTarget) * 100).round().clamp(0, 100);
+  int get daysDoneThisWeek => [for (var i = 0; i < 7; i++) isDayDone(i)].where((d) => d).length;
 
-  List<({String id, String name, double topWeight, double oneRm})> get personalRecords {
-    final best = <String, ({String id, String name, double topWeight, double oneRm})>{};
-    for (final s in sessions) {
-      for (final e in s.exercises) {
-        for (final st in e.workingSets) {
-          final c = best[e.id];
-          best[e.id] = (
-            id: e.id,
-            name: e.name,
-            topWeight: c == null ? st.weight : math.max(c.topWeight, st.weight),
-            oneRm: c == null ? st.oneRm : math.max(c.oneRm, st.oneRm),
-          );
-        }
-      }
-    }
-    final list = best.values.toList()..sort((a, b) => b.oneRm.compareTo(a.oneRm));
-    return list;
+  int get goalPct => ((daysDoneThisWeek / weeklyTarget) * 100).round().clamp(0, 100);
+
+  PersonalRecord _record(String id, String name, List<LoggedSet> sets) {
+    double top(double Function(LoggedSet) f) => sets.fold(0.0, (m, s) => math.max(m, f(s)));
+    final kind = PrKind.values.firstWhere((k) => top(k.score) > 0, orElse: () => PrKind.reps);
+    return (id: id, name: name, kind: kind, best: top(kind.score), oneRm: top((s) => s.oneRm));
   }
 
+  List<PersonalRecord> get personalRecords {
+    final sets = <String, List<LoggedSet>>{};
+    final names = <String, String>{};
+    for (final s in sessions) {
+      for (final e in s.exercises) {
+        (sets[e.id] ??= []).addAll(e.workingSets);
+        names[e.id] = e.name;
+      }
+    }
+    return [
+      for (final e in sets.entries)
+        if (e.value.isNotEmpty) _record(e.key, names[e.key]!, e.value),
+    ]..sort((a, b) => a.kind != b.kind
+        ? a.kind.index.compareTo(b.kind.index)
+        : (a.kind == PrKind.weight ? b.oneRm.compareTo(a.oneRm) : b.best.compareTo(a.best)));
+  }
+
+  PersonalRecord? exerciseRecord(String id) {
+    final sets = [for (final h in exerciseHistory(id)) ...h.ex.workingSets];
+    return sets.isEmpty ? null : _record(id, '', sets);
+  }
+
+  String recordLabel(PersonalRecord r) => switch (r.kind) {
+        PrKind.weight => weightLabel(r.best),
+        PrKind.distance => distanceLabel(r.best),
+        PrKind.time => durationLabel(r.best.round()),
+        PrKind.reps => t.repCount(r.best.round()),
+      };
+
+  String recordDetail(PersonalRecord r) =>
+      r.kind == PrKind.weight ? t.oneRmEst(weightLabel(r.oneRm)) : t.prBestSet;
+
   int get prsThisWeek {
-    final bestOrm = <String, double>{};
+    final kinds = {for (final r in personalRecords) r.id: r.kind};
+    final bestScore = <String, double>{};
     final bestDate = <String, DateTime>{};
     for (final s in sessions) {
       for (final e in s.exercises) {
-        for (final st in e.sets) {
-          if (!bestOrm.containsKey(e.id) || st.oneRm > bestOrm[e.id]!) {
-            bestOrm[e.id] = st.oneRm;
+        final kind = kinds[e.id];
+        if (kind == null) continue;
+        for (final st in e.workingSets) {
+          final score = kind == PrKind.weight ? st.oneRm : kind.score(st);
+          if (score > (bestScore[e.id] ?? 0)) {
+            bestScore[e.id] = score;
             bestDate[e.id] = s.date;
           }
         }
@@ -626,17 +661,6 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     return '${weightValue(s.weight)}×${s.reps}';
   }
 
-  ({double topWeight, double oneRm})? exercisePr(String id) {
-    final h = exerciseHistory(id);
-    if (h.isEmpty) return null;
-    double tw = 0, orm = 0;
-    for (final r in h) {
-      tw = math.max(tw, r.ex.topWeight);
-      orm = math.max(orm, r.ex.bestOneRm);
-    }
-    return (topWeight: tw, oneRm: orm);
-  }
-
   String? strengthExerciseId;
 
   List<({String id, String name, int sessions})> get trackedExercises {
@@ -644,6 +668,7 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     final names = <String, String>{};
     for (final s in sessions) {
       for (final e in s.exercises) {
+        if (e.topWeight <= 0) continue;
         count[e.id] = (count[e.id] ?? 0) + 1;
         names[e.id] = e.name;
       }

@@ -52,6 +52,22 @@ class LoggedSet {
       );
 }
 
+enum PrKind {
+  weight,
+  distance,
+  time,
+  reps;
+
+  double score(LoggedSet s) => switch (this) {
+        PrKind.weight => s.weight,
+        PrKind.distance => s.km ?? 0,
+        PrKind.time => (s.sec ?? 0).toDouble(),
+        PrKind.reps => s.reps.toDouble(),
+      };
+}
+
+typedef PersonalRecord = ({String id, String name, PrKind kind, double best, double oneRm});
+
 class LoggedExercise {
   LoggedExercise(this.id, this.name, this.primary, this.sets);
   final String id;

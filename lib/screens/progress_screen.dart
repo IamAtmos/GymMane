@@ -120,9 +120,7 @@ class ProgressScreen extends StatelessWidget {
         children: [
           Row(children: [
             Expanded(
-              child: Text(label.toUpperCase(),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+              child: FitText(label.toUpperCase(),
                   style: AppTheme.f(10,
                       weight: FontWeight.w600, color: gc.textTertiary, letterSpacing: 0.9)),
             ),
@@ -268,7 +266,7 @@ class ProgressScreen extends StatelessWidget {
             Text(t.streakDays(fit.currentStreak),
                 style: AppTheme.f(12.5, weight: FontWeight.w600, color: gc.text)),
             const Spacer(),
-            Text(t.weekOfGoal(fit.sessionsThisWeek, fit.weeklyTarget),
+            Text(t.weekOfGoal(fit.daysDoneThisWeek, fit.weeklyTarget),
                 style: AppTheme.f(12, weight: FontWeight.w500, color: gc.textTertiary)),
           ]),
         ],
@@ -364,7 +362,7 @@ class ProgressScreen extends StatelessWidget {
               for (var i = 0; i < 7; i++) ...[
                 Expanded(
                   child: Text(
-                    t.weekdayInitial((t.firstWeekday - 1 + i) % 7 + 1),
+                    t.weekdayInitial(fit.weekdayAt(i)),
                     textAlign: TextAlign.center,
                     style: AppTheme.f(11,
                         weight: i == todayIndex ? FontWeight.w700 : FontWeight.w500,
@@ -453,7 +451,7 @@ class ProgressScreen extends StatelessWidget {
     GymColors gc,
     List<double> bw,
     List<({String name, int pct})> split,
-    List<({String id, String name, double topWeight, double oneRm})> prs,
+    List<PersonalRecord> prs,
   ) {
     return [
       if (fit.sessions.isNotEmpty) _thisWeek(gc),
@@ -1136,7 +1134,7 @@ class _PrThumb extends StatelessWidget {
 class _PrCard extends StatefulWidget {
   const _PrCard(this.prs);
 
-  final List<({String id, String name, double topWeight, double oneRm})> prs;
+  final List<PersonalRecord> prs;
 
   @override
   State<_PrCard> createState() => _PrCardState();
@@ -1205,7 +1203,7 @@ class _PrCardState extends State<_PrCard> {
     );
   }
 
-  Widget _row(GymColors gc, ({String id, String name, double topWeight, double oneRm}) pr, int rank, bool border) {
+  Widget _row(GymColors gc, PersonalRecord pr, int rank, bool border) {
     final medal = rank < 3 ? [gc.brass, gc.textSecondary, gc.accent][rank] : null;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 11),
@@ -1246,13 +1244,13 @@ class _PrCardState extends State<_PrCard> {
                     overflow: TextOverflow.ellipsis,
                     style: AppTheme.s(14, weight: FontWeight.w600, color: gc.text, height: 1.25)),
                 const SizedBox(height: 3),
-                Text(t.oneRmEst(fit.weightLabel(pr.oneRm)),
+                Text(fit.recordDetail(pr),
                     style: AppTheme.s(11.5, weight: FontWeight.w500, color: gc.textTertiary)),
               ],
             ),
           ),
           const SizedBox(width: 12),
-          Text(fit.weightLabel(pr.topWeight), style: AppTheme.d(19, weight: FontWeight.w800, color: gc.text)),
+          Text(fit.recordLabel(pr), style: AppTheme.d(19, weight: FontWeight.w800, color: gc.text)),
         ],
       ),
     );
