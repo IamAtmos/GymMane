@@ -15,9 +15,11 @@ class TodayWidgetProvider : DayWidgetProvider() {
     ) {
         val now = Calendar.getInstance()
         val saved = widgetData.getString("today_stamp", null)
+        val week = widgetData.getString("today_week", null).orEmpty()
         val key = when {
             saved == null || saved == dayStamp(now) -> "today_img"
-            widgetData.getString("today_week", null)?.getOrNull(weekdayIndex(now)) == '1' -> "today_plan_img"
+            week.getOrNull(weekdayIndex(now)) == '1' -> "today_plan_img"
+            '1' in week -> "today_rest_img"
             else -> "today_idle_img"
         }
         val shown = if (widgetData.getString(key, null) == null) "today_img" else key

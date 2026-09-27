@@ -19,6 +19,7 @@ class HomeWidgetBridge {
   static const todayKey = 'today_img';
   static const todayIdleKey = 'today_idle_img';
   static const todayPlanKey = 'today_plan_img';
+  static const todayRestKey = 'today_rest_img';
   static const weekKey = 'week_img';
   static const weekFreshKey = 'week_fresh_img';
   static const darkKey = 'widget_dark';
@@ -47,6 +48,8 @@ class HomeWidgetBridge {
       final week = [for (var i = 0; i < 7; i++) fit.isDayDone(i)];
       final levels = fit.heatmapLevelsFor(182);
       final heat = fit.muscleHeatOver(bodyDays);
+      final plannedToday = fit.todayRoutine != null;
+      final hasPlan = fit.weeklyPlan.isNotEmpty;
 
       final views = <(String, Size, Widget Function(GymColors))>[
         (
@@ -66,7 +69,7 @@ class HomeWidgetBridge {
           (gc) => StatsWidgetView(
                 gc: gc,
                 streak: fit.currentStreak,
-                sessionsThisWeek: fit.sessionsThisWeek,
+                sessionsThisWeek: fit.daysDoneThisWeek,
                 goalPct: fit.goalPct,
                 size: statsSize,
                 framed: framed,
@@ -88,21 +91,27 @@ class HomeWidgetBridge {
           todaySize,
           (gc) => TodayWidgetView(
                 gc: gc,
-                done: fit.isDayDone(fit.todayIndex),
-                planned: fit.todayRoutine != null,
+                done: fit.todayPlanDone,
+                planned: plannedToday,
+                rest: !plannedToday && hasPlan,
                 streak: fit.currentStreak,
                 size: todaySize,
                 framed: framed,
               ),
         ),
-        for (final planned in [false, true])
+        for (final (key, planned, rest) in [
+          (todayIdleKey, false, false),
+          (todayPlanKey, true, false),
+          (todayRestKey, false, true),
+        ])
           (
-            planned ? todayPlanKey : todayIdleKey,
+            key,
             todaySize,
             (gc) => TodayWidgetView(
                   gc: gc,
                   done: false,
                   planned: planned,
+                  rest: rest,
                   streak: 0,
                   size: todaySize,
                   framed: framed,
@@ -141,6 +150,7 @@ class HomeWidgetBridge {
       ];
       await HomeWidget.saveWidgetData<String>('today_week', plan.join());
       await HomeWidget.saveWidgetData<String>('week_start', _stamp(fit.weekStartDate));
+      await HomeWidget.saveWidgetData<String>('week_first', '${fit.weekStartDay}');
       await HomeWidget.saveWidgetData<String>('week_done', [for (final d in week) d ? '1' : '0'].join());
       await HomeWidget.saveWidgetData<String>(
           'week_geo', WeekWidgetView.geometry(weekSize, framed: framed).map((v) => v.toStringAsFixed(5)).join(','));
