@@ -202,7 +202,8 @@ GymMane 免费，并且会一直免费。点个 Star、帮忙翻译或提交一�
 
 ## 许可证
 
-代码采用 [GPL-3.0](../../LICENSE)。动作插图来自 Bryl Lim 的
+代码采用 [GPL-3.0](../../LICENSE)，并附有其第 7(b) 条规定的一项[附加条款](../../ADDITIONAL_TERMS.md)：
+基于 GymMane 的作品须注明 "Based on GymMane by InlitX"。动作插图来自 Bryl Lim 的
 [Workout Guide](https://github.com/bryllim/workout-guide)，基于
 [Everkinetic](https://github.com/everkinetic/data)，采用
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可。字体使用 SIL Open

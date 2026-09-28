@@ -208,7 +208,9 @@ report helps a lot. If you want to buy me a coffee:
 
 ## License
 
-The code is [GPL-3.0](LICENSE). The exercise art comes from
+The code is [GPL-3.0](LICENSE), with one [additional term](ADDITIONAL_TERMS.md)
+under its section 7(b): works based on GymMane must credit it as "Based on
+GymMane by InlitX". The exercise art comes from
 [Workout Guide](https://github.com/bryllim/workout-guide) by Bryl Lim, based on
 [Everkinetic](https://github.com/everkinetic/data), and is
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The fonts use

@@ -208,7 +208,9 @@ reporte de fallo ayudan mucho. Si quieres invitarme a un café:
 
 ## Licencia
 
-El código es [GPL-3.0](../../LICENSE). El arte de los ejercicios viene de
+El código es [GPL-3.0](../../LICENSE), con un [término adicional](../../ADDITIONAL_TERMS.md)
+de su sección 7(b): las obras basadas en GymMane deben indicar "Based on
+GymMane by InlitX". El arte de los ejercicios viene de
 [Workout Guide](https://github.com/bryllim/workout-guide) de Bryl Lim, basado en
 [Everkinetic](https://github.com/everkinetic/data), y es
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Las fuentes usan la SIL Open

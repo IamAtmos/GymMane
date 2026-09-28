@@ -213,7 +213,9 @@ segnalazione di bug aiutano molto. Se vuoi offrirmi un caffè:
 
 ## Licenza
 
-Il codice è [GPL-3.0](../../LICENSE). Le illustrazioni degli esercizi vengono
+Il codice è [GPL-3.0](../../LICENSE), con un [termine aggiuntivo](../../ADDITIONAL_TERMS.md)
+secondo la sua sezione 7(b): le opere basate su GymMane devono indicare "Based on
+GymMane by InlitX". Le illustrazioni degli esercizi vengono
 da [Workout Guide](https://github.com/bryllim/workout-guide) di Bryl Lim, basato su
 [Everkinetic](https://github.com/everkinetic/data), e sono
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). I font usano la SIL Open
