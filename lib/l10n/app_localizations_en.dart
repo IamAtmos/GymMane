@@ -1438,7 +1438,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get activityLevel => 'ACTIVITY LEVEL';
 
   @override
-  String get barWeight => 'Bar or sled weight';
+  String get barWeight => 'BAR WEIGHT';
 
   @override
   String get perSide => 'PER SIDE';
@@ -3163,6 +3163,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Finish set now';
+
+  @override
+  String get barWeightExercise => 'Bar or sled weight';
 
   @override
   String get barWeightHint => 'Used by the plate calculator';

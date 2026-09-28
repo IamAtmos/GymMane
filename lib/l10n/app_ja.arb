@@ -1211,7 +1211,7 @@
   "tapToPause": "タップで一時停止",
   "holdPausedHint": "一時停止中 · タップで再開",
   "finishHoldNow": "今すぐセットを終える",
-  "barWeight": "バーまたはスレッドの重さ",
+  "barWeightExercise": "バーまたはスレッドの重さ",
   "barWeightHint": "プレート計算に使われます",
   "barWeightCustom": "自分で設定 · タップでリセット"
 }

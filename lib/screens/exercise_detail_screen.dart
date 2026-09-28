@@ -697,7 +697,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(titleCase(t.barWeight), style: AppTheme.f(14.5, weight: FontWeight.w500, color: gc.text)),
+                Text(titleCase(t.barWeightExercise), style: AppTheme.f(14.5, weight: FontWeight.w500, color: gc.text)),
                 const SizedBox(height: 3),
                 GestureDetector(
                   behavior: HitTestBehavior.opaque,
@@ -719,7 +719,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
             onDec: () => fit.setExerciseBar(ex.id, bar - step),
             onInc: () => fit.setExerciseBar(ex.id, bar + step),
             onEdit: () async {
-              final v = await askNumber(context, title: t.barWeight, initial: fmt(bar), decimal: true);
+              final v = await askNumber(context, title: t.barWeightExercise, initial: fmt(bar), decimal: true);
               if (v != null) fit.setExerciseBar(ex.id, v);
             },
           ),

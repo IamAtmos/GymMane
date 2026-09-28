@@ -1078,7 +1078,7 @@
   "tapToPause": "Tippen zum Pausieren",
   "holdPausedHint": "Pausiert · tippen zum Fortsetzen",
   "finishHoldNow": "Satz jetzt beenden",
-  "barWeight": "Gewicht von Stange oder Schlitten",
+  "barWeightExercise": "Gewicht von Stange oder Schlitten",
   "barWeightHint": "Wird vom Scheibenrechner genutzt",
   "barWeightCustom": "Eigenes · tippen zum Zurücksetzen"
 }

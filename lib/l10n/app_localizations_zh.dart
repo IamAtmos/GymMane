@@ -1373,7 +1373,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get activityLevel => '日常活动水平';
 
   @override
-  String get barWeight => '杠铃杆或滑车重量';
+  String get barWeight => '杠铃杆重';
 
   @override
   String get perSide => '单侧配重';
@@ -3036,6 +3036,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get finishHoldNow => '现在完成这组';
 
   @override
+  String get barWeightExercise => '杠铃杆或滑车重量';
+
+  @override
   String get barWeightHint => '杠铃片计算器会用到';
 
   @override
@@ -4411,7 +4414,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get activityLevel => '活動等級';
 
   @override
-  String get barWeight => '槓鈴桿或滑車重量';
+  String get barWeight => '槓鈴重量';
 
   @override
   String get perSide => '每側';
@@ -6095,6 +6098,9 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get finishHoldNow => '現在完成這組';
+
+  @override
+  String get barWeightExercise => '槓鈴桿或滑車重量';
 
   @override
   String get barWeightHint => '槓片計算器會用到';

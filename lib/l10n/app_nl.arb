@@ -1211,7 +1211,7 @@
   "tapToPause": "Tik om te pauzeren",
   "holdPausedHint": "Gepauzeerd · tik om verder te gaan",
   "finishHoldNow": "Set nu afronden",
-  "barWeight": "Gewicht van stang of slede",
+  "barWeightExercise": "Gewicht van stang of slede",
   "barWeightHint": "Gebruikt door de schijvencalculator",
   "barWeightCustom": "Eigen · tik om te wissen"
 }

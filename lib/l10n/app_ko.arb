@@ -1211,7 +1211,7 @@
   "tapToPause": "탭하면 일시정지",
   "holdPausedHint": "일시정지됨 · 탭하면 계속",
   "finishHoldNow": "지금 세트 끝내기",
-  "barWeight": "바 또는 슬레드 무게",
+  "barWeightExercise": "바 또는 슬레드 무게",
   "barWeightHint": "원판 계산기에 사용돼요",
   "barWeightCustom": "직접 설정 · 탭하면 초기화"
 }

@@ -1401,7 +1401,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get activityLevel => '활동 수준';
 
   @override
-  String get barWeight => '바 또는 슬레드 무게';
+  String get barWeight => '바 무게';
 
   @override
   String get perSide => '한쪽당';
@@ -3090,6 +3090,9 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get finishHoldNow => '지금 세트 끝내기';
+
+  @override
+  String get barWeightExercise => '바 또는 슬레드 무게';
 
   @override
   String get barWeightHint => '원판 계산기에 사용돼요';

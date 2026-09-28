@@ -1430,7 +1430,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get activityLevel => 'مستوى النشاط';
 
   @override
-  String get barWeight => 'وزن البار أو المزلجة';
+  String get barWeight => 'وزن البار';
 
   @override
   String get perSide => 'لكل جانب';
@@ -3165,6 +3165,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'أنهِ المجموعة الآن';
+
+  @override
+  String get barWeightExercise => 'وزن البار أو المزلجة';
 
   @override
   String get barWeightHint => 'تستخدمه حاسبة الأقراص';

@@ -1444,7 +1444,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get activityLevel => 'AKTIVITÄTSSTUFE';
 
   @override
-  String get barWeight => 'Gewicht von Stange oder Schlitten';
+  String get barWeight => 'STANGENGEWICHT';
 
   @override
   String get perSide => 'PRO SEITE';
@@ -3183,6 +3183,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Satz jetzt beenden';
+
+  @override
+  String get barWeightExercise => 'Gewicht von Stange oder Schlitten';
 
   @override
   String get barWeightHint => 'Wird vom Scheibenrechner genutzt';

@@ -1211,7 +1211,7 @@
   "tapToPause": "Touche pour mettre en pause",
   "holdPausedHint": "En pause · touche pour reprendre",
   "finishHoldNow": "Finir la série maintenant",
-  "barWeight": "Poids de la barre ou du chariot",
+  "barWeightExercise": "Poids de la barre ou du chariot",
   "barWeightHint": "Utilisé par le calculateur de disques",
   "barWeightCustom": "Personnalisé · touche pour réinitialiser"
 }

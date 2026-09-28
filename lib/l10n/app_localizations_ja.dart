@@ -1388,7 +1388,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get activityLevel => '活動レベル';
 
   @override
-  String get barWeight => 'バーまたはスレッドの重さ';
+  String get barWeight => 'バー重量';
 
   @override
   String get perSide => '片側';
@@ -3074,6 +3074,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get finishHoldNow => '今すぐセットを終える';
+
+  @override
+  String get barWeightExercise => 'バーまたはスレッドの重さ';
 
   @override
   String get barWeightHint => 'プレート計算に使われます';

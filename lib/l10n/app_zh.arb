@@ -971,7 +971,7 @@
   "tapToPause": "点按暂停",
   "holdPausedHint": "已暂停 · 点按继续",
   "finishHoldNow": "现在完成这组",
-  "barWeight": "杠铃杆或滑车重量",
+  "barWeightExercise": "杠铃杆或滑车重量",
   "barWeightHint": "杠铃片计算器会用到",
   "barWeightCustom": "自定义 · 点按重置"
 }

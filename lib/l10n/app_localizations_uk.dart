@@ -1438,7 +1438,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get activityLevel => 'РІВЕНЬ АКТИВНОСТІ';
 
   @override
-  String get barWeight => 'Вага грифа чи платформи';
+  String get barWeight => 'ВАГА ГРИФА';
 
   @override
   String get perSide => 'НА СТОРОНУ';
@@ -3180,6 +3180,9 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Завершити підхід зараз';
+
+  @override
+  String get barWeightExercise => 'Вага грифа чи платформи';
 
   @override
   String get barWeightHint => 'Використовує калькулятор млинців';

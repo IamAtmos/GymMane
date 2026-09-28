@@ -1099,7 +1099,7 @@
   "tapToPause": "Tap to pause",
   "holdPausedHint": "Paused · tap to resume",
   "finishHoldNow": "Finish set now",
-  "barWeight": "Bar or sled weight",
+  "barWeightExercise": "Bar or sled weight",
   "barWeightHint": "Used by the plate calculator",
   "barWeightCustom": "Your own · tap to reset"
 }

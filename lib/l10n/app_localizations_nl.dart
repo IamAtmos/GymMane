@@ -1441,7 +1441,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get activityLevel => 'ACTIVITEITSNIVEAU';
 
   @override
-  String get barWeight => 'Gewicht van stang of slede';
+  String get barWeight => 'STANGGEWICHT';
 
   @override
   String get perSide => 'PER KANT';
@@ -3176,6 +3176,9 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Set nu afronden';
+
+  @override
+  String get barWeightExercise => 'Gewicht van stang of slede';
 
   @override
   String get barWeightHint => 'Gebruikt door de schijvencalculator';

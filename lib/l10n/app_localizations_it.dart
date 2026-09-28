@@ -1438,7 +1438,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get activityLevel => 'LIVELLO DI ATTIVITÀ';
 
   @override
-  String get barWeight => 'Peso del bilanciere o della slitta';
+  String get barWeight => 'PESO DEL BILANCIERE';
 
   @override
   String get perSide => 'PER LATO';
@@ -3171,6 +3171,9 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Chiudi la serie ora';
+
+  @override
+  String get barWeightExercise => 'Peso del bilanciere o della slitta';
 
   @override
   String get barWeightHint => 'Usato dal calcolatore dei dischi';

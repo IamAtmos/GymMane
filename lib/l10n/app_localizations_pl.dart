@@ -1439,7 +1439,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get activityLevel => 'POZIOM AKTYWNOŚCI';
 
   @override
-  String get barWeight => 'Waga sztangi lub sanek';
+  String get barWeight => 'WAGA GRYFU';
 
   @override
   String get perSide => 'NA STRONĘ';
@@ -3174,6 +3174,9 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Zakończ serię teraz';
+
+  @override
+  String get barWeightExercise => 'Waga sztangi lub sanek';
 
   @override
   String get barWeightHint => 'Używana przez kalkulator talerzy';

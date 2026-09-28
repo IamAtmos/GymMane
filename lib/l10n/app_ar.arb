@@ -1211,7 +1211,7 @@
   "tapToPause": "اضغط للإيقاف المؤقت",
   "holdPausedHint": "متوقف مؤقتًا · اضغط للمتابعة",
   "finishHoldNow": "أنهِ المجموعة الآن",
-  "barWeight": "وزن البار أو المزلجة",
+  "barWeightExercise": "وزن البار أو المزلجة",
   "barWeightHint": "تستخدمه حاسبة الأقراص",
   "barWeightCustom": "مخصص · اضغط لإعادة الضبط"
 }

@@ -1058,7 +1058,7 @@
   "tapToPause": "Tocca per mettere in pausa",
   "holdPausedHint": "In pausa · tocca per riprendere",
   "finishHoldNow": "Chiudi la serie ora",
-  "barWeight": "Peso del bilanciere o della slitta",
+  "barWeightExercise": "Peso del bilanciere o della slitta",
   "barWeightHint": "Usato dal calcolatore dei dischi",
   "barWeightCustom": "Personalizzato · tocca per azzerare"
 }

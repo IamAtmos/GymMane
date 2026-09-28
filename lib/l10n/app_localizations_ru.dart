@@ -1486,7 +1486,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get activityLevel => 'УРОВЕНЬ АКТИВНОСТИ';
 
   @override
-  String get barWeight => 'Вес грифа или платформы';
+  String get barWeight => 'ВЕС ГРИФА';
 
   @override
   String get perSide => 'НА СТОРОНУ';
@@ -3263,6 +3263,9 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Завершить подход сейчас';
+
+  @override
+  String get barWeightExercise => 'Вес грифа или платформы';
 
   @override
   String get barWeightHint => 'Используется калькулятором блинов';

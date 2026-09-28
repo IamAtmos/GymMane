@@ -9,6 +9,7 @@ import 'app_localizations_ar.dart';
 import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
+import 'app_localizations_fa.dart';
 import 'app_localizations_fr.dart';
 import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
@@ -108,6 +109,7 @@ abstract class AppLocalizations {
     Locale('de'),
     Locale('en'),
     Locale('es'),
+    Locale('fa'),
     Locale('fr'),
     Locale('it'),
     Locale('ja'),
@@ -2579,7 +2581,7 @@ abstract class AppLocalizations {
   /// No description provided for @barWeight.
   ///
   /// In en, this message translates to:
-  /// **'Bar or sled weight'**
+  /// **'BAR WEIGHT'**
   String get barWeight;
 
   /// No description provided for @perSide.
@@ -5660,6 +5662,12 @@ abstract class AppLocalizations {
   /// **'Finish set now'**
   String get finishHoldNow;
 
+  /// No description provided for @barWeightExercise.
+  ///
+  /// In en, this message translates to:
+  /// **'Bar or sled weight'**
+  String get barWeightExercise;
+
   /// No description provided for @barWeightHint.
   ///
   /// In en, this message translates to:
@@ -5687,6 +5695,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
     'de',
     'en',
     'es',
+    'fa',
     'fr',
     'it',
     'ja',
@@ -5727,6 +5736,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsEn();
     case 'es':
       return AppLocalizationsEs();
+    case 'fa':
+      return AppLocalizationsFa();
     case 'fr':
       return AppLocalizationsFr();
     case 'it':

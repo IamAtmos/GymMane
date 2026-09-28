@@ -1211,7 +1211,7 @@
   "tapToPause": "點按暫停",
   "holdPausedHint": "已暫停 · 點按繼續",
   "finishHoldNow": "現在完成這組",
-  "barWeight": "槓鈴桿或滑車重量",
+  "barWeightExercise": "槓鈴桿或滑車重量",
   "barWeightHint": "槓片計算器會用到",
   "barWeightCustom": "自訂 · 點按重設"
 }

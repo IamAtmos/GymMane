@@ -1211,7 +1211,7 @@
   "tapToPause": "Dotknij, aby wstrzymać",
   "holdPausedHint": "Wstrzymane · dotknij, aby wznowić",
   "finishHoldNow": "Zakończ serię teraz",
-  "barWeight": "Waga sztangi lub sanek",
+  "barWeightExercise": "Waga sztangi lub sanek",
   "barWeightHint": "Używana przez kalkulator talerzy",
   "barWeightCustom": "Własna · dotknij, aby przywrócić"
 }

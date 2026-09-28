@@ -1437,7 +1437,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get activityLevel => 'NIVEL DE ACTIVIDAD';
 
   @override
-  String get barWeight => 'Peso de la barra o carro';
+  String get barWeight => 'PESO DE LA BARRA';
 
   @override
   String get perSide => 'POR LADO';
@@ -3165,6 +3165,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get finishHoldNow => 'Terminar la serie ya';
+
+  @override
+  String get barWeightExercise => 'Peso de la barra o carro';
 
   @override
   String get barWeightHint => 'Lo usa la calculadora de discos';

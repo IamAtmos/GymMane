@@ -1018,7 +1018,7 @@
   "tapToPause": "Toca para pausar",
   "holdPausedHint": "En pausa · toca para seguir",
   "finishHoldNow": "Terminar la serie ya",
-  "barWeight": "Peso de la barra o carro",
+  "barWeightExercise": "Peso de la barra o carro",
   "barWeightHint": "Lo usa la calculadora de discos",
   "barWeightCustom": "Propio · toca para quitarlo"
 }
