@@ -1213,5 +1213,10 @@
   "finishHoldNow": "Seti şimdi bitir",
   "barWeightExercise": "Bar ya da kızak ağırlığı",
   "barWeightHint": "Plaka hesaplayıcı bunu kullanır",
-  "barWeightCustom": "Kendi değerin · sıfırlamak için dokun"
+  "barWeightCustom": "Kendi değerin · sıfırlamak için dokun",
+  "groupRename": "Grubu yeniden adlandır",
+  "groupUngroup": "Grubu kaldır, rutinleri koru",
+  "groupDeleteAll": "Grubu ve rutinleri sil",
+  "groupDeleteTitle": "“{name}” silinsin mi?",
+  "groupDeleteBody": "{count} silinecek. Antrenman geçmişin korunur."
 }

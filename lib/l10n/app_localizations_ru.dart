@@ -3272,4 +3272,23 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Свой · нажмите, чтобы сбросить';
+
+  @override
+  String get groupRename => 'Переименовать группу';
+
+  @override
+  String get groupUngroup => 'Убрать группу, оставить программы';
+
+  @override
+  String get groupDeleteAll => 'Удалить группу и программы';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return 'Удалить «$name»?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return 'Будут удалены: $count. История тренировок сохранится.';
+  }
 }

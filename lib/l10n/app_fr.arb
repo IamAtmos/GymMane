@@ -1213,5 +1213,10 @@
   "finishHoldNow": "Finir la série maintenant",
   "barWeightExercise": "Poids de la barre ou du chariot",
   "barWeightHint": "Utilisé par le calculateur de disques",
-  "barWeightCustom": "Personnalisé · touche pour réinitialiser"
+  "barWeightCustom": "Personnalisé · touche pour réinitialiser",
+  "groupRename": "Renommer le groupe",
+  "groupUngroup": "Retirer le groupe, garder les routines",
+  "groupDeleteAll": "Supprimer le groupe et ses routines",
+  "groupDeleteTitle": "Supprimer « {name} » ?",
+  "groupDeleteBody": "{count} seront supprimées. Ton historique d’entraînement est conservé."
 }

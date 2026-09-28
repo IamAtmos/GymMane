@@ -3083,4 +3083,23 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get barWeightCustom => '自分で設定 · タップでリセット';
+
+  @override
+  String get groupRename => 'グループ名を変更';
+
+  @override
+  String get groupUngroup => 'グループを解除(ルーティンは残す)';
+
+  @override
+  String get groupDeleteAll => 'グループとルーティンを削除';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '「$name」を削除しますか?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$countが削除されます。トレーニング履歴は残ります。';
+  }
 }

@@ -3177,4 +3177,23 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Próprio · toca para repor';
+
+  @override
+  String get groupRename => 'Renomear grupo';
+
+  @override
+  String get groupUngroup => 'Remover grupo, manter rotinas';
+
+  @override
+  String get groupDeleteAll => 'Excluir grupo e rotinas';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return 'Excluir “$name”?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count serão excluídas. Seu histórico de treinos é mantido.';
+  }
 }

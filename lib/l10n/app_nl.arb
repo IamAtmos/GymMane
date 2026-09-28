@@ -1213,5 +1213,10 @@
   "finishHoldNow": "Set nu afronden",
   "barWeightExercise": "Gewicht van stang of slede",
   "barWeightHint": "Gebruikt door de schijvencalculator",
-  "barWeightCustom": "Eigen · tik om te wissen"
+  "barWeightCustom": "Eigen · tik om te wissen",
+  "groupRename": "Groep hernoemen",
+  "groupUngroup": "Groep opheffen, routines houden",
+  "groupDeleteAll": "Groep en routines verwijderen",
+  "groupDeleteTitle": "“{name}” verwijderen?",
+  "groupDeleteBody": "{count} worden verwijderd. Je trainingsgeschiedenis blijft bewaard."
 }

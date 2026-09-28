@@ -585,7 +585,7 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
                   child: Row(children: [
                     Flexible(
                       child: Text(exerciseName(ex),
-                          maxLines: 1,
+                          maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: AppTheme.f(14, weight: FontWeight.w600, color: gc.text)),
                     ),

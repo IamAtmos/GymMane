@@ -1213,5 +1213,10 @@
   "finishHoldNow": "Завершити підхід зараз",
   "barWeightExercise": "Вага грифа чи платформи",
   "barWeightHint": "Використовує калькулятор млинців",
-  "barWeightCustom": "Власна · торкніться, щоб скинути"
+  "barWeightCustom": "Власна · торкніться, щоб скинути",
+  "groupRename": "Перейменувати групу",
+  "groupUngroup": "Прибрати групу, залишити програми",
+  "groupDeleteAll": "Видалити групу й програми",
+  "groupDeleteTitle": "Видалити «{name}»?",
+  "groupDeleteBody": "Буде видалено: {count}. Історія тренувань збережеться."
 }

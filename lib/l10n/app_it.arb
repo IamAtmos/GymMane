@@ -1060,5 +1060,10 @@
   "finishHoldNow": "Chiudi la serie ora",
   "barWeightExercise": "Peso del bilanciere o della slitta",
   "barWeightHint": "Usato dal calcolatore dei dischi",
-  "barWeightCustom": "Personalizzato · tocca per azzerare"
+  "barWeightCustom": "Personalizzato · tocca per azzerare",
+  "groupRename": "Rinomina gruppo",
+  "groupUngroup": "Togli il gruppo, tieni le routine",
+  "groupDeleteAll": "Elimina gruppo e routine",
+  "groupDeleteTitle": "Eliminare «{name}»?",
+  "groupDeleteBody": "Verranno eliminate {count}. Lo storico degli allenamenti resta."
 }

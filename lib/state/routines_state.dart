@@ -142,7 +142,30 @@ mixin RoutinesState on FitCore, LibraryState {
     return copy;
   }
 
+  void renameGroup(String from, String to) {
+    final name = to.trim();
+    for (final r in routines) {
+      if (r.group == from) r.group = name;
+    }
+    _persist();
+    notifyListeners();
+  }
+
+  void deleteGroup(String group) {
+    for (final id in [for (final r in routinesInGroup(group)) r.id]) {
+      _dropRoutine(id);
+    }
+    _persist();
+    notifyListeners();
+  }
+
   void deleteRoutine(String id) {
+    _dropRoutine(id);
+    _persist();
+    notifyListeners();
+  }
+
+  void _dropRoutine(String id) {
     routines.removeWhere((r) => r.id == id);
     weeklyPlan.removeWhere((_, v) => v == id);
     for (final extras in planExtras.values) {
@@ -156,8 +179,6 @@ mixin RoutinesState on FitCore, LibraryState {
       if (extras.isEmpty) planExtras.remove(day);
     }
     if (activeRoutineId == id) activeRoutineId = null;
-    _persist();
-    notifyListeners();
   }
 
   void toggleRoutineExercise(String routineId, String exId) {

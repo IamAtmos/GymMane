@@ -1101,5 +1101,12 @@
   "finishHoldNow": "Finish set now",
   "barWeightExercise": "Bar or sled weight",
   "barWeightHint": "Used by the plate calculator",
-  "barWeightCustom": "Your own · tap to reset"
+  "barWeightCustom": "Your own · tap to reset",
+  "groupRename": "Rename group",
+  "groupUngroup": "Remove group, keep routines",
+  "groupDeleteAll": "Delete group and routines",
+  "groupDeleteTitle": "Delete “{name}”?",
+  "@groupDeleteTitle": {"placeholders": {"name": {"type": "String"}}},
+  "groupDeleteBody": "{count} will be deleted. Your workout history is kept.",
+  "@groupDeleteBody": {"placeholders": {"count": {"type": "String"}}}
 }

@@ -973,5 +973,10 @@
   "finishHoldNow": "Terminar a série já",
   "barWeightExercise": "Peso da barra ou do carro",
   "barWeightHint": "Usado pela calculadora de discos",
-  "barWeightCustom": "Próprio · toca para repor"
+  "barWeightCustom": "Próprio · toca para repor",
+  "groupRename": "Renomear grupo",
+  "groupUngroup": "Remover grupo, manter rotinas",
+  "groupDeleteAll": "Excluir grupo e rotinas",
+  "groupDeleteTitle": "Excluir “{name}”?",
+  "groupDeleteBody": "{count} serão excluídas. Seu histórico de treinos é mantido."
 }

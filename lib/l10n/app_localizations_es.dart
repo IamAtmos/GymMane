@@ -3174,4 +3174,23 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Propio · toca para quitarlo';
+
+  @override
+  String get groupRename => 'Cambiar nombre';
+
+  @override
+  String get groupUngroup => 'Quitar el grupo, mantener rutinas';
+
+  @override
+  String get groupDeleteAll => 'Borrar grupo y rutinas';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '¿Borrar «$name»?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return 'Se borrarán $count. Tu historial de entrenos se mantiene.';
+  }
 }

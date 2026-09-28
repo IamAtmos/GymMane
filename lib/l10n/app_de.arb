@@ -1080,5 +1080,10 @@
   "finishHoldNow": "Satz jetzt beenden",
   "barWeightExercise": "Gewicht von Stange oder Schlitten",
   "barWeightHint": "Wird vom Scheibenrechner genutzt",
-  "barWeightCustom": "Eigenes · tippen zum Zurücksetzen"
+  "barWeightCustom": "Eigenes · tippen zum Zurücksetzen",
+  "groupRename": "Gruppe umbenennen",
+  "groupUngroup": "Gruppe auflösen, Routinen behalten",
+  "groupDeleteAll": "Gruppe und Routinen löschen",
+  "groupDeleteTitle": "„{name}“ löschen?",
+  "groupDeleteBody": "{count} werden gelöscht. Dein Trainingsverlauf bleibt erhalten."
 }

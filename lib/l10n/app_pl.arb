@@ -1213,5 +1213,10 @@
   "finishHoldNow": "Zakończ serię teraz",
   "barWeightExercise": "Waga sztangi lub sanek",
   "barWeightHint": "Używana przez kalkulator talerzy",
-  "barWeightCustom": "Własna · dotknij, aby przywrócić"
+  "barWeightCustom": "Własna · dotknij, aby przywrócić",
+  "groupRename": "Zmień nazwę grupy",
+  "groupUngroup": "Usuń grupę, zachowaj rutyny",
+  "groupDeleteAll": "Usuń grupę i rutyny",
+  "groupDeleteTitle": "Usunąć „{name}”?",
+  "groupDeleteBody": "Zostaną usunięte: {count}. Historia treningów zostaje."
 }

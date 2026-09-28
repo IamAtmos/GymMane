@@ -3174,4 +3174,23 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'مخصص · اضغط لإعادة الضبط';
+
+  @override
+  String get groupRename => 'إعادة تسمية المجموعة';
+
+  @override
+  String get groupUngroup => 'إزالة المجموعة مع إبقاء الروتينات';
+
+  @override
+  String get groupDeleteAll => 'حذف المجموعة وروتيناتها';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return 'حذف «$name»؟';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return 'سيتم حذف $count. يبقى سجل تمارينك كما هو.';
+  }
 }

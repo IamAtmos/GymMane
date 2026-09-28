@@ -1213,5 +1213,10 @@
   "finishHoldNow": "지금 세트 끝내기",
   "barWeightExercise": "바 또는 슬레드 무게",
   "barWeightHint": "원판 계산기에 사용돼요",
-  "barWeightCustom": "직접 설정 · 탭하면 초기화"
+  "barWeightCustom": "직접 설정 · 탭하면 초기화",
+  "groupRename": "그룹 이름 변경",
+  "groupUngroup": "그룹만 해제 (루틴 유지)",
+  "groupDeleteAll": "그룹과 루틴 삭제",
+  "groupDeleteTitle": "「{name}」을(를) 삭제할까요?",
+  "groupDeleteBody": "{count}이(가) 삭제됩니다. 운동 기록은 유지됩니다."
 }

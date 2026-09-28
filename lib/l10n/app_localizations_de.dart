@@ -3192,4 +3192,23 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Eigenes · tippen zum Zurücksetzen';
+
+  @override
+  String get groupRename => 'Gruppe umbenennen';
+
+  @override
+  String get groupUngroup => 'Gruppe auflösen, Routinen behalten';
+
+  @override
+  String get groupDeleteAll => 'Gruppe und Routinen löschen';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '„$name“ löschen?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count werden gelöscht. Dein Trainingsverlauf bleibt erhalten.';
+  }
 }

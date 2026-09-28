@@ -3183,4 +3183,23 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Własna · dotknij, aby przywrócić';
+
+  @override
+  String get groupRename => 'Zmień nazwę grupy';
+
+  @override
+  String get groupUngroup => 'Usuń grupę, zachowaj rutyny';
+
+  @override
+  String get groupDeleteAll => 'Usuń grupę i rutyny';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return 'Usunąć „$name”?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return 'Zostaną usunięte: $count. Historia treningów zostaje.';
+  }
 }

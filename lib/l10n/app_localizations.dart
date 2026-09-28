@@ -5679,6 +5679,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your own · tap to reset'**
   String get barWeightCustom;
+
+  /// No description provided for @groupRename.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename group'**
+  String get groupRename;
+
+  /// No description provided for @groupUngroup.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove group, keep routines'**
+  String get groupUngroup;
+
+  /// No description provided for @groupDeleteAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete group and routines'**
+  String get groupDeleteAll;
+
+  /// No description provided for @groupDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete “{name}”?'**
+  String groupDeleteTitle(String name);
+
+  /// No description provided for @groupDeleteBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} will be deleted. Your workout history is kept.'**
+  String groupDeleteBody(String count);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

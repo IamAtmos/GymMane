@@ -1213,5 +1213,10 @@
   "finishHoldNow": "現在完成這組",
   "barWeightExercise": "槓鈴桿或滑車重量",
   "barWeightHint": "槓片計算器會用到",
-  "barWeightCustom": "自訂 · 點按重設"
+  "barWeightCustom": "自訂 · 點按重設",
+  "groupRename": "重新命名群組",
+  "groupUngroup": "取消群組,保留課表",
+  "groupDeleteAll": "刪除群組及其課表",
+  "groupDeleteTitle": "刪除「{name}」?",
+  "groupDeleteBody": "將刪除{count}。訓練紀錄會保留。"
 }

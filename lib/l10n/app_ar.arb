@@ -1213,5 +1213,10 @@
   "finishHoldNow": "أنهِ المجموعة الآن",
   "barWeightExercise": "وزن البار أو المزلجة",
   "barWeightHint": "تستخدمه حاسبة الأقراص",
-  "barWeightCustom": "مخصص · اضغط لإعادة الضبط"
+  "barWeightCustom": "مخصص · اضغط لإعادة الضبط",
+  "groupRename": "إعادة تسمية المجموعة",
+  "groupUngroup": "إزالة المجموعة مع إبقاء الروتينات",
+  "groupDeleteAll": "حذف المجموعة وروتيناتها",
+  "groupDeleteTitle": "حذف «{name}»؟",
+  "groupDeleteBody": "سيتم حذف {count}. يبقى سجل تمارينك كما هو."
 }

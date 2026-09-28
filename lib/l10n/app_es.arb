@@ -1020,5 +1020,10 @@
   "finishHoldNow": "Terminar la serie ya",
   "barWeightExercise": "Peso de la barra o carro",
   "barWeightHint": "Lo usa la calculadora de discos",
-  "barWeightCustom": "Propio · toca para quitarlo"
+  "barWeightCustom": "Propio · toca para quitarlo",
+  "groupRename": "Cambiar nombre",
+  "groupUngroup": "Quitar el grupo, mantener rutinas",
+  "groupDeleteAll": "Borrar grupo y rutinas",
+  "groupDeleteTitle": "¿Borrar «{name}»?",
+  "groupDeleteBody": "Se borrarán {count}. Tu historial de entrenos se mantiene."
 }

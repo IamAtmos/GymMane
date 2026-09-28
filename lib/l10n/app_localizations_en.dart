@@ -3172,4 +3172,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Your own · tap to reset';
+
+  @override
+  String get groupRename => 'Rename group';
+
+  @override
+  String get groupUngroup => 'Remove group, keep routines';
+
+  @override
+  String get groupDeleteAll => 'Delete group and routines';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return 'Delete “$name”?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count will be deleted. Your workout history is kept.';
+  }
 }

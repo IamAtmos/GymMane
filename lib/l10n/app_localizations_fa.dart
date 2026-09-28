@@ -3162,4 +3162,23 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'وزن شما · برای بازنشانی لمس کنید';
+
+  @override
+  String get groupRename => 'تغییر نام گروه';
+
+  @override
+  String get groupUngroup => 'حذف گروه، نگه‌داشتن روتین‌ها';
+
+  @override
+  String get groupDeleteAll => 'حذف گروه و روتین‌ها';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '«$name» حذف شود؟';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count حذف می‌شود. سابقهٔ تمرین‌هایت باقی می‌ماند.';
+  }
 }

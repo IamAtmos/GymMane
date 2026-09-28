@@ -3043,6 +3043,25 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get barWeightCustom => '自定义 · 点按重置';
+
+  @override
+  String get groupRename => '重命名分组';
+
+  @override
+  String get groupUngroup => '取消分组,保留计划';
+
+  @override
+  String get groupDeleteAll => '删除分组及其计划';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '删除“$name”?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '将删除$count。训练记录会保留。';
+  }
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6107,4 +6126,23 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get barWeightCustom => '自訂 · 點按重設';
+
+  @override
+  String get groupRename => '重新命名群組';
+
+  @override
+  String get groupUngroup => '取消群組,保留課表';
+
+  @override
+  String get groupDeleteAll => '刪除群組及其課表';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '刪除「$name」?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '將刪除$count。訓練紀錄會保留。';
+  }
 }

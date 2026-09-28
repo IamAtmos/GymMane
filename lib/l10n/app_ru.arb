@@ -1001,5 +1001,10 @@
   "finishHoldNow": "Завершить подход сейчас",
   "barWeightExercise": "Вес грифа или платформы",
   "barWeightHint": "Используется калькулятором блинов",
-  "barWeightCustom": "Свой · нажмите, чтобы сбросить"
+  "barWeightCustom": "Свой · нажмите, чтобы сбросить",
+  "groupRename": "Переименовать группу",
+  "groupUngroup": "Убрать группу, оставить программы",
+  "groupDeleteAll": "Удалить группу и программы",
+  "groupDeleteTitle": "Удалить «{name}»?",
+  "groupDeleteBody": "Будут удалены: {count}. История тренировок сохранится."
 }

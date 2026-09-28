@@ -3182,4 +3182,23 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Kendi değerin · sıfırlamak için dokun';
+
+  @override
+  String get groupRename => 'Grubu yeniden adlandır';
+
+  @override
+  String get groupUngroup => 'Grubu kaldır, rutinleri koru';
+
+  @override
+  String get groupDeleteAll => 'Grubu ve rutinleri sil';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '“$name” silinsin mi?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count silinecek. Antrenman geçmişin korunur.';
+  }
 }

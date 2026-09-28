@@ -3185,4 +3185,23 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Eigen · tik om te wissen';
+
+  @override
+  String get groupRename => 'Groep hernoemen';
+
+  @override
+  String get groupUngroup => 'Groep opheffen, routines houden';
+
+  @override
+  String get groupDeleteAll => 'Groep en routines verwijderen';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '“$name” verwijderen?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count worden verwijderd. Je trainingsgeschiedenis blijft bewaard.';
+  }
 }

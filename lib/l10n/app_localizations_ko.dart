@@ -3099,4 +3099,23 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get barWeightCustom => '직접 설정 · 탭하면 초기화';
+
+  @override
+  String get groupRename => '그룹 이름 변경';
+
+  @override
+  String get groupUngroup => '그룹만 해제 (루틴 유지)';
+
+  @override
+  String get groupDeleteAll => '그룹과 루틴 삭제';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return '「$name」을(를) 삭제할까요?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return '$count이(가) 삭제됩니다. 운동 기록은 유지됩니다.';
+  }
 }

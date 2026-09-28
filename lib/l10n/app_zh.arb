@@ -973,5 +973,10 @@
   "finishHoldNow": "现在完成这组",
   "barWeightExercise": "杠铃杆或滑车重量",
   "barWeightHint": "杠铃片计算器会用到",
-  "barWeightCustom": "自定义 · 点按重置"
+  "barWeightCustom": "自定义 · 点按重置",
+  "groupRename": "重命名分组",
+  "groupUngroup": "取消分组,保留计划",
+  "groupDeleteAll": "删除分组及其计划",
+  "groupDeleteTitle": "删除“{name}”?",
+  "groupDeleteBody": "将删除{count}。训练记录会保留。"
 }

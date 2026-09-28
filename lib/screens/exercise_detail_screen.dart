@@ -572,7 +572,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
         ]),
       );
 
-  Widget _cardLabel(GymColors gc, String label) => Text(label.toUpperCase(),
+  Widget _cardLabel(GymColors gc, String label) => FitText(label.toUpperCase(),
       style: AppTheme.f(10.5, weight: FontWeight.w700, color: gc.textTertiary, letterSpacing: 1.3));
 
   Widget _section(GymColors gc, String label) => Text(titleCase(label),

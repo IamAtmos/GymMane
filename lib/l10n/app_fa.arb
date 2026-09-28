@@ -1626,5 +1626,10 @@
   "finishHoldNow": "همین حالا ست را تمام کن",
   "barWeightExercise": "وزن هالتر یا سورتمه",
   "barWeightHint": "در ماشین‌حساب صفحه‌ها استفاده می‌شود",
-  "barWeightCustom": "وزن شما · برای بازنشانی لمس کنید"
+  "barWeightCustom": "وزن شما · برای بازنشانی لمس کنید",
+  "groupRename": "تغییر نام گروه",
+  "groupUngroup": "حذف گروه، نگه‌داشتن روتین‌ها",
+  "groupDeleteAll": "حذف گروه و روتین‌ها",
+  "groupDeleteTitle": "«{name}» حذف شود؟",
+  "groupDeleteBody": "{count} حذف می‌شود. سابقهٔ تمرین‌هایت باقی می‌ماند."
 }

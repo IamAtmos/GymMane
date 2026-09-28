@@ -1213,5 +1213,10 @@
   "finishHoldNow": "今すぐセットを終える",
   "barWeightExercise": "バーまたはスレッドの重さ",
   "barWeightHint": "プレート計算に使われます",
-  "barWeightCustom": "自分で設定 · タップでリセット"
+  "barWeightCustom": "自分で設定 · タップでリセット",
+  "groupRename": "グループ名を変更",
+  "groupUngroup": "グループを解除(ルーティンは残す)",
+  "groupDeleteAll": "グループとルーティンを削除",
+  "groupDeleteTitle": "「{name}」を削除しますか?",
+  "groupDeleteBody": "{count}が削除されます。トレーニング履歴は残ります。"
 }

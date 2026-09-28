@@ -75,7 +75,7 @@ class RoutinesScreen extends StatelessWidget {
               )
             else ...[
               for (final group in fit.routineGroups) ...[
-                _groupHeader(gc, group, fit.routinesInGroup(group).length),
+                _groupHeader(context, gc, group, fit.routinesInGroup(group).length),
                 _folders(context, fit.routinesInGroup(group)),
                 const SizedBox(height: 10),
               ],
@@ -314,21 +314,78 @@ class RoutinesScreen extends StatelessWidget {
     );
   }
 
-  Widget _groupHeader(GymColors gc, String name, int count) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8, left: 4),
-      child: Row(
-        children: [
-          Icon(PhosphorIconsRegular.folderSimple, size: 15, color: gc.brass),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(name,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: AppTheme.f(13, weight: FontWeight.w700, color: gc.text, letterSpacing: 1)),
+  Widget _groupHeader(BuildContext context, GymColors gc, String name, int count) {
+    return Semantics(
+      button: true,
+      label: name,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => _groupMenu(context, name, count),
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 8, left: 4, top: 4),
+          child: Row(
+            children: [
+              Icon(PhosphorIconsRegular.folderSimple, size: 15, color: gc.brass),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(name,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTheme.f(13, weight: FontWeight.w700, color: gc.text, letterSpacing: 1)),
+              ),
+              Text('$count', style: AppTheme.f(12, weight: FontWeight.w500, color: gc.textTertiary)),
+              const SizedBox(width: 6),
+              Icon(PhosphorIconsBold.dotsThree, size: 18, color: gc.textTertiary),
+            ],
           ),
-          Text('$count', style: AppTheme.f(12, weight: FontWeight.w500, color: gc.textTertiary)),
-        ],
+        ),
+      ),
+    );
+  }
+
+  void _groupMenu(BuildContext context, String name, int count) {
+    final gc = context.gc;
+    showAppSheet<void>(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (sheet) => Container(
+        padding: sheetPad(sheet),
+        decoration: BoxDecoration(
+          color: gc.bgRaised,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const SheetHandle(),
+            const SizedBox(height: 16),
+            SheetTitle(name, subtitle: t.routineCount(count)),
+            const SizedBox(height: 14),
+            OptionGroup([
+              OptionItem(t.groupRename, icon: PhosphorIconsRegular.pencilSimple, onTap: () async {
+                Navigator.pop(sheet);
+                final next = await askText(context, title: t.groupRename, initial: name, hint: t.groupNameHint);
+                if (next != null && next != name) fit.renameGroup(name, next);
+              }),
+              OptionItem(t.groupUngroup, icon: PhosphorIconsRegular.folderSimpleMinus, onTap: () {
+                Navigator.pop(sheet);
+                fit.renameGroup(name, '');
+              }),
+              OptionItem(t.groupDeleteAll, icon: PhosphorIconsRegular.trash, danger: true, onTap: () async {
+                Navigator.pop(sheet);
+                final ok = await askConfirm(
+                  context,
+                  title: t.groupDeleteTitle(name),
+                  body: t.groupDeleteBody(t.routineCount(count)),
+                  confirmLabel: t.delete,
+                  danger: true,
+                );
+                if (ok) fit.deleteGroup(name);
+              }),
+            ]),
+          ],
+        ),
       ),
     );
   }

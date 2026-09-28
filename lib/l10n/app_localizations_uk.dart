@@ -3189,4 +3189,23 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get barWeightCustom => 'Власна · торкніться, щоб скинути';
+
+  @override
+  String get groupRename => 'Перейменувати групу';
+
+  @override
+  String get groupUngroup => 'Прибрати групу, залишити програми';
+
+  @override
+  String get groupDeleteAll => 'Видалити групу й програми';
+
+  @override
+  String groupDeleteTitle(String name) {
+    return 'Видалити «$name»?';
+  }
+
+  @override
+  String groupDeleteBody(String count) {
+    return 'Буде видалено: $count. Історія тренувань збережеться.';
+  }
 }
