@@ -3181,4 +3181,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String groupDeleteBody(String count) {
     return '$count حذف می‌شود. سابقهٔ تمرین‌هایت باقی می‌ماند.';
   }
+
+  @override
+  String get tplRr =>
+      'روتین کلاسیک r/bodyweightfitness: کل بدن، سه روز در هفته. وقتی آسان شد یک پله بالاتر برو.';
 }

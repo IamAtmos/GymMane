@@ -1025,5 +1025,6 @@
   "groupUngroup": "Quitar el grupo, mantener rutinas",
   "groupDeleteAll": "Borrar grupo y rutinas",
   "groupDeleteTitle": "¿Borrar «{name}»?",
-  "groupDeleteBody": "Se borrarán {count}. Tu historial de entrenos se mantiene."
+  "groupDeleteBody": "Se borrarán {count}. Tu historial de entrenos se mantiene.",
+  "tplRr": "El clásico de r/bodyweightfitness: cuerpo entero tres días a la semana. Sube un paso cuando te resulte fácil."
 }

@@ -3062,6 +3062,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String groupDeleteBody(String count) {
     return '将删除$count。训练记录会保留。';
   }
+
+  @override
+  String get tplRr => 'r/bodyweightfitness 的经典计划:每周三天全身训练。变轻松了就进阶到下一级。';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6145,4 +6148,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String groupDeleteBody(String count) {
     return '將刪除$count。訓練紀錄會保留。';
   }
+
+  @override
+  String get tplRr => 'r/bodyweightfitness 的經典計畫:每週三天全身訓練。變輕鬆了就進階到下一級。';
 }

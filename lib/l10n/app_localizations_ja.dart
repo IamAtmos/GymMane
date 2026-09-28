@@ -3102,4 +3102,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String groupDeleteBody(String count) {
     return '$countが削除されます。トレーニング履歴は残ります。';
   }
+
+  @override
+  String get tplRr => 'r/bodyweightfitness の定番:週3日の全身トレーニング。楽になったら次の段階へ。';
 }

@@ -1085,5 +1085,6 @@
   "groupUngroup": "Gruppe auflösen, Routinen behalten",
   "groupDeleteAll": "Gruppe und Routinen löschen",
   "groupDeleteTitle": "„{name}“ löschen?",
-  "groupDeleteBody": "{count} werden gelöscht. Dein Trainingsverlauf bleibt erhalten."
+  "groupDeleteBody": "{count} werden gelöscht. Dein Trainingsverlauf bleibt erhalten.",
+  "tplRr": "Der Klassiker von r/bodyweightfitness: Ganzkörper an drei Tagen pro Woche. Geh eine Stufe höher, wenn es leicht wird."
 }

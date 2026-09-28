@@ -1108,5 +1108,6 @@
   "groupDeleteTitle": "Delete “{name}”?",
   "@groupDeleteTitle": {"placeholders": {"name": {"type": "String"}}},
   "groupDeleteBody": "{count} will be deleted. Your workout history is kept.",
-  "@groupDeleteBody": {"placeholders": {"count": {"type": "String"}}}
+  "@groupDeleteBody": {"placeholders": {"count": {"type": "String"}}},
+  "tplRr": "The r/bodyweightfitness classic: full body three days a week. Move up a step when it gets easy."
 }

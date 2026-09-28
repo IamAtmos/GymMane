@@ -3193,4 +3193,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String groupDeleteBody(String count) {
     return 'سيتم حذف $count. يبقى سجل تمارينك كما هو.';
   }
+
+  @override
+  String get tplRr =>
+      'الروتين الكلاسيكي من r/bodyweightfitness: الجسم كله ثلاثة أيام في الأسبوع. انتقل إلى المستوى التالي حين يصبح سهلًا.';
 }

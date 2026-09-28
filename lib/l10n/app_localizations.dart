@@ -5709,6 +5709,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count} will be deleted. Your workout history is kept.'**
   String groupDeleteBody(String count);
+
+  /// No description provided for @tplRr.
+  ///
+  /// In en, this message translates to:
+  /// **'The r/bodyweightfitness classic: full body three days a week. Move up a step when it gets easy.'**
+  String get tplRr;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

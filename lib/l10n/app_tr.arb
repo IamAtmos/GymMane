@@ -1218,5 +1218,6 @@
   "groupUngroup": "Grubu kaldır, rutinleri koru",
   "groupDeleteAll": "Grubu ve rutinleri sil",
   "groupDeleteTitle": "“{name}” silinsin mi?",
-  "groupDeleteBody": "{count} silinecek. Antrenman geçmişin korunur."
+  "groupDeleteBody": "{count} silinecek. Antrenman geçmişin korunur.",
+  "tplRr": "r/bodyweightfitness klasiği: haftada üç gün tüm vücut. Kolaylaşınca bir sonraki aşamaya geç."
 }

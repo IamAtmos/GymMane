@@ -1631,5 +1631,6 @@
   "groupUngroup": "حذف گروه، نگه‌داشتن روتین‌ها",
   "groupDeleteAll": "حذف گروه و روتین‌ها",
   "groupDeleteTitle": "«{name}» حذف شود؟",
-  "groupDeleteBody": "{count} حذف می‌شود. سابقهٔ تمرین‌هایت باقی می‌ماند."
+  "groupDeleteBody": "{count} حذف می‌شود. سابقهٔ تمرین‌هایت باقی می‌ماند.",
+  "tplRr": "روتین کلاسیک r/bodyweightfitness: کل بدن، سه روز در هفته. وقتی آسان شد یک پله بالاتر برو."
 }

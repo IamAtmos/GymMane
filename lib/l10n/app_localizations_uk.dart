@@ -3208,4 +3208,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String groupDeleteBody(String count) {
     return 'Буде видалено: $count. Історія тренувань збережеться.';
   }
+
+  @override
+  String get tplRr =>
+      'Класика r/bodyweightfitness: усе тіло три дні на тиждень. Переходь на наступний щабель, коли стане легко.';
 }

@@ -1218,5 +1218,6 @@
   "groupUngroup": "그룹만 해제 (루틴 유지)",
   "groupDeleteAll": "그룹과 루틴 삭제",
   "groupDeleteTitle": "「{name}」을(를) 삭제할까요?",
-  "groupDeleteBody": "{count}이(가) 삭제됩니다. 운동 기록은 유지됩니다."
+  "groupDeleteBody": "{count}이(가) 삭제됩니다. 운동 기록은 유지됩니다.",
+  "tplRr": "r/bodyweightfitness의 대표 루틴: 주 3일 전신 운동. 쉬워지면 다음 단계로 넘어가세요."
 }

@@ -3202,4 +3202,8 @@ class AppLocalizationsPl extends AppLocalizations {
   String groupDeleteBody(String count) {
     return 'Zostaną usunięte: $count. Historia treningów zostaje.';
   }
+
+  @override
+  String get tplRr =>
+      'Klasyk z r/bodyweightfitness: całe ciało trzy dni w tygodniu. Przejdź o krok wyżej, gdy zrobi się łatwo.';
 }

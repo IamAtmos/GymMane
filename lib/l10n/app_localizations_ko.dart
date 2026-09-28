@@ -3118,4 +3118,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String groupDeleteBody(String count) {
     return '$count이(가) 삭제됩니다. 운동 기록은 유지됩니다.';
   }
+
+  @override
+  String get tplRr => 'r/bodyweightfitness의 대표 루틴: 주 3일 전신 운동. 쉬워지면 다음 단계로 넘어가세요.';
 }

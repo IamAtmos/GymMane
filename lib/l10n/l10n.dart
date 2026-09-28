@@ -107,6 +107,7 @@ extension GymL10n on AppLocalizations {
         'abcde' => tplAbcde,
         'stronglifts' => tplStronglifts,
         'startingstrength' => tplStartingstrength,
+        'rr' => tplRr,
         _ => tplHome,
       };
 

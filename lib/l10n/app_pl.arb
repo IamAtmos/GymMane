@@ -1218,5 +1218,6 @@
   "groupUngroup": "Usuń grupę, zachowaj rutyny",
   "groupDeleteAll": "Usuń grupę i rutyny",
   "groupDeleteTitle": "Usunąć „{name}”?",
-  "groupDeleteBody": "Zostaną usunięte: {count}. Historia treningów zostaje."
+  "groupDeleteBody": "Zostaną usunięte: {count}. Historia treningów zostaje.",
+  "tplRr": "Klasyk z r/bodyweightfitness: całe ciało trzy dni w tygodniu. Przejdź o krok wyżej, gdy zrobi się łatwo."
 }

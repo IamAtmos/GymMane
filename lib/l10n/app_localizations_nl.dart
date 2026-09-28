@@ -3204,4 +3204,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String groupDeleteBody(String count) {
     return '$count worden verwijderd. Je trainingsgeschiedenis blijft bewaard.';
   }
+
+  @override
+  String get tplRr =>
+      'De klassieker van r/bodyweightfitness: drie dagen per week het hele lichaam. Ga een stap verder als het makkelijk wordt.';
 }

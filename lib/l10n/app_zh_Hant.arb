@@ -1218,5 +1218,6 @@
   "groupUngroup": "取消群組,保留課表",
   "groupDeleteAll": "刪除群組及其課表",
   "groupDeleteTitle": "刪除「{name}」?",
-  "groupDeleteBody": "將刪除{count}。訓練紀錄會保留。"
+  "groupDeleteBody": "將刪除{count}。訓練紀錄會保留。",
+  "tplRr": "r/bodyweightfitness 的經典計畫:每週三天全身訓練。變輕鬆了就進階到下一級。"
 }

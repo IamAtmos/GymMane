@@ -3193,4 +3193,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String groupDeleteBody(String count) {
     return 'Se borrarán $count. Tu historial de entrenos se mantiene.';
   }
+
+  @override
+  String get tplRr =>
+      'El clásico de r/bodyweightfitness: cuerpo entero tres días a la semana. Sube un paso cuando te resulte fácil.';
 }

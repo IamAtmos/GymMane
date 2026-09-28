@@ -3201,4 +3201,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String groupDeleteBody(String count) {
     return '$count silinecek. Antrenman geçmişin korunur.';
   }
+
+  @override
+  String get tplRr =>
+      'r/bodyweightfitness klasiği: haftada üç gün tüm vücut. Kolaylaşınca bir sonraki aşamaya geç.';
 }
