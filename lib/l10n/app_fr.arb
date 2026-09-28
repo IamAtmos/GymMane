@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "Nouveau programme",
-  "dragToReorder": "Maintiens et fais glisser pour réorganiser — c’est l’ordre de ta séance.",
+  "dragToReorder": "Fais glisser la poignée à points pour réordonner : c’est l’ordre de ta séance.",
   "reorderHandle": "Réorganiser {name}",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "Cinq jours, un groupe par jour : pecs, dos, jambes, épaules, bras.",
   "elapsedCaps": "ÉCOULÉ",
   "tapToSkip": "Touche pour passer",
-  "tapToStop": "Touche pour arrêter",
   "screenLocked": "Écran verrouillé",
   "lockedHint": "Maintiens l'empreinte en haut pour déverrouiller",
   "liveDoneSet": "Série faite",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{1 séance enregistrée ces 30 derniers jours.} other{{n} séances enregistrées ces 30 derniers jours.}}",
   "planBestLifts": "Meilleures séries récentes",
   "planAskFirst": "Si tu ne connais pas mon objectif (force, muscle, perte de gras ou forme générale) ou la durée possible d’une séance, demande-le-moi d’abord en un court message. Ensuite, réponds uniquement en JSON.",
-  "backToTop": "Revenir en haut"
+  "backToTop": "Revenir en haut",
+  "deleteExerciseTitle": "Supprimer cet exercice ?",
+  "deleteExerciseBody": "« {name} » sera retiré de ta bibliothèque et de tes programmes. Tes séries passées sont conservées.",
+  "exportForStravaHint": "Importe-le depuis un navigateur sur strava.com/upload/select (l’app Strava n’importe pas de fichiers). Il apparaît comme musculation avec tes séries.",
+  "manualStartTime": "Heure de début",
+  "manualDuration": "Durée",
+  "manualDurationUnset": "Ajouter la durée",
+  "stravaRow": "Exporter vers Strava (bêta)",
+  "stravaBeta": "BÊTA",
+  "stravaIntro": "Choisis une séance à envoyer sur Strava. Tu obtiens un fichier .fit : importe-le depuis un navigateur sur strava.com/upload/select, il apparaît comme musculation avec tes séries.",
+  "stravaEmpty": "Aucune séance à exporter pour l’instant.",
+  "tapToPause": "Touche pour mettre en pause",
+  "holdPausedHint": "En pause · touche pour reprendre",
+  "finishHoldNow": "Finir la série maintenant",
+  "barWeight": "Poids de la barre ou du chariot",
+  "barWeightHint": "Utilisé par le calculateur de disques",
+  "barWeightCustom": "Personnalisé · touche pour réinitialiser"
 }

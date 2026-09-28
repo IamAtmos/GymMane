@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "새 루틴",
-  "dragToReorder": "길게 눌러 드래그해 순서를 바꾸세요 — 이 순서로 운동합니다.",
+  "dragToReorder": "점 손잡이를 끌어 순서를 바꾸세요. 이 순서대로 운동해요.",
   "reorderHandle": "{name} 순서 변경",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "5일, 하루 한 부위: 가슴, 등, 하체, 어깨, 팔.",
   "elapsedCaps": "경과",
   "tapToSkip": "탭해서 건너뛰기",
-  "tapToStop": "탭해서 정지",
   "screenLocked": "화면 잠김",
   "lockedHint": "위쪽 지문 아이콘을 길게 눌러 잠금 해제",
   "liveDoneSet": "세트 완료",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{최근 30일 운동 1회.} other{최근 30일 운동 {n}회.}}",
   "planBestLifts": "최근 최고 세트",
   "planAskFirst": "내 목표(근력, 근육, 체지방 감량, 전반적 체력)나 한 번에 운동할 수 있는 시간을 모르면 먼저 짧게 물어봐 주세요. 알게 되면 JSON으로만 답해 주세요.",
-  "backToTop": "맨 위로"
+  "backToTop": "맨 위로",
+  "deleteExerciseTitle": "이 운동을 삭제할까요?",
+  "deleteExerciseBody": "\"{name}\"이(가) 라이브러리와 루틴에서 삭제돼요. 지난 세트 기록은 남아요.",
+  "exportForStravaHint": "브라우저에서 strava.com/upload/select 로 올리세요(Strava 앱은 파일을 가져올 수 없어요). 세트와 함께 웨이트 트레이닝으로 표시돼요.",
+  "manualStartTime": "시작 시간",
+  "manualDuration": "운동 시간",
+  "manualDurationUnset": "시간 추가",
+  "stravaRow": "Strava로 내보내기 (베타)",
+  "stravaBeta": "베타",
+  "stravaIntro": "Strava로 보낼 운동을 고르세요. .fit 파일이 만들어지면 브라우저에서 strava.com/upload/select 로 올리세요. 세트와 함께 웨이트 트레이닝으로 표시돼요.",
+  "stravaEmpty": "아직 내보낼 운동이 없어요.",
+  "tapToPause": "탭하면 일시정지",
+  "holdPausedHint": "일시정지됨 · 탭하면 계속",
+  "finishHoldNow": "지금 세트 끝내기",
+  "barWeight": "바 또는 슬레드 무게",
+  "barWeightHint": "원판 계산기에 사용돼요",
+  "barWeightCustom": "직접 설정 · 탭하면 초기화"
 }

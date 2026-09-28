@@ -331,9 +331,9 @@ class ToolDetailScreen extends StatelessWidget {
   }
 }
 
-void showPlateSheet(BuildContext context, double displayTarget) {
+void showPlateSheet(BuildContext context, double displayTarget, {double? startBar}) {
   final gc = context.gc;
-  var bar = fit.defaultBar;
+  var bar = startBar ?? fit.defaultBar;
   showAppSheet<void>(
     context: context,
     backgroundColor: Colors.transparent,

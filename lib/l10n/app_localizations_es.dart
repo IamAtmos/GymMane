@@ -1132,7 +1132,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get newRoutineName => 'Rutina nueva';
 
   @override
-  String get dragToReorder => 'Mantén y arrastra para reordenar — es el orden en que entrenas.';
+  String get dragToReorder => 'Arrastra el asa de puntos para reordenar: es el orden en que entrenas.';
 
   @override
   String reorderHandle(String name) {
@@ -1437,7 +1437,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get activityLevel => 'NIVEL DE ACTIVIDAD';
 
   @override
-  String get barWeight => 'PESO DE LA BARRA';
+  String get barWeight => 'Peso de la barra o carro';
 
   @override
   String get perSide => 'POR LADO';
@@ -2861,9 +2861,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get tapToSkip => 'Toca para saltar';
 
   @override
-  String get tapToStop => 'Toca para parar';
-
-  @override
   String get screenLocked => 'Pantalla bloqueada';
 
   @override
@@ -3125,4 +3122,53 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get backToTop => 'Volver arriba';
+
+  @override
+  String get deleteExerciseTitle => '¿Borrar este ejercicio?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '\"$name\" se quitará de tu biblioteca y de tus rutinas. Tus series anteriores se conservan.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Súbelo desde el navegador en strava.com/upload/select (la app de Strava no importa archivos). Aparece como Entrenamiento con pesas, con tus series.';
+
+  @override
+  String get manualStartTime => 'Hora de inicio';
+
+  @override
+  String get manualDuration => 'Duración';
+
+  @override
+  String get manualDurationUnset => 'Añadir duración';
+
+  @override
+  String get stravaRow => 'Exportar a Strava (beta)';
+
+  @override
+  String get stravaBeta => 'BETA';
+
+  @override
+  String get stravaIntro =>
+      'Elige un entreno para llevarlo a Strava. Te llevas un archivo .fit: súbelo desde el navegador en strava.com/upload/select y aparece como Entrenamiento con pesas, con tus series.';
+
+  @override
+  String get stravaEmpty => 'Aún no hay entrenos para exportar.';
+
+  @override
+  String get tapToPause => 'Toca para pausar';
+
+  @override
+  String get holdPausedHint => 'En pausa · toca para seguir';
+
+  @override
+  String get finishHoldNow => 'Terminar la serie ya';
+
+  @override
+  String get barWeightHint => 'Lo usa la calculadora de discos';
+
+  @override
+  String get barWeightCustom => 'Propio · toca para quitarlo';
 }

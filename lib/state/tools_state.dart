@@ -134,11 +134,30 @@ mixin ToolsState on FitCore {
     return _round1(displayBar + parts.fold<double>(0, (a, p) => a + p.weight * p.count) * 2);
   }
 
-  String? plateHint(String equipment, double weightKg) {
-    if (equipment != 'Barbell') return null;
+  bool hasOwnBar(String id) => exerciseBar.containsKey(id);
+
+  double barFor(String id, {String equipment = 'Barbell'}) {
+    final kg = exerciseBar[id];
+    if (kg != null) return _round1(toDisplayWeight(kg));
+    return equipment == 'Barbell' ? defaultBar : 0;
+  }
+
+  void setExerciseBar(String id, double? displayKg) {
+    if (displayKg == null) {
+      exerciseBar.remove(id);
+    } else {
+      exerciseBar[id] = fromDisplayWeight(displayKg.clamp(0, isLb ? 1100 : 500).toDouble());
+    }
+    _persist();
+    notifyListeners();
+  }
+
+  String? plateHint(String equipment, double weightKg, {String id = ''}) {
+    if (equipment != 'Barbell' && !hasOwnBar(id)) return null;
+    final bar = barFor(id, equipment: equipment);
     final target = _round1(toDisplayWeight(weightKg));
-    if (target <= defaultBar) return null;
-    final parts = platesPerSide(target, defaultBar);
+    if (target <= bar) return null;
+    final parts = platesPerSide(target, bar);
     if (parts.isEmpty) return null;
     return parts
         .map((p) => p.count == 1 ? fmt(p.weight) : '${fmt(p.weight)}×${p.count}')

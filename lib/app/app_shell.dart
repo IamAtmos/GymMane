@@ -472,7 +472,11 @@ class _ParkedPill extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              Text(fit.elapsedLabel, style: AppTheme.f(14, weight: FontWeight.w700, color: gc.textSecondary)),
+              ValueListenableBuilder<int>(
+                valueListenable: fit.clock,
+                builder: (_, _, _) =>
+                    Text(fit.elapsedLabel, style: AppTheme.f(14, weight: FontWeight.w700, color: gc.textSecondary)),
+              ),
               const SizedBox(width: 12),
               Container(
                 width: 40,

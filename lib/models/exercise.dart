@@ -32,6 +32,7 @@ class Exercise {
   Exercise copyWith({
     String? name,
     String? primary,
+    List<String>? secondary,
     String? equipment,
     String? difficulty,
     List<String>? steps,
@@ -41,7 +42,7 @@ class Exercise {
         id: id,
         name: name ?? this.name,
         primary: primary ?? this.primary,
-        secondary: secondary,
+        secondary: secondary ?? this.secondary,
         equipment: equipment ?? this.equipment,
         difficulty: difficulty ?? this.difficulty,
         art: art,
@@ -55,6 +56,7 @@ class Exercise {
         'p': primary,
         'e': equipment,
         'd': difficulty,
+        if (secondary.isNotEmpty) 's': secondary,
         if (steps.isNotEmpty) 'st': steps,
         if (mode.isNotEmpty) 'k': mode,
       };
@@ -62,7 +64,7 @@ class Exercise {
         id: j['id'] as String,
         name: j['n'] as String,
         primary: j['p'] as String,
-        secondary: const [],
+        secondary: ((j['s'] as List?) ?? const []).whereType<String>().where((m) => m != j['p']).toList(),
         equipment: (j['e'] as String?) ?? 'Other',
         difficulty: (j['d'] as String?) ?? 'Beginner',
         art: '',

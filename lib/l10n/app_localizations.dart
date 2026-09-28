@@ -2021,7 +2021,7 @@ abstract class AppLocalizations {
   /// No description provided for @dragToReorder.
   ///
   /// In en, this message translates to:
-  /// **'Hold and drag to reorder — this is the order you train in.'**
+  /// **'Drag the dotted handle to reorder — this is the order you train in.'**
   String get dragToReorder;
 
   /// No description provided for @reorderHandle.
@@ -2579,7 +2579,7 @@ abstract class AppLocalizations {
   /// No description provided for @barWeight.
   ///
   /// In en, this message translates to:
-  /// **'BAR WEIGHT'**
+  /// **'Bar or sled weight'**
   String get barWeight;
 
   /// No description provided for @perSide.
@@ -5114,12 +5114,6 @@ abstract class AppLocalizations {
   /// **'Tap to skip'**
   String get tapToSkip;
 
-  /// No description provided for @tapToStop.
-  ///
-  /// In en, this message translates to:
-  /// **'Tap to stop'**
-  String get tapToStop;
-
   /// No description provided for @screenLocked.
   ///
   /// In en, this message translates to:
@@ -5587,6 +5581,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Back to top'**
   String get backToTop;
+
+  /// No description provided for @deleteExerciseTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete this exercise?'**
+  String get deleteExerciseTitle;
+
+  /// No description provided for @deleteExerciseBody.
+  ///
+  /// In en, this message translates to:
+  /// **'\"{name}\" will be removed from your library and routines. Your past sets are kept.'**
+  String deleteExerciseBody(String name);
+
+  /// No description provided for @exportForStravaHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload it in a browser at strava.com/upload/select (the Strava app can\'t import files). It shows up as a Weight Training with your sets.'**
+  String get exportForStravaHint;
+
+  /// No description provided for @manualStartTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Start time'**
+  String get manualStartTime;
+
+  /// No description provided for @manualDuration.
+  ///
+  /// In en, this message translates to:
+  /// **'Duration'**
+  String get manualDuration;
+
+  /// No description provided for @manualDurationUnset.
+  ///
+  /// In en, this message translates to:
+  /// **'Add duration'**
+  String get manualDurationUnset;
+
+  /// No description provided for @stravaRow.
+  ///
+  /// In en, this message translates to:
+  /// **'Export to Strava (beta)'**
+  String get stravaRow;
+
+  /// No description provided for @stravaBeta.
+  ///
+  /// In en, this message translates to:
+  /// **'BETA'**
+  String get stravaBeta;
+
+  /// No description provided for @stravaIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a workout to take it to Strava. You get a .fit file: upload it in a browser at strava.com/upload/select and it shows up as a Weight Training with your sets.'**
+  String get stravaIntro;
+
+  /// No description provided for @stravaEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No workouts to export yet.'**
+  String get stravaEmpty;
+
+  /// No description provided for @tapToPause.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to pause'**
+  String get tapToPause;
+
+  /// No description provided for @holdPausedHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Paused · tap to resume'**
+  String get holdPausedHint;
+
+  /// No description provided for @finishHoldNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish set now'**
+  String get finishHoldNow;
+
+  /// No description provided for @barWeightHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Used by the plate calculator'**
+  String get barWeightHint;
+
+  /// No description provided for @barWeightCustom.
+  ///
+  /// In en, this message translates to:
+  /// **'Your own · tap to reset'**
+  String get barWeightCustom;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

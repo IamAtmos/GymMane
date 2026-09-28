@@ -9,6 +9,7 @@ import '../models/note.dart';
 import '../models/progress_shot.dart';
 import '../state/fit_state.dart';
 import 'alarm_store.dart';
+import 'local_store.dart';
 import 'media_store.dart';
 
 const String kBackupJsonEntry = 'gymmane.json';
@@ -91,7 +92,7 @@ Future<Uint8List> buildBackupZip() async {
   }
 
   archive.addFile(
-      ArchiveFile.string(kBackupJsonEntry, const JsonEncoder.withIndent('  ').convert(data)));
+      ArchiveFile.string(kBackupJsonEntry, const JsonEncoder.withIndent('  ').convert(Store.finite(data))));
   return ZipEncoder().encodeBytes(archive);
 }
 

@@ -1135,7 +1135,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get newRoutineName => 'Nieuwe routine';
 
   @override
-  String get dragToReorder => 'Houd vast en sleep om te herschikken — dit is de trainingsvolgorde.';
+  String get dragToReorder => 'Sleep aan het stippengreepje om te herschikken — zo train je ze.';
 
   @override
   String reorderHandle(String name) {
@@ -1441,7 +1441,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get activityLevel => 'ACTIVITEITSNIVEAU';
 
   @override
-  String get barWeight => 'STANGGEWICHT';
+  String get barWeight => 'Gewicht van stang of slede';
 
   @override
   String get perSide => 'PER KANT';
@@ -2869,9 +2869,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String get tapToSkip => 'Tik om over te slaan';
 
   @override
-  String get tapToStop => 'Tik om te stoppen';
-
-  @override
   String get screenLocked => 'Scherm vergrendeld';
 
   @override
@@ -3136,4 +3133,53 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get backToTop => 'Naar boven';
+
+  @override
+  String get deleteExerciseTitle => 'Deze oefening verwijderen?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '\"$name\" wordt uit je bibliotheek en routines gehaald. Je eerdere sets blijven bewaard.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Upload het in een browser op strava.com/upload/select (de Strava-app kan geen bestanden importeren). Het verschijnt als krachttraining met je sets.';
+
+  @override
+  String get manualStartTime => 'Starttijd';
+
+  @override
+  String get manualDuration => 'Duur';
+
+  @override
+  String get manualDurationUnset => 'Duur invullen';
+
+  @override
+  String get stravaRow => 'Exporteren naar Strava (bèta)';
+
+  @override
+  String get stravaBeta => 'BÈTA';
+
+  @override
+  String get stravaIntro =>
+      'Kies een training voor Strava. Je krijgt een .fit-bestand: upload het in een browser op strava.com/upload/select en het verschijnt als krachttraining met je sets.';
+
+  @override
+  String get stravaEmpty => 'Nog geen trainingen om te exporteren.';
+
+  @override
+  String get tapToPause => 'Tik om te pauzeren';
+
+  @override
+  String get holdPausedHint => 'Gepauzeerd · tik om verder te gaan';
+
+  @override
+  String get finishHoldNow => 'Set nu afronden';
+
+  @override
+  String get barWeightHint => 'Gebruikt door de schijvencalculator';
+
+  @override
+  String get barWeightCustom => 'Eigen · tik om te wissen';
 }

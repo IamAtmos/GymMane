@@ -9,6 +9,7 @@ import '../state/fit_state.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_theme.dart';
 import '../widgets/charts.dart';
+import '../widgets/dialogs.dart';
 import '../widgets/entrance.dart';
 import '../widgets/exercise_media.dart';
 import '../widgets/exercise_preview.dart';
@@ -78,10 +79,8 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                   Row(children: [
                     if (custom) ...[
                       RoundAction(
-                        onTap: () {
-                          fit.closeExerciseDetail();
-                          fit.deleteCustomExercise(ex.id);
-                        },
+                        label: t.delete,
+                        onTap: () => _confirmDelete(context, ex),
                         child: Icon(PhosphorIconsRegular.trash, size: 16, color: gc.textSecondary),
                       ),
                       const SizedBox(width: 10),
@@ -175,6 +174,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                     _modeRow(context, gc, ex.id, mode),
                     if (mode != 'cardio') _repsOnlyRow(gc, ex.id, repsOnly),
                     _restRow(gc, ex.id),
+                    if (ex.equipment == 'Barbell' || ex.equipment == 'Machine') _barRow(gc, ex),
                     _switchRow(
                       gc,
                       PhosphorIconsRegular.sparkle,
@@ -436,7 +436,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
       button: true,
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
-        onTap: () => fit.goNotes(exerciseId: exId),
+        onTap: () => fit.goNotes(exerciseId: exId, all: true),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
           decoration: BoxDecoration(
@@ -520,6 +520,19 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
         ],
       ),
     );
+  }
+
+  Future<void> _confirmDelete(BuildContext context, Exercise ex) async {
+    final ok = await askConfirm(
+      context,
+      title: t.deleteExerciseTitle,
+      body: t.deleteExerciseBody(exerciseName(ex)),
+      confirmLabel: t.delete,
+      danger: true,
+    );
+    if (!ok) return;
+    fit.closeExerciseDetail();
+    fit.deleteCustomExercise(ex.id);
   }
 
   void _toggleArchived(BuildContext context, Exercise ex) {
@@ -664,6 +677,50 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                   format: (v) => clockLabel(v.round()),
                   tickLabel: (v) => clockLabel(v.round()));
               if (v != null) fit.setExerciseRest(id, v.round());
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _barRow(GymColors gc, Exercise ex) {
+    final own = fit.hasOwnBar(ex.id);
+    final bar = fit.barFor(ex.id, equipment: ex.equipment);
+    final step = fit.weightStep;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      child: Row(
+        children: [
+          _rowIcon(gc, PhosphorIconsRegular.barbell, own),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(titleCase(t.barWeight), style: AppTheme.f(14.5, weight: FontWeight.w500, color: gc.text)),
+                const SizedBox(height: 3),
+                GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: own ? () => fit.setExerciseBar(ex.id, null) : null,
+                  child: Text(own ? t.barWeightCustom : t.barWeightHint,
+                      style: AppTheme.f(11.5, weight: FontWeight.w500, color: own ? gc.accent : gc.textSecondary)),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 12),
+          StepperControl(
+            value: '${fmt(bar)} ${fit.units}',
+            minWidth: 56,
+            btnSize: 30,
+            gap: 3,
+            fontSize: 14,
+            btnRadius: 10,
+            onDec: () => fit.setExerciseBar(ex.id, bar - step),
+            onInc: () => fit.setExerciseBar(ex.id, bar + step),
+            onEdit: () async {
+              final v = await askNumber(context, title: t.barWeight, initial: fmt(bar), decimal: true);
+              if (v != null) fit.setExerciseBar(ex.id, v);
             },
           ),
         ],

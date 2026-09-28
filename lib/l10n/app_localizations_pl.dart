@@ -1134,7 +1134,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get dragToReorder =>
-      'Przytrzymaj i przeciągnij, aby zmienić kolejność — w tej kolejności trenujesz.';
+      'Przeciągnij uchwyt z kropkami, aby zmienić kolejność — w tej kolejności trenujesz.';
 
   @override
   String reorderHandle(String name) {
@@ -1439,7 +1439,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get activityLevel => 'POZIOM AKTYWNOŚCI';
 
   @override
-  String get barWeight => 'WAGA GRYFU';
+  String get barWeight => 'Waga sztangi lub sanek';
 
   @override
   String get perSide => 'NA STRONĘ';
@@ -2869,9 +2869,6 @@ class AppLocalizationsPl extends AppLocalizations {
   String get tapToSkip => 'Dotknij, by pominąć';
 
   @override
-  String get tapToStop => 'Dotknij, by zatrzymać';
-
-  @override
   String get screenLocked => 'Ekran zablokowany';
 
   @override
@@ -3134,4 +3131,53 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get backToTop => 'Na górę';
+
+  @override
+  String get deleteExerciseTitle => 'Usunąć to ćwiczenie?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '„$name” zniknie z biblioteki i planów. Wcześniejsze serie zostaną.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Prześlij w przeglądarce na strava.com/upload/select (aplikacja Strava nie importuje plików). Pojawi się jako trening siłowy z twoimi seriami.';
+
+  @override
+  String get manualStartTime => 'Godzina rozpoczęcia';
+
+  @override
+  String get manualDuration => 'Czas trwania';
+
+  @override
+  String get manualDurationUnset => 'Dodaj czas trwania';
+
+  @override
+  String get stravaRow => 'Eksport do Stravy (beta)';
+
+  @override
+  String get stravaBeta => 'BETA';
+
+  @override
+  String get stravaIntro =>
+      'Wybierz trening do Stravy. Dostaniesz plik .fit: prześlij go w przeglądarce na strava.com/upload/select, a pojawi się jako trening siłowy z seriami.';
+
+  @override
+  String get stravaEmpty => 'Brak treningów do eksportu.';
+
+  @override
+  String get tapToPause => 'Dotknij, aby wstrzymać';
+
+  @override
+  String get holdPausedHint => 'Wstrzymane · dotknij, aby wznowić';
+
+  @override
+  String get finishHoldNow => 'Zakończ serię teraz';
+
+  @override
+  String get barWeightHint => 'Używana przez kalkulator talerzy';
+
+  @override
+  String get barWeightCustom => 'Własna · dotknij, aby przywrócić';
 }

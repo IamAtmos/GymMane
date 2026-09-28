@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "Yeni program",
-  "dragToReorder": "Sıralamak için basılı tutup sürükle — antrenman sırası budur.",
+  "dragToReorder": "Sıralamak için noktalı tutamacı sürükle — antrenman sırası budur.",
   "reorderHandle": "{name} yeniden sırala",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "Beş gün, her gün bir kas grubu: göğüs, sırt, bacak, omuz, kol.",
   "elapsedCaps": "GEÇEN SÜRE",
   "tapToSkip": "Geçmek için dokun",
-  "tapToStop": "Durdurmak için dokun",
   "screenLocked": "Ekran kilitli",
   "lockedHint": "Kilidi açmak için üstteki parmak izine basılı tut",
   "liveDoneSet": "Set tamam",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{Son 30 günde 1 antrenman.} other{Son 30 günde {n} antrenman.}}",
   "planBestLifts": "Son en iyi setler",
   "planAskFirst": "Hedefimi (güç, kas, yağ yakımı ya da genel form) veya bir seansın ne kadar sürebileceğini bilmiyorsan önce bana kısa bir mesajla sor. Sonra yalnızca JSON ile cevap ver.",
-  "backToTop": "Başa dön"
+  "backToTop": "Başa dön",
+  "deleteExerciseTitle": "Bu egzersiz silinsin mi?",
+  "deleteExerciseBody": "\"{name}\" kütüphanenden ve programlarından kaldırılacak. Önceki setlerin korunur.",
+  "exportForStravaHint": "Tarayıcıdan strava.com/upload/select adresine yükle (Strava uygulaması dosya içe aktaramaz). Setlerinle birlikte ağırlık antrenmanı olarak görünür.",
+  "manualStartTime": "Başlangıç saati",
+  "manualDuration": "Süre",
+  "manualDurationUnset": "Süre ekle",
+  "stravaRow": "Strava’ya aktar (beta)",
+  "stravaBeta": "BETA",
+  "stravaIntro": "Strava’ya götürmek için bir antrenman seç. Bir .fit dosyası alırsın: tarayıcıdan strava.com/upload/select adresine yükle, setlerinle birlikte ağırlık antrenmanı olarak görünür.",
+  "stravaEmpty": "Henüz dışa aktarılacak antrenman yok.",
+  "tapToPause": "Duraklatmak için dokun",
+  "holdPausedHint": "Duraklatıldı · devam için dokun",
+  "finishHoldNow": "Seti şimdi bitir",
+  "barWeight": "Bar ya da kızak ağırlığı",
+  "barWeightHint": "Plaka hesaplayıcı bunu kullanır",
+  "barWeightCustom": "Kendi değerin · sıfırlamak için dokun"
 }

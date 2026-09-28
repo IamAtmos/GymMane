@@ -386,7 +386,7 @@
   "setDay": "IMPOSTA {day}",
   "@setDay": { "placeholders": { "day": { "type": "String" } } },
   "newRoutineName": "Nuova routine",
-  "dragToReorder": "Tieni premuto e trascina per riordinare — è l'ordine in cui ti alleni.",
+  "dragToReorder": "Trascina la maniglia a puntini per riordinare: è l’ordine in cui ti alleni.",
   "reorderHandle": "Riordina {name}",
   "@reorderHandle": { "placeholders": { "name": { "type": "String" } } },
   "removeFromRoutine": "Rimuovi dalla routine",
@@ -957,7 +957,6 @@
 
   "elapsedCaps": "TRASCORSO",
   "tapToSkip": "Tocca per saltare",
-  "tapToStop": "Tocca per fermare",
 
   "screenLocked": "Schermo bloccato",
   "lockedHint": "Tieni premuta l'impronta in alto per sbloccare",
@@ -1045,5 +1044,21 @@
   "planHistory": "{n, plural, =1{1 allenamento negli ultimi 30 giorni.} other{{n} allenamenti negli ultimi 30 giorni.}}",
   "planBestLifts": "Migliori serie recenti",
   "planAskFirst": "Se non conosci il mio obiettivo (forza, massa, dimagrimento o forma generale) o quanto può durare una sessione, chiedimelo prima con un breve messaggio. Poi rispondi solo in JSON.",
-  "backToTop": "Torna su"
+  "backToTop": "Torna su",
+  "deleteExerciseTitle": "Eliminare questo esercizio?",
+  "deleteExerciseBody": "«{name}» verrà tolto dalla libreria e dalle schede. Le serie passate restano.",
+  "exportForStravaHint": "Caricalo dal browser su strava.com/upload/select (l’app di Strava non importa file). Compare come allenamento con i pesi, con le tue serie.",
+  "manualStartTime": "Ora di inizio",
+  "manualDuration": "Durata",
+  "manualDurationUnset": "Aggiungi durata",
+  "stravaRow": "Esporta su Strava (beta)",
+  "stravaBeta": "BETA",
+  "stravaIntro": "Scegli un allenamento da portare su Strava. Ottieni un file .fit: caricalo dal browser su strava.com/upload/select e compare come allenamento con i pesi, con le tue serie.",
+  "stravaEmpty": "Ancora nessun allenamento da esportare.",
+  "tapToPause": "Tocca per mettere in pausa",
+  "holdPausedHint": "In pausa · tocca per riprendere",
+  "finishHoldNow": "Chiudi la serie ora",
+  "barWeight": "Peso del bilanciere o della slitta",
+  "barWeightHint": "Usato dal calcolatore dei dischi",
+  "barWeightCustom": "Personalizzato · tocca per azzerare"
 }

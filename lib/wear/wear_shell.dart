@@ -152,7 +152,7 @@ class _WearShellState extends State<WearShell> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: fit,
+      animation: Listenable.merge([fit, fit.clock]),
       builder: (context, _) {
         final gc = context.gc;
         return PopScope(

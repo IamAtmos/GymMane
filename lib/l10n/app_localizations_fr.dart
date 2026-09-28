@@ -1137,7 +1137,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get newRoutineName => 'Nouveau programme';
 
   @override
-  String get dragToReorder => 'Maintiens et fais glisser pour réorganiser — c’est l’ordre de ta séance.';
+  String get dragToReorder =>
+      'Fais glisser la poignée à points pour réordonner : c’est l’ordre de ta séance.';
 
   @override
   String reorderHandle(String name) {
@@ -1443,7 +1444,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get activityLevel => 'NIVEAU D’ACTIVITÉ';
 
   @override
-  String get barWeight => 'POIDS DE LA BARRE';
+  String get barWeight => 'Poids de la barre ou du chariot';
 
   @override
   String get perSide => 'PAR CÔTÉ';
@@ -2874,9 +2875,6 @@ class AppLocalizationsFr extends AppLocalizations {
   String get tapToSkip => 'Touche pour passer';
 
   @override
-  String get tapToStop => 'Touche pour arrêter';
-
-  @override
   String get screenLocked => 'Écran verrouillé';
 
   @override
@@ -3141,4 +3139,53 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get backToTop => 'Revenir en haut';
+
+  @override
+  String get deleteExerciseTitle => 'Supprimer cet exercice ?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '« $name » sera retiré de ta bibliothèque et de tes programmes. Tes séries passées sont conservées.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Importe-le depuis un navigateur sur strava.com/upload/select (l’app Strava n’importe pas de fichiers). Il apparaît comme musculation avec tes séries.';
+
+  @override
+  String get manualStartTime => 'Heure de début';
+
+  @override
+  String get manualDuration => 'Durée';
+
+  @override
+  String get manualDurationUnset => 'Ajouter la durée';
+
+  @override
+  String get stravaRow => 'Exporter vers Strava (bêta)';
+
+  @override
+  String get stravaBeta => 'BÊTA';
+
+  @override
+  String get stravaIntro =>
+      'Choisis une séance à envoyer sur Strava. Tu obtiens un fichier .fit : importe-le depuis un navigateur sur strava.com/upload/select, il apparaît comme musculation avec tes séries.';
+
+  @override
+  String get stravaEmpty => 'Aucune séance à exporter pour l’instant.';
+
+  @override
+  String get tapToPause => 'Touche pour mettre en pause';
+
+  @override
+  String get holdPausedHint => 'En pause · touche pour reprendre';
+
+  @override
+  String get finishHoldNow => 'Finir la série maintenant';
+
+  @override
+  String get barWeightHint => 'Utilisé par le calculateur de disques';
+
+  @override
+  String get barWeightCustom => 'Personnalisé · touche pour réinitialiser';
 }

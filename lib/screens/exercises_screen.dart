@@ -370,6 +370,7 @@ void showCreateExerciseSheet(BuildContext context,
   final nameCtrl = TextEditingController(text: editing?.name ?? initialName.trim());
   final stepsCtrl = TextEditingController(text: editing?.steps.join('\n') ?? '');
   String muscle = editing?.primary ?? kMuscles.first.id;
+  final secondary = <String>{...?editing?.secondary};
   String equipment = editing?.equipment ?? kEquipment.first;
   String difficulty = editing?.difficulty ?? kDifficulties.first;
   String mode = editing?.mode ?? '';
@@ -431,10 +432,30 @@ void showCreateExerciseSheet(BuildContext context,
                         label: t.muscle(m.id),
                         bg: muscle == m.id ? gc.ember : gc.bgRaised2,
                         fg: muscle == m.id ? gc.onEmber : gc.textSecondary,
-                        onTap: () => setSheet(() => muscle = m.id),
+                        onTap: () => setSheet(() {
+                          muscle = m.id;
+                          secondary.remove(m.id);
+                        }),
                         vPad: 7,
                         fontSize: 12,
                       ),
+                  ]),
+                  const SizedBox(height: 16),
+                  _filterLabel(gc, t.secondaryLabel),
+                  const SizedBox(height: 8),
+                  Wrap(spacing: 8, runSpacing: 8, children: [
+                    for (final m in kMuscles)
+                      if (m.id != muscle)
+                        Pill(
+                          label: t.muscle(m.id),
+                          bg: secondary.contains(m.id) ? gc.ember : gc.bgRaised2,
+                          fg: secondary.contains(m.id) ? gc.onEmber : gc.textSecondary,
+                          onTap: () => setSheet(() {
+                            if (!secondary.remove(m.id)) secondary.add(m.id);
+                          }),
+                          vPad: 7,
+                          fontSize: 12,
+                        ),
                   ]),
                   const SizedBox(height: 16),
                   _filterLabel(gc, t.equipmentLabel),
@@ -610,7 +631,8 @@ void showCreateExerciseSheet(BuildContext context,
                             equipment: equipment,
                             difficulty: difficulty,
                             steps: steps,
-                            mode: mode);
+                            mode: mode,
+                            secondary: secondary.toList());
                         Navigator.pop(sheetCtx);
                         return;
                       }
@@ -620,7 +642,8 @@ void showCreateExerciseSheet(BuildContext context,
                           equipment: equipment,
                           difficulty: difficulty,
                           steps: steps,
-                          mode: mode);
+                          mode: mode,
+                          secondary: secondary.toList());
                       if (mediaPath != null) {
                         await fit.attachExerciseMedia(id, mediaPath!);
                       }

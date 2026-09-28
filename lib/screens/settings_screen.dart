@@ -33,6 +33,7 @@ import '../widgets/profile_avatar.dart';
 import '../widgets/ruler_picker.dart';
 import '../widgets/timer_panel.dart';
 import 'profile_screen.dart';
+import 'strava_sheet.dart';
 import '../widgets/ui_kit.dart';
 
 const _kRepoUrl = 'https://github.com/InlitX/GymMane';
@@ -311,8 +312,9 @@ class SettingsScreen extends StatelessWidget {
               (PhosphorIconsRegular.fileZip, t.exportBackup, () => _exportBackup(context)),
               (PhosphorIconsRegular.downloadSimple, t.importBackup, () => _importBackup(context)),
               (PhosphorIconsRegular.arrowSquareIn, t.importFromApp, () => _openImportApps(context)),
+              (PhosphorIconsRegular.export, t.stravaRow, () => showStravaSheet(context)),
               (PhosphorIconsRegular.trash, t.resetData, () => _resetAll(context)),
-            ], danger: 4),
+            ], danger: 5),
             const SizedBox(height: 18),
             _sectionLabel(gc, t.support),
             const SizedBox(height: 8),
@@ -817,7 +819,7 @@ class SettingsScreen extends StatelessWidget {
   }
 
   Future<void> _addWidget(BuildContext context, String provider) async {
-    await HomeWidgetBridge.update();
+    await HomeWidgetBridge.updateNow(provider: provider);
     try {
       final supported = await HomeWidget.isRequestPinWidgetSupported() ?? false;
       if (!supported) {

@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 
 import '../theme/app_colors.dart';
@@ -475,6 +476,34 @@ String sentenceCase(String s) {
   return s[0] + s.substring(1).toLowerCase();
 }
 
+ReorderItemProxyDecorator liftedRow(double radius) => (child, _, animation) => AnimatedBuilder(
+      animation: animation,
+      child: child,
+      builder: (context, kid) {
+        final t = Curves.easeOutCubic.transform(animation.value);
+        return Transform.scale(
+          scale: 1 + 0.03 * t,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(radius),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.35 * t),
+                  blurRadius: 18 * t,
+                  offset: Offset(0, 8 * t),
+                ),
+              ],
+            ),
+            child: Material(type: MaterialType.transparency, child: kid),
+          ),
+        );
+      },
+    );
+
+void reorderPicked(int _) => HapticFeedback.selectionClick();
+
+void reorderDropped(int _) => HapticFeedback.lightImpact();
+
 class FitText extends StatelessWidget {
   const FitText(this.text, {super.key, required this.style});
 
@@ -503,10 +532,113 @@ class ScreenTitle extends StatelessWidget {
   final double spacing;
   @override
   Widget build(BuildContext context) =>
-      Text(titleCase(text),
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: AppTheme.f(size, weight: FontWeight.w800, color: context.gc.text));
+      MarqueeText(titleCase(text), style: AppTheme.f(size, weight: FontWeight.w800, color: context.gc.text));
+}
+
+class MarqueeText extends StatefulWidget {
+  const MarqueeText(this.text, {super.key, required this.style});
+  final String text;
+  final TextStyle style;
+
+  @override
+  State<MarqueeText> createState() => _MarqueeTextState();
+}
+
+class _MarqueeTextState extends State<MarqueeText> with SingleTickerProviderStateMixin {
+  static const _gap = 48.0;
+  static const _speed = 38.0;
+  static const _holdMs = 1600;
+
+  late final AnimationController _c;
+  double _run = 0;
+  bool _paused = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _c = AnimationController(vsync: this);
+  }
+
+  int get _scrollMs => (_run / _speed * 1000).round();
+
+  void _sync(double run, bool still) {
+    if (run == _run) return;
+    _run = run;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || _run != run) return;
+      if (run == 0) {
+        _c.stop();
+        _c.value = 0;
+        return;
+      }
+      _c.duration = Duration(milliseconds: _holdMs + _scrollMs);
+      _c.value = 0;
+      if (!_paused && !still) _c.repeat();
+    });
+  }
+
+  void _toggle() {
+    setState(() => _paused = !_paused);
+    if (_paused) {
+      _c.stop();
+    } else {
+      _c.repeat();
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, box) {
+      final tp = TextPainter(
+        text: TextSpan(text: widget.text, style: widget.style),
+        textDirection: Directionality.of(context),
+        textScaler: MediaQuery.textScalerOf(context),
+        maxLines: 1,
+      )..layout();
+      final fits = tp.width <= box.maxWidth;
+      _sync(fits ? 0 : tp.width + _gap, MediaQuery.disableAnimationsOf(context));
+      final plain = Text(widget.text, maxLines: 1, overflow: TextOverflow.ellipsis, style: widget.style);
+      if (fits) return plain;
+      final rtl = Directionality.of(context) == TextDirection.rtl;
+      return GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: _toggle,
+        child: SizedBox(
+          width: box.maxWidth,
+          height: tp.height,
+          child: ClipRect(
+            child: AnimatedBuilder(
+              animation: _c,
+              builder: (context, child) {
+                final total = _holdMs + _scrollMs;
+                final ms = _c.value * total;
+                final dx = ms <= _holdMs ? 0.0 : (ms - _holdMs) / _scrollMs * _run;
+                return Transform.translate(offset: Offset(rtl ? dx : -dx, 0), child: child);
+              },
+              child: OverflowBox(
+                alignment: rtl ? Alignment.centerRight : Alignment.centerLeft,
+                maxWidth: double.infinity,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(widget.text, maxLines: 1, softWrap: false, style: widget.style),
+                    const SizedBox(width: _gap),
+                    Text(widget.text, maxLines: 1, softWrap: false, style: widget.style),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    });
+  }
 }
 
 class Kicker extends StatelessWidget {

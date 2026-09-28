@@ -1133,7 +1133,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get newRoutineName => 'Нова програма';
 
   @override
-  String get dragToReorder => 'Утримуй і перетягуй, щоб змінити порядок — у такій послідовності тренуєшся.';
+  String get dragToReorder => 'Потягніть за ручку з крапками, щоб змінити порядок — у ньому ви тренуєтеся.';
 
   @override
   String reorderHandle(String name) {
@@ -1438,7 +1438,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get activityLevel => 'РІВЕНЬ АКТИВНОСТІ';
 
   @override
-  String get barWeight => 'ВАГА ГРИФА';
+  String get barWeight => 'Вага грифа чи платформи';
 
   @override
   String get perSide => 'НА СТОРОНУ';
@@ -2867,9 +2867,6 @@ class AppLocalizationsUk extends AppLocalizations {
   String get tapToSkip => 'Торкніться, щоб пропустити';
 
   @override
-  String get tapToStop => 'Торкніться, щоб зупинити';
-
-  @override
   String get screenLocked => 'Екран заблоковано';
 
   @override
@@ -3140,4 +3137,53 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get backToTop => 'Угору';
+
+  @override
+  String get deleteExerciseTitle => 'Видалити цю вправу?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '«$name» буде видалено з бібліотеки та програм. Попередні підходи збережуться.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Завантажте в браузері на strava.com/upload/select (застосунок Strava не імпортує файли). З’явиться як силове тренування з вашими підходами.';
+
+  @override
+  String get manualStartTime => 'Час початку';
+
+  @override
+  String get manualDuration => 'Тривалість';
+
+  @override
+  String get manualDurationUnset => 'Додати тривалість';
+
+  @override
+  String get stravaRow => 'Експорт у Strava (бета)';
+
+  @override
+  String get stravaBeta => 'БЕТА';
+
+  @override
+  String get stravaIntro =>
+      'Оберіть тренування для Strava. Ви отримаєте файл .fit: завантажте його в браузері на strava.com/upload/select, і воно з’явиться як силове тренування з підходами.';
+
+  @override
+  String get stravaEmpty => 'Поки немає тренувань для експорту.';
+
+  @override
+  String get tapToPause => 'Торкніться для паузи';
+
+  @override
+  String get holdPausedHint => 'Пауза · торкніться, щоб продовжити';
+
+  @override
+  String get finishHoldNow => 'Завершити підхід зараз';
+
+  @override
+  String get barWeightHint => 'Використовує калькулятор млинців';
+
+  @override
+  String get barWeightCustom => 'Власна · торкніться, щоб скинути';
 }

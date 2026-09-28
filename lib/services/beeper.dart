@@ -15,24 +15,34 @@ class Beeper {
   String? _tick;
   String? _go;
   bool _failed = false;
+  bool _loud = false;
+
+  set loud(bool on) {
+    if (_loud == on) return;
+    _loud = on;
+    final p = _player;
+    if (p != null) p.setAudioContext(_context).catchError((_) {});
+  }
+
+  AudioContext get _context => AudioContext(
+        android: AudioContextAndroid(
+          contentType: AndroidContentType.sonification,
+          usageType: _loud ? AndroidUsageType.alarm : AndroidUsageType.notification,
+          audioFocus: AndroidAudioFocus.gainTransientMayDuck,
+        ),
+        iOS: AudioContextIOS(category: AVAudioSessionCategory.ambient, options: const {}),
+      );
 
   Future<bool> _ready() async {
     if (_player != null) return true;
     if (_failed || kIsWeb) return false;
     try {
       final dir = await getTemporaryDirectory();
-      _tick = await _write(dir, 'gm_tick.wav', _tone(880, 0.09));
-      _go = await _write(dir, 'gm_go.wav', _tone(1318.5, 0.32));
+      _tick = await _write(dir, 'gm_tick2.wav', _tone(880, 0.09));
+      _go = await _write(dir, 'gm_go2.wav', _tone(1318.5, 0.32));
       final p = AudioPlayer();
       await p.setReleaseMode(ReleaseMode.stop);
-      await p.setAudioContext(AudioContext(
-        android: const AudioContextAndroid(
-          contentType: AndroidContentType.sonification,
-          usageType: AndroidUsageType.notification,
-          audioFocus: AndroidAudioFocus.gainTransientMayDuck,
-        ),
-        iOS: AudioContextIOS(category: AVAudioSessionCategory.ambient, options: const {}),
-      ));
+      await p.setAudioContext(_context);
       _player = p;
       return true;
     } catch (_) {
@@ -54,7 +64,7 @@ class Beeper {
     if (path == null) return;
     try {
       await _player!.stop();
-      await _player!.play(DeviceFileSource(path), volume: 0.9);
+      await _player!.play(DeviceFileSource(path), volume: 1);
     } catch (_) {}
   }
 
@@ -92,9 +102,9 @@ class Beeper {
     for (var i = 0; i < n; i++) {
       final t = i / rate;
       final attack = math.min(1.0, i / (rate * 0.004));
-      final release = math.exp(-t * (6 / secs));
+      final release = math.exp(-t * (3 / secs));
       final wave = math.sin(2 * math.pi * hz * t) * 0.8 + math.sin(4 * math.pi * hz * t) * 0.2;
-      data.setInt16(44 + i * 2, (wave * 0.5 * attack * release * 32767).round(), Endian.little);
+      data.setInt16(44 + i * 2, (wave * 0.9 * attack * release * 32767).round(), Endian.little);
     }
     return data.buffer.asUint8List();
   }

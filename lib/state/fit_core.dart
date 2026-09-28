@@ -69,6 +69,8 @@ abstract class FitCore extends ChangeNotifier {
 
   final Map<String, Map<int, int>> videoMarks = {};
 
+  final Map<String, double> exerciseBar = {};
+
   final Map<String, String> modeOverride = {};
   VoidCallback? onWidgetsShouldUpdate;
 

@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "Nieuwe routine",
-  "dragToReorder": "Houd vast en sleep om te herschikken — dit is de trainingsvolgorde.",
+  "dragToReorder": "Sleep aan het stippengreepje om te herschikken — zo train je ze.",
   "reorderHandle": "{name} herschikken",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "Vijf dagen, één spiergroep per dag: borst, rug, benen, schouders, armen.",
   "elapsedCaps": "VERSTREKEN",
   "tapToSkip": "Tik om over te slaan",
-  "tapToStop": "Tik om te stoppen",
   "screenLocked": "Scherm vergrendeld",
   "lockedHint": "Houd de vingerafdruk bovenaan ingedrukt om te ontgrendelen",
   "liveDoneSet": "Set klaar",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{1 training in de laatste 30 dagen.} other{{n} trainingen in de laatste 30 dagen.}}",
   "planBestLifts": "Beste recente sets",
   "planAskFirst": "Als je mijn doel (kracht, spiermassa, vetverlies of algemene fitheid) of de duur van een sessie niet weet, vraag het me eerst in één kort bericht. Antwoord daarna alleen met JSON.",
-  "backToTop": "Naar boven"
+  "backToTop": "Naar boven",
+  "deleteExerciseTitle": "Deze oefening verwijderen?",
+  "deleteExerciseBody": "\"{name}\" wordt uit je bibliotheek en routines gehaald. Je eerdere sets blijven bewaard.",
+  "exportForStravaHint": "Upload het in een browser op strava.com/upload/select (de Strava-app kan geen bestanden importeren). Het verschijnt als krachttraining met je sets.",
+  "manualStartTime": "Starttijd",
+  "manualDuration": "Duur",
+  "manualDurationUnset": "Duur invullen",
+  "stravaRow": "Exporteren naar Strava (bèta)",
+  "stravaBeta": "BÈTA",
+  "stravaIntro": "Kies een training voor Strava. Je krijgt een .fit-bestand: upload het in een browser op strava.com/upload/select en het verschijnt als krachttraining met je sets.",
+  "stravaEmpty": "Nog geen trainingen om te exporteren.",
+  "tapToPause": "Tik om te pauzeren",
+  "holdPausedHint": "Gepauzeerd · tik om verder te gaan",
+  "finishHoldNow": "Set nu afronden",
+  "barWeight": "Gewicht van stang of slede",
+  "barWeightHint": "Gebruikt door de schijvencalculator",
+  "barWeightCustom": "Eigen · tik om te wissen"
 }

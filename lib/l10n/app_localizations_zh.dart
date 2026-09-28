@@ -1080,7 +1080,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get newRoutineName => '新计划';
 
   @override
-  String get dragToReorder => '长按并拖动以调整顺序 — 这将决定你的训练顺序。';
+  String get dragToReorder => '拖动带点的手柄调整顺序，这就是你的训练顺序。';
 
   @override
   String reorderHandle(String name) {
@@ -1373,7 +1373,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get activityLevel => '日常活动水平';
 
   @override
-  String get barWeight => '杠铃杆重';
+  String get barWeight => '杠铃杆或滑车重量';
 
   @override
   String get perSide => '单侧配重';
@@ -2735,9 +2735,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tapToSkip => '点按跳过';
 
   @override
-  String get tapToStop => '点按停止';
-
-  @override
   String get screenLocked => '屏幕已锁定';
 
   @override
@@ -2995,6 +2992,54 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get backToTop => '回到顶部';
+
+  @override
+  String get deleteExerciseTitle => '删除这个动作？';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '“$name”将从动作库和训练计划中移除，之前的训练记录会保留。';
+  }
+
+  @override
+  String get exportForStravaHint => '请在浏览器中打开 strava.com/upload/select 上传（Strava 应用无法导入文件），会显示为带组数的力量训练。';
+
+  @override
+  String get manualStartTime => '开始时间';
+
+  @override
+  String get manualDuration => '时长';
+
+  @override
+  String get manualDurationUnset => '添加时长';
+
+  @override
+  String get stravaRow => '导出到 Strava（测试版）';
+
+  @override
+  String get stravaBeta => '测试版';
+
+  @override
+  String get stravaIntro =>
+      '选择一次训练导出到 Strava。你会得到一个 .fit 文件：在浏览器中打开 strava.com/upload/select 上传，会显示为带组数的力量训练。';
+
+  @override
+  String get stravaEmpty => '还没有可导出的训练。';
+
+  @override
+  String get tapToPause => '点按暂停';
+
+  @override
+  String get holdPausedHint => '已暂停 · 点按继续';
+
+  @override
+  String get finishHoldNow => '现在完成这组';
+
+  @override
+  String get barWeightHint => '杠铃片计算器会用到';
+
+  @override
+  String get barWeightCustom => '自定义 · 点按重置';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -4073,7 +4118,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get newRoutineName => '新增課表';
 
   @override
-  String get dragToReorder => '長按並拖曳以重新排序 — 這就是訓練順序。';
+  String get dragToReorder => '拖曳帶點的把手調整順序，這就是你的訓練順序。';
 
   @override
   String reorderHandle(String name) {
@@ -4366,7 +4411,7 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get activityLevel => '活動等級';
 
   @override
-  String get barWeight => '槓鈴重量';
+  String get barWeight => '槓鈴桿或滑車重量';
 
   @override
   String get perSide => '每側';
@@ -5751,9 +5796,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get tapToSkip => '點一下略過';
 
   @override
-  String get tapToStop => '點一下停止';
-
-  @override
   String get screenLocked => '螢幕已鎖定';
 
   @override
@@ -6011,4 +6053,52 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get backToTop => '回到頂端';
+
+  @override
+  String get deleteExerciseTitle => '刪除這個動作？';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '「$name」將從動作庫和課表中移除，之前的訓練紀錄會保留。';
+  }
+
+  @override
+  String get exportForStravaHint => '請在瀏覽器中開啟 strava.com/upload/select 上傳（Strava App 無法匯入檔案），會顯示為含組數的重量訓練。';
+
+  @override
+  String get manualStartTime => '開始時間';
+
+  @override
+  String get manualDuration => '時長';
+
+  @override
+  String get manualDurationUnset => '新增時長';
+
+  @override
+  String get stravaRow => '匯出到 Strava（測試版）';
+
+  @override
+  String get stravaBeta => '測試版';
+
+  @override
+  String get stravaIntro =>
+      '選擇一次訓練匯出到 Strava。你會得到一個 .fit 檔：在瀏覽器中開啟 strava.com/upload/select 上傳，會顯示為含組數的重量訓練。';
+
+  @override
+  String get stravaEmpty => '還沒有可匯出的訓練。';
+
+  @override
+  String get tapToPause => '點按暫停';
+
+  @override
+  String get holdPausedHint => '已暫停 · 點按繼續';
+
+  @override
+  String get finishHoldNow => '現在完成這組';
+
+  @override
+  String get barWeightHint => '槓片計算器會用到';
+
+  @override
+  String get barWeightCustom => '自訂 · 點按重設';
 }

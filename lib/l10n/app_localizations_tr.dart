@@ -1134,7 +1134,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get newRoutineName => 'Yeni program';
 
   @override
-  String get dragToReorder => 'Sıralamak için basılı tutup sürükle — antrenman sırası budur.';
+  String get dragToReorder => 'Sıralamak için noktalı tutamacı sürükle — antrenman sırası budur.';
 
   @override
   String reorderHandle(String name) {
@@ -1439,7 +1439,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get activityLevel => 'AKTİVİTE SEVİYESİ';
 
   @override
-  String get barWeight => 'BAR AĞIRLIĞI';
+  String get barWeight => 'Bar ya da kızak ağırlığı';
 
   @override
   String get perSide => 'HER TARAF';
@@ -2863,9 +2863,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get tapToSkip => 'Geçmek için dokun';
 
   @override
-  String get tapToStop => 'Durdurmak için dokun';
-
-  @override
   String get screenLocked => 'Ekran kilitli';
 
   @override
@@ -3128,4 +3125,53 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get backToTop => 'Başa dön';
+
+  @override
+  String get deleteExerciseTitle => 'Bu egzersiz silinsin mi?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '\"$name\" kütüphanenden ve programlarından kaldırılacak. Önceki setlerin korunur.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Tarayıcıdan strava.com/upload/select adresine yükle (Strava uygulaması dosya içe aktaramaz). Setlerinle birlikte ağırlık antrenmanı olarak görünür.';
+
+  @override
+  String get manualStartTime => 'Başlangıç saati';
+
+  @override
+  String get manualDuration => 'Süre';
+
+  @override
+  String get manualDurationUnset => 'Süre ekle';
+
+  @override
+  String get stravaRow => 'Strava’ya aktar (beta)';
+
+  @override
+  String get stravaBeta => 'BETA';
+
+  @override
+  String get stravaIntro =>
+      'Strava’ya götürmek için bir antrenman seç. Bir .fit dosyası alırsın: tarayıcıdan strava.com/upload/select adresine yükle, setlerinle birlikte ağırlık antrenmanı olarak görünür.';
+
+  @override
+  String get stravaEmpty => 'Henüz dışa aktarılacak antrenman yok.';
+
+  @override
+  String get tapToPause => 'Duraklatmak için dokun';
+
+  @override
+  String get holdPausedHint => 'Duraklatıldı · devam için dokun';
+
+  @override
+  String get finishHoldNow => 'Seti şimdi bitir';
+
+  @override
+  String get barWeightHint => 'Plaka hesaplayıcı bunu kullanır';
+
+  @override
+  String get barWeightCustom => 'Kendi değerin · sıfırlamak için dokun';
 }

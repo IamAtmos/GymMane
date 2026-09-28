@@ -15,6 +15,7 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
   bool sessionLocked = false;
   DateTime? logDay;
   int restDoneTick = 0;
+  final ValueNotifier<int> clock = ValueNotifier(0);
   int restTotal = 0;
   int autoMoves = 0;
 
@@ -345,7 +346,7 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
   void _startTicking({DateTime? from}) {
     _sessionTimer?.cancel();
     _runningSince = from ?? DateTime.now();
-    _sessionTimer = Timer.periodic(const Duration(seconds: 1), (_) => notifyListeners());
+    _sessionTimer = Timer.periodic(const Duration(seconds: 1), (_) => clock.value++);
   }
 
   int get sessionElapsed => _runningSince == null
@@ -373,7 +374,7 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
 
   void toggleSessionPause() {
     final s = session;
-    if (holding) stopHold();
+    if (holding && !holdPaused) toggleHoldPause();
     if (sessionPaused) {
       _startTicking();
       sessionPaused = false;
@@ -422,13 +423,40 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
   bool get sessionParked => session != null && !session!.complete && route != 'session';
 
   void stepOutOfSession() {
-    if (!sessionPaused) toggleSessionPause();
+    if (!sessionPaused && !(session?.manual ?? false)) toggleSessionPause();
     parkSession();
   }
 
   void stepBackIntoSession() {
     if (sessionPaused) toggleSessionPause();
     resumeSession();
+  }
+
+  DateTime? get manualStart {
+    final s = session;
+    final at = s?.loggedAt;
+    if (s == null || !s.manual || at == null) return null;
+    return at.subtract(Duration(seconds: _elapsedBefore));
+  }
+
+  int get manualMinutes => _elapsedBefore ~/ 60;
+
+  void setManualStart(int minuteOfDay) {
+    final start = manualStart;
+    if (start == null) return;
+    final next = DateTime(start.year, start.month, start.day, minuteOfDay ~/ 60, minuteOfDay % 60);
+    session!.loggedAt = next.add(Duration(seconds: _elapsedBefore));
+    persistNow();
+    notifyListeners();
+  }
+
+  void setManualMinutes(int minutes) {
+    final start = manualStart;
+    if (start == null) return;
+    _elapsedBefore = minutes.clamp(0, 24 * 60) * 60;
+    session!.loggedAt = start.add(Duration(seconds: _elapsedBefore));
+    persistNow();
+    notifyListeners();
   }
 
   bool _backToParked() {
@@ -621,8 +649,10 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
         t.cancel();
         restDoneTick++;
         RestAlarm.instance.fireNow();
+        notifyListeners();
+        return;
       }
-      notifyListeners();
+      clock.value++;
     });
   }
 
@@ -721,13 +751,37 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
     return left <= 0 ? 0 : (left / 1000).ceil();
   }
 
-  int get holdLead => _secondsUntil(holdStartsAt);
+  bool holdPaused = false;
+  int _pausedLeadMs = 0;
+  int _pausedEndMs = 0;
+
+  int get holdLead => holdPaused ? (_pausedLeadMs / 1000).ceil() : _secondsUntil(holdStartsAt);
 
   int? get holdRemaining {
     final end = holdEndsAt;
     if (end == null) return null;
-    return math.min(_secondsUntil(end), holdTotal);
+    return math.min(holdPaused ? (_pausedEndMs / 1000).ceil() : _secondsUntil(end), holdTotal);
   }
+
+  void toggleHoldPause() {
+    final start = holdStartsAt, end = holdEndsAt;
+    if (start == null || end == null) return;
+    final now = DateTime.now();
+    if (holdPaused) {
+      holdStartsAt = now.add(Duration(milliseconds: _pausedLeadMs));
+      holdEndsAt = now.add(Duration(milliseconds: _pausedEndMs));
+      holdPaused = false;
+      _runHold();
+    } else {
+      _pausedLeadMs = math.max(0, start.difference(now).inMilliseconds);
+      _pausedEndMs = math.max(0, end.difference(now).inMilliseconds);
+      _holdTimer?.cancel();
+      holdPaused = true;
+    }
+    notifyListeners();
+  }
+
+  void completeHold() => _finishHold();
 
   bool get holding => holdEndsAt != null;
 
@@ -760,6 +814,12 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
     final now = DateTime.now();
     holdStartsAt = now.add(const Duration(seconds: holdLeadIn));
     holdEndsAt = holdStartsAt!.add(Duration(seconds: secs));
+    holdPaused = false;
+    _runHold();
+    notifyListeners();
+  }
+
+  void _runHold() {
     _holdTimer?.cancel();
     final sound = alarmStyle != 'vibrate';
     var shownLead = holdLead;
@@ -779,19 +839,19 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
         } else if (lead <= 3) {
           Beeper.instance.tick(sound: sound);
         }
-        notifyListeners();
+        clock.value++;
       } else if (left != shown) {
         shown = left;
         if (lead == 0 && left != null && left <= 3) Beeper.instance.tick(sound: sound);
-        notifyListeners();
+        clock.value++;
       }
     });
-    notifyListeners();
   }
 
   void stopHold() {
     _holdTimer?.cancel();
     _holdTimer = null;
+    holdPaused = false;
     holdEndsAt = null;
     holdStartsAt = null;
     holdEx = -1;

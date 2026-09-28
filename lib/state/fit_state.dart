@@ -152,12 +152,17 @@ class FitState extends FitCore
     demoSize = data['demo'] as String? ?? 'large';
     alarmStyle = data['alarmStyle'] as String? ?? 'quiet';
     RestAlarm.instance.style = alarmStyle;
+    Beeper.instance.loud = alarmStyle == 'loud';
     noSuggest
       ..clear()
       ..addAll(((data['noSuggest'] as List?) ?? const []).cast<String>());
     archived
       ..clear()
       ..addAll(((data['archived'] as List?) ?? const []).cast<String>());
+    exerciseBar
+      ..clear()
+      ..addAll(((data['barKg'] as Map?) ?? const {})
+          .map((k, v) => MapEntry(k as String, (v as num).toDouble())));
     videoMarks
       ..clear()
       ..addAll(((data['marks'] as Map?) ?? const {}).map((k, v) => MapEntry(
@@ -351,6 +356,7 @@ class FitState extends FitCore
         'alarmStyle': alarmStyle,
         'noSuggest': noSuggest.toList(),
         'archived': archived.toList(),
+        'barKg': exerciseBar,
         'marks': videoMarks.map((k, v) => MapEntry(k, v.map((i, ms) => MapEntry('$i', ms)))),
         'exMode': modeOverride,
         'trainAt': trainReminderMin,
@@ -428,6 +434,7 @@ class FitState extends FitCore
     noSuggest.clear();
     archived.clear();
     videoMarks.clear();
+    exerciseBar.clear();
     modeOverride.clear();
     demoSize = 'large';
     MediaStore.clearAll();
@@ -698,7 +705,13 @@ class FitState extends FitCore
     final gear = kEquipment.contains(item.equipment) ? item.equipment! : 'Other';
     final level = kDifficulties.contains(item.level) ? item.level! : 'Beginner';
     final id = addCustomExercise(
-        name: item.name, primary: muscle, equipment: gear, difficulty: level, steps: item.steps, mode: item.mode);
+        name: item.name,
+        primary: muscle,
+        equipment: gear,
+        difficulty: level,
+        steps: item.steps,
+        mode: item.mode,
+        secondary: item.secondary);
     return exerciseById(id);
   }
 
@@ -835,6 +848,7 @@ class FitState extends FitCore
                     if (isCustom(id))
                       'custom': {
                         'muscle': ex.primary,
+                        if (ex.secondary.isNotEmpty) 'secondary': ex.secondary,
                         'equipment': ex.equipment,
                         'level': ex.difficulty,
                         if (ex.steps.isNotEmpty) 'steps': ex.steps,

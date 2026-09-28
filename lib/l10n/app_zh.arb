@@ -180,7 +180,7 @@
   "exercisesWithCount": "动作 · {n}",
   "setDay": "设为{day}",
   "newRoutineName": "新计划",
-  "dragToReorder": "长按并拖动以调整顺序 — 这将决定你的训练顺序。",
+  "dragToReorder": "拖动带点的手柄调整顺序，这就是你的训练顺序。",
   "reorderHandle": "拖动重新排序 {name}",
   "removeFromRoutine": "从计划中移除",
   "dropExercise": "移除此动作？",
@@ -870,7 +870,6 @@
 
   "elapsedCaps": "已用时",
   "tapToSkip": "点按跳过",
-  "tapToStop": "点按停止",
 
   "screenLocked": "屏幕已锁定",
   "lockedHint": "长按顶部的指纹图标即可解锁",
@@ -958,5 +957,21 @@
   "planHistory": "{n, plural, =1{最近 30 天训练了 1 次。} other{最近 30 天训练了 {n} 次。}}",
   "planBestLifts": "最近的最佳组",
   "planAskFirst": "如果你不知道我的目标（力量、增肌、减脂或一般体能）或每次能练多久，请先用一条简短消息问我。知道后只用 JSON 回答。",
-  "backToTop": "回到顶部"
+  "backToTop": "回到顶部",
+  "deleteExerciseTitle": "删除这个动作？",
+  "deleteExerciseBody": "“{name}”将从动作库和训练计划中移除，之前的训练记录会保留。",
+  "exportForStravaHint": "请在浏览器中打开 strava.com/upload/select 上传（Strava 应用无法导入文件），会显示为带组数的力量训练。",
+  "manualStartTime": "开始时间",
+  "manualDuration": "时长",
+  "manualDurationUnset": "添加时长",
+  "stravaRow": "导出到 Strava（测试版）",
+  "stravaBeta": "测试版",
+  "stravaIntro": "选择一次训练导出到 Strava。你会得到一个 .fit 文件：在浏览器中打开 strava.com/upload/select 上传，会显示为带组数的力量训练。",
+  "stravaEmpty": "还没有可导出的训练。",
+  "tapToPause": "点按暂停",
+  "holdPausedHint": "已暂停 · 点按继续",
+  "finishHoldNow": "现在完成这组",
+  "barWeight": "杠铃杆或滑车重量",
+  "barWeightHint": "杠铃片计算器会用到",
+  "barWeightCustom": "自定义 · 点按重置"
 }

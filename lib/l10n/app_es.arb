@@ -352,7 +352,7 @@
   "exercisesWithCount": "EJERCICIOS · {n}",
   "setDay": "PONER {day}",
   "newRoutineName": "Rutina nueva",
-  "dragToReorder": "Mantén y arrastra para reordenar — es el orden en que entrenas.",
+  "dragToReorder": "Arrastra el asa de puntos para reordenar: es el orden en que entrenas.",
   "reorderHandle": "Reordenar {name}",
   "removeFromRoutine": "Quitar de la rutina",
 
@@ -917,7 +917,6 @@
 
   "elapsedCaps": "TRANSCURRIDO",
   "tapToSkip": "Toca para saltar",
-  "tapToStop": "Toca para parar",
 
   "screenLocked": "Pantalla bloqueada",
   "lockedHint": "Mantén pulsada la huella de arriba para desbloquear",
@@ -1005,5 +1004,21 @@
   "planHistory": "{n, plural, =1{1 entreno registrado en los últimos 30 días.} other{{n} entrenos registrados en los últimos 30 días.}}",
   "planBestLifts": "Mejores series recientes",
   "planAskFirst": "Si no sabes mi objetivo (fuerza, músculo, perder grasa o forma general) o cuánto puede durar cada sesión, pregúntamelo primero en un mensaje corto. Cuando lo tengas, responde solo con JSON.",
-  "backToTop": "Volver arriba"
+  "backToTop": "Volver arriba",
+  "deleteExerciseTitle": "¿Borrar este ejercicio?",
+  "deleteExerciseBody": "\"{name}\" se quitará de tu biblioteca y de tus rutinas. Tus series anteriores se conservan.",
+  "exportForStravaHint": "Súbelo desde el navegador en strava.com/upload/select (la app de Strava no importa archivos). Aparece como Entrenamiento con pesas, con tus series.",
+  "manualStartTime": "Hora de inicio",
+  "manualDuration": "Duración",
+  "manualDurationUnset": "Añadir duración",
+  "stravaRow": "Exportar a Strava (beta)",
+  "stravaBeta": "BETA",
+  "stravaIntro": "Elige un entreno para llevarlo a Strava. Te llevas un archivo .fit: súbelo desde el navegador en strava.com/upload/select y aparece como Entrenamiento con pesas, con tus series.",
+  "stravaEmpty": "Aún no hay entrenos para exportar.",
+  "tapToPause": "Toca para pausar",
+  "holdPausedHint": "En pausa · toca para seguir",
+  "finishHoldNow": "Terminar la serie ya",
+  "barWeight": "Peso de la barra o carro",
+  "barWeightHint": "Lo usa la calculadora de discos",
+  "barWeightCustom": "Propio · toca para quitarlo"
 }

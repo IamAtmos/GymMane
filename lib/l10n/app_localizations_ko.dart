@@ -1103,7 +1103,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get newRoutineName => '새 루틴';
 
   @override
-  String get dragToReorder => '길게 눌러 드래그해 순서를 바꾸세요 — 이 순서로 운동합니다.';
+  String get dragToReorder => '점 손잡이를 끌어 순서를 바꾸세요. 이 순서대로 운동해요.';
 
   @override
   String reorderHandle(String name) {
@@ -1401,7 +1401,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get activityLevel => '활동 수준';
 
   @override
-  String get barWeight => '바 무게';
+  String get barWeight => '바 또는 슬레드 무게';
 
   @override
   String get perSide => '한쪽당';
@@ -2788,9 +2788,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tapToSkip => '탭해서 건너뛰기';
 
   @override
-  String get tapToStop => '탭해서 정지';
-
-  @override
   String get screenLocked => '화면 잠김';
 
   @override
@@ -3050,4 +3047,53 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get backToTop => '맨 위로';
+
+  @override
+  String get deleteExerciseTitle => '이 운동을 삭제할까요?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '\"$name\"이(가) 라이브러리와 루틴에서 삭제돼요. 지난 세트 기록은 남아요.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      '브라우저에서 strava.com/upload/select 로 올리세요(Strava 앱은 파일을 가져올 수 없어요). 세트와 함께 웨이트 트레이닝으로 표시돼요.';
+
+  @override
+  String get manualStartTime => '시작 시간';
+
+  @override
+  String get manualDuration => '운동 시간';
+
+  @override
+  String get manualDurationUnset => '시간 추가';
+
+  @override
+  String get stravaRow => 'Strava로 내보내기 (베타)';
+
+  @override
+  String get stravaBeta => '베타';
+
+  @override
+  String get stravaIntro =>
+      'Strava로 보낼 운동을 고르세요. .fit 파일이 만들어지면 브라우저에서 strava.com/upload/select 로 올리세요. 세트와 함께 웨이트 트레이닝으로 표시돼요.';
+
+  @override
+  String get stravaEmpty => '아직 내보낼 운동이 없어요.';
+
+  @override
+  String get tapToPause => '탭하면 일시정지';
+
+  @override
+  String get holdPausedHint => '일시정지됨 · 탭하면 계속';
+
+  @override
+  String get finishHoldNow => '지금 세트 끝내기';
+
+  @override
+  String get barWeightHint => '원판 계산기에 사용돼요';
+
+  @override
+  String get barWeightCustom => '직접 설정 · 탭하면 초기화';
 }

@@ -284,6 +284,9 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
             shrinkWrap: true,
             buildDefaultDragHandles: false,
             physics: const NeverScrollableScrollPhysics(),
+            proxyDecorator: liftedRow(14),
+            onReorderStart: reorderPicked,
+            onReorderEnd: reorderDropped,
             onReorder: (from, to) => fit.reorderRoutineExercise(routine.id, from, to),
             children: [
               for (int i = 0; i < fit.routineExercises(routine).length; i++)

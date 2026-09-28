@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "روتين جديد",
-  "dragToReorder": "اضغط مطولًا واسحب لإعادة الترتيب — هذا هو ترتيب تمرينك.",
+  "dragToReorder": "اسحب المقبض المنقّط لإعادة الترتيب — هذا هو ترتيب تمرينك.",
   "reorderHandle": "إعادة ترتيب {name}",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "خمسة أيام، مجموعة عضلية لكل يوم: صدر، ظهر، أرجل، أكتاف، ذراعان.",
   "elapsedCaps": "المنقضي",
   "tapToSkip": "اضغط للتخطي",
-  "tapToStop": "اضغط للإيقاف",
   "screenLocked": "الشاشة مقفلة",
   "lockedHint": "اضغط مطولًا على البصمة في الأعلى لفتح القفل",
   "liveDoneSet": "انتهت المجموعة",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{تمرين واحد في آخر 30 يومًا.} other{{n} تمارين في آخر 30 يومًا.}}",
   "planBestLifts": "أفضل المجموعات الأخيرة",
   "planAskFirst": "إذا لم تكن تعرف هدفي (قوة أو عضل أو خسارة دهون أو لياقة عامة) أو مدة كل حصة، فاسألني أولًا برسالة قصيرة. بعدها أجب بـ JSON فقط.",
-  "backToTop": "العودة للأعلى"
+  "backToTop": "العودة للأعلى",
+  "deleteExerciseTitle": "حذف هذا التمرين؟",
+  "deleteExerciseBody": "سيُزال «{name}» من مكتبتك ومن روتيناتك. تبقى مجموعاتك السابقة محفوظة.",
+  "exportForStravaHint": "ارفعه من المتصفح على strava.com/upload/select (تطبيق Strava لا يستورد الملفات). سيظهر كتمرين أوزان مع مجموعاتك.",
+  "manualStartTime": "وقت البدء",
+  "manualDuration": "المدة",
+  "manualDurationUnset": "أضف المدة",
+  "stravaRow": "تصدير إلى Strava (تجريبي)",
+  "stravaBeta": "تجريبي",
+  "stravaIntro": "اختر تمرينًا لنقله إلى Strava. ستحصل على ملف .fit: ارفعه من المتصفح على strava.com/upload/select وسيظهر كتمرين أوزان مع مجموعاتك.",
+  "stravaEmpty": "لا توجد تمارين للتصدير بعد.",
+  "tapToPause": "اضغط للإيقاف المؤقت",
+  "holdPausedHint": "متوقف مؤقتًا · اضغط للمتابعة",
+  "finishHoldNow": "أنهِ المجموعة الآن",
+  "barWeight": "وزن البار أو المزلجة",
+  "barWeightHint": "تستخدمه حاسبة الأقراص",
+  "barWeightCustom": "مخصص · اضغط لإعادة الضبط"
 }

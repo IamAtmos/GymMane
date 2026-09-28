@@ -1125,7 +1125,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get newRoutineName => 'روتين جديد';
 
   @override
-  String get dragToReorder => 'اضغط مطولًا واسحب لإعادة الترتيب — هذا هو ترتيب تمرينك.';
+  String get dragToReorder => 'اسحب المقبض المنقّط لإعادة الترتيب — هذا هو ترتيب تمرينك.';
 
   @override
   String reorderHandle(String name) {
@@ -1430,7 +1430,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get activityLevel => 'مستوى النشاط';
 
   @override
-  String get barWeight => 'وزن البار';
+  String get barWeight => 'وزن البار أو المزلجة';
 
   @override
   String get perSide => 'لكل جانب';
@@ -2855,9 +2855,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get tapToSkip => 'اضغط للتخطي';
 
   @override
-  String get tapToStop => 'اضغط للإيقاف';
-
-  @override
   String get screenLocked => 'الشاشة مقفلة';
 
   @override
@@ -3125,4 +3122,53 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backToTop => 'العودة للأعلى';
+
+  @override
+  String get deleteExerciseTitle => 'حذف هذا التمرين؟';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return 'سيُزال «$name» من مكتبتك ومن روتيناتك. تبقى مجموعاتك السابقة محفوظة.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'ارفعه من المتصفح على strava.com/upload/select (تطبيق Strava لا يستورد الملفات). سيظهر كتمرين أوزان مع مجموعاتك.';
+
+  @override
+  String get manualStartTime => 'وقت البدء';
+
+  @override
+  String get manualDuration => 'المدة';
+
+  @override
+  String get manualDurationUnset => 'أضف المدة';
+
+  @override
+  String get stravaRow => 'تصدير إلى Strava (تجريبي)';
+
+  @override
+  String get stravaBeta => 'تجريبي';
+
+  @override
+  String get stravaIntro =>
+      'اختر تمرينًا لنقله إلى Strava. ستحصل على ملف .fit: ارفعه من المتصفح على strava.com/upload/select وسيظهر كتمرين أوزان مع مجموعاتك.';
+
+  @override
+  String get stravaEmpty => 'لا توجد تمارين للتصدير بعد.';
+
+  @override
+  String get tapToPause => 'اضغط للإيقاف المؤقت';
+
+  @override
+  String get holdPausedHint => 'متوقف مؤقتًا · اضغط للمتابعة';
+
+  @override
+  String get finishHoldNow => 'أنهِ المجموعة الآن';
+
+  @override
+  String get barWeightHint => 'تستخدمه حاسبة الأقراص';
+
+  @override
+  String get barWeightCustom => 'مخصص · اضغط لإعادة الضبط';
 }

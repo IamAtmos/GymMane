@@ -316,6 +316,71 @@ void main() {
     });
   });
 
+  group('#107 entreno pasado con su hora', () {
+    test('la hora y la duración elegidas llegan al historial', () {
+      final day = DateTime.now().subtract(const Duration(days: 2));
+      fit.startRoutine(routineOf(['Barbell Bench Press']), on: day);
+      fit.setManualStart(18 * 60 + 30);
+      fit.setManualMinutes(45);
+      fit.stepOutOfSession();
+      fit.stepBackIntoSession();
+      expect(fit.manualMinutes, 45, reason: 'salir y volver no toca la duración');
+      fit.toggleSet(0, 0);
+      fit.finishSession();
+      final s = fit.sessions.last;
+      expect(s.durationSec, 45 * 60);
+      expect(s.date, DateTime(day.year, day.month, day.day, 19, 15));
+    });
+  });
+
+  group('#99 músculos secundarios propios', () {
+    test('se guardan, viajan en la copia y cuentan en las series', () {
+      final id = fit.addCustomExercise(
+          name: 'Thruster', primary: 'quads', equipment: 'Dumbbell', secondary: ['shoulders', 'quads', 'triceps']);
+      final ex = fit.exerciseById(id)!;
+      expect(ex.secondary, ['shoulders', 'triceps'], reason: 'sin repetir el principal');
+      final json = ex.toJson();
+      expect(json['s'], ['shoulders', 'triceps']);
+      fit.sessions.add(logged(DateTime.now(), [LoggedSet(8, 20), LoggedSet(8, 20)], id: id, primary: 'quads'));
+      expect(fit.muscleSetsOver(7)['shoulders'], 1);
+    });
+  });
+
+  group('#88 pausar el temporizador', () {
+    test('pausar guarda lo que queda y terminar ya marca la serie', () {
+      fit.startRoutine(routineOf(['Plank']));
+      fit.endCountdown();
+      fit.setExerciseMode(idOf('Plank'), 'time');
+      fit.startHold(0, 0);
+      final lead = fit.holdLead;
+      fit.toggleHoldPause();
+      expect(fit.holdPaused, isTrue);
+      expect(fit.holdLead, lead);
+      fit.toggleHoldPause();
+      expect(fit.holdPaused, isFalse);
+      fit.toggleHoldPause();
+      fit.completeHold();
+      expect(fit.session!.exercises.first.sets.first.done, isTrue);
+      expect(fit.holding, isFalse);
+    });
+  });
+
+  test('#105 las notas de un ejercicio se abren en lista y atrás vuelve', () {
+    fit.openExercise(idOf('Plank'));
+    fit.goNotes(exerciseId: idOf('Plank'), all: true);
+    expect(fit.notesAllView, isTrue);
+    fit.backFromNotes();
+    expect(fit.route, 'exercise-detail');
+  });
+
+  test('#125 la prensa usa su propio carro en la calculadora', () {
+    final press = idOf('Leg Press');
+    expect(fit.plateHint('Machine', 150, id: press), isNull);
+    fit.setExerciseBar(press, 50);
+    expect(fit.plateHint('Machine', 150, id: press), '25×2');
+    expect(fit.toJson()['barKg'], {press: 50.0});
+  });
+
   group('#85 racha con calendario', () {
     test('un día sin rutina no rompe la racha', () {
       final today = DateTime.now();

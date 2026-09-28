@@ -384,7 +384,7 @@
   "setDay": "{day} FESTLEGEN",
   "@setDay": { "placeholders": { "day": { "type": "String" } } },
   "newRoutineName": "Neuer Trainingsplan",
-  "dragToReorder": "Gedrückt halten und ziehen zum Sortieren — dies ist die Reihenfolge deines Trainings.",
+  "dragToReorder": "Zieh am Punkte-Griff, um die Reihenfolge zu ändern — so trainierst du.",
   "reorderHandle": "{name} neu sortieren",
   "@reorderHandle": { "placeholders": { "name": { "type": "String" } } },
   "removeFromRoutine": "Aus Trainingsplan entfernen",
@@ -977,7 +977,6 @@
 
   "elapsedCaps": "VERSTRICHEN",
   "tapToSkip": "Tippen zum Überspringen",
-  "tapToStop": "Tippen zum Stoppen",
 
   "screenLocked": "Bildschirm gesperrt",
   "lockedHint": "Halte den Fingerabdruck oben gedrückt, um zu entsperren",
@@ -1065,5 +1064,21 @@
   "planHistory": "{n, plural, =1{1 Training in den letzten 30 Tagen.} other{{n} Trainings in den letzten 30 Tagen.}}",
   "planBestLifts": "Beste Sätze zuletzt",
   "planAskFirst": "Wenn du mein Ziel (Kraft, Muskeln, Fettabbau oder allgemeine Fitness) oder die Dauer einer Einheit nicht kennst, frag mich zuerst in einer kurzen Nachricht. Danach antworte nur mit JSON.",
-  "backToTop": "Nach oben"
+  "backToTop": "Nach oben",
+  "deleteExerciseTitle": "Diese Übung löschen?",
+  "deleteExerciseBody": "„{name}“ wird aus deiner Bibliothek und deinen Plänen entfernt. Deine bisherigen Sätze bleiben erhalten.",
+  "exportForStravaHint": "Lade die Datei im Browser auf strava.com/upload/select hoch (die Strava-App kann keine Dateien importieren). Sie erscheint als Krafttraining mit deinen Sätzen.",
+  "manualStartTime": "Startzeit",
+  "manualDuration": "Dauer",
+  "manualDurationUnset": "Dauer eintragen",
+  "stravaRow": "Zu Strava exportieren (Beta)",
+  "stravaBeta": "BETA",
+  "stravaIntro": "Wähle ein Training für Strava. Du bekommst eine .fit-Datei: Lade sie im Browser auf strava.com/upload/select hoch, dann erscheint sie als Krafttraining mit deinen Sätzen.",
+  "stravaEmpty": "Noch keine Trainings zum Exportieren.",
+  "tapToPause": "Tippen zum Pausieren",
+  "holdPausedHint": "Pausiert · tippen zum Fortsetzen",
+  "finishHoldNow": "Satz jetzt beenden",
+  "barWeight": "Gewicht von Stange oder Schlitten",
+  "barWeightHint": "Wird vom Scheibenrechner genutzt",
+  "barWeightCustom": "Eigenes · tippen zum Zurücksetzen"
 }

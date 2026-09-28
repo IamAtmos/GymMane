@@ -1135,7 +1135,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get newRoutineName => 'Nova rotina';
 
   @override
-  String get dragToReorder => 'Segure e arraste para reordenar — esta é a ordem em que você treina.';
+  String get dragToReorder => 'Arrasta a pega de pontos para reordenar: é a ordem em que treinas.';
 
   @override
   String reorderHandle(String name) {
@@ -1440,7 +1440,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get activityLevel => 'NÍVEL DE ATIVIDADE';
 
   @override
-  String get barWeight => 'PESO DA BARRA';
+  String get barWeight => 'Peso da barra ou do carro';
 
   @override
   String get perSide => 'POR LADO';
@@ -2862,9 +2862,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get tapToSkip => 'Toque para pular';
 
   @override
-  String get tapToStop => 'Toque para parar';
-
-  @override
   String get screenLocked => 'Tela bloqueada';
 
   @override
@@ -3126,4 +3123,53 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get backToTop => 'Voltar ao topo';
+
+  @override
+  String get deleteExerciseTitle => 'Apagar este exercício?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '\"$name\" será removido da tua biblioteca e das tuas rotinas. As séries anteriores ficam guardadas.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Envia pelo navegador em strava.com/upload/select (a app do Strava não importa ficheiros). Aparece como treino de musculação, com as tuas séries.';
+
+  @override
+  String get manualStartTime => 'Hora de início';
+
+  @override
+  String get manualDuration => 'Duração';
+
+  @override
+  String get manualDurationUnset => 'Adicionar duração';
+
+  @override
+  String get stravaRow => 'Exportar para o Strava (beta)';
+
+  @override
+  String get stravaBeta => 'BETA';
+
+  @override
+  String get stravaIntro =>
+      'Escolhe um treino para levar para o Strava. Recebes um ficheiro .fit: envia pelo navegador em strava.com/upload/select e aparece como treino de musculação, com as tuas séries.';
+
+  @override
+  String get stravaEmpty => 'Ainda não há treinos para exportar.';
+
+  @override
+  String get tapToPause => 'Toca para pausar';
+
+  @override
+  String get holdPausedHint => 'Em pausa · toca para continuar';
+
+  @override
+  String get finishHoldNow => 'Terminar a série já';
+
+  @override
+  String get barWeightHint => 'Usado pela calculadora de discos';
+
+  @override
+  String get barWeightCustom => 'Próprio · toca para repor';
 }

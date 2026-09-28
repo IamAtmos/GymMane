@@ -1085,7 +1085,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get newRoutineName => '新しいルーティン';
 
   @override
-  String get dragToReorder => '長押ししてドラッグで並べ替え — この順番でトレーニングします。';
+  String get dragToReorder => '点のハンドルをドラッグして並べ替え。この順番でトレーニングします。';
 
   @override
   String reorderHandle(String name) {
@@ -1388,7 +1388,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get activityLevel => '活動レベル';
 
   @override
-  String get barWeight => 'バー重量';
+  String get barWeight => 'バーまたはスレッドの重さ';
 
   @override
   String get perSide => '片側';
@@ -2774,9 +2774,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tapToSkip => 'タップでスキップ';
 
   @override
-  String get tapToStop => 'タップで停止';
-
-  @override
   String get screenLocked => '画面ロック中';
 
   @override
@@ -3034,4 +3031,53 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get backToTop => '先頭へ戻る';
+
+  @override
+  String get deleteExerciseTitle => 'この種目を削除しますか？';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '「$name」をライブラリとルーティンから削除します。これまでのセットは残ります。';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'ブラウザで strava.com/upload/select からアップロード（Stravaアプリはファイルを取り込めません）。セット付きのウェイトトレーニングとして表示されます。';
+
+  @override
+  String get manualStartTime => '開始時刻';
+
+  @override
+  String get manualDuration => '時間';
+
+  @override
+  String get manualDurationUnset => '時間を入力';
+
+  @override
+  String get stravaRow => 'Stravaへ書き出し（ベータ）';
+
+  @override
+  String get stravaBeta => 'ベータ';
+
+  @override
+  String get stravaIntro =>
+      'Stravaに送るトレーニングを選んでください。.fitファイルができるので、ブラウザで strava.com/upload/select からアップロードすると、セット付きのウェイトトレーニングとして表示されます。';
+
+  @override
+  String get stravaEmpty => '書き出せるトレーニングはまだありません。';
+
+  @override
+  String get tapToPause => 'タップで一時停止';
+
+  @override
+  String get holdPausedHint => '一時停止中 · タップで再開';
+
+  @override
+  String get finishHoldNow => '今すぐセットを終える';
+
+  @override
+  String get barWeightHint => 'プレート計算に使われます';
+
+  @override
+  String get barWeightCustom => '自分で設定 · タップでリセット';
 }

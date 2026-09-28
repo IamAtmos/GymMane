@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "Nowy plan",
-  "dragToReorder": "Przytrzymaj i przeciągnij, aby zmienić kolejność — w tej kolejności trenujesz.",
+  "dragToReorder": "Przeciągnij uchwyt z kropkami, aby zmienić kolejność — w tej kolejności trenujesz.",
   "reorderHandle": "Zmień kolejność: {name}",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "Pięć dni, jedna partia dziennie: klatka, plecy, nogi, barki, ramiona.",
   "elapsedCaps": "UPŁYNĘŁO",
   "tapToSkip": "Dotknij, by pominąć",
-  "tapToStop": "Dotknij, by zatrzymać",
   "screenLocked": "Ekran zablokowany",
   "lockedHint": "Przytrzymaj odcisk palca u góry, aby odblokować",
   "liveDoneSet": "Seria zrobiona",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{1 trening w ostatnich 30 dniach.} other{{n} treningów w ostatnich 30 dniach.}}",
   "planBestLifts": "Najlepsze ostatnie serie",
   "planAskFirst": "Jeśli nie znasz mojego celu (siła, mięśnie, redukcja lub ogólna forma) albo długości sesji, najpierw zapytaj mnie krótko. Potem odpowiedz wyłącznie w JSON.",
-  "backToTop": "Na górę"
+  "backToTop": "Na górę",
+  "deleteExerciseTitle": "Usunąć to ćwiczenie?",
+  "deleteExerciseBody": "„{name}” zniknie z biblioteki i planów. Wcześniejsze serie zostaną.",
+  "exportForStravaHint": "Prześlij w przeglądarce na strava.com/upload/select (aplikacja Strava nie importuje plików). Pojawi się jako trening siłowy z twoimi seriami.",
+  "manualStartTime": "Godzina rozpoczęcia",
+  "manualDuration": "Czas trwania",
+  "manualDurationUnset": "Dodaj czas trwania",
+  "stravaRow": "Eksport do Stravy (beta)",
+  "stravaBeta": "BETA",
+  "stravaIntro": "Wybierz trening do Stravy. Dostaniesz plik .fit: prześlij go w przeglądarce na strava.com/upload/select, a pojawi się jako trening siłowy z seriami.",
+  "stravaEmpty": "Brak treningów do eksportu.",
+  "tapToPause": "Dotknij, aby wstrzymać",
+  "holdPausedHint": "Wstrzymane · dotknij, aby wznowić",
+  "finishHoldNow": "Zakończ serię teraz",
+  "barWeight": "Waga sztangi lub sanek",
+  "barWeightHint": "Używana przez kalkulator talerzy",
+  "barWeightCustom": "Własna · dotknij, aby przywrócić"
 }

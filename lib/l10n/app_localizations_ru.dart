@@ -1177,7 +1177,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get newRoutineName => 'Новая программа';
 
   @override
-  String get dragToReorder => 'Удерживай и перетаскивай, чтобы изменить порядок — в нём ты и тренируешься.';
+  String get dragToReorder => 'Потяните за ручку с точками, чтобы изменить порядок — в нём вы тренируетесь.';
 
   @override
   String reorderHandle(String name) {
@@ -1486,7 +1486,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get activityLevel => 'УРОВЕНЬ АКТИВНОСТИ';
 
   @override
-  String get barWeight => 'ВЕС ГРИФА';
+  String get barWeight => 'Вес грифа или платформы';
 
   @override
   String get perSide => 'НА СТОРОНУ';
@@ -2949,9 +2949,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String get tapToSkip => 'Нажми, чтобы пропустить';
 
   @override
-  String get tapToStop => 'Нажми, чтобы остановить';
-
-  @override
   String get screenLocked => 'Экран заблокирован';
 
   @override
@@ -3223,4 +3220,53 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get backToTop => 'Наверх';
+
+  @override
+  String get deleteExerciseTitle => 'Удалить это упражнение?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '«$name» будет удалено из библиотеки и программ. Прошлые подходы сохранятся.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Загрузите в браузере на strava.com/upload/select (приложение Strava не импортирует файлы). Появится как силовая тренировка с вашими подходами.';
+
+  @override
+  String get manualStartTime => 'Время начала';
+
+  @override
+  String get manualDuration => 'Длительность';
+
+  @override
+  String get manualDurationUnset => 'Указать длительность';
+
+  @override
+  String get stravaRow => 'Экспорт в Strava (бета)';
+
+  @override
+  String get stravaBeta => 'БЕТА';
+
+  @override
+  String get stravaIntro =>
+      'Выберите тренировку для Strava. Вы получите файл .fit: загрузите его в браузере на strava.com/upload/select, и он появится как силовая тренировка с подходами.';
+
+  @override
+  String get stravaEmpty => 'Пока нет тренировок для экспорта.';
+
+  @override
+  String get tapToPause => 'Нажмите для паузы';
+
+  @override
+  String get holdPausedHint => 'Пауза · нажмите, чтобы продолжить';
+
+  @override
+  String get finishHoldNow => 'Завершить подход сейчас';
+
+  @override
+  String get barWeightHint => 'Используется калькулятором блинов';
+
+  @override
+  String get barWeightCustom => 'Свой · нажмите, чтобы сбросить';
 }

@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "新しいルーティン",
-  "dragToReorder": "長押ししてドラッグで並べ替え — この順番でトレーニングします。",
+  "dragToReorder": "点のハンドルをドラッグして並べ替え。この順番でトレーニングします。",
   "reorderHandle": "{name} を並べ替え",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "5日、1日1部位：胸、背中、脚、肩、腕。",
   "elapsedCaps": "経過",
   "tapToSkip": "タップでスキップ",
-  "tapToStop": "タップで停止",
   "screenLocked": "画面ロック中",
   "lockedHint": "上の指紋マークを長押しして解除します",
   "liveDoneSet": "セット完了",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{直近30日のトレーニングは1回。} other{直近30日のトレーニングは{n}回。}}",
   "planBestLifts": "最近のベストセット",
   "planAskFirst": "目標（筋力、筋肥大、減量、体力づくり）や1回の時間が分からなければ、まず短いメッセージで質問してください。分かったらJSONだけで答えてください。",
-  "backToTop": "先頭へ戻る"
+  "backToTop": "先頭へ戻る",
+  "deleteExerciseTitle": "この種目を削除しますか？",
+  "deleteExerciseBody": "「{name}」をライブラリとルーティンから削除します。これまでのセットは残ります。",
+  "exportForStravaHint": "ブラウザで strava.com/upload/select からアップロード（Stravaアプリはファイルを取り込めません）。セット付きのウェイトトレーニングとして表示されます。",
+  "manualStartTime": "開始時刻",
+  "manualDuration": "時間",
+  "manualDurationUnset": "時間を入力",
+  "stravaRow": "Stravaへ書き出し（ベータ）",
+  "stravaBeta": "ベータ",
+  "stravaIntro": "Stravaに送るトレーニングを選んでください。.fitファイルができるので、ブラウザで strava.com/upload/select からアップロードすると、セット付きのウェイトトレーニングとして表示されます。",
+  "stravaEmpty": "書き出せるトレーニングはまだありません。",
+  "tapToPause": "タップで一時停止",
+  "holdPausedHint": "一時停止中 · タップで再開",
+  "finishHoldNow": "今すぐセットを終える",
+  "barWeight": "バーまたはスレッドの重さ",
+  "barWeightHint": "プレート計算に使われます",
+  "barWeightCustom": "自分で設定 · タップでリセット"
 }

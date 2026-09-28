@@ -1133,7 +1133,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get newRoutineName => 'New routine';
 
   @override
-  String get dragToReorder => 'Hold and drag to reorder — this is the order you train in.';
+  String get dragToReorder => 'Drag the dotted handle to reorder — this is the order you train in.';
 
   @override
   String reorderHandle(String name) {
@@ -1438,7 +1438,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get activityLevel => 'ACTIVITY LEVEL';
 
   @override
-  String get barWeight => 'BAR WEIGHT';
+  String get barWeight => 'Bar or sled weight';
 
   @override
   String get perSide => 'PER SIDE';
@@ -2859,9 +2859,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tapToSkip => 'Tap to skip';
 
   @override
-  String get tapToStop => 'Tap to stop';
-
-  @override
   String get screenLocked => 'Screen locked';
 
   @override
@@ -3123,4 +3120,53 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backToTop => 'Back to top';
+
+  @override
+  String get deleteExerciseTitle => 'Delete this exercise?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '\"$name\" will be removed from your library and routines. Your past sets are kept.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Upload it in a browser at strava.com/upload/select (the Strava app can\'t import files). It shows up as a Weight Training with your sets.';
+
+  @override
+  String get manualStartTime => 'Start time';
+
+  @override
+  String get manualDuration => 'Duration';
+
+  @override
+  String get manualDurationUnset => 'Add duration';
+
+  @override
+  String get stravaRow => 'Export to Strava (beta)';
+
+  @override
+  String get stravaBeta => 'BETA';
+
+  @override
+  String get stravaIntro =>
+      'Pick a workout to take it to Strava. You get a .fit file: upload it in a browser at strava.com/upload/select and it shows up as a Weight Training with your sets.';
+
+  @override
+  String get stravaEmpty => 'No workouts to export yet.';
+
+  @override
+  String get tapToPause => 'Tap to pause';
+
+  @override
+  String get holdPausedHint => 'Paused · tap to resume';
+
+  @override
+  String get finishHoldNow => 'Finish set now';
+
+  @override
+  String get barWeightHint => 'Used by the plate calculator';
+
+  @override
+  String get barWeightCustom => 'Your own · tap to reset';
 }

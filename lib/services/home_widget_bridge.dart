@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io' show Platform;
 
 import 'package:flutter/foundation.dart';
@@ -28,10 +29,51 @@ class HomeWidgetBridge {
   static bool get _ios => !kIsWeb && Platform.isIOS;
   static bool get _supported => !kIsWeb && (Platform.isAndroid || Platform.isIOS);
   static bool _groupReady = false;
+  static Timer? _debounce;
+  static bool _running = false;
+  static bool _again = false;
+  static final Set<String> _forced = {};
 
-  static Future<void> update() async {
+  static void update() {
     if (!_supported) return;
+    _debounce?.cancel();
+    _debounce = Timer(const Duration(milliseconds: 800), _run);
+  }
+
+  static Future<void> _run() async {
+    if (_running) {
+      _again = true;
+      return;
+    }
+    _running = true;
     try {
+      await _paint();
+    } finally {
+      _running = false;
+      if (_again) {
+        _again = false;
+        update();
+      }
+    }
+  }
+
+  static Future<void> updateNow({String? provider}) {
+    if (provider != null) _forced.add(provider);
+    _debounce?.cancel();
+    return _run();
+  }
+
+  static Future<void> _paint() async {
+    try {
+      final installed = _ios
+          ? null
+          : {
+              ..._forced,
+              for (final w in await HomeWidget.getInstalledWidgets()) w.androidClassName?.split('.').last,
+            };
+      _forced.clear();
+      if (installed != null && installed.isEmpty) return;
+      bool wants(String provider) => installed == null || installed.contains(provider);
       if (_ios && !_groupReady) {
         await HomeWidget.setAppGroupId(appGroup);
         _groupReady = true;
@@ -51,8 +93,9 @@ class HomeWidgetBridge {
       final plannedToday = fit.todayRoutine != null;
       final hasPlan = fit.weeklyPlan.isNotEmpty;
 
-      final views = <(String, Size, Widget Function(GymColors))>[
+      final views = <(String, String, Size, Widget Function(GymColors))>[
         (
+          'HeatmapWidgetProvider',
           heatmapKey,
           heatmapSize,
           (gc) => HeatmapWidgetView(
@@ -64,6 +107,7 @@ class HomeWidgetBridge {
               ),
         ),
         (
+          'StatsWidgetProvider',
           statsKey,
           statsSize,
           (gc) => StatsWidgetView(
@@ -76,6 +120,7 @@ class HomeWidgetBridge {
               ),
         ),
         (
+          'BodyWidgetProvider',
           bodyKey,
           bodySize,
           (gc) => BodyWidgetView(
@@ -87,6 +132,7 @@ class HomeWidgetBridge {
               ),
         ),
         (
+          'TodayWidgetProvider',
           todayKey,
           todaySize,
           (gc) => TodayWidgetView(
@@ -105,6 +151,7 @@ class HomeWidgetBridge {
           (todayRestKey, false, true),
         ])
           (
+            'TodayWidgetProvider',
             key,
             todaySize,
             (gc) => TodayWidgetView(
@@ -118,11 +165,13 @@ class HomeWidgetBridge {
                 ),
           ),
         (
+          'WeekWidgetProvider',
           weekKey,
           weekSize,
           (gc) => WeekWidgetView(gc: gc, done: week, goal: fit.weeklyTarget, size: weekSize, framed: framed),
         ),
         (
+          'WeekWidgetProvider',
           weekFreshKey,
           weekSize,
           (gc) => WeekWidgetView(
@@ -134,7 +183,8 @@ class HomeWidgetBridge {
               ),
         ),
       ];
-      for (final (key, size, build) in views) {
+      for (final (provider, key, size, build) in views) {
+        if (!wants(provider)) continue;
         await _render(build(day), key, size);
         if (!identical(day, night)) {
           await _render(build(night), '${key}_night', size);
@@ -161,11 +211,15 @@ class HomeWidgetBridge {
         await HomeWidget.saveWidgetData<String>(themeKey, pref);
       }
 
-      await _reload('HeatmapWidgetProvider', 'HeatmapWidget');
-      await _reload('BodyWidgetProvider', 'BodyWidget');
-      await _reload('TodayWidgetProvider', 'TodayWidget');
-      await _reload('StatsWidgetProvider', 'StatsWidget');
-      await _reload('WeekWidgetProvider', 'WeekWidget');
+      for (final (android, ios) in const [
+        ('HeatmapWidgetProvider', 'HeatmapWidget'),
+        ('BodyWidgetProvider', 'BodyWidget'),
+        ('TodayWidgetProvider', 'TodayWidget'),
+        ('StatsWidgetProvider', 'StatsWidget'),
+        ('WeekWidgetProvider', 'WeekWidget'),
+      ]) {
+        if (wants(android)) await _reload(android, ios);
+      }
     } catch (e) {
       debugPrint('HomeWidgetBridge.update falló: $e');
     }

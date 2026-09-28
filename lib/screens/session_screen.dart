@@ -57,7 +57,7 @@ class SessionScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        s.manual ? _manualBar(gc, s) : _liveBar(gc, locked),
+        s.manual ? _manualBar(context, gc, s) : _liveBar(gc, locked),
         const SizedBox(height: 14),
         _progressStrip(context, gc, s, locked),
         const SizedBox(height: 16),
@@ -469,9 +469,9 @@ class SessionScreen extends StatelessWidget {
             ),
           ]),
         Row(children: [
-          RollingText(fit.elapsedLabel,
+          _ticking(() => RollingText(fit.elapsedLabel,
               style: AppTheme.f(18,
-                  weight: FontWeight.w700, color: fit.sessionPaused ? gc.textSecondary : gc.text)),
+                  weight: FontWeight.w700, color: fit.sessionPaused ? gc.textSecondary : gc.text))),
           const SizedBox(width: 2),
           if (!locked)
             Semantics(
@@ -543,22 +543,87 @@ class SessionScreen extends StatelessWidget {
         child: Icon(PhosphorIconsBold.caretDown, size: 15, color: gc.text),
       );
 
-  Widget _manualBar(GymColors gc, WorkoutSession s) {
-    return Row(children: [
-      _stepOutButton(gc),
-      const SizedBox(width: 12),
-      Icon(PhosphorIconsRegular.calendarPlus, size: 15, color: gc.brass),
-      const SizedBox(width: 8),
-      Expanded(
-        child: Text(
-          '${t.logging} · ${t.longDate(s.loggedAt ?? DateTime.now())}',
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: AppTheme.f(12.5, weight: FontWeight.w700, color: gc.brass, letterSpacing: 0.6),
+  Widget _manualBar(BuildContext context, GymColors gc, WorkoutSession s) {
+    final start = fit.manualStart ?? s.loggedAt ?? DateTime.now();
+    final minutes = fit.manualMinutes;
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Row(children: [
+        _stepOutButton(gc),
+        const SizedBox(width: 12),
+        Icon(PhosphorIconsRegular.calendarPlus, size: 15, color: gc.brass),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            '${t.logging} · ${t.longDate(start)}',
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: AppTheme.f(12.5, weight: FontWeight.w700, color: gc.brass, letterSpacing: 0.6),
+          ),
         ),
-      ),
+      ]),
+      const SizedBox(height: 12),
+      Row(children: [
+        _manualChip(
+          gc,
+          PhosphorIconsRegular.clock,
+          TimeOfDay.fromDateTime(start).format(context),
+          t.manualStartTime,
+          () async {
+            final v = await askRuler(context,
+                title: t.manualStartTime,
+                value: (start.hour * 60 + start.minute).toDouble(),
+                min: 0,
+                max: 24 * 60 - 5,
+                step: 5,
+                majorEvery: 12,
+                format: (v) => TimeOfDay(hour: v.round() ~/ 60, minute: v.round() % 60).format(context),
+                tickLabel: (v) => '${v.round() ~/ 60}');
+            if (v != null) fit.setManualStart(v.round());
+          },
+        ),
+        const SizedBox(width: 8),
+        _manualChip(
+          gc,
+          PhosphorIconsRegular.timer,
+          minutes == 0 ? t.manualDurationUnset : '$minutes min',
+          t.manualDuration,
+          () async {
+            final v = await askRuler(context,
+                title: t.manualDuration,
+                value: (minutes == 0 ? 60 : minutes).toDouble(),
+                min: 5,
+                max: 240,
+                step: 5,
+                majorEvery: 6,
+                format: (v) => '${v.round()} min',
+                tickLabel: (v) => '${v.round()}');
+            if (v != null) fit.setManualMinutes(v.round());
+          },
+        ),
+      ]),
     ]);
   }
+
+  Widget _manualChip(GymColors gc, IconData icon, String value, String label, VoidCallback onTap) => Semantics(
+        button: true,
+        label: label,
+        child: Pressable(
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+            decoration: BoxDecoration(
+              color: gc.bgRaised,
+              borderRadius: BorderRadius.circular(100),
+              border: Border.all(color: gc.border),
+            ),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              Icon(icon, size: 15, color: gc.brass),
+              const SizedBox(width: 8),
+              Text(value, style: AppTheme.f(13.5, weight: FontWeight.w700, color: gc.text)),
+            ]),
+          ),
+        ),
+      );
 
   List<Widget> _cells(GymColors gc, int exIdx, int j, SessionSet st, String mode, bool repsOnly) {
     final cardio = mode == 'cardio';
@@ -821,7 +886,7 @@ class SessionScreen extends StatelessWidget {
     final exercise = fit.exerciseById(ex.id);
     if (exercise == null || ex.sets.isEmpty) return const SizedBox.shrink();
     final next = ex.sets.firstWhere((s) => !s.done, orElse: () => ex.sets.last);
-    final hint = fit.plateHint(exercise.equipment, next.weight);
+    final hint = fit.plateHint(exercise.equipment, next.weight, id: ex.id);
     if (hint == null) return const SizedBox.shrink();
 
     return Semantics(
@@ -829,7 +894,8 @@ class SessionScreen extends StatelessWidget {
       label: t.toolTitle('plate'),
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
-        onTap: () => showPlateSheet(context, fit.toDisplayWeight(next.weight)),
+        onTap: () => showPlateSheet(context, fit.toDisplayWeight(next.weight),
+            startBar: fit.barFor(ex.id, equipment: exercise.equipment)),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(_rowPad, 8, _rowPad, 0),
           child: Row(
@@ -1045,7 +1111,12 @@ class SessionScreen extends StatelessWidget {
     if (v != null) onSave(v);
   }
 
-  Widget _holdCard(GymColors gc) {
+  Widget _ticking(Widget Function() build) =>
+      ValueListenableBuilder<int>(valueListenable: fit.clock, builder: (_, _, _) => build());
+
+  Widget _holdCard(GymColors gc) => _ticking(() => _holdPanel(gc));
+
+  Widget _holdPanel(GymColors gc) {
     final count = fit.sessionSetCount;
     final lead = fit.holdLead;
     return TimerPanel(
@@ -1056,13 +1127,15 @@ class SessionScreen extends StatelessWidget {
       elapsedLabel: t.elapsedCaps,
       sets: '${count.done}/${count.total}',
       setsLabel: t.setsCaps,
-      hint: t.tapToStop,
+      hint: fit.holdPaused ? t.holdPausedHint : t.tapToPause,
       color: gc.accent,
-      onTap: fit.stopHold,
+      onTap: fit.toggleHoldPause,
     );
   }
 
-  Widget _restCard(GymColors gc, WorkoutSession s) {
+  Widget _restCard(GymColors gc, WorkoutSession s) => _ticking(() => _restPanel(gc, s));
+
+  Widget _restPanel(GymColors gc, WorkoutSession s) {
     final count = fit.sessionSetCount;
     return TimerPanel(
       label: t.liveResting,
@@ -1083,11 +1156,13 @@ class SessionScreen extends StatelessWidget {
     final pending = ex == null ? -1 : ex.sets.indexWhere((st) => !st.done);
     if (pending >= 0 && ex != null && fit.isTimed(ex.id)) {
       if (fit.holding && fit.holdEx == exIdx) {
-        return PrimaryButton(
-          label: '${t.stopLabel} · ${durationLabel(fit.holdRemaining ?? 0)}',
-          onTap: fit.stopHold,
-          height: 56,
-        );
+        return _ticking(() => PrimaryButton(
+              label: fit.holdPaused
+                  ? t.finishHoldNow
+                  : '${t.stopLabel} · ${durationLabel(fit.holdRemaining ?? 0)}',
+              onTap: fit.holdPaused ? fit.completeHold : fit.stopHold,
+              height: 56,
+            ));
       }
       return PrimaryButton(
         label: t.startHold(durationLabel(ex.sets[pending].sec ?? 30)),
@@ -1651,8 +1726,11 @@ void showSessionOverview(BuildContext context) {
               Text(titleCase(t.workoutOverview),
                   style: AppTheme.f(19, weight: FontWeight.w800, color: gc.text)),
               const SizedBox(height: 4),
-              Text('${t.exerciseCount(s.exercises.length)} · ${fit.elapsedLabel}',
-                  style: AppTheme.f(12.5, weight: FontWeight.w500, color: gc.textSecondary)),
+              ValueListenableBuilder<int>(
+                valueListenable: fit.clock,
+                builder: (_, _, _) => Text('${t.exerciseCount(s.exercises.length)} · ${fit.elapsedLabel}',
+                    style: AppTheme.f(12.5, weight: FontWeight.w500, color: gc.textSecondary)),
+              ),
               const SizedBox(height: 16),
               Flexible(
                 child: ReorderableListView.builder(
@@ -1660,7 +1738,9 @@ void showSessionOverview(BuildContext context) {
                   buildDefaultDragHandles: false,
                   itemCount: s.exercises.length,
                   onReorder: fit.reorderSessionExercise,
-                  proxyDecorator: (child, _, _) => Material(color: Colors.transparent, child: child),
+                  onReorderStart: reorderPicked,
+                  onReorderEnd: reorderDropped,
+                  proxyDecorator: liftedRow(16),
                   itemBuilder: (context, i) => _overviewRow(sheet, gc, s, i),
                 ),
               ),

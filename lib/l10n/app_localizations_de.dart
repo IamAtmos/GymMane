@@ -1138,8 +1138,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get newRoutineName => 'Neuer Trainingsplan';
 
   @override
-  String get dragToReorder =>
-      'Gedrückt halten und ziehen zum Sortieren — dies ist die Reihenfolge deines Trainings.';
+  String get dragToReorder => 'Zieh am Punkte-Griff, um die Reihenfolge zu ändern — so trainierst du.';
 
   @override
   String reorderHandle(String name) {
@@ -1445,7 +1444,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get activityLevel => 'AKTIVITÄTSSTUFE';
 
   @override
-  String get barWeight => 'STANGENGEWICHT';
+  String get barWeight => 'Gewicht von Stange oder Schlitten';
 
   @override
   String get perSide => 'PRO SEITE';
@@ -2877,9 +2876,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String get tapToSkip => 'Tippen zum Überspringen';
 
   @override
-  String get tapToStop => 'Tippen zum Stoppen';
-
-  @override
   String get screenLocked => 'Bildschirm gesperrt';
 
   @override
@@ -3144,4 +3140,53 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get backToTop => 'Nach oben';
+
+  @override
+  String get deleteExerciseTitle => 'Diese Übung löschen?';
+
+  @override
+  String deleteExerciseBody(String name) {
+    return '„$name“ wird aus deiner Bibliothek und deinen Plänen entfernt. Deine bisherigen Sätze bleiben erhalten.';
+  }
+
+  @override
+  String get exportForStravaHint =>
+      'Lade die Datei im Browser auf strava.com/upload/select hoch (die Strava-App kann keine Dateien importieren). Sie erscheint als Krafttraining mit deinen Sätzen.';
+
+  @override
+  String get manualStartTime => 'Startzeit';
+
+  @override
+  String get manualDuration => 'Dauer';
+
+  @override
+  String get manualDurationUnset => 'Dauer eintragen';
+
+  @override
+  String get stravaRow => 'Zu Strava exportieren (Beta)';
+
+  @override
+  String get stravaBeta => 'BETA';
+
+  @override
+  String get stravaIntro =>
+      'Wähle ein Training für Strava. Du bekommst eine .fit-Datei: Lade sie im Browser auf strava.com/upload/select hoch, dann erscheint sie als Krafttraining mit deinen Sätzen.';
+
+  @override
+  String get stravaEmpty => 'Noch keine Trainings zum Exportieren.';
+
+  @override
+  String get tapToPause => 'Tippen zum Pausieren';
+
+  @override
+  String get holdPausedHint => 'Pausiert · tippen zum Fortsetzen';
+
+  @override
+  String get finishHoldNow => 'Satz jetzt beenden';
+
+  @override
+  String get barWeightHint => 'Wird vom Scheibenrechner genutzt';
+
+  @override
+  String get barWeightCustom => 'Eigenes · tippen zum Zurücksetzen';
 }

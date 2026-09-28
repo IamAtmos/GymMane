@@ -137,13 +137,14 @@ mixin LibraryState on FitCore {
     String difficulty = 'Beginner',
     List<String> steps = const [],
     String mode = '',
+    List<String> secondary = const [],
   }) {
     final id = 'c${DateTime.now().microsecondsSinceEpoch}-${_customSeq++}';
     customExercises.add(Exercise(
       id: id,
       name: name.trim(),
       primary: primary,
-      secondary: const [],
+      secondary: _cleanSecondary(primary, secondary),
       equipment: equipment,
       difficulty: difficulty,
       art: '',
@@ -163,12 +164,14 @@ mixin LibraryState on FitCore {
     required String difficulty,
     required List<String> steps,
     required String mode,
+    List<String> secondary = const [],
   }) {
     final i = customExercises.indexWhere((e) => e.id == id);
     if (i < 0 || name.trim().isEmpty) return;
     customExercises[i] = customExercises[i].copyWith(
       name: name.trim(),
       primary: primary,
+      secondary: _cleanSecondary(primary, secondary),
       equipment: equipment,
       difficulty: difficulty,
       steps: _cleanSteps(steps),
@@ -178,6 +181,11 @@ mixin LibraryState on FitCore {
     _persist();
     notifyListeners();
   }
+
+  static List<String> _cleanSecondary(String primary, List<String> raw) => [
+        for (final m in kMuscles)
+          if (m.id != primary && raw.contains(m.id)) m.id,
+      ];
 
   static final _bullet = RegExp(r'^(\d+[.)]|[-•*])\s*');
 

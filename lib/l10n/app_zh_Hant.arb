@@ -347,7 +347,7 @@
     }
   },
   "newRoutineName": "新增課表",
-  "dragToReorder": "長按並拖曳以重新排序 — 這就是訓練順序。",
+  "dragToReorder": "拖曳帶點的把手調整順序，這就是你的訓練順序。",
   "reorderHandle": "重新排序 {name}",
   "@reorderHandle": {
     "placeholders": {
@@ -1114,7 +1114,6 @@
   "tplAbcde": "五天，每天一個部位：胸、背、腿、肩、手臂。",
   "elapsedCaps": "已經過",
   "tapToSkip": "點一下略過",
-  "tapToStop": "點一下停止",
   "screenLocked": "螢幕已鎖定",
   "lockedHint": "長按上方的指紋圖示即可解鎖",
   "liveDoneSet": "完成這一組",
@@ -1198,5 +1197,21 @@
   "planHistory": "{n, plural, =1{最近 30 天訓練了 1 次。} other{最近 30 天訓練了 {n} 次。}}",
   "planBestLifts": "最近的最佳組",
   "planAskFirst": "如果你不知道我的目標（力量、增肌、減脂或一般體能）或每次能練多久，請先用一則簡短訊息問我。知道後只用 JSON 回答。",
-  "backToTop": "回到頂端"
+  "backToTop": "回到頂端",
+  "deleteExerciseTitle": "刪除這個動作？",
+  "deleteExerciseBody": "「{name}」將從動作庫和課表中移除，之前的訓練紀錄會保留。",
+  "exportForStravaHint": "請在瀏覽器中開啟 strava.com/upload/select 上傳（Strava App 無法匯入檔案），會顯示為含組數的重量訓練。",
+  "manualStartTime": "開始時間",
+  "manualDuration": "時長",
+  "manualDurationUnset": "新增時長",
+  "stravaRow": "匯出到 Strava（測試版）",
+  "stravaBeta": "測試版",
+  "stravaIntro": "選擇一次訓練匯出到 Strava。你會得到一個 .fit 檔：在瀏覽器中開啟 strava.com/upload/select 上傳，會顯示為含組數的重量訓練。",
+  "stravaEmpty": "還沒有可匯出的訓練。",
+  "tapToPause": "點按暫停",
+  "holdPausedHint": "已暫停 · 點按繼續",
+  "finishHoldNow": "現在完成這組",
+  "barWeight": "槓鈴桿或滑車重量",
+  "barWeightHint": "槓片計算器會用到",
+  "barWeightCustom": "自訂 · 點按重設"
 }
