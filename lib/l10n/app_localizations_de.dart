@@ -634,9 +634,9 @@ class AppLocalizationsDe extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       n,
       locale: localeName,
-      other: '$n kinds of kit',
-      one: '1 kind of kit',
-      zero: 'Nothing ticked',
+      other: '$n Arten von Ausrüstung',
+      one: '1 Art von Ausrüstung',
+      zero: 'Nichts ausgewählt',
     );
     return '$_temp0';
   }

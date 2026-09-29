@@ -224,7 +224,7 @@
   "placeNameLabel": "NAME",
   "placeNamePlaceholder": "Zuhause, Fitnessstudio, Park…",
   "placeGearLabel": "WAS IST VORHANDEN",
-  "placeGearCount": "{n, plural, =0{Nothing ticked} =1{1 kind of kit} other{{n} kinds of kit}}",
+  "placeGearCount": "{n, plural, =0{Nichts ausgewählt} =1{1 Art von Ausrüstung} other{{n} Arten von Ausrüstung}}",
   "@placeGearCount": { "placeholders": { "n": { "type": "int" } } },
   "placeExercises": "{n} Übungen hier",
   "@placeExercises": { "placeholders": { "n": { "type": "int" } } },
