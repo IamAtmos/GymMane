@@ -171,7 +171,7 @@ for are for the rest timer, its notification and the widgets.
 
 Bug reports, ideas and pull requests are welcome. For anything big, open an
 issue first. Translations happen on [Crowdin](https://crowdin.com/project/gymmane), and
-**TRANSLATING.md** explains how to help.
+[TRANSLATING.md](TRANSLATING.md) explains how to help.
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -219,7 +219,7 @@ GymMane by InlitX". The exercise art comes from
 [Everkinetic](https://github.com/everkinetic/data), the drawings Workout Guide
 builds on, and is
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The fonts use
-the SIL Open Font License. **CREDITS.md** has the details.
+the SIL Open Font License. [CREDITS.md](CREDITS.md) has the details.
 
 ## Star history
 

@@ -171,7 +171,7 @@ para el temporizador de descanso, su notificación y los widgets.
 
 Los reportes de fallos, las ideas y los pull requests son bienvenidos. Para
 algo grande, abre antes una incidencia. Las traducciones se hacen en
-[Crowdin](https://crowdin.com/project/gymmane), y **TRANSLATING.md** explica cómo ayudar.
+[Crowdin](https://crowdin.com/project/gymmane), y [TRANSLATING.md](../../TRANSLATING.md) explica cómo ayudar.
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -219,7 +219,7 @@ GymMane by InlitX". El arte de los ejercicios viene de
 [Everkinetic](https://github.com/everkinetic/data), los dibujos en los que se basa
 Workout Guide, y es
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Las fuentes usan la SIL Open
-Font License. **CREDITS.md** tiene los detalles.
+Font License. [CREDITS.md](../../CREDITS.md) tiene los detalles.
 
 ## Historial de estrellas
 

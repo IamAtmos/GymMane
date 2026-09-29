@@ -6,6 +6,8 @@ Translations happen on
 **[Crowdin](https://crowdin.com/project/gymmane)**, right in the browser.
 No Dart and no build tools, just text.
 
+<a href="https://crowdin.com/project/gymmane"><img alt="Crowdin" src="https://badges.crowdin.net/gymmane/localized.svg" /></a>
+
 </div>
 
 ---

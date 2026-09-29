@@ -164,7 +164,7 @@
 
 欢迎提交问题反馈、想法和 Pull Request。较大的改动请先开一个 issue 讨论。
 翻译在 [Crowdin](https://crowdin.com/project/gymmane) 上进行，参与方法见
-**TRANSLATING.md**。
+[TRANSLATING.md](../../TRANSLATING.md)。
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -210,7 +210,7 @@ GymMane 免费，并且会一直免费。点个 Star、帮忙翻译或提交一�
 [Workout Guide](https://github.com/bryllim/workout-guide)，以及它所基于的
 [Everkinetic](https://github.com/everkinetic/data)，采用
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可。字体使用 SIL Open
-Font License。详情见 **CREDITS.md**。
+Font License。详情见 [CREDITS.md](../../CREDITS.md)。
 
 ## Star 历史
 

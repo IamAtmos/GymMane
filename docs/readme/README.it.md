@@ -176,7 +176,7 @@ che chiede servono per il timer di recupero, la sua notifica e i widget.
 
 Segnalazioni di bug, idee e pull request sono benvenute. Per qualcosa di
 grosso, apri prima una issue. Le traduzioni si fanno su
-[Crowdin](https://crowdin.com/project/gymmane) e **TRANSLATING.md** spiega come aiutare.
+[Crowdin](https://crowdin.com/project/gymmane) e [TRANSLATING.md](../../TRANSLATING.md) spiega come aiutare.
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -224,7 +224,7 @@ da [Workout Guide](https://github.com/bryllim/workout-guide) di Bryl Lim e da
 [Everkinetic](https://github.com/everkinetic/data), i disegni su cui si basa
 Workout Guide, e sono
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). I font usano la SIL Open
-Font License. **CREDITS.md** ha i dettagli.
+Font License. [CREDITS.md](../../CREDITS.md) ha i dettagli.
 
 ## Storico delle stelle
 
