@@ -178,7 +178,7 @@ Segnalazioni di bug, idee e pull request sono benvenute. Per qualcosa di
 grosso, apri prima una issue. Le traduzioni si fanno su
 [Crowdin](https://crowdin.com/project/gymmane) e [TRANSLATING.md](../../TRANSLATING.md) spiega come aiutare.
 
-<a href="https://crowdin.com/?utm_term=click-badge-add-on"><picture><source media="(prefers-color-scheme: dark)" srcset="https://badges.crowdin.net/badge/light/crowdin-on-dark@2x.png" /><img alt="Crowdin | Agile localization for tech companies" src="https://badges.crowdin.net/badge/dark/crowdin-on-light@2x.png" height="40" /></picture></a>
+<a href="https://crowdin.com/project/gymmane"><picture><source media="(prefers-color-scheme: dark)" srcset="https://badges.crowdin.net/badge/light/crowdin-on-dark@2x.png" /><img alt="Crowdin | Agile localization for tech companies" src="https://badges.crowdin.net/badge/dark/crowdin-on-light@2x.png" height="40" /></picture></a>
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git

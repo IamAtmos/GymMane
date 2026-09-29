@@ -173,7 +173,7 @@ Bug reports, ideas and pull requests are welcome. For anything big, open an
 issue first. Translations happen on [Crowdin](https://crowdin.com/project/gymmane), and
 [TRANSLATING.md](TRANSLATING.md) explains how to help.
 
-<a href="https://crowdin.com/?utm_term=click-badge-add-on"><picture><source media="(prefers-color-scheme: dark)" srcset="https://badges.crowdin.net/badge/light/crowdin-on-dark@2x.png" /><img alt="Crowdin | Agile localization for tech companies" src="https://badges.crowdin.net/badge/dark/crowdin-on-light@2x.png" height="40" /></picture></a>
+<a href="https://crowdin.com/project/gymmane"><picture><source media="(prefers-color-scheme: dark)" srcset="https://badges.crowdin.net/badge/light/crowdin-on-dark@2x.png" /><img alt="Crowdin | Agile localization for tech companies" src="https://badges.crowdin.net/badge/dark/crowdin-on-light@2x.png" height="40" /></picture></a>
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
