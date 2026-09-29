@@ -1061,9 +1061,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String get setTypeFailure => 'Bis zum Muskelversagen';
 
   @override
-  String get setTypeHint => 'Aufwärmsätze zählen nicht für dein Volumen und deine Rekorde.';
-
-  @override
   String get addWarmup => 'AUFWÄRMEN';
 
   @override
@@ -2616,6 +2613,19 @@ class AppLocalizationsDe extends AppLocalizations {
   String get demoOff => 'Aus';
 
   @override
+  String get demoLoopTitle => 'Demo-Animation';
+
+  @override
+  String get demoLoopAlways => 'Endlos';
+
+  @override
+  String get demoLoopShort => '10 Sekunden';
+
+  @override
+  String get demoLoopHint =>
+      'Läuft etwa 10 Sekunden und bleibt in der Ausgangsposition stehen. Tippe auf die Demo, um sie erneut anzusehen.';
+
+  @override
   String get alarmStyleTitle => 'Wenn die Pause endet';
 
   @override
@@ -2724,6 +2734,23 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-Pause';
+
+  @override
+  String get setTypeNormalInfo => 'Ein normaler Satz. Zählt für dein Volumen und deine Rekorde.';
+
+  @override
+  String get setTypeWarmupInfo => 'Leichte Sätze zum Aufwärmen. Zählen nicht für Volumen oder Rekorde.';
+
+  @override
+  String get setTypeDropInfo => 'Direkt nach dem Satz das Gewicht senken und ohne Pause weitermachen.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Weitermachen, bis keine saubere Wiederholung mehr geht. Trag die Wiederholungen ein, die du wirklich geschafft hast.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Nach dem Satz 10 bis 20 Sekunden Pause, dann noch ein paar Wiederholungen herausholen.';
 
   @override
   String get planFormatNotes =>

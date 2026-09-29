@@ -1057,9 +1057,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get setTypeFailure => 'Tükenişe kadar';
 
   @override
-  String get setTypeHint => 'Isınma setleri hacmine veya rekorlarına dahil edilmez.';
-
-  @override
   String get addWarmup => 'ISINMA';
 
   @override
@@ -2612,6 +2609,19 @@ class AppLocalizationsTr extends AppLocalizations {
   String get demoOff => 'Gizli';
 
   @override
+  String get demoLoopTitle => 'Demo animasyonu';
+
+  @override
+  String get demoLoopAlways => 'Döngü';
+
+  @override
+  String get demoLoopShort => '10 saniye';
+
+  @override
+  String get demoLoopHint =>
+      'Yaklaşık 10 saniye oynar ve başlangıç duruşunda durur. Tekrar izlemek için demoya dokun.';
+
+  @override
   String get alarmStyleTitle => 'Dinlenme bitince';
 
   @override
@@ -2717,6 +2727,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Normal bir set. Hacmine ve rekorlarına sayılır.';
+
+  @override
+  String get setTypeWarmupInfo => 'Isınmak için hafif setler. Hacme ve rekorlara sayılmaz.';
+
+  @override
+  String get setTypeDropInfo => 'Setin hemen ardından ağırlığı düşür ve dinlenmeden devam et.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Temiz bir tekrar daha yapamayana kadar devam et. Gerçekten yaptığın tekrarları kaydet.';
+
+  @override
+  String get setTypeRestPauseInfo => 'Setten sonra 10-20 saniye dinlen, sonra birkaç tekrar daha çıkar.';
 
   @override
   String get planFormatNotes =>

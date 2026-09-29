@@ -18,6 +18,7 @@ mixin SettingsState on FitCore, ToolsState, LibraryState {
       };
 
   String demoSize = 'large';
+  String demoLoop = 'always';
   String alarmStyle = 'quiet';
   int restSeconds = 90;
   String? alarmSound;
@@ -75,6 +76,13 @@ mixin SettingsState on FitCore, ToolsState, LibraryState {
   void setDemoSize(String size) {
     if (!const ['large', 'small', 'off'].contains(size)) return;
     demoSize = size;
+    _persist();
+    notifyListeners();
+  }
+
+  void setDemoLoop(String loop) {
+    if (!const ['always', 'short'].contains(loop)) return;
+    demoLoop = loop;
     _persist();
     notifyListeners();
   }

@@ -1060,9 +1060,6 @@ class AppLocalizationsFr extends AppLocalizations {
   String get setTypeFailure => 'À l’échec';
 
   @override
-  String get setTypeHint => 'Les séries d’échauffement ne comptent ni dans ton volume ni dans tes records.';
-
-  @override
   String get addWarmup => 'ÉCHAUFFEMENT';
 
   @override
@@ -2615,6 +2612,19 @@ class AppLocalizationsFr extends AppLocalizations {
   String get demoOff => 'Masquée';
 
   @override
+  String get demoLoopTitle => 'Animation de la démo';
+
+  @override
+  String get demoLoopAlways => 'En boucle';
+
+  @override
+  String get demoLoopShort => '10 secondes';
+
+  @override
+  String get demoLoopHint =>
+      'Tourne une dizaine de secondes puis s’arrête sur la position de départ. Touchez la démo pour la revoir.';
+
+  @override
   String get alarmStyleTitle => 'À la fin du repos';
 
   @override
@@ -2722,6 +2732,24 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Une série classique. Elle compte pour le volume et les records.';
+
+  @override
+  String get setTypeWarmupInfo =>
+      'Séries légères pour se préparer. Elles ne comptent ni pour le volume ni pour les records.';
+
+  @override
+  String get setTypeDropInfo => 'Juste après une série, baissez la charge et continuez sans repos.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Continuez jusqu’à ne plus pouvoir faire une répétition propre. Notez celles réellement faites.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Reposez-vous 10 à 20 secondes après la série, puis arrachez quelques répétitions de plus.';
 
   @override
   String get planFormatNotes =>

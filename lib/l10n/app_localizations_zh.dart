@@ -1003,9 +1003,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get setTypeFailure => '力竭组';
 
   @override
-  String get setTypeHint => '热身组不会计入正式容量与个人纪录（PR）。';
-
-  @override
   String get addWarmup => '添加热身组';
 
   @override
@@ -2492,6 +2489,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get demoOff => '隐藏';
 
   @override
+  String get demoLoopTitle => '演示动画';
+
+  @override
+  String get demoLoopAlways => '循环';
+
+  @override
+  String get demoLoopShort => '10 秒';
+
+  @override
+  String get demoLoopHint => '播放约 10 秒后停在起始姿势。点按演示可再次观看。';
+
+  @override
   String get alarmStyleTitle => '休息结束时';
 
   @override
@@ -2595,6 +2604,21 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get setTypeRestPause => '休息暂停';
+
+  @override
+  String get setTypeNormalInfo => '普通组，计入训练量和个人纪录。';
+
+  @override
+  String get setTypeWarmupInfo => '用于热身的轻重量组，不计入训练量和个人纪录。';
+
+  @override
+  String get setTypeDropInfo => '一组结束后立刻降低重量，不休息继续做。';
+
+  @override
+  String get setTypeFailureInfo => '做到无法再以标准动作完成一次为止。记录实际完成的次数。';
+
+  @override
+  String get setTypeRestPauseInfo => '一组后休息 10 到 20 秒，再挤出几次。';
 
   @override
   String get planFormatNotes =>
@@ -4100,9 +4124,6 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get setTypeFailure => '力竭';
-
-  @override
-  String get setTypeHint => '暖身組不計入訓練量或紀錄。';
 
   @override
   String get addWarmup => '暖身';
@@ -5612,6 +5633,18 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
   String get demoOff => '隱藏';
 
   @override
+  String get demoLoopTitle => '示範動畫';
+
+  @override
+  String get demoLoopAlways => '循環';
+
+  @override
+  String get demoLoopShort => '10 秒';
+
+  @override
+  String get demoLoopHint => '播放約 10 秒後停在起始姿勢。點按示範即可再看一次。';
+
+  @override
   String get alarmStyleTitle => '休息結束時';
 
   @override
@@ -5715,6 +5748,21 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get setTypeRestPause => '休息暫停';
+
+  @override
+  String get setTypeNormalInfo => '一般組，計入訓練量和個人紀錄。';
+
+  @override
+  String get setTypeWarmupInfo => '用於熱身的輕重量組，不計入訓練量和個人紀錄。';
+
+  @override
+  String get setTypeDropInfo => '一組結束後立刻降低重量，不休息繼續做。';
+
+  @override
+  String get setTypeFailureInfo => '做到無法再以標準動作完成一次為止。記錄實際完成的次數。';
+
+  @override
+  String get setTypeRestPauseInfo => '一組後休息 10 到 20 秒，再擠出幾次。';
 
   @override
   String get planFormatNotes =>

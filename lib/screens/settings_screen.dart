@@ -212,6 +212,20 @@ class SettingsScreen extends StatelessWidget {
                 () => fit.demoSize,
                 fit.setDemoSize,
               ),
+              if (fit.demoSize != 'off')
+                _choiceRow(
+                  context,
+                  gc,
+                  PhosphorIconsRegular.repeat,
+                  t.demoLoopTitle,
+                  [
+                    ('always', t.demoLoopAlways, PhosphorIconsRegular.repeat),
+                    ('short', t.demoLoopShort, PhosphorIconsRegular.timer),
+                  ],
+                  () => fit.demoLoop,
+                  fit.setDemoLoop,
+                  hint: t.demoLoopHint,
+                ),
             ]),
             const SizedBox(height: 18),
             _linkGroup(gc, [

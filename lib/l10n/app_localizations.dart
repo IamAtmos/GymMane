@@ -1888,12 +1888,6 @@ abstract class AppLocalizations {
   /// **'To failure'**
   String get setTypeFailure;
 
-  /// No description provided for @setTypeHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Warm-ups stay out of your volume and your records.'**
-  String get setTypeHint;
-
   /// No description provided for @addWarmup.
   ///
   /// In en, this message translates to:
@@ -4672,6 +4666,30 @@ abstract class AppLocalizations {
   /// **'Hidden'**
   String get demoOff;
 
+  /// No description provided for @demoLoopTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Demo animation'**
+  String get demoLoopTitle;
+
+  /// No description provided for @demoLoopAlways.
+  ///
+  /// In en, this message translates to:
+  /// **'Loop'**
+  String get demoLoopAlways;
+
+  /// No description provided for @demoLoopShort.
+  ///
+  /// In en, this message translates to:
+  /// **'10 seconds'**
+  String get demoLoopShort;
+
+  /// No description provided for @demoLoopHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Plays for about 10 seconds and stops on the starting pose. Tap the demo to watch it again.'**
+  String get demoLoopHint;
+
   /// No description provided for @alarmStyleTitle.
   ///
   /// In en, this message translates to:
@@ -4869,6 +4887,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rest-pause'**
   String get setTypeRestPause;
+
+  /// No description provided for @setTypeNormalInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'A regular set. It counts toward your volume and records.'**
+  String get setTypeNormalInfo;
+
+  /// No description provided for @setTypeWarmupInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Light sets to get ready. They don\'t count toward volume or records.'**
+  String get setTypeWarmupInfo;
+
+  /// No description provided for @setTypeDropInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Straight after a set, lower the weight and keep going without resting.'**
+  String get setTypeDropInfo;
+
+  /// No description provided for @setTypeFailureInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep going until you can\'t do another clean rep. Log the reps you actually did.'**
+  String get setTypeFailureInfo;
+
+  /// No description provided for @setTypeRestPauseInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Rest 10 to 20 seconds after the set, then squeeze out a few more reps.'**
+  String get setTypeRestPauseInfo;
 
   /// No description provided for @planFormatNotes.
   ///

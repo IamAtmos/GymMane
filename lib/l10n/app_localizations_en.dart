@@ -1056,9 +1056,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get setTypeFailure => 'To failure';
 
   @override
-  String get setTypeHint => 'Warm-ups stay out of your volume and your records.';
-
-  @override
   String get addWarmup => 'WARM-UP';
 
   @override
@@ -2604,6 +2601,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get demoOff => 'Hidden';
 
   @override
+  String get demoLoopTitle => 'Demo animation';
+
+  @override
+  String get demoLoopAlways => 'Loop';
+
+  @override
+  String get demoLoopShort => '10 seconds';
+
+  @override
+  String get demoLoopHint =>
+      'Plays for about 10 seconds and stops on the starting pose. Tap the demo to watch it again.';
+
+  @override
   String get alarmStyleTitle => 'When rest ends';
 
   @override
@@ -2710,6 +2720,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'A regular set. It counts toward your volume and records.';
+
+  @override
+  String get setTypeWarmupInfo => 'Light sets to get ready. They don\'t count toward volume or records.';
+
+  @override
+  String get setTypeDropInfo => 'Straight after a set, lower the weight and keep going without resting.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Keep going until you can\'t do another clean rep. Log the reps you actually did.';
+
+  @override
+  String get setTypeRestPauseInfo => 'Rest 10 to 20 seconds after the set, then squeeze out a few more reps.';
 
   @override
   String get planFormatNotes =>

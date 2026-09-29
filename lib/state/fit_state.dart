@@ -151,6 +151,7 @@ class FitState extends FitCore
 
   void _loadToggles(Map<String, dynamic> data) {
     demoSize = data['demo'] as String? ?? 'large';
+    demoLoop = data['demoLoop'] as String? ?? 'always';
     alarmStyle = data['alarmStyle'] as String? ?? 'quiet';
     RestAlarm.instance.style = alarmStyle;
     Beeper.instance.loud = alarmStyle == 'loud';
@@ -368,6 +369,7 @@ class FitState extends FitCore
         'rpe': logRpe,
         'effort': effortScale,
         'demo': demoSize,
+        'demoLoop': demoLoop,
         'alarmStyle': alarmStyle,
         'noSuggest': noSuggest.toList(),
         'archived': archived.toList(),
@@ -458,6 +460,7 @@ class FitState extends FitCore
     exerciseBar.clear();
     modeOverride.clear();
     demoSize = 'large';
+    demoLoop = 'always';
     MediaStore.clearAll();
     favorites.clear();
     sessionPicks.clear();

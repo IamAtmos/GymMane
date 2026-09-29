@@ -1059,9 +1059,6 @@ class AppLocalizationsPt extends AppLocalizations {
   String get setTypeFailure => 'Até a falha';
 
   @override
-  String get setTypeHint => 'Aquecimentos ficam fora do seu volume e registros';
-
-  @override
   String get addWarmup => 'AQUECIMENTO';
 
   @override
@@ -2606,6 +2603,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get demoOff => 'Oculta';
 
   @override
+  String get demoLoopTitle => 'Animação da demo';
+
+  @override
+  String get demoLoopAlways => 'Em loop';
+
+  @override
+  String get demoLoopShort => '10 segundos';
+
+  @override
+  String get demoLoopHint =>
+      'Mexe-se durante cerca de 10 segundos e para na posição inicial. Toca na demo para a voltar a ver.';
+
+  @override
   String get alarmStyleTitle => 'Quando o descanso acaba';
 
   @override
@@ -2713,6 +2723,23 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Uma série normal. Conta para o volume e para os recordes.';
+
+  @override
+  String get setTypeWarmupInfo => 'Séries leves para aquecer. Não contam para o volume nem para os recordes.';
+
+  @override
+  String get setTypeDropInfo => 'Logo a seguir a uma série, baixa o peso e continua sem descansar.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Continua até não conseguires mais uma repetição limpa. Regista as que fizeste mesmo.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Descansa 10 a 20 segundos depois da série e tira mais algumas repetições.';
 
   @override
   String get planFormatNotes =>

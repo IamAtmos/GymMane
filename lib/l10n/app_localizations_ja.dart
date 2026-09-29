@@ -1008,9 +1008,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String get setTypeFailure => '限界まで';
 
   @override
-  String get setTypeHint => 'ウォームアップセットはボリュームや記録に含まれません。';
-
-  @override
   String get addWarmup => 'ウォームアップ';
 
   @override
@@ -2529,6 +2526,18 @@ class AppLocalizationsJa extends AppLocalizations {
   String get demoOff => '非表示';
 
   @override
+  String get demoLoopTitle => 'デモのアニメーション';
+
+  @override
+  String get demoLoopAlways => 'ループ';
+
+  @override
+  String get demoLoopShort => '10秒';
+
+  @override
+  String get demoLoopHint => '約10秒動いたあと、開始姿勢で止まります。もう一度見るにはデモをタップ。';
+
+  @override
   String get alarmStyleTitle => '休憩が終わったら';
 
   @override
@@ -2632,6 +2641,21 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'レストポーズ';
+
+  @override
+  String get setTypeNormalInfo => '通常のセット。ボリュームと自己ベストに反映されます。';
+
+  @override
+  String get setTypeWarmupInfo => '準備のための軽いセット。ボリュームや自己ベストには含まれません。';
+
+  @override
+  String get setTypeDropInfo => 'セット直後に重量を下げ、休まずに続けます。';
+
+  @override
+  String get setTypeFailureInfo => '正しいフォームでもう1回もできなくなるまで続けます。実際にできた回数を記録しましょう。';
+
+  @override
+  String get setTypeRestPauseInfo => 'セット後に10〜20秒休み、さらに数回絞り出します。';
 
   @override
   String get planFormatNotes =>

@@ -52,6 +52,7 @@ class SessionScreen extends StatelessWidget {
     final repsOnly = ex != null && fit.isRepsOnly(ex.id);
     final locked = fit.sessionLocked && !s.manual;
     final demo = ex == null ? 'off' : fit.demoSize;
+    final loops = fit.demoLoop == 'short' ? 6 : null;
     final mode = ex == null ? '' : fit.modeOf(ex.id);
     final second = _secondAction(gc, ex, exIdx, mode, repsOnly);
     return Column(
@@ -80,7 +81,8 @@ class SessionScreen extends StatelessWidget {
                         locked,
                         GestureDetector(
                           onTap: () => showExercisePreview(context, def),
-                          child: ExerciseMedia(ex: def, height: 104, radius: 18, live: true),
+                          child: ExerciseMedia(
+                              ex: def, height: 104, radius: 18, live: true, loops: loops),
                         ),
                       ),
                     ),
@@ -94,7 +96,7 @@ class SessionScreen extends StatelessWidget {
                   locked,
                   GestureDetector(
                     onTap: () => showExercisePreview(context, def),
-                    child: ExerciseMedia(ex: def, height: 170, live: true),
+                    child: ExerciseMedia(ex: def, height: 170, live: true, loops: loops),
                   ),
                 ),
               ],
@@ -919,8 +921,6 @@ class SessionScreen extends StatelessWidget {
 
   Color _kindColor(GymColors gc, SetKind kind) => setKindColor(gc, kind);
 
-  String _kindLabel(SetKind kind) => setKindLabel(kind);
-
   Widget _setBadge(GymColors gc, int exIdx, int j, SessionSet st) {
     final sets = fit.session?.exercises[exIdx].sets ?? const <SessionSet>[];
     var working = 0;
@@ -971,39 +971,10 @@ class SessionScreen extends StatelessWidget {
                       style: AppTheme.f(12,
                           weight: FontWeight.w600, color: gc.textSecondary, letterSpacing: 0.4)),
                   const SizedBox(height: 12),
-                  for (final kind in SetKind.values) ...[
-                    if (kind != SetKind.values.first) const SizedBox(height: 8),
-                    GestureDetector(
-                      behavior: HitTestBehavior.opaque,
-                      onTap: () => setSheet(() => fit.setSetKind(exIdx, j, kind)),
-                      child: Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: kind == kindNow ? gc.bgRaised2 : Colors.transparent,
-                          borderRadius: BorderRadius.circular(14),
-                          border:
-                              Border.all(color: kind == kindNow ? _kindColor(gc, kind) : gc.border),
-                        ),
-                        child: Row(children: [
-                          Container(
-                            width: 8,
-                            height: 8,
-                            decoration:
-                                BoxDecoration(color: _kindColor(gc, kind), shape: BoxShape.circle),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Text(_kindLabel(kind),
-                                style: AppTheme.f(14, weight: FontWeight.w600, color: gc.text)),
-                          ),
-                          if (kind == kindNow)
-                            Icon(PhosphorIconsBold.check, size: 14, color: _kindColor(gc, kind)),
-                        ]),
-                      ),
-                    ),
-                  ],
-                  const SizedBox(height: 14),
-                  Text(t.setTypeHint, style: AppTheme.f(11.5, weight: FontWeight.w500, color: gc.textTertiary, height: 1.4)),
+                  SetKindOptions(
+                    current: kindNow,
+                    onPick: (kind) => setSheet(() => fit.setSetKind(exIdx, j, kind)),
+                  ),
                   const SizedBox(height: 18),
                   PrimaryButton(label: t.done, onTap: () => Navigator.of(sheet).pop()),
                   const SizedBox(height: 4),

@@ -1048,9 +1048,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get setTypeFailure => 'حتى الفشل';
 
   @override
-  String get setTypeHint => 'مجموعات الإحماء لا تدخل في الحجم أو الأرقام القياسية.';
-
-  @override
   String get addWarmup => 'إحماء';
 
   @override
@@ -2592,6 +2589,18 @@ class AppLocalizationsAr extends AppLocalizations {
   String get demoOff => 'مخفي';
 
   @override
+  String get demoLoopTitle => 'حركة العرض';
+
+  @override
+  String get demoLoopAlways => 'متكررة';
+
+  @override
+  String get demoLoopShort => '10 ثوانٍ';
+
+  @override
+  String get demoLoopHint => 'تتحرك نحو 10 ثوانٍ ثم تتوقف عند وضعية البداية. المس العرض لمشاهدته مرة أخرى.';
+
+  @override
   String get alarmStyleTitle => 'عند انتهاء الراحة';
 
   @override
@@ -2697,6 +2706,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'راحة-توقف';
+
+  @override
+  String get setTypeNormalInfo => 'مجموعة عادية. تُحتسب في الحجم والأرقام القياسية.';
+
+  @override
+  String get setTypeWarmupInfo => 'مجموعات خفيفة للتهيئة. لا تُحتسب في الحجم ولا في الأرقام القياسية.';
+
+  @override
+  String get setTypeDropInfo => 'بعد المجموعة مباشرة، خفّف الوزن وتابع دون راحة.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'استمر حتى لا تستطيع تكرارًا نظيفًا آخر. سجّل التكرارات التي أنجزتها فعلًا.';
+
+  @override
+  String get setTypeRestPauseInfo => 'استرح من 10 إلى 20 ثانية بعد المجموعة، ثم أضف بضع تكرارات أخرى.';
 
   @override
   String get planFormatNotes =>

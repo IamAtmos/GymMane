@@ -1049,9 +1049,6 @@ class AppLocalizationsFa extends AppLocalizations {
   String get setTypeFailure => 'تا ناتوانی';
 
   @override
-  String get setTypeHint => 'گرم‌کردن‌ها از حجم و رکوردهایت بیرون می‌مانند.';
-
-  @override
   String get addWarmup => 'گرم‌کردن';
 
   @override
@@ -2593,6 +2590,19 @@ class AppLocalizationsFa extends AppLocalizations {
   String get demoOff => 'پنهان';
 
   @override
+  String get demoLoopTitle => 'انیمیشن نمایش';
+
+  @override
+  String get demoLoopAlways => 'تکرار پیوسته';
+
+  @override
+  String get demoLoopShort => '۱۰ ثانیه';
+
+  @override
+  String get demoLoopHint =>
+      'حدود ۱۰ ثانیه پخش می‌شود و روی حالت شروع می‌ایستد. برای دیدن دوباره، روی نمایش بزنید.';
+
+  @override
   String get alarmStyleTitle => 'وقتی استراحت تمام شد';
 
   @override
@@ -2700,6 +2710,22 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'رست-پاز';
+
+  @override
+  String get setTypeNormalInfo => 'یک ست معمولی. در حجم و رکوردهایت حساب می‌شود.';
+
+  @override
+  String get setTypeWarmupInfo => 'ست‌های سبک برای گرم شدن. در حجم و رکوردها حساب نمی‌شوند.';
+
+  @override
+  String get setTypeDropInfo => 'بلافاصله بعد از ست، وزنه را کم کن و بدون استراحت ادامه بده.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'ادامه بده تا جایی که دیگر یک تکرار تمیز هم ممکن نباشد. تکرارهایی را که واقعاً زدی ثبت کن.';
+
+  @override
+  String get setTypeRestPauseInfo => 'بعد از ست ۱۰ تا ۲۰ ثانیه استراحت کن، بعد چند تکرار دیگر بزن.';
 
   @override
   String get planFormatNotes =>

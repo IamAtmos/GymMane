@@ -1055,9 +1055,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get setTypeFailure => 'Al fallo';
 
   @override
-  String get setTypeHint => 'El calentamiento no cuenta para el volumen ni para los récords.';
-
-  @override
   String get addWarmup => 'CALENTAR';
 
   @override
@@ -2602,6 +2599,19 @@ class AppLocalizationsEs extends AppLocalizations {
   String get demoOff => 'Oculta';
 
   @override
+  String get demoLoopTitle => 'Animación de la demo';
+
+  @override
+  String get demoLoopAlways => 'En bucle';
+
+  @override
+  String get demoLoopShort => '10 segundos';
+
+  @override
+  String get demoLoopHint =>
+      'Se mueve unos 10 segundos y se queda en la postura inicial. Toca la demo para volver a verla.';
+
+  @override
   String get alarmStyleTitle => 'Al acabar el descanso';
 
   @override
@@ -2709,6 +2719,24 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Una serie normal. Cuenta para tu volumen y tus récords.';
+
+  @override
+  String get setTypeWarmupInfo =>
+      'Series ligeras para entrar en calor. No cuentan para el volumen ni para los récords.';
+
+  @override
+  String get setTypeDropInfo => 'Justo al acabar una serie, bajas el peso y sigues sin descansar.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Sigues hasta que no sale otra repetición limpia. Apunta las que hiciste de verdad.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Descansas de 10 a 20 segundos tras la serie y sacas unas pocas repeticiones más.';
 
   @override
   String get planFormatNotes =>

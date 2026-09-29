@@ -1058,9 +1058,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String get setTypeFailure => 'Tot falen';
 
   @override
-  String get setTypeHint => 'Opwarmsets tellen niet mee voor je volume of records.';
-
-  @override
   String get addWarmup => 'WARMING-UP';
 
   @override
@@ -2611,6 +2608,19 @@ class AppLocalizationsNl extends AppLocalizations {
   String get demoOff => 'Verborgen';
 
   @override
+  String get demoLoopTitle => 'Demo-animatie';
+
+  @override
+  String get demoLoopAlways => 'Herhalen';
+
+  @override
+  String get demoLoopShort => '10 seconden';
+
+  @override
+  String get demoLoopHint =>
+      'Speelt ongeveer 10 seconden en stopt in de beginhouding. Tik op de demo om hem opnieuw te zien.';
+
+  @override
   String get alarmStyleTitle => 'Als de rust voorbij is';
 
   @override
@@ -2718,6 +2728,23 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Een gewone set. Telt mee voor je volume en records.';
+
+  @override
+  String get setTypeWarmupInfo => 'Lichte sets om op te warmen. Tellen niet mee voor volume of records.';
+
+  @override
+  String get setTypeDropInfo => 'Direct na een set het gewicht verlagen en zonder rust doorgaan.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Ga door tot er geen nette herhaling meer lukt. Noteer de herhalingen die je echt deed.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Rust 10 tot 20 seconden na de set en pers er daarna nog een paar herhalingen uit.';
 
   @override
   String get planFormatNotes =>

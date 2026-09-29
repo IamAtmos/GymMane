@@ -1056,9 +1056,6 @@ class AppLocalizationsIt extends AppLocalizations {
   String get setTypeFailure => 'A cedimento';
 
   @override
-  String get setTypeHint => 'Il riscaldamento non conta per volume e record.';
-
-  @override
   String get addWarmup => 'RISCALDAMENTO';
 
   @override
@@ -2606,6 +2603,19 @@ class AppLocalizationsIt extends AppLocalizations {
   String get demoOff => 'Nascosta';
 
   @override
+  String get demoLoopTitle => 'Animazione della demo';
+
+  @override
+  String get demoLoopAlways => 'In loop';
+
+  @override
+  String get demoLoopShort => '10 secondi';
+
+  @override
+  String get demoLoopHint =>
+      'Si muove per circa 10 secondi e si ferma sulla posizione iniziale. Tocca la demo per rivederla.';
+
+  @override
   String get alarmStyleTitle => 'A fine recupero';
 
   @override
@@ -2713,6 +2723,23 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Una serie normale. Conta per il volume e i record.';
+
+  @override
+  String get setTypeWarmupInfo => 'Serie leggere per scaldarsi. Non contano per il volume né per i record.';
+
+  @override
+  String get setTypeDropInfo => 'Subito dopo una serie, riduci il peso e continua senza riposare.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Continua finché non riesci a fare un\'altra ripetizione pulita. Segna quelle fatte davvero.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Riposa da 10 a 20 secondi dopo la serie, poi strappa qualche ripetizione in più.';
 
   @override
   String get planFormatNotes =>

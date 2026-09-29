@@ -1093,9 +1093,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String get setTypeFailure => 'До отказа';
 
   @override
-  String get setTypeHint => 'Разминочные не идут в объём и рекорды.';
-
-  @override
   String get addWarmup => 'РАЗМИНКА';
 
   @override
@@ -2683,6 +2680,19 @@ class AppLocalizationsRu extends AppLocalizations {
   String get demoOff => 'Скрыта';
 
   @override
+  String get demoLoopTitle => 'Анимация демо';
+
+  @override
+  String get demoLoopAlways => 'По кругу';
+
+  @override
+  String get demoLoopShort => '10 секунд';
+
+  @override
+  String get demoLoopHint =>
+      'Двигается около 10 секунд и останавливается в исходной позе. Нажмите на демо, чтобы посмотреть снова.';
+
+  @override
   String get alarmStyleTitle => 'Когда отдых закончится';
 
   @override
@@ -2790,6 +2800,23 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Отдых-пауза';
+
+  @override
+  String get setTypeNormalInfo => 'Обычный подход. Учитывается в объёме и рекордах.';
+
+  @override
+  String get setTypeWarmupInfo => 'Лёгкие подходы для разминки. Не учитываются в объёме и рекордах.';
+
+  @override
+  String get setTypeDropInfo => 'Сразу после подхода снизьте вес и продолжайте без отдыха.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Продолжайте, пока не сможете сделать ещё одно чистое повторение. Записывайте, сколько сделали на самом деле.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Отдохните 10–20 секунд после подхода и выжмите ещё несколько повторений.';
 
   @override
   String get planFormatNotes =>

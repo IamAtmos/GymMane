@@ -80,6 +80,7 @@ class ExerciseArt extends StatefulWidget {
     this.radius = 20,
     this.live = false,
     this.bordered = true,
+    this.loops,
   });
 
   final String slug;
@@ -87,6 +88,7 @@ class ExerciseArt extends StatefulWidget {
   final double radius;
   final bool live;
   final bool bordered;
+  final int? loops;
 
   @override
   State<ExerciseArt> createState() => _ExerciseArtState();
@@ -108,6 +110,10 @@ class _ExerciseArtState extends State<ExerciseArt> with SingleTickerProviderStat
   @override
   void didUpdateWidget(ExerciseArt old) {
     super.didUpdateWidget(old);
+    if (old.slug != widget.slug || old.loops != widget.loops) {
+      _c?.reset();
+      _sync();
+    }
     if (old.slug != widget.slug) {
       _art = null;
       _failed = false;
@@ -140,7 +146,7 @@ class _ExerciseArtState extends State<ExerciseArt> with SingleTickerProviderStat
   void _sync() {
     if (widget.live && (_art?.frames.length ?? 0) > 1) {
       final c = _c ??= AnimationController(vsync: this, duration: _cycle);
-      if (!c.isAnimating) c.repeat();
+      if (!c.isAnimating && (widget.loops == null || c.value == 0)) c.repeat(count: widget.loops);
     } else {
       _c?.stop();
     }

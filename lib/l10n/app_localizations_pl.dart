@@ -1056,9 +1056,6 @@ class AppLocalizationsPl extends AppLocalizations {
   String get setTypeFailure => 'Do upadku';
 
   @override
-  String get setTypeHint => 'Serie rozgrzewkowe nie liczą się do objętości ani rekordów.';
-
-  @override
   String get addWarmup => 'ROZGRZEWKA';
 
   @override
@@ -2606,6 +2603,19 @@ class AppLocalizationsPl extends AppLocalizations {
   String get demoOff => 'Ukryte';
 
   @override
+  String get demoLoopTitle => 'Animacja demo';
+
+  @override
+  String get demoLoopAlways => 'W pętli';
+
+  @override
+  String get demoLoopShort => '10 sekund';
+
+  @override
+  String get demoLoopHint =>
+      'Porusza się przez około 10 sekund i zatrzymuje w pozycji wyjściowej. Stuknij demo, aby obejrzeć je ponownie.';
+
+  @override
   String get alarmStyleTitle => 'Po końcu przerwy';
 
   @override
@@ -2712,6 +2722,23 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get setTypeRestPause => 'Rest-pause';
+
+  @override
+  String get setTypeNormalInfo => 'Zwykła seria. Liczy się do objętości i rekordów.';
+
+  @override
+  String get setTypeWarmupInfo => 'Lekkie serie na rozgrzewkę. Nie liczą się do objętości ani rekordów.';
+
+  @override
+  String get setTypeDropInfo => 'Zaraz po serii zmniejsz ciężar i kontynuuj bez odpoczynku.';
+
+  @override
+  String get setTypeFailureInfo =>
+      'Ćwicz, aż nie dasz rady zrobić kolejnego czystego powtórzenia. Zapisz te, które faktycznie zrobiłeś.';
+
+  @override
+  String get setTypeRestPauseInfo =>
+      'Odpocznij 10–20 sekund po serii, a potem wyciśnij jeszcze kilka powtórzeń.';
 
   @override
   String get planFormatNotes =>

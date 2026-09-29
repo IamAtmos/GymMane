@@ -1026,9 +1026,6 @@ class AppLocalizationsKo extends AppLocalizations {
   String get setTypeFailure => '실패 지점까지';
 
   @override
-  String get setTypeHint => '워밍업 세트는 볼륨이나 기록에 포함되지 않습니다.';
-
-  @override
   String get addWarmup => '워밍업';
 
   @override
@@ -2542,6 +2539,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get demoOff => '숨김';
 
   @override
+  String get demoLoopTitle => '데모 애니메이션';
+
+  @override
+  String get demoLoopAlways => '반복';
+
+  @override
+  String get demoLoopShort => '10초';
+
+  @override
+  String get demoLoopHint => '약 10초 동안 움직인 뒤 시작 자세에서 멈춥니다. 다시 보려면 데모를 탭하세요.';
+
+  @override
   String get alarmStyleTitle => '휴식이 끝나면';
 
   @override
@@ -2646,6 +2655,21 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get setTypeRestPause => '레스트-포즈';
+
+  @override
+  String get setTypeNormalInfo => '일반 세트입니다. 볼륨과 기록에 포함됩니다.';
+
+  @override
+  String get setTypeWarmupInfo => '준비를 위한 가벼운 세트입니다. 볼륨과 기록에 포함되지 않습니다.';
+
+  @override
+  String get setTypeDropInfo => '세트 직후 무게를 낮추고 쉬지 않고 이어갑니다.';
+
+  @override
+  String get setTypeFailureInfo => '바른 자세로 한 번도 더 못 할 때까지 계속합니다. 실제로 한 횟수를 기록하세요.';
+
+  @override
+  String get setTypeRestPauseInfo => '세트 후 10~20초 쉬고 몇 회를 더 짜냅니다.';
 
   @override
   String get planFormatNotes =>

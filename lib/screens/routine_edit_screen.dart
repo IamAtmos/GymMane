@@ -831,7 +831,6 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
     void Function(List<PlannedSet>) save,
   ) {
     final p = plan[i];
-    final kinds = SetKind.values;
     final auto = t.autoValue;
     Widget cell(String value, VoidCallback dec, VoidCallback inc, VoidCallback onEdit) => Expanded(
           child: FittedBox(
@@ -925,7 +924,10 @@ class _RoutineEditScreenState extends State<RoutineEditScreen> {
           label: '${t.setType} · ${setKindLabel(p.kind)}',
           child: GestureDetector(
             behavior: HitTestBehavior.opaque,
-            onTap: () => edit(i, p.copyWith(kind: kinds[(p.kind.index + 1) % kinds.length])),
+            onTap: () async {
+              final kind = await askSetKind(sheet, p.kind);
+              if (kind != null) edit(i, p.copyWith(kind: kind));
+            },
             child: Container(
               width: 40,
               height: 34,
