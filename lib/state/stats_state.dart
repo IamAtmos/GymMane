@@ -207,6 +207,30 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     }
   }
 
+  String workoutText(LoggedSession s) {
+    String line(LoggedSet x) {
+      if (x.km != null) return '${distanceLabel(x.km!)} · ${durationLabel(x.sec ?? 0)}';
+      if (x.sec != null && x.reps == 0) return durationLabel(x.sec!);
+      return x.weight > 0 ? '${weightLabel(x.weight)} × ${x.reps}' : t.repCount(x.reps);
+    }
+
+    final out = [s.durationSec > 0 ? '${t.longDate(s.date)} · ${s.durationSec ~/ 60} min' : t.longDate(s.date)];
+    var reps = 0;
+    for (final e in s.exercises) {
+      out
+        ..add('')
+        ..add(t.catalogName(e.id, e.name));
+      for (final x in e.sets) {
+        if (x.counts) reps += x.reps;
+        out.add('  ${line(x)}');
+      }
+    }
+    out
+      ..add('')
+      ..add('${t.setCount(s.setCount)} · ${t.repCount(reps)} · ${volumeLabel(s.volume)}');
+    return out.join('\n');
+  }
+
   void deleteSession(LoggedSession s) {
     sessions.remove(s);
     _releaseLevel(s, s.exercises.map((e) => e.id));
@@ -716,6 +740,34 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     return h.map((r) => _round1(r.ex.bestOneRm)).toList();
   }
 
+  bool goalFits(String id) => modeOf(id).isEmpty;
+
+  PrKind goalKind(String id) {
+    final kind = exerciseRecord(id)?.kind;
+    if (kind == PrKind.weight || kind == PrKind.reps) return kind!;
+    return isRepsOnly(id) ? PrKind.reps : PrKind.weight;
+  }
+
+  double goalBest(String id) {
+    final r = exerciseRecord(id);
+    return r != null && r.kind == goalKind(id) ? r.best : 0;
+  }
+
+  String goalLabel(String id, double value) =>
+      goalKind(id) == PrKind.reps ? t.repCount(value.round()) : weightLabel(value);
+
+  void setExerciseGoal(String id, double target, DateTime? due) {
+    exerciseGoals[id] = (target: target, due: due == null ? null : _dayKey(due));
+    persistNow();
+    notifyListeners();
+  }
+
+  void clearExerciseGoal(String id) {
+    if (exerciseGoals.remove(id) == null) return;
+    persistNow();
+    notifyListeners();
+  }
+
   List<int> heatmapWeeksFor(int weeks) {
     final tail = 6 - todayIndex;
     return [...heatmapLevelsFor(weeks * 7 - tail), for (var i = 0; i < tail; i++) -1];
@@ -725,6 +777,11 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
 
   DateTime heatmapWeekDate(int i, {int weeks = kHeatmapDays ~/ 7}) =>
       shiftDays(_weekStart, i - (weeks - 1) * 7);
+
+  List<double> bestRepsSeries(String id) => [
+        for (final r in exerciseHistory(id).reversed)
+          r.ex.sets.where((s) => s.counts).fold(0, (m, s) => math.max(m, s.reps)).toDouble(),
+      ];
 
   static const _habitWindowDays = 120;
 

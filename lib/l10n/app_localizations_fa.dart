@@ -3247,4 +3247,47 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'روزها و ماه‌ها روی نقشهٔ فعالیت';
+
+  @override
+  String get rmPercent => 'درصد';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '$pct از حداکثر تو';
+  }
+
+  @override
+  String get copyWorkout => 'کپی به‌صورت متن';
+
+  @override
+  String get goalSet => 'یک هدف بگذار';
+
+  @override
+  String get goalTargetReps => 'تکرارهای هدف';
+
+  @override
+  String goalToGo(String value) {
+    return '$value مانده';
+  }
+
+  @override
+  String get goalReached => 'به هدف رسیدی';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n روز مانده', one: '۱ روز مانده');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'تاریخ گذشته';
+
+  @override
+  String get goalDeadline => 'مهلت';
+
+  @override
+  String get goalNoDeadline => 'بدون مهلت';
+
+  @override
+  String get goalRemove => 'حذف هدف';
 }

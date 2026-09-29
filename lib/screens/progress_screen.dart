@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 
 import '../l10n/l10n.dart';
@@ -17,6 +18,7 @@ import '../widgets/dialogs.dart';
 import '../widgets/entrance.dart';
 import '../widgets/exercise_media.dart';
 import '../widgets/glass.dart';
+import '../widgets/liquid_notch.dart';
 import '../widgets/muscle_radar.dart';
 import '../widgets/rolling_text.dart';
 import '../widgets/ruler_picker.dart';
@@ -1351,6 +1353,22 @@ class _DaySheet extends StatelessWidget {
             child: Text(
               '${t.setCount(s.setCount)} · ${fit.volumeLabel(s.volume)}',
               style: AppTheme.s(11, weight: FontWeight.w600, color: gc.textTertiary, letterSpacing: 1),
+            ),
+          ),
+          Semantics(
+            button: true,
+            label: t.copyWorkout,
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () {
+                Clipboard.setData(ClipboardData(text: fit.workoutText(s)));
+                showNotchToast(context, t.copiedDone, icon: PhosphorIconsRegular.copy, accent: gc.accent);
+              },
+              child: SizedBox(
+                width: 40,
+                height: 36,
+                child: Icon(PhosphorIconsRegular.copy, size: 16, color: gc.textTertiary),
+              ),
             ),
           ),
           Semantics(

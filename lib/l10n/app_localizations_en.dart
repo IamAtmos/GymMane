@@ -3257,4 +3257,47 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'Days and months on the activity map';
+
+  @override
+  String get rmPercent => 'PERCENTAGE';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '$pct of your max';
+  }
+
+  @override
+  String get copyWorkout => 'Copy as text';
+
+  @override
+  String get goalSet => 'Set a goal';
+
+  @override
+  String get goalTargetReps => 'TARGET REPS';
+
+  @override
+  String goalToGo(String value) {
+    return '$value to go';
+  }
+
+  @override
+  String get goalReached => 'Goal reached';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n days left', one: '1 day left');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'Past the date';
+
+  @override
+  String get goalDeadline => 'DEADLINE';
+
+  @override
+  String get goalNoDeadline => 'No deadline';
+
+  @override
+  String get goalRemove => 'Remove goal';
 }

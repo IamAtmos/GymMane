@@ -3267,4 +3267,47 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'Aktivite haritasında gün ve aylar';
+
+  @override
+  String get rmPercent => 'YÜZDE';
+
+  @override
+  String rmAtPercent(String pct) {
+    return 'Maksimumunun $pct kadarı';
+  }
+
+  @override
+  String get copyWorkout => 'Metin olarak kopyala';
+
+  @override
+  String get goalSet => 'Hedef belirle';
+
+  @override
+  String get goalTargetReps => 'HEDEF TEKRAR';
+
+  @override
+  String goalToGo(String value) {
+    return '$value kaldı';
+  }
+
+  @override
+  String get goalReached => 'Hedefe ulaşıldı';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n gün kaldı', one: '1 gün kaldı');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'Tarih geçti';
+
+  @override
+  String get goalDeadline => 'SON TARİH';
+
+  @override
+  String get goalNoDeadline => 'Tarih yok';
+
+  @override
+  String get goalRemove => 'Hedefi kaldır';
 }

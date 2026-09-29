@@ -1025,5 +1025,17 @@
   "levelUpSwapped": "«{name}» теперь в «{routine}»",
   "levelUpStayed": "Больше не предлагать усложнение для этого",
   "levelHintsSetting": "Предлагать следующий шаг",
-  "heatmapLabelsSetting": "Дни и месяцы на карте активности"
+  "heatmapLabelsSetting": "Дни и месяцы на карте активности",
+  "rmPercent": "ПРОЦЕНТ",
+  "rmAtPercent": "{pct} от твоего максимума",
+  "copyWorkout": "Скопировать текстом",
+  "goalSet": "Поставить цель",
+  "goalTargetReps": "ЦЕЛЕВЫЕ ПОВТОРЫ",
+  "goalToGo": "Осталось {value}",
+  "goalReached": "Цель достигнута",
+  "goalDaysLeft": "{n, plural, =1{Остался {n} день} few{Осталось {n} дня} other{Осталось {n} дней}}",
+  "goalOverdue": "Срок прошёл",
+  "goalDeadline": "СРОК",
+  "goalNoDeadline": "Без срока",
+  "goalRemove": "Убрать цель"
 }

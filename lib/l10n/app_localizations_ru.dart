@@ -3358,4 +3358,53 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'Дни и месяцы на карте активности';
+
+  @override
+  String get rmPercent => 'ПРОЦЕНТ';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '$pct от твоего максимума';
+  }
+
+  @override
+  String get copyWorkout => 'Скопировать текстом';
+
+  @override
+  String get goalSet => 'Поставить цель';
+
+  @override
+  String get goalTargetReps => 'ЦЕЛЕВЫЕ ПОВТОРЫ';
+
+  @override
+  String goalToGo(String value) {
+    return 'Осталось $value';
+  }
+
+  @override
+  String get goalReached => 'Цель достигнута';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Осталось $n дней',
+      few: 'Осталось $n дня',
+      one: 'Остался $n день',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'Срок прошёл';
+
+  @override
+  String get goalDeadline => 'СРОК';
+
+  @override
+  String get goalNoDeadline => 'Без срока';
+
+  @override
+  String get goalRemove => 'Убрать цель';
 }

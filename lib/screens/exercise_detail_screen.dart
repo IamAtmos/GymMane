@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
@@ -52,6 +54,7 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
     final steps = fit.activeExerciseSteps(ex);
     final pr = fit.exerciseRecord(ex.id);
     final oneRm = fit.oneRmSeries(ex.id);
+    final bestReps = fit.bestRepsSeries(ex.id);
     final history = fit.exerciseHistory(ex.id);
     final hasMedia = fit.hasCustomMedia(ex.id);
     final repsOnly = fit.isRepsOnly(ex.id);
@@ -232,9 +235,17 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
                             const SizedBox(height: 16),
                             TrendChart(values: [for (final v in oneRm) fit.toDisplayWeight(v)], height: 84, scale: fmt),
                           ],
+                          if (pr.kind == PrKind.reps && bestReps.length > 2) ...[
+                            const SizedBox(height: 16),
+                            TrendChart(values: bestReps, height: 84, scale: (v) => '${v.round()}'),
+                          ],
                         ],
                       ),
                     ),
+                    const SizedBox(height: 20),
+                  ],
+                  if (fit.goalFits(ex.id)) ...[
+                    _goalCard(context, gc, ex.id),
                     const SizedBox(height: 20),
                   ],
                   if (fit.nextTargetLabel(ex.id) != null) ...[
@@ -735,6 +746,202 @@ class _ExerciseDetailScreenState extends State<ExerciseDetailScreen> {
           child: Icon(icon, size: 19, color: on ? gc.text : gc.textSecondary),
         ),
       );
+
+  Widget _goalCard(BuildContext context, GymColors gc, String id) {
+    final goal = fit.exerciseGoals[id];
+    if (goal == null) {
+      return GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => _editGoal(context, id),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(
+            border: Border.all(color: gc.border),
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: Row(children: [
+            Icon(PhosphorIconsRegular.target, size: 18, color: gc.textSecondary),
+            const SizedBox(width: 12),
+            Expanded(child: Text(t.goalSet, style: AppTheme.f(13.5, weight: FontWeight.w600, color: gc.text))),
+            Icon(PhosphorIconsRegular.plus, size: 15, color: gc.textTertiary),
+          ]),
+        ),
+      );
+    }
+    final best = fit.goalBest(id);
+    final done = best >= goal.target;
+    final share = goal.target <= 0 ? 1.0 : (best / goal.target).clamp(0.0, 1.0);
+    final due = goal.due;
+    final today = DateTime.now();
+    final days = due == null ? null : DateTime(due.year, due.month, due.day).difference(DateTime(today.year, today.month, today.day)).inDays;
+    final when = done || due == null
+        ? null
+        : days! < 0
+            ? t.goalOverdue
+            : '${t.goalDaysLeft(days)} · ${t.shortDate(due)}';
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () => _editGoal(context, id),
+      child: Container(
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          color: gc.bgRaised,
+          border: Border.all(color: done ? gc.ember : Colors.transparent),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _cardLabel(gc, t.goal),
+                      const SizedBox(height: 8),
+                      Text(fit.goalLabel(id, goal.target),
+                          style: AppTheme.f(26, weight: FontWeight.w800, color: gc.text, height: 1)),
+                    ],
+                  ),
+                ),
+                Text(done ? t.goalReached : t.goalToGo(fit.goalLabel(id, goal.target - best)),
+                    style: AppTheme.f(12.5, weight: FontWeight.w600, color: done ? gc.ember : gc.textSecondary)),
+              ],
+            ),
+            const SizedBox(height: 14),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(3),
+              child: LinearProgressIndicator(
+                value: share,
+                minHeight: 6,
+                backgroundColor: gc.bgRaised2,
+                valueColor: AlwaysStoppedAnimation(done ? gc.ember : gc.accent),
+              ),
+            ),
+            if (when != null) ...[
+              const SizedBox(height: 10),
+              Text(when,
+                  style: AppTheme.f(11.5,
+                      weight: FontWeight.w500, color: days! < 0 ? gc.ember : gc.textTertiary)),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _editGoal(BuildContext context, String id) async {
+    final reps = fit.goalKind(id) == PrKind.reps;
+    final current = fit.exerciseGoals[id];
+    final best = fit.goalBest(id);
+    var target = current?.target ??
+        (reps ? math.max(best + 5, 10.0) : fit.fromDisplayWeight(fit.toDisplayWeight(best) + fit.weightStep * 4));
+    DateTime? due = current?.due;
+    String shown() => reps ? '${target.round()}' : '${fit.weightValue(target)} ${fit.units}';
+    await showAppSheet<void>(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (sheet) => StatefulBuilder(
+        builder: (sheet, setSheet) {
+          final gc = sheet.gc;
+          void bump(int dir) => setSheet(() {
+                target = reps
+                    ? math.max(1, target + dir).toDouble()
+                    : math.max(0, target + dir * fit.fromDisplayWeight(fit.weightStep)).toDouble();
+              });
+          return Container(
+            padding: sheetPad(sheet),
+            decoration: BoxDecoration(
+              color: gc.bgRaised,
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SheetHandle(),
+                const SizedBox(height: 16),
+                SheetTitle(titleCase(t.goal)),
+                const SizedBox(height: 18),
+                ToolGroup([
+                  ToolRow(
+                    label: reps ? t.goalTargetReps : t.targetWeight,
+                    control: StepperControl(
+                      value: shown(),
+                      onDec: () => bump(-1),
+                      onInc: () => bump(1),
+                      onEdit: () async {
+                        final v = await askNumber(sheet,
+                            title: reps ? t.goalTargetReps : t.targetWeight,
+                            initial: reps ? '${target.round()}' : fit.weightValue(target),
+                            decimal: !reps);
+                        if (v != null && v > 0) setSheet(() => target = reps ? v.roundToDouble() : fit.fromDisplayWeight(v));
+                      },
+                    ),
+                  ),
+                  ToolRow(
+                    label: t.goalDeadline,
+                    control: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () async {
+                        final now = DateTime.now();
+                        final picked = await showDatePicker(
+                          context: sheet,
+                          initialDate: due ?? now.add(const Duration(days: 90)),
+                          firstDate: now,
+                          lastDate: now.add(const Duration(days: 365 * 3)),
+                        );
+                        if (picked != null) setSheet(() => due = picked);
+                      },
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        Text(due == null ? t.goalNoDeadline : t.shortDateYear(due!),
+                            style: AppTheme.f(14, weight: FontWeight.w700, color: due == null ? gc.textTertiary : gc.text)),
+                        if (due != null) ...[
+                          const SizedBox(width: 8),
+                          GestureDetector(
+                            behavior: HitTestBehavior.opaque,
+                            onTap: () => setSheet(() => due = null),
+                            child: Icon(PhosphorIconsRegular.x, size: 14, color: gc.textTertiary),
+                          ),
+                        ],
+                      ]),
+                    ),
+                  ),
+                ]),
+                const SizedBox(height: 18),
+                PrimaryButton(
+                  label: t.save,
+                  onTap: () {
+                    fit.setExerciseGoal(id, target, due);
+                    Navigator.pop(sheet);
+                  },
+                ),
+                if (current != null) ...[
+                  const SizedBox(height: 6),
+                  Center(
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: () {
+                        fit.clearExerciseGoal(id);
+                        Navigator.pop(sheet);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        child: Text(t.goalRemove,
+                            style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary)),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
 
   Widget _nextCard(GymColors gc, String id) {
     final target = fit.nextTarget(id)!;

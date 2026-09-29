@@ -3271,4 +3271,47 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'Dagen en maanden op de activiteitenkaart';
+
+  @override
+  String get rmPercent => 'PERCENTAGE';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '$pct van je max';
+  }
+
+  @override
+  String get copyWorkout => 'Kopiëren als tekst';
+
+  @override
+  String get goalSet => 'Doel instellen';
+
+  @override
+  String get goalTargetReps => 'DOEL-HERHALINGEN';
+
+  @override
+  String goalToGo(String value) {
+    return 'Nog $value';
+  }
+
+  @override
+  String get goalReached => 'Doel bereikt';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: 'Nog $n dagen', one: 'Nog 1 dag');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'Datum verstreken';
+
+  @override
+  String get goalDeadline => 'DEADLINE';
+
+  @override
+  String get goalNoDeadline => 'Geen deadline';
+
+  @override
+  String get goalRemove => 'Doel verwijderen';
 }

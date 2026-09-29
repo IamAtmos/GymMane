@@ -107,6 +107,10 @@ class ToolDetailScreen extends StatelessWidget {
           ToolRow(label: t.weightLifted, control: StepperControl(value: '${fit.weightValue(fit.rmWeight)} ${fit.units}', onDec: () => fit.bumpRmWeight(-fit.fromDisplayWeight(fit.weightStep)), onInc: () => fit.bumpRmWeight(fit.fromDisplayWeight(fit.weightStep)), onEdit: () => _editNumber(context, title: t.weightLifted, current: fit.toDisplayWeight(fit.rmWeight), decimal: true, apply: (v) => fit.bumpRmWeight(fit.fromDisplayWeight(v) - fit.rmWeight)))),
           const SizedBox(height: 10),
           ToolRow(label: t.repsPerformed, control: StepperControl(value: '${fit.rmReps}', minWidth: 40, onDec: () => fit.bumpRmReps(-1), onInc: () => fit.bumpRmReps(1), onEdit: () => _editNumber(context, title: t.repsPerformed, current: fit.rmReps.toDouble(), decimal: false, apply: (v) => fit.bumpRmReps(v.round() - fit.rmReps)))),
+          const SizedBox(height: 10),
+          ToolRow(label: t.rmPercent, control: StepperControl(value: '${fit.rmPct}%', minWidth: 52, onDec: () => fit.bumpRmPct(-1), onInc: () => fit.bumpRmPct(1), onEdit: () => _editNumber(context, title: t.rmPercent, current: fit.rmPct.toDouble(), decimal: false, apply: (v) => fit.bumpRmPct(v.round() - fit.rmPct)))),
+          const SizedBox(height: 10),
+          _rmPctCard(context, gc),
         ];
       case 'bmi':
         return [
@@ -299,6 +303,41 @@ class ToolDetailScreen extends StatelessWidget {
             Text(t.plateAchievable('${fmt(loadable)} ${fit.units}'),
                 style: AppTheme.f(12, weight: FontWeight.w500, color: gc.brass)),
         ],
+      ),
+    );
+  }
+
+  Widget _rmPctCard(BuildContext context, GymColors gc) {
+    final weight = fit.rmAtPct;
+    final bar = fit.defaultBar;
+    final plates = weight > bar ? fit.platesPerSide(weight, bar) : const <({double weight, int count})>[];
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: weight > bar ? () => showPlateSheet(context, weight) : null,
+      child: SoftCard(
+        radius: 20,
+        borderColor: Colors.transparent,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(t.rmAtPercent('${fit.rmPct}%'),
+                      style: AppTheme.f(13, weight: FontWeight.w500, color: gc.textSecondary)),
+                  if (plates.isNotEmpty) ...[
+                    const SizedBox(height: 3),
+                    Text(plates.map((p) => p.count == 1 ? fmt(p.weight) : '${fmt(p.weight)}×${p.count}').join(' · '),
+                        style: AppTheme.f(11.5, weight: FontWeight.w500, color: gc.textTertiary)),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(width: 12),
+            Text('${fmt(weight)} ${fit.units}', style: AppTheme.f(17, weight: FontWeight.w800, color: gc.text)),
+          ],
+        ),
       ),
     );
   }

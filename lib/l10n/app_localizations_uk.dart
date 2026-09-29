@@ -3274,4 +3274,53 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'Дні й місяці на карті активності';
+
+  @override
+  String get rmPercent => 'ВІДСОТОК';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '$pct від твого максимуму';
+  }
+
+  @override
+  String get copyWorkout => 'Скопіювати текстом';
+
+  @override
+  String get goalSet => 'Поставити ціль';
+
+  @override
+  String get goalTargetReps => 'ЦІЛЬОВІ ПОВТОРИ';
+
+  @override
+  String goalToGo(String value) {
+    return 'Залишилось $value';
+  }
+
+  @override
+  String get goalReached => 'Ціль досягнуто';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Залишилось $n днів',
+      few: 'Залишилось $n дні',
+      one: 'Залишився $n день',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'Термін минув';
+
+  @override
+  String get goalDeadline => 'ТЕРМІН';
+
+  @override
+  String get goalNoDeadline => 'Без терміну';
+
+  @override
+  String get goalRemove => 'Прибрати ціль';
 }

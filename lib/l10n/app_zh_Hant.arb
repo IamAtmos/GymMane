@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "{name} 已加入{routine}",
   "levelUpStayed": "不再為這個動作提示進階",
   "levelHintsSetting": "提示下一步進階",
-  "heatmapLabelsSetting": "在活動圖上顯示星期和月份"
+  "heatmapLabelsSetting": "在活動圖上顯示星期和月份",
+  "rmPercent": "百分比",
+  "rmAtPercent": "最大重量的 {pct}",
+  "copyWorkout": "複製為文字",
+  "goalSet": "設定目標",
+  "goalTargetReps": "目標次數",
+  "goalToGo": "還差 {value}",
+  "goalReached": "目標達成",
+  "goalDaysLeft": "{n, plural, other{還剩 {n} 天}}",
+  "goalOverdue": "已過期限",
+  "goalDeadline": "截止日期",
+  "goalNoDeadline": "無截止日期",
+  "goalRemove": "刪除目標"
 }

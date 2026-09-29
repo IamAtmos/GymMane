@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "{name} artık {routine} içinde",
   "levelUpStayed": "Bu hareket için artık seviye önerisi yok",
   "levelHintsSetting": "Sonraki adımı öner",
-  "heatmapLabelsSetting": "Aktivite haritasında gün ve aylar"
+  "heatmapLabelsSetting": "Aktivite haritasında gün ve aylar",
+  "rmPercent": "YÜZDE",
+  "rmAtPercent": "Maksimumunun {pct} kadarı",
+  "copyWorkout": "Metin olarak kopyala",
+  "goalSet": "Hedef belirle",
+  "goalTargetReps": "HEDEF TEKRAR",
+  "goalToGo": "{value} kaldı",
+  "goalReached": "Hedefe ulaşıldı",
+  "goalDaysLeft": "{n, plural, =1{1 gün kaldı} other{{n} gün kaldı}}",
+  "goalOverdue": "Tarih geçti",
+  "goalDeadline": "SON TARİH",
+  "goalNoDeadline": "Tarih yok",
+  "goalRemove": "Hedefi kaldır"
 }

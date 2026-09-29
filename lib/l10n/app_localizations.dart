@@ -5823,6 +5823,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Days and months on the activity map'**
   String get heatmapLabelsSetting;
+
+  /// No description provided for @rmPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'PERCENTAGE'**
+  String get rmPercent;
+
+  /// No description provided for @rmAtPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'{pct} of your max'**
+  String rmAtPercent(String pct);
+
+  /// No description provided for @copyWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy as text'**
+  String get copyWorkout;
+
+  /// No description provided for @goalSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a goal'**
+  String get goalSet;
+
+  /// No description provided for @goalTargetReps.
+  ///
+  /// In en, this message translates to:
+  /// **'TARGET REPS'**
+  String get goalTargetReps;
+
+  /// No description provided for @goalToGo.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} to go'**
+  String goalToGo(String value);
+
+  /// No description provided for @goalReached.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal reached'**
+  String get goalReached;
+
+  /// No description provided for @goalDaysLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'{n, plural, =1{1 day left} other{{n} days left}}'**
+  String goalDaysLeft(int n);
+
+  /// No description provided for @goalOverdue.
+  ///
+  /// In en, this message translates to:
+  /// **'Past the date'**
+  String get goalOverdue;
+
+  /// No description provided for @goalDeadline.
+  ///
+  /// In en, this message translates to:
+  /// **'DEADLINE'**
+  String get goalDeadline;
+
+  /// No description provided for @goalNoDeadline.
+  ///
+  /// In en, this message translates to:
+  /// **'No deadline'**
+  String get goalNoDeadline;
+
+  /// No description provided for @goalRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove goal'**
+  String get goalRemove;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

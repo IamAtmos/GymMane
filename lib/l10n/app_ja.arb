@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "{name}が{routine}に入りました",
   "levelUpStayed": "この種目ではステップアップを提案しません",
   "levelHintsSetting": "次のステップを提案",
-  "heatmapLabelsSetting": "アクティビティマップに曜日と月を表示"
+  "heatmapLabelsSetting": "アクティビティマップに曜日と月を表示",
+  "rmPercent": "パーセント",
+  "rmAtPercent": "最大の{pct}",
+  "copyWorkout": "テキストでコピー",
+  "goalSet": "目標を設定",
+  "goalTargetReps": "目標回数",
+  "goalToGo": "あと{value}",
+  "goalReached": "目標達成",
+  "goalDaysLeft": "{n, plural, other{残り{n}日}}",
+  "goalOverdue": "期限切れ",
+  "goalDeadline": "期限",
+  "goalNoDeadline": "期限なし",
+  "goalRemove": "目標を削除"
 }

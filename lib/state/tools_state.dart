@@ -4,6 +4,7 @@ mixin ToolsState on FitCore {
   String? activeToolId;
   double rmWeight = 100;
   int rmReps = 5;
+  int rmPct = 75;
   double bmiHeight = 175;
   double bmiWeight = 75;
   int calAge = 28;
@@ -189,6 +190,14 @@ mixin ToolsState on FitCore {
   }
 
   void bumpRmWeight(double d) { rmWeight = _clamp(rmWeight + d, 0, null); notifyListeners(); }
+
+  void bumpRmPct(int d) { rmPct = (rmPct + d).clamp(30, 100); notifyListeners(); }
+
+  double get rmAtPct {
+    final target = toDisplayWeight(rmResult * rmPct / 100);
+    final bar = defaultBar;
+    return target <= bar ? _roundTo(target, isLb ? 5.0 : 2.5) : loadableTotal(target, bar);
+  }
 
   void bumpRmReps(int d) { rmReps = _clamp(rmReps + d.toDouble(), 1, 20).round(); notifyListeners(); }
 

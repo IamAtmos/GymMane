@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "«{name}» тепер у «{routine}»",
   "levelUpStayed": "Більше не пропонувати ускладнення для цієї",
   "levelHintsSetting": "Пропонувати наступний крок",
-  "heatmapLabelsSetting": "Дні й місяці на карті активності"
+  "heatmapLabelsSetting": "Дні й місяці на карті активності",
+  "rmPercent": "ВІДСОТОК",
+  "rmAtPercent": "{pct} від твого максимуму",
+  "copyWorkout": "Скопіювати текстом",
+  "goalSet": "Поставити ціль",
+  "goalTargetReps": "ЦІЛЬОВІ ПОВТОРИ",
+  "goalToGo": "Залишилось {value}",
+  "goalReached": "Ціль досягнуто",
+  "goalDaysLeft": "{n, plural, =1{Залишився {n} день} few{Залишилось {n} дні} other{Залишилось {n} днів}}",
+  "goalOverdue": "Термін минув",
+  "goalDeadline": "ТЕРМІН",
+  "goalNoDeadline": "Без терміну",
+  "goalRemove": "Прибрати ціль"
 }

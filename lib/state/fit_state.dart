@@ -167,6 +167,14 @@ class FitState extends FitCore
     levelSeen
       ..clear()
       ..addAll(((data['levelSeen'] as Map?) ?? const {}).map((k, v) => MapEntry(k as String, (v as num).toInt())));
+    exerciseGoals
+      ..clear()
+      ..addAll(((data['goals'] as Map?) ?? const {}).map((k, v) {
+        final g = (v as Map).cast<String, dynamic>();
+        final due = (g['d'] as num?)?.toInt();
+        return MapEntry(k as String,
+            (target: (g['t'] as num).toDouble(), due: due == null ? null : DateTime.fromMillisecondsSinceEpoch(due)));
+      }));
     levelShown
       ..clear()
       ..addAll(((data['levelShown'] as Map?) ?? const {})
@@ -376,6 +384,7 @@ class FitState extends FitCore
         'levelStay': levelStay.toList(),
         'levelSeen': Map.of(levelSeen),
         'levelShown': Map.of(levelShown),
+        'goals': exerciseGoals.map((k, g) => MapEntry(k, {'t': g.target, if (g.due != null) 'd': g.due!.millisecondsSinceEpoch})),
         'barKg': exerciseBar,
         'marks': videoMarks.map((k, v) => MapEntry(k, v.map((i, ms) => MapEntry('$i', ms)))),
         'exMode': modeOverride,
@@ -456,6 +465,7 @@ class FitState extends FitCore
     levelStay.clear();
     levelSeen.clear();
     levelShown.clear();
+    exerciseGoals.clear();
     videoMarks.clear();
     exerciseBar.clear();
     modeOverride.clear();

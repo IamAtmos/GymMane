@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "{name} staat nu in {routine}",
   "levelUpStayed": "Geen stap-tips meer voor deze",
   "levelHintsSetting": "Volgende stap voorstellen",
-  "heatmapLabelsSetting": "Dagen en maanden op de activiteitenkaart"
+  "heatmapLabelsSetting": "Dagen en maanden op de activiteitenkaart",
+  "rmPercent": "PERCENTAGE",
+  "rmAtPercent": "{pct} van je max",
+  "copyWorkout": "Kopiëren als tekst",
+  "goalSet": "Doel instellen",
+  "goalTargetReps": "DOEL-HERHALINGEN",
+  "goalToGo": "Nog {value}",
+  "goalReached": "Doel bereikt",
+  "goalDaysLeft": "{n, plural, =1{Nog 1 dag} other{Nog {n} dagen}}",
+  "goalOverdue": "Datum verstreken",
+  "goalDeadline": "DEADLINE",
+  "goalNoDeadline": "Geen deadline",
+  "goalRemove": "Doel verwijderen"
 }

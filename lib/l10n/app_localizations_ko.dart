@@ -3181,4 +3181,47 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => '활동 지도에 요일과 월 표시';
+
+  @override
+  String get rmPercent => '퍼센트';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '최대치의 $pct';
+  }
+
+  @override
+  String get copyWorkout => '텍스트로 복사';
+
+  @override
+  String get goalSet => '목표 설정';
+
+  @override
+  String get goalTargetReps => '목표 횟수';
+
+  @override
+  String goalToGo(String value) {
+    return '$value 남음';
+  }
+
+  @override
+  String get goalReached => '목표 달성';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '$n일 남음');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => '기한 지남';
+
+  @override
+  String get goalDeadline => '기한';
+
+  @override
+  String get goalNoDeadline => '기한 없음';
+
+  @override
+  String get goalRemove => '목표 삭제';
 }

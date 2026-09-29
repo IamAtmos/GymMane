@@ -1650,5 +1650,17 @@
   "levelUpSwapped": "{name} حالا در {routine} است",
   "levelUpStayed": "دیگر برای این حرکت پیشنهاد پیشرفت نمی‌دهیم",
   "levelHintsSetting": "پیشنهاد قدم بعدی",
-  "heatmapLabelsSetting": "روزها و ماه‌ها روی نقشهٔ فعالیت"
+  "heatmapLabelsSetting": "روزها و ماه‌ها روی نقشهٔ فعالیت",
+  "rmPercent": "درصد",
+  "rmAtPercent": "{pct} از حداکثر تو",
+  "copyWorkout": "کپی به‌صورت متن",
+  "goalSet": "یک هدف بگذار",
+  "goalTargetReps": "تکرارهای هدف",
+  "goalToGo": "{value} مانده",
+  "goalReached": "به هدف رسیدی",
+  "goalDaysLeft": "{n, plural, =1{۱ روز مانده} other{{n} روز مانده}}",
+  "goalOverdue": "تاریخ گذشته",
+  "goalDeadline": "مهلت",
+  "goalNoDeadline": "بدون مهلت",
+  "goalRemove": "حذف هدف"
 }

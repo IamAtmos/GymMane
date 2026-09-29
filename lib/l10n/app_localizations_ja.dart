@@ -3165,4 +3165,47 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'アクティビティマップに曜日と月を表示';
+
+  @override
+  String get rmPercent => 'パーセント';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '最大の$pct';
+  }
+
+  @override
+  String get copyWorkout => 'テキストでコピー';
+
+  @override
+  String get goalSet => '目標を設定';
+
+  @override
+  String get goalTargetReps => '目標回数';
+
+  @override
+  String goalToGo(String value) {
+    return 'あと$value';
+  }
+
+  @override
+  String get goalReached => '目標達成';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '残り$n日');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => '期限切れ';
+
+  @override
+  String get goalDeadline => '期限';
+
+  @override
+  String get goalNoDeadline => '期限なし';
+
+  @override
+  String get goalRemove => '目標を削除';
 }

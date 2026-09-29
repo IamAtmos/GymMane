@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "أصبح {name} في {routine}",
   "levelUpStayed": "لن نقترح الترقي في هذا التمرين",
   "levelHintsSetting": "اقتراح الخطوة التالية",
-  "heatmapLabelsSetting": "الأيام والأشهر على خريطة النشاط"
+  "heatmapLabelsSetting": "الأيام والأشهر على خريطة النشاط",
+  "rmPercent": "النسبة",
+  "rmAtPercent": "{pct} من حدك الأقصى",
+  "copyWorkout": "نسخ كنص",
+  "goalSet": "حدّد هدفًا",
+  "goalTargetReps": "التكرارات المستهدفة",
+  "goalToGo": "بقي {value}",
+  "goalReached": "تم بلوغ الهدف",
+  "goalDaysLeft": "{n, plural, =1{بقي يوم واحد} other{بقي {n} يوم}}",
+  "goalOverdue": "فات الموعد",
+  "goalDeadline": "الموعد النهائي",
+  "goalNoDeadline": "بلا موعد",
+  "goalRemove": "إزالة الهدف"
 }

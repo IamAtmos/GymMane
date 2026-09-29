@@ -1104,5 +1104,17 @@
   "levelUpSwapped": "{name} ist jetzt in {routine}",
   "levelUpStayed": "Keine Stufen-Tipps mehr für diese Übung",
   "levelHintsSetting": "Nächste Stufe vorschlagen",
-  "heatmapLabelsSetting": "Tage und Monate in der Aktivitätskarte"
+  "heatmapLabelsSetting": "Tage und Monate in der Aktivitätskarte",
+  "rmPercent": "PROZENT",
+  "rmAtPercent": "{pct} deines Maximums",
+  "copyWorkout": "Als Text kopieren",
+  "goalSet": "Ziel setzen",
+  "goalTargetReps": "ZIEL-WIEDERHOLUNGEN",
+  "goalToGo": "Noch {value}",
+  "goalReached": "Ziel erreicht",
+  "goalDaysLeft": "{n, plural, =1{Noch 1 Tag} other{Noch {n} Tage}}",
+  "goalOverdue": "Datum überschritten",
+  "goalDeadline": "FRIST",
+  "goalNoDeadline": "Keine Frist",
+  "goalRemove": "Ziel entfernen"
 }

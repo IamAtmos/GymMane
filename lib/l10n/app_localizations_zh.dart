@@ -3125,6 +3125,49 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => '在活动图上显示星期和月份';
+
+  @override
+  String get rmPercent => '百分比';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '最大重量的 $pct';
+  }
+
+  @override
+  String get copyWorkout => '复制为文本';
+
+  @override
+  String get goalSet => '设定目标';
+
+  @override
+  String get goalTargetReps => '目标次数';
+
+  @override
+  String goalToGo(String value) {
+    return '还差 $value';
+  }
+
+  @override
+  String get goalReached => '目标达成';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '还剩 $n 天');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => '已过期限';
+
+  @override
+  String get goalDeadline => '截止日期';
+
+  @override
+  String get goalNoDeadline => '无截止日期';
+
+  @override
+  String get goalRemove => '删除目标';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6271,4 +6314,47 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get heatmapLabelsSetting => '在活動圖上顯示星期和月份';
+
+  @override
+  String get rmPercent => '百分比';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '最大重量的 $pct';
+  }
+
+  @override
+  String get copyWorkout => '複製為文字';
+
+  @override
+  String get goalSet => '設定目標';
+
+  @override
+  String get goalTargetReps => '目標次數';
+
+  @override
+  String goalToGo(String value) {
+    return '還差 $value';
+  }
+
+  @override
+  String get goalReached => '目標達成';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: '還剩 $n 天');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => '已過期限';
+
+  @override
+  String get goalDeadline => '截止日期';
+
+  @override
+  String get goalNoDeadline => '無截止日期';
+
+  @override
+  String get goalRemove => '刪除目標';
 }

@@ -3258,4 +3258,47 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get heatmapLabelsSetting => 'الأيام والأشهر على خريطة النشاط';
+
+  @override
+  String get rmPercent => 'النسبة';
+
+  @override
+  String rmAtPercent(String pct) {
+    return '$pct من حدك الأقصى';
+  }
+
+  @override
+  String get copyWorkout => 'نسخ كنص';
+
+  @override
+  String get goalSet => 'حدّد هدفًا';
+
+  @override
+  String get goalTargetReps => 'التكرارات المستهدفة';
+
+  @override
+  String goalToGo(String value) {
+    return 'بقي $value';
+  }
+
+  @override
+  String get goalReached => 'تم بلوغ الهدف';
+
+  @override
+  String goalDaysLeft(int n) {
+    String _temp0 = intl.Intl.pluralLogic(n, locale: localeName, other: 'بقي $n يوم', one: 'بقي يوم واحد');
+    return '$_temp0';
+  }
+
+  @override
+  String get goalOverdue => 'فات الموعد';
+
+  @override
+  String get goalDeadline => 'الموعد النهائي';
+
+  @override
+  String get goalNoDeadline => 'بلا موعد';
+
+  @override
+  String get goalRemove => 'إزالة الهدف';
 }

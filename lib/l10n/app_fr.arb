@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "{name} est maintenant dans {routine}",
   "levelUpStayed": "Plus de suggestion de progression pour celui-ci",
   "levelHintsSetting": "Suggérer l’étape suivante",
-  "heatmapLabelsSetting": "Jours et mois sur la carte d'activité"
+  "heatmapLabelsSetting": "Jours et mois sur la carte d'activité",
+  "rmPercent": "POURCENTAGE",
+  "rmAtPercent": "{pct} de ton max",
+  "copyWorkout": "Copier en texte",
+  "goalSet": "Fixer un objectif",
+  "goalTargetReps": "RÉPÉTITIONS VISÉES",
+  "goalToGo": "Encore {value}",
+  "goalReached": "Objectif atteint",
+  "goalDaysLeft": "{n, plural, =1{1 jour restant} other{{n} jours restants}}",
+  "goalOverdue": "Date dépassée",
+  "goalDeadline": "ÉCHÉANCE",
+  "goalNoDeadline": "Sans échéance",
+  "goalRemove": "Supprimer l'objectif"
 }

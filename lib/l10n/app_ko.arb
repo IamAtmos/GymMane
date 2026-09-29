@@ -1237,5 +1237,17 @@
   "levelUpSwapped": "{name}이(가) 이제 {routine}에 있어요",
   "levelUpStayed": "이 운동은 더 이상 단계 상승을 제안하지 않아요",
   "levelHintsSetting": "다음 단계 제안",
-  "heatmapLabelsSetting": "활동 지도에 요일과 월 표시"
+  "heatmapLabelsSetting": "활동 지도에 요일과 월 표시",
+  "rmPercent": "퍼센트",
+  "rmAtPercent": "최대치의 {pct}",
+  "copyWorkout": "텍스트로 복사",
+  "goalSet": "목표 설정",
+  "goalTargetReps": "목표 횟수",
+  "goalToGo": "{value} 남음",
+  "goalReached": "목표 달성",
+  "goalDaysLeft": "{n, plural, other{{n}일 남음}}",
+  "goalOverdue": "기한 지남",
+  "goalDeadline": "기한",
+  "goalNoDeadline": "기한 없음",
+  "goalRemove": "목표 삭제"
 }
