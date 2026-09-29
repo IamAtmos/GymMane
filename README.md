@@ -17,6 +17,7 @@ Tap the muscles you want to train, log your sets and watch your numbers go up.
   <img alt="Android 7.0+" src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat&logo=android&logoColor=white" />
   <img alt="License GPLv3" src="https://img.shields.io/badge/Code-GPLv3-C2410C?style=flat&logo=gnu&logoColor=white" />
   <img alt="Art CC BY-SA 4.0" src="https://img.shields.io/badge/Art-CC%20BY--SA%204.0-8A6B41?style=flat&logo=creativecommons&logoColor=white" />
+  <a href="https://crowdin.com/project/gymmane"><img alt="Crowdin" src="https://badges.crowdin.net/gymmane/localized.svg" /></a>
   <a href="https://github.com/InlitX/GymMane/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/InlitX/GymMane?style=flat&color=D9A184&labelColor=181717&logo=github" /></a>
 </p>
 
@@ -90,7 +91,9 @@ Tap the muscles you want to train, log your sets and watch your numbers go up.
 - **Set types** (warm-up, working, drop set, to failure) and RPE or RIR
 - **Supersets**: chain an exercise to the next one and skip the rest
 - **Plates per side**, worked out from the kit you own
-- **Routines** you can group, duplicate and schedule, plus ready-made plans
+- **Routines** you can group, duplicate and schedule, several a day if you
+  like, plus ready-made plans
+- **Next step**: when an exercise gets easy, it offers the harder one
 - A **live notification** with the rest countdown, and a session that
   survives a reboot
 
@@ -133,11 +136,12 @@ Tap the muscles you want to train, log your sets and watch your numbers go up.
   it back
 - Bring your history from **Hevy**, **Strong**, **Lyfta**, **FitNotes**,
   **openGym** or any CSV
+- Send a workout to **Strava** as a `.fit` file
 - **Routine with AI**: export your list, paste it anywhere, import the
   answer
 - No account, no ads, no analytics and no **internet permission**
 - Photos, videos and notes stay in the app's own storage
-- **16 languages**, light and dark themes, kg or lb
+- **17 languages**, light and dark themes, kg or lb
 - Delete everything in one tap
 
 </td>
@@ -166,8 +170,8 @@ for are for the rest timer, its notification and the widgets.
 ## Contributing
 
 Bug reports, ideas and pull requests are welcome. For anything big, open an
-issue first. Translations are plain files in [lib/l10n](lib/l10n), and
-**TRANSLATING.md** explains how to add one.
+issue first. Translations happen on [Crowdin](https://crowdin.com/project/gymmane), and
+**TRANSLATING.md** explains how to help.
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -211,8 +215,9 @@ report helps a lot. If you want to buy me a coffee:
 The code is [GPL-3.0](LICENSE), with one [additional term](ADDITIONAL_TERMS.md)
 under its section 7(b): works based on GymMane must credit it as "Based on
 GymMane by InlitX". The exercise art comes from
-[Workout Guide](https://github.com/bryllim/workout-guide) by Bryl Lim, based on
-[Everkinetic](https://github.com/everkinetic/data), and is
+[Workout Guide](https://github.com/bryllim/workout-guide) by Bryl Lim and from
+[Everkinetic](https://github.com/everkinetic/data), the drawings Workout Guide
+builds on, and is
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The fonts use
 the SIL Open Font License. **CREDITS.md** has the details.
 

@@ -17,6 +17,7 @@
   <img alt="Android 7.0+" src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat&logo=android&logoColor=white" />
   <img alt="License GPLv3" src="https://img.shields.io/badge/Code-GPLv3-C2410C?style=flat&logo=gnu&logoColor=white" />
   <img alt="Art CC BY-SA 4.0" src="https://img.shields.io/badge/Art-CC%20BY--SA%204.0-8A6B41?style=flat&logo=creativecommons&logoColor=white" />
+  <a href="https://crowdin.com/project/gymmane"><img alt="Crowdin" src="https://badges.crowdin.net/gymmane/localized.svg" /></a>
   <a href="https://github.com/InlitX/GymMane/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/InlitX/GymMane?style=flat&color=D9A184&labelColor=181717&logo=github" /></a>
 </p>
 
@@ -90,7 +91,8 @@
 - **组类型**（热身组、正式组、递减组、力竭组），以及 RPE 或 RIR
 - **超级组**：把一个动作和下一个串起来，跳过中间的休息
 - **每侧配重片**，按你手头的器材自动计算
-- 可分组、复制和排期的**训练计划**，还有现成的方案
+- 可分组、复制和排期的**训练计划**，一天也可以安排多个，还有现成的方案
+- **下一步**：某个动作练得轻松了，就推荐更难的那个
 - 带休息倒计时的**实时通知**，手机重启后训练也不会丢失
 
 </td>
@@ -129,10 +131,11 @@
 - 导出为 **CSV** 或包含照片和视频的完整 **ZIP 备份**，也能再导入回来
 - 从 **Hevy**、**Strong**、**Lyfta**、**FitNotes**、**openGym** 或任意 CSV
   导入历史记录
+- 把一次训练导出为 `.fit` 文件，上传到 **Strava**
 - **AI 训练计划**：导出动作列表，粘贴到任意 AI，再把回答导入
 - 无账号、无广告、无统计分析，也没有**网络权限**
 - 照片、视频和笔记都保存在应用自己的存储空间里
-- **16 种语言**，浅色和深色主题，kg 或 lb
+- **17 种语言**，浅色和深色主题，kg 或 lb
 - 一键删除全部数据
 
 </td>
@@ -160,7 +163,7 @@
 ## 参与贡献
 
 欢迎提交问题反馈、想法和 Pull Request。较大的改动请先开一个 issue 讨论。
-翻译是 [lib/l10n](../../lib/l10n) 里的纯文本文件，添加新语言的方法见
+翻译在 [Crowdin](https://crowdin.com/project/gymmane) 上进行，参与方法见
 **TRANSLATING.md**。
 
 ```bash
@@ -204,7 +207,7 @@ GymMane 免费，并且会一直免费。点个 Star、帮忙翻译或提交一�
 
 代码采用 [GPL-3.0](../../LICENSE)，并附有其第 7(b) 条规定的一项[附加条款](../../ADDITIONAL_TERMS.md)：
 基于 GymMane 的作品须注明 "Based on GymMane by InlitX"。动作插图来自 Bryl Lim 的
-[Workout Guide](https://github.com/bryllim/workout-guide)，基于
+[Workout Guide](https://github.com/bryllim/workout-guide)，以及它所基于的
 [Everkinetic](https://github.com/everkinetic/data)，采用
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 许可。字体使用 SIL Open
 Font License。详情见 **CREDITS.md**。

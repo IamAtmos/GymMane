@@ -17,6 +17,7 @@ Tocca i muscoli che vuoi allenare, registra le serie e guarda crescere i tuoi nu
   <img alt="Android 7.0+" src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat&logo=android&logoColor=white" />
   <img alt="License GPLv3" src="https://img.shields.io/badge/Code-GPLv3-C2410C?style=flat&logo=gnu&logoColor=white" />
   <img alt="Art CC BY-SA 4.0" src="https://img.shields.io/badge/Art-CC%20BY--SA%204.0-8A6B41?style=flat&logo=creativecommons&logoColor=white" />
+  <a href="https://crowdin.com/project/gymmane"><img alt="Crowdin" src="https://badges.crowdin.net/gymmane/localized.svg" /></a>
   <a href="https://github.com/InlitX/GymMane/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/InlitX/GymMane?style=flat&color=D9A184&labelColor=181717&logo=github" /></a>
 </p>
 
@@ -91,7 +92,9 @@ Tocca i muscoli che vuoi allenare, registra le serie e guarda crescere i tuoi nu
   o RIR
 - **Superserie**: collega un esercizio al successivo e salta il recupero
 - **Dischi per lato**, calcolati con l'attrezzatura che hai
-- **Routine** da raggruppare, duplicare e programmare, più piani già pronti
+- **Routine** da raggruppare, duplicare e programmare, anche più di una al
+  giorno, più piani già pronti
+- **Passo successivo**: quando un esercizio diventa facile, ti propone il prossimo
 - Una **notifica in tempo reale** con il conto alla rovescia del recupero, e
   una sessione che sopravvive a un riavvio
 
@@ -137,12 +140,13 @@ Tocca i muscoli che vuoi allenare, registra le serie e guarda crescere i tuoi nu
   reimportalo
 - Porta il tuo storico da **Hevy**, **Strong**, **Lyfta**, **FitNotes**,
   **openGym** o da qualsiasi CSV
+- Manda un allenamento a **Strava** come file `.fit`
 - **Routine con l'IA**: esporta la tua lista, incollala dove vuoi e importa
   la risposta
 - Nessun account, niente pubblicità, niente analisi e nessun **permesso
   internet**
 - Foto, video e note restano nella memoria dell'app
-- **16 lingue**, tema chiaro e scuro, kg o lb
+- **17 lingue**, tema chiaro e scuro, kg o lb
 - Cancella tutto con un tocco
 
 </td>
@@ -171,8 +175,8 @@ che chiede servono per il timer di recupero, la sua notifica e i widget.
 ## Contribuire
 
 Segnalazioni di bug, idee e pull request sono benvenute. Per qualcosa di
-grosso, apri prima una issue. Le traduzioni sono semplici file in
-[lib/l10n](../../lib/l10n) e **TRANSLATING.md** spiega come aggiungerne una.
+grosso, apri prima una issue. Le traduzioni si fanno su
+[Crowdin](https://crowdin.com/project/gymmane) e **TRANSLATING.md** spiega come aiutare.
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -216,8 +220,9 @@ segnalazione di bug aiutano molto. Se vuoi offrirmi un caffè:
 Il codice è [GPL-3.0](../../LICENSE), con un [termine aggiuntivo](../../ADDITIONAL_TERMS.md)
 secondo la sua sezione 7(b): le opere basate su GymMane devono indicare "Based on
 GymMane by InlitX". Le illustrazioni degli esercizi vengono
-da [Workout Guide](https://github.com/bryllim/workout-guide) di Bryl Lim, basato su
-[Everkinetic](https://github.com/everkinetic/data), e sono
+da [Workout Guide](https://github.com/bryllim/workout-guide) di Bryl Lim e da
+[Everkinetic](https://github.com/everkinetic/data), i disegni su cui si basa
+Workout Guide, e sono
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). I font usano la SIL Open
 Font License. **CREDITS.md** ha i dettagli.
 

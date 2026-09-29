@@ -17,6 +17,7 @@ Toca los músculos que quieres entrenar, apunta tus series y mira cómo suben tu
   <img alt="Android 7.0+" src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=flat&logo=android&logoColor=white" />
   <img alt="License GPLv3" src="https://img.shields.io/badge/Code-GPLv3-C2410C?style=flat&logo=gnu&logoColor=white" />
   <img alt="Art CC BY-SA 4.0" src="https://img.shields.io/badge/Art-CC%20BY--SA%204.0-8A6B41?style=flat&logo=creativecommons&logoColor=white" />
+  <a href="https://crowdin.com/project/gymmane"><img alt="Crowdin" src="https://badges.crowdin.net/gymmane/localized.svg" /></a>
   <a href="https://github.com/InlitX/GymMane/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/InlitX/GymMane?style=flat&color=D9A184&labelColor=181717&logo=github" /></a>
 </p>
 
@@ -90,7 +91,9 @@ Toca los músculos que quieres entrenar, apunta tus series y mira cómo suben tu
 - **Tipos de serie** (calentamiento, efectiva, drop set, al fallo) y RPE o RIR
 - **Superseries**: enlaza un ejercicio con el siguiente y sáltate el descanso
 - **Discos por lado**, calculados con el material que tienes
-- **Rutinas** que puedes agrupar, duplicar y programar, y planes ya hechos
+- **Rutinas** que puedes agrupar, duplicar y programar, varias al día si
+  quieres, y planes ya hechos
+- **Siguiente paso**: cuando un ejercicio se te queda corto, te ofrece el siguiente
 - Una **notificación en vivo** con la cuenta atrás del descanso, y una sesión
   que sobrevive a un reinicio
 
@@ -133,11 +136,12 @@ Toca los músculos que quieres entrenar, apunta tus series y mira cómo suben tu
   vuelve a importarla
 - Trae tu historial de **Hevy**, **Strong**, **Lyfta**, **FitNotes**,
   **openGym** o cualquier CSV
+- Manda un entreno a **Strava** como archivo `.fit`
 - **Rutina con IA**: exporta tu lista, pégala donde quieras e importa la
   respuesta
 - Sin cuenta, sin anuncios, sin analítica y sin **permiso de internet**
 - Fotos, vídeos y notas se quedan en el almacenamiento de la app
-- **16 idiomas**, tema claro y oscuro, kg o lb
+- **17 idiomas**, tema claro y oscuro, kg o lb
 - Bórralo todo de un toque
 
 </td>
@@ -166,8 +170,8 @@ para el temporizador de descanso, su notificación y los widgets.
 ## Colaborar
 
 Los reportes de fallos, las ideas y los pull requests son bienvenidos. Para
-algo grande, abre antes una incidencia. Las traducciones son ficheros de texto
-en [lib/l10n](../../lib/l10n), y **TRANSLATING.md** explica cómo añadir una.
+algo grande, abre antes una incidencia. Las traducciones se hacen en
+[Crowdin](https://crowdin.com/project/gymmane), y **TRANSLATING.md** explica cómo ayudar.
 
 ```bash
 git clone https://github.com/InlitX/GymMane.git
@@ -211,8 +215,9 @@ reporte de fallo ayudan mucho. Si quieres invitarme a un café:
 El código es [GPL-3.0](../../LICENSE), con un [término adicional](../../ADDITIONAL_TERMS.md)
 de su sección 7(b): las obras basadas en GymMane deben indicar "Based on
 GymMane by InlitX". El arte de los ejercicios viene de
-[Workout Guide](https://github.com/bryllim/workout-guide) de Bryl Lim, basado en
-[Everkinetic](https://github.com/everkinetic/data), y es
+[Workout Guide](https://github.com/bryllim/workout-guide) de Bryl Lim y de
+[Everkinetic](https://github.com/everkinetic/data), los dibujos en los que se basa
+Workout Guide, y es
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Las fuentes usan la SIL Open
 Font License. **CREDITS.md** tiene los detalles.
 
