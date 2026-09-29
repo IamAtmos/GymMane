@@ -107,6 +107,12 @@ class SettingsScreen extends StatelessWidget {
               ),
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleHeatmapLabels,
+                child: _prefRow(gc, PhosphorIconsRegular.gridNine, t.heatmapLabelsSetting,
+                    TinySwitch(on: fit.heatmapLabels)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
                 onTap: () => _editBackground(context),
                 child: _prefRow(
                   gc,
@@ -186,6 +192,12 @@ class SettingsScreen extends StatelessWidget {
                 onTap: fit.toggleMultiPlan,
                 child: _prefRow(gc, PhosphorIconsRegular.stack, t.multiPlanSetting,
                     TinySwitch(on: fit.multiPlan)),
+              ),
+              GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: fit.toggleLevelHints,
+                child: _prefRow(gc, PhosphorIconsRegular.stairs, t.levelHintsSetting,
+                    TinySwitch(on: fit.levelHints)),
               ),
               _choiceRow(
                 context,

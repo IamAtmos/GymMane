@@ -3197,4 +3197,40 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get tplRr =>
       'El clásico de r/bodyweightfitness: cuerpo entero tres días a la semana. Sube un paso cuando te resulte fácil.';
+
+  @override
+  String get levelUpKicker => 'SIGUIENTE PASO';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '3×$reps en $name dos entrenos seguidos. ¿Listo para el siguiente paso?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return 'Cambiarlo en $routine';
+  }
+
+  @override
+  String get levelUpSee => 'Ver cómo se hace';
+
+  @override
+  String get levelUpLater => 'Ahora no';
+
+  @override
+  String get levelUpStay => 'Me quedo con este';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$name ya está en $routine';
+  }
+
+  @override
+  String get levelUpStayed => 'No te sugeriremos subir en este';
+
+  @override
+  String get levelHintsSetting => 'Sugerir el siguiente paso';
+
+  @override
+  String get heatmapLabelsSetting => 'Días y meses en el mapa de actividad';
 }

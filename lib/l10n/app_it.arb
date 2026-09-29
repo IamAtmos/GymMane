@@ -1066,5 +1066,15 @@
   "groupDeleteAll": "Elimina gruppo e routine",
   "groupDeleteTitle": "Eliminare «{name}»?",
   "groupDeleteBody": "Verranno eliminate {count}. Lo storico degli allenamenti resta.",
-  "tplRr": "Il classico di r/bodyweightfitness: tutto il corpo tre giorni a settimana. Passa al livello successivo quando diventa facile."
+  "tplRr": "Il classico di r/bodyweightfitness: tutto il corpo tre giorni a settimana. Passa al livello successivo quando diventa facile.",
+  "levelUpKicker": "PROSSIMO PASSO",
+  "levelUpBody": "3×{reps} su {name} per due allenamenti di fila. Pronto per il passo successivo?",
+  "levelUpSwap": "Sostituiscilo in {routine}",
+  "levelUpSee": "Guarda come si fa",
+  "levelUpLater": "Non ora",
+  "levelUpStay": "Resto su questo",
+  "levelUpSwapped": "{name} ora è in {routine}",
+  "levelUpStayed": "Niente più suggerimenti di progressione per questo",
+  "levelHintsSetting": "Suggerisci il passo successivo",
+  "heatmapLabelsSetting": "Giorni e mesi sulla mappa attività"
 }

@@ -1219,5 +1219,15 @@
   "groupDeleteAll": "Groep en routines verwijderen",
   "groupDeleteTitle": "“{name}” verwijderen?",
   "groupDeleteBody": "{count} worden verwijderd. Je trainingsgeschiedenis blijft bewaard.",
-  "tplRr": "De klassieker van r/bodyweightfitness: drie dagen per week het hele lichaam. Ga een stap verder als het makkelijk wordt."
+  "tplRr": "De klassieker van r/bodyweightfitness: drie dagen per week het hele lichaam. Ga een stap verder als het makkelijk wordt.",
+  "levelUpKicker": "VOLGENDE STAP",
+  "levelUpBody": "Twee trainingen op rij 3×{reps} bij {name}. Klaar voor de volgende stap?",
+  "levelUpSwap": "Vervangen in {routine}",
+  "levelUpSee": "Bekijk hoe het moet",
+  "levelUpLater": "Nu niet",
+  "levelUpStay": "Deze houden",
+  "levelUpSwapped": "{name} staat nu in {routine}",
+  "levelUpStayed": "Geen stap-tips meer voor deze",
+  "levelHintsSetting": "Volgende stap voorstellen",
+  "heatmapLabelsSetting": "Dagen en maanden op de activiteitenkaart"
 }

@@ -12,8 +12,11 @@ const _kDisplay = 'Nunito';
 const _kBody = 'Nunito';
 const _kBorder = 1.0;
 
-Color _heat(int level, GymColors gc) =>
-    level <= 0 ? gc.heatEmpty : heatLevelColor(gc, level);
+Color _heat(int level, GymColors gc) => level < 0
+    ? Colors.transparent
+    : level == 0
+        ? gc.heatEmpty
+        : heatLevelColor(gc, level);
 
 BoxDecoration _card(GymColors gc, bool framed, double radius) => BoxDecoration(
       color: gc.bgRaised,

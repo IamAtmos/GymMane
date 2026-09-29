@@ -3205,4 +3205,40 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get tplRr =>
       'r/bodyweightfitness klasiği: haftada üç gün tüm vücut. Kolaylaşınca bir sonraki aşamaya geç.';
+
+  @override
+  String get levelUpKicker => 'SONRAKİ ADIM';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '$name hareketinde üst üste iki antrenmanda 3×$reps. Sonraki adıma hazır mısın?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return '$routine içinde değiştir';
+  }
+
+  @override
+  String get levelUpSee => 'Nasıl yapıldığını gör';
+
+  @override
+  String get levelUpLater => 'Şimdi değil';
+
+  @override
+  String get levelUpStay => 'Bununla devam';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$name artık $routine içinde';
+  }
+
+  @override
+  String get levelUpStayed => 'Bu hareket için artık seviye önerisi yok';
+
+  @override
+  String get levelHintsSetting => 'Sonraki adımı öner';
+
+  @override
+  String get heatmapLabelsSetting => 'Aktivite haritasında gün ve aylar';
 }

@@ -5715,6 +5715,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The r/bodyweightfitness classic: full body three days a week. Move up a step when it gets easy.'**
   String get tplRr;
+
+  /// No description provided for @levelUpKicker.
+  ///
+  /// In en, this message translates to:
+  /// **'NEXT STEP'**
+  String get levelUpKicker;
+
+  /// No description provided for @levelUpBody.
+  ///
+  /// In en, this message translates to:
+  /// **'3×{reps} on {name} two workouts in a row. Ready for the next step?'**
+  String levelUpBody(int reps, String name);
+
+  /// No description provided for @levelUpSwap.
+  ///
+  /// In en, this message translates to:
+  /// **'Swap it in {routine}'**
+  String levelUpSwap(String routine);
+
+  /// No description provided for @levelUpSee.
+  ///
+  /// In en, this message translates to:
+  /// **'See how it\'s done'**
+  String get levelUpSee;
+
+  /// No description provided for @levelUpLater.
+  ///
+  /// In en, this message translates to:
+  /// **'Not now'**
+  String get levelUpLater;
+
+  /// No description provided for @levelUpStay.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep this one'**
+  String get levelUpStay;
+
+  /// No description provided for @levelUpSwapped.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} is now in {routine}'**
+  String levelUpSwapped(String name, String routine);
+
+  /// No description provided for @levelUpStayed.
+  ///
+  /// In en, this message translates to:
+  /// **'No more step-up tips for this one'**
+  String get levelUpStayed;
+
+  /// No description provided for @levelHintsSetting.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest the next step'**
+  String get levelHintsSetting;
+
+  /// No description provided for @heatmapLabelsSetting.
+  ///
+  /// In en, this message translates to:
+  /// **'Days and months on the activity map'**
+  String get heatmapLabelsSetting;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

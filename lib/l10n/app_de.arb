@@ -1086,5 +1086,15 @@
   "groupDeleteAll": "Gruppe und Routinen löschen",
   "groupDeleteTitle": "„{name}“ löschen?",
   "groupDeleteBody": "{count} werden gelöscht. Dein Trainingsverlauf bleibt erhalten.",
-  "tplRr": "Der Klassiker von r/bodyweightfitness: Ganzkörper an drei Tagen pro Woche. Geh eine Stufe höher, wenn es leicht wird."
+  "tplRr": "Der Klassiker von r/bodyweightfitness: Ganzkörper an drei Tagen pro Woche. Geh eine Stufe höher, wenn es leicht wird.",
+  "levelUpKicker": "NÄCHSTE STUFE",
+  "levelUpBody": "3×{reps} bei {name} in zwei Trainings hintereinander. Bereit für die nächste Stufe?",
+  "levelUpSwap": "In {routine} tauschen",
+  "levelUpSee": "So geht's",
+  "levelUpLater": "Jetzt nicht",
+  "levelUpStay": "Bei dieser bleiben",
+  "levelUpSwapped": "{name} ist jetzt in {routine}",
+  "levelUpStayed": "Keine Stufen-Tipps mehr für diese Übung",
+  "levelHintsSetting": "Nächste Stufe vorschlagen",
+  "heatmapLabelsSetting": "Tage und Monate in der Aktivitätskarte"
 }

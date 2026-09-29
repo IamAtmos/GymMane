@@ -3295,4 +3295,40 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get tplRr =>
       'Классика r/bodyweightfitness: всё тело три дня в неделю. Переходи на следующую ступень, когда станет легко.';
+
+  @override
+  String get levelUpKicker => 'СЛЕДУЮЩИЙ ШАГ';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '3×$reps в «$name» две тренировки подряд. Готов к следующему шагу?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return 'Заменить в «$routine»';
+  }
+
+  @override
+  String get levelUpSee => 'Как выполнять';
+
+  @override
+  String get levelUpLater => 'Не сейчас';
+
+  @override
+  String get levelUpStay => 'Оставить это';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '«$name» теперь в «$routine»';
+  }
+
+  @override
+  String get levelUpStayed => 'Больше не предлагать усложнение для этого';
+
+  @override
+  String get levelHintsSetting => 'Предлагать следующий шаг';
+
+  @override
+  String get heatmapLabelsSetting => 'Дни и месяцы на карте активности';
 }

@@ -3105,4 +3105,40 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get tplRr => 'r/bodyweightfitness の定番:週3日の全身トレーニング。楽になったら次の段階へ。';
+
+  @override
+  String get levelUpKicker => '次のステップ';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '$nameで3×$repsを2回連続で達成。次のステップに進みますか?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return '$routineで入れ替える';
+  }
+
+  @override
+  String get levelUpSee => 'やり方を見る';
+
+  @override
+  String get levelUpLater => '今はしない';
+
+  @override
+  String get levelUpStay => 'このまま続ける';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$nameが$routineに入りました';
+  }
+
+  @override
+  String get levelUpStayed => 'この種目ではステップアップを提案しません';
+
+  @override
+  String get levelHintsSetting => '次のステップを提案';
+
+  @override
+  String get heatmapLabelsSetting => 'アクティビティマップに曜日と月を表示';
 }

@@ -3121,4 +3121,40 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get tplRr => 'r/bodyweightfitness의 대표 루틴: 주 3일 전신 운동. 쉬워지면 다음 단계로 넘어가세요.';
+
+  @override
+  String get levelUpKicker => '다음 단계';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '$name 3×$reps을(를) 두 번 연속 달성했어요. 다음 단계로 갈까요?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return '$routine에서 교체';
+  }
+
+  @override
+  String get levelUpSee => '방법 보기';
+
+  @override
+  String get levelUpLater => '나중에';
+
+  @override
+  String get levelUpStay => '이대로 할게요';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$name이(가) 이제 $routine에 있어요';
+  }
+
+  @override
+  String get levelUpStayed => '이 운동은 더 이상 단계 상승을 제안하지 않아요';
+
+  @override
+  String get levelHintsSetting => '다음 단계 제안';
+
+  @override
+  String get heatmapLabelsSetting => '활동 지도에 요일과 월 표시';
 }

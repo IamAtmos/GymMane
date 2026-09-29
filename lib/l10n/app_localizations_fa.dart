@@ -3185,4 +3185,40 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get tplRr =>
       'روتین کلاسیک r/bodyweightfitness: کل بدن، سه روز در هفته. وقتی آسان شد یک پله بالاتر برو.';
+
+  @override
+  String get levelUpKicker => 'قدم بعدی';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return 'دو تمرین پشت سر هم ۳×$reps در $name. آماده‌ی قدم بعدی هستی؟';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return 'جایگزین کن در $routine';
+  }
+
+  @override
+  String get levelUpSee => 'ببین چطور انجام می‌شود';
+
+  @override
+  String get levelUpLater => 'الان نه';
+
+  @override
+  String get levelUpStay => 'همین را نگه می‌دارم';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$name حالا در $routine است';
+  }
+
+  @override
+  String get levelUpStayed => 'دیگر برای این حرکت پیشنهاد پیشرفت نمی‌دهیم';
+
+  @override
+  String get levelHintsSetting => 'پیشنهاد قدم بعدی';
+
+  @override
+  String get heatmapLabelsSetting => 'روزها و ماه‌ها روی نقشهٔ فعالیت';
 }

@@ -72,10 +72,8 @@ class ProgressScreen extends StatelessWidget {
               const SizedBox(height: 12),
             ],
             _heroRow(context, gc, change, bw),
-            if (fit.sessions.isNotEmpty) ...[
-              const SizedBox(height: 12),
-              _consistency(context, gc),
-            ],
+            const SizedBox(height: 12),
+            _consistency(context, gc),
             const SizedBox(height: 12),
             _totals(gc),
             const SizedBox(height: 12),
@@ -258,7 +256,12 @@ class ProgressScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 14),
-          Heatmap(levels: fit.heatmapLevels, onTapDay: (i) => _showDay(context, i)),
+          Heatmap(
+            levels: fit.heatmapWeeks,
+            firstDay: fit.heatmapWeekDate(0),
+            labels: fit.heatmapLabels,
+            onTapDay: (i) => _showDay(context, i),
+          ),
           const SizedBox(height: 14),
           Row(children: [
             Icon(PhosphorIconsFill.fire, size: 14, color: gc.accent),
@@ -703,7 +706,7 @@ class ProgressScreen extends StatelessWidget {
     );
   }
 
-  void _showDay(BuildContext context, int index) => showDaySheet(context, fit.heatmapDate(index));
+  void _showDay(BuildContext context, int index) => showDaySheet(context, fit.heatmapWeekDate(index));
 
   void _logBodyweight(BuildContext context) {
     final start = fit.latestBodyweight?.kg ?? fit.profile.weightKg;
@@ -1450,6 +1453,7 @@ class _DaySheet extends StatelessWidget {
               ),
             ),
           ),
+          if (s.exercises.length > 1)
           Semantics(
             button: true,
             label: '${t.deleteCaps} ${t.catalogName(e.id, e.name)}',

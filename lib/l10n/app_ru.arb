@@ -1007,5 +1007,15 @@
   "groupDeleteAll": "Удалить группу и программы",
   "groupDeleteTitle": "Удалить «{name}»?",
   "groupDeleteBody": "Будут удалены: {count}. История тренировок сохранится.",
-  "tplRr": "Классика r/bodyweightfitness: всё тело три дня в неделю. Переходи на следующую ступень, когда станет легко."
+  "tplRr": "Классика r/bodyweightfitness: всё тело три дня в неделю. Переходи на следующую ступень, когда станет легко.",
+  "levelUpKicker": "СЛЕДУЮЩИЙ ШАГ",
+  "levelUpBody": "3×{reps} в «{name}» две тренировки подряд. Готов к следующему шагу?",
+  "levelUpSwap": "Заменить в «{routine}»",
+  "levelUpSee": "Как выполнять",
+  "levelUpLater": "Не сейчас",
+  "levelUpStay": "Оставить это",
+  "levelUpSwapped": "«{name}» теперь в «{routine}»",
+  "levelUpStayed": "Больше не предлагать усложнение для этого",
+  "levelHintsSetting": "Предлагать следующий шаг",
+  "heatmapLabelsSetting": "Дни и месяцы на карте активности"
 }

@@ -29,6 +29,8 @@ mixin SettingsState on FitCore, ToolsState, LibraryState {
   double bgDim = 0.55;
   bool showFocus = true;
   bool showRecommended = true;
+  bool levelHints = true;
+  bool heatmapLabels = true;
   bool autoAdvance = true;
   bool keepScreenOn = true;
   bool startCountdown = true;
@@ -342,6 +344,18 @@ mixin SettingsState on FitCore, ToolsState, LibraryState {
 
   void toggleRecommended() {
     showRecommended = !showRecommended;
+    _persist();
+    notifyListeners();
+  }
+
+  void toggleHeatmapLabels() {
+    heatmapLabels = !heatmapLabels;
+    _persist();
+    notifyListeners();
+  }
+
+  void toggleLevelHints() {
+    levelHints = !levelHints;
     _persist();
     notifyListeners();
   }

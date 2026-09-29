@@ -1219,5 +1219,15 @@
   "groupDeleteAll": "グループとルーティンを削除",
   "groupDeleteTitle": "「{name}」を削除しますか?",
   "groupDeleteBody": "{count}が削除されます。トレーニング履歴は残ります。",
-  "tplRr": "r/bodyweightfitness の定番:週3日の全身トレーニング。楽になったら次の段階へ。"
+  "tplRr": "r/bodyweightfitness の定番:週3日の全身トレーニング。楽になったら次の段階へ。",
+  "levelUpKicker": "次のステップ",
+  "levelUpBody": "{name}で3×{reps}を2回連続で達成。次のステップに進みますか?",
+  "levelUpSwap": "{routine}で入れ替える",
+  "levelUpSee": "やり方を見る",
+  "levelUpLater": "今はしない",
+  "levelUpStay": "このまま続ける",
+  "levelUpSwapped": "{name}が{routine}に入りました",
+  "levelUpStayed": "この種目ではステップアップを提案しません",
+  "levelHintsSetting": "次のステップを提案",
+  "heatmapLabelsSetting": "アクティビティマップに曜日と月を表示"
 }

@@ -193,8 +193,23 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
       ..sort((a, b) => b.date.compareTo(a.date));
   }
 
+  void _releaseLevel(LoggedSession s, Iterable<String> ids) {
+    final ms = s.date.millisecondsSinceEpoch;
+    for (final id in ids) {
+      final shown = levelShown[id];
+      if (shown == null || shown.first != ms) continue;
+      if (shown.last == 0) {
+        levelSeen.remove(id);
+      } else {
+        levelSeen[id] = shown.last;
+      }
+      levelShown.remove(id);
+    }
+  }
+
   void deleteSession(LoggedSession s) {
     sessions.remove(s);
+    _releaseLevel(s, s.exercises.map((e) => e.id));
     persistNow();
     _refreshWidgets();
     notifyListeners();
@@ -203,6 +218,7 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
   void deleteLoggedExercise(LoggedSession s, LoggedExercise e) {
     s.exercises.remove(e);
     if (s.exercises.isEmpty) sessions.remove(s);
+    _releaseLevel(s, [e.id]);
     persistNow();
     notifyListeners();
   }
@@ -699,6 +715,16 @@ mixin StatsState on FitCore, ToolsState, LibraryState, TimelineState {
     final h = exerciseHistory(id).reversed;
     return h.map((r) => _round1(r.ex.bestOneRm)).toList();
   }
+
+  List<int> heatmapWeeksFor(int weeks) {
+    final tail = 6 - todayIndex;
+    return [...heatmapLevelsFor(weeks * 7 - tail), for (var i = 0; i < tail; i++) -1];
+  }
+
+  List<int> get heatmapWeeks => heatmapWeeksFor(kHeatmapDays ~/ 7);
+
+  DateTime heatmapWeekDate(int i, {int weeks = kHeatmapDays ~/ 7}) =>
+      shiftDays(_weekStart, i - (weeks - 1) * 7);
 
   static const _habitWindowDays = 120;
 

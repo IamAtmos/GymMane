@@ -195,6 +195,21 @@ mixin RoutinesState on FitCore, LibraryState {
     notifyListeners();
   }
 
+  void replaceRoutineExercise(String routineId, String from, String to) {
+    final r = _routine(routineId);
+    if (r == null) return;
+    final at = r.exerciseIds.indexOf(from);
+    if (at < 0 || r.exerciseIds.contains(to)) return;
+    r.exerciseIds[at] = to;
+    final sets = r.sets.remove(from);
+    if (sets != null) r.sets[to] = sets;
+    final plan = r.plan.remove(from);
+    if (plan != null) r.plan[to] = [for (final p in plan) PlannedSet(kind: p.kind)];
+    if (r.chained.remove(from)) r.chained.add(to);
+    _persist();
+    notifyListeners();
+  }
+
   VoidCallback? removeRoutineExercise(String routineId, String exId) {
     final r = _routine(routineId);
     if (r == null) return null;

@@ -1117,10 +1117,12 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
       sessions.sort((a, b) => a.date.compareTo(b.date));
       _filed = entry;
       _computeSummaryHighlights(entry);
+      _offerLevelUp(entry);
     } else {
       _filed = null;
       summaryPrs = 0;
       summaryVsLast = null;
+      summaryLevelUp = null;
     }
     persistNow();
     _refreshWidgets();
@@ -1234,11 +1236,111 @@ mixin WorkoutState on FitCore, SettingsState, LibraryState, PlacesState, StatsSt
     summaryVsLast = previous?.volume;
   }
 
+  ({Exercise from, Exercise to, int reps})? summaryLevelUp;
+  int? _levelQuietBefore;
+
+  static const _levelQuiet = Duration(days: 7);
+  static const _levelLater = Duration(days: 21);
+
+  bool _clearsLevel(List<LoggedSet> sets, int reps) => sets.where((s) => s.counts && s.reps >= reps).length >= 3;
+
+  void _offerLevelUp(LoggedSession entry) {
+    summaryLevelUp = null;
+    _levelQuietBefore = null;
+    if (!levelHints) return;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final done = {for (final e in entry.exercises) e.id};
+    ({Exercise from, Exercise to, int reps})? best;
+    var bestStep = -1;
+    for (final e in entry.exercises) {
+      final next = nextStepOf(e.id);
+      if (next == null || done.contains(next) || levelStay.contains(e.id) || isArchived(next)) continue;
+      if ((levelSeen[e.id] ?? 0) > now || modeOf(e.id).isNotEmpty) continue;
+      final from = exerciseById(e.id);
+      final to = exerciseById(next);
+      if (from == null || to == null) continue;
+      final reps = kSlowReps.contains(e.id) ? 5 : 8;
+      if (!_clearsLevel(e.sets, reps)) continue;
+      LoggedExercise? before;
+      for (final s in sessions.reversed) {
+        if (identical(s, entry)) continue;
+        for (final x in s.exercises) {
+          if (x.id == e.id) before = x;
+        }
+        if (before != null) break;
+      }
+      if (before == null || !_clearsLevel(before.sets, reps)) continue;
+      final step = kProgressions.firstWhere((c) => c.contains(e.id)).indexOf(e.id);
+      if (step > bestStep) {
+        bestStep = step;
+        best = (from: from, to: to, reps: reps);
+      }
+    }
+    if (best == null) return;
+    summaryLevelUp = best;
+    _levelQuietBefore = levelSeen[best.from.id];
+    levelSeen[best.from.id] = now + _levelQuiet.inMilliseconds;
+    levelShown[best.from.id] = [entry.date.millisecondsSinceEpoch, _levelQuietBefore ?? 0];
+  }
+
+  bool get levelUpInRoutine {
+    final l = summaryLevelUp;
+    final r = sessionRoutine;
+    return l != null && r != null && r.exerciseIds.contains(l.from.id) && !r.exerciseIds.contains(l.to.id);
+  }
+
+  String? levelUpSwap() {
+    final l = summaryLevelUp;
+    final r = sessionRoutine;
+    if (l == null || r == null || !levelUpInRoutine) return null;
+    replaceRoutineExercise(r.id, l.from.id, l.to.id);
+    summaryLevelUp = null;
+    persistNow();
+    notifyListeners();
+    return routineTitle(r);
+  }
+
+  void levelUpLater() {
+    final l = summaryLevelUp;
+    if (l == null) return;
+    levelSeen[l.from.id] = DateTime.now().add(_levelLater).millisecondsSinceEpoch;
+    levelShown.remove(l.from.id);
+    summaryLevelUp = null;
+    persistNow();
+    notifyListeners();
+  }
+
+  VoidCallback? levelUpStay() {
+    final l = summaryLevelUp;
+    if (l == null) return null;
+    levelStay.add(l.from.id);
+    summaryLevelUp = null;
+    persistNow();
+    notifyListeners();
+    return () {
+      levelStay.remove(l.from.id);
+      summaryLevelUp = l;
+      persistNow();
+      notifyListeners();
+    };
+  }
+
   LoggedSession? _filed;
 
   void continueSession() {
     final s = session;
     if (s == null || !s.complete) return;
+    final level = summaryLevelUp;
+    if (level != null) {
+      final before = _levelQuietBefore;
+      if (before == null) {
+        levelSeen.remove(level.from.id);
+      } else {
+        levelSeen[level.from.id] = before;
+      }
+      levelShown.remove(level.from.id);
+      summaryLevelUp = null;
+    }
     final filed = _filed;
     if (filed != null) sessions.remove(filed);
     _filed = null;

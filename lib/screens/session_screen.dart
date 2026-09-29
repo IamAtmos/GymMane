@@ -1246,10 +1246,23 @@ class SessionScreen extends StatelessWidget {
                 Expanded(child: _countUp(vol, (v) => _sumCard(gc, t.volume, fit.volumeLabel(v)))),
               ]),
             ),
-            const SizedBox(height: 10),
-            Rise(
-              index: 2,
-              child: vsLast != null && vsLast > 0 ? _vsLastCard(gc, vol, vsLast) : _firstTimeCard(gc),
+            if (vsLast == null || vsLast > 0) ...[
+              const SizedBox(height: 10),
+              Rise(
+                index: 2,
+                child: vsLast != null ? _vsLastCard(gc, vol, vsLast) : _firstTimeCard(gc),
+              ),
+            ],
+            AnimatedSize(
+              duration: const Duration(milliseconds: 280),
+              curve: Curves.easeOutCubic,
+              alignment: Alignment.topCenter,
+              child: fit.summaryLevelUp == null
+                  ? const SizedBox(width: double.infinity)
+                  : Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Rise(index: 3, child: _levelUpCard(context, gc, fit.summaryLevelUp!)),
+                    ),
             ),
             const SizedBox(height: 18),
             Rise(
@@ -1472,6 +1485,95 @@ class SessionScreen extends StatelessWidget {
     );
   }
 
+  Widget _levelUpCard(BuildContext context, GymColors gc, ({Exercise from, Exercise to, int reps}) level) {
+    final inRoutine = fit.levelUpInRoutine;
+    Widget link(String label, VoidCallback onTap) => GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+            child: Text(label, style: AppTheme.f(13, weight: FontWeight.w600, color: gc.textSecondary)),
+          ),
+        );
+    return SoftCard(
+      radius: 20,
+      padding: const EdgeInsets.fromLTRB(14, 14, 14, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(children: [
+            Semantics(
+              button: true,
+              label: t.levelUpSee,
+              child: GestureDetector(
+                onTap: () => showExercisePreview(context, level.to),
+                child: SizedBox(width: 64, child: ExerciseMedia(ex: level.to, height: 64, radius: 14)),
+              ),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Row(children: [
+                  Icon(PhosphorIconsBold.trendUp, size: 13, color: gc.sage),
+                  const SizedBox(width: 6),
+                  Text(t.levelUpKicker,
+                      style: AppTheme.f(10.5, weight: FontWeight.w800, color: gc.sage, letterSpacing: 1.3)),
+                ]),
+                const SizedBox(height: 4),
+                Text(exerciseName(level.to),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTheme.f(17, weight: FontWeight.w800, color: gc.text)),
+                const SizedBox(height: 3),
+                Text(t.levelUpBody(level.reps, exerciseName(level.from)),
+                    style: AppTheme.f(12.5, weight: FontWeight.w500, color: gc.textSecondary, height: 1.35)),
+              ]),
+            ),
+          ]),
+          const SizedBox(height: 12),
+          Pressable(
+            onTap: () {
+              if (!inRoutine) {
+                showExercisePreview(context, level.to);
+                return;
+              }
+              final name = exerciseName(level.to);
+              final routine = fit.levelUpSwap();
+              if (routine == null) return;
+              HapticFeedback.lightImpact();
+              showNotchToast(context, t.levelUpSwapped(name, routine),
+                  icon: PhosphorIconsFill.checkCircle, accent: gc.sage);
+            },
+            child: Container(
+              height: 46,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(color: gc.sageSoft, borderRadius: BorderRadius.circular(100)),
+              child: Text(inRoutine ? t.levelUpSwap(fit.routineTitle(fit.sessionRoutine!)) : t.levelUpSee,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTheme.f(14, weight: FontWeight.w700, color: gc.sage)),
+            ),
+          ),
+          const SizedBox(height: 2),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            link(t.levelUpLater, fit.levelUpLater),
+            Text('·', style: AppTheme.f(13, color: gc.textTertiary)),
+            link(t.levelUpStay, () {
+              final undo = fit.levelUpStay();
+              if (undo == null) return;
+              showNotchToast(context, t.levelUpStayed,
+                  icon: PhosphorIconsRegular.bellSlash,
+                  accent: gc.accent,
+                  action: t.undo,
+                  onTap: undo,
+                  duration: const Duration(milliseconds: 3600));
+            }),
+          ]),
+        ],
+      ),
+    );
+  }
+
   Widget _firstTimeCard(GymColors gc) {
     return SoftCard(
       radius: 16,
@@ -1662,7 +1764,8 @@ class _ExerciseStageState extends State<_ExerciseStage> {
         subtitle: where,
         icon: fit.inSuperset ? PhosphorIconsBold.link : PhosphorIconsBold.arrowRight,
         accent: fit.inSuperset ? gc.brass : gc.ember,
-        duration: const Duration(milliseconds: 1900));
+        duration: const Duration(milliseconds: 1900),
+        sound: false);
   }
 
   @override
@@ -1909,6 +2012,7 @@ void _showLockHint(BuildContext context) {
     subtitle: t.lockedHint,
     icon: PhosphorIconsFill.fingerprint,
     accent: context.gc.accent,
+    sound: false,
   );
 }
 

@@ -1219,5 +1219,15 @@
   "groupDeleteAll": "Видалити групу й програми",
   "groupDeleteTitle": "Видалити «{name}»?",
   "groupDeleteBody": "Буде видалено: {count}. Історія тренувань збережеться.",
-  "tplRr": "Класика r/bodyweightfitness: усе тіло три дні на тиждень. Переходь на наступний щабель, коли стане легко."
+  "tplRr": "Класика r/bodyweightfitness: усе тіло три дні на тиждень. Переходь на наступний щабель, коли стане легко.",
+  "levelUpKicker": "НАСТУПНИЙ КРОК",
+  "levelUpBody": "3×{reps} у «{name}» два тренування поспіль. Готовий до наступного кроку?",
+  "levelUpSwap": "Замінити в «{routine}»",
+  "levelUpSee": "Як виконувати",
+  "levelUpLater": "Не зараз",
+  "levelUpStay": "Залишити цю",
+  "levelUpSwapped": "«{name}» тепер у «{routine}»",
+  "levelUpStayed": "Більше не пропонувати ускладнення для цієї",
+  "levelHintsSetting": "Пропонувати наступний крок",
+  "heatmapLabelsSetting": "Дні й місяці на карті активності"
 }

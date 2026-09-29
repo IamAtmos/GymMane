@@ -1632,5 +1632,15 @@
   "groupDeleteAll": "حذف گروه و روتین‌ها",
   "groupDeleteTitle": "«{name}» حذف شود؟",
   "groupDeleteBody": "{count} حذف می‌شود. سابقهٔ تمرین‌هایت باقی می‌ماند.",
-  "tplRr": "روتین کلاسیک r/bodyweightfitness: کل بدن، سه روز در هفته. وقتی آسان شد یک پله بالاتر برو."
+  "tplRr": "روتین کلاسیک r/bodyweightfitness: کل بدن، سه روز در هفته. وقتی آسان شد یک پله بالاتر برو.",
+  "levelUpKicker": "قدم بعدی",
+  "levelUpBody": "دو تمرین پشت سر هم ۳×{reps} در {name}. آماده‌ی قدم بعدی هستی؟",
+  "levelUpSwap": "جایگزین کن در {routine}",
+  "levelUpSee": "ببین چطور انجام می‌شود",
+  "levelUpLater": "الان نه",
+  "levelUpStay": "همین را نگه می‌دارم",
+  "levelUpSwapped": "{name} حالا در {routine} است",
+  "levelUpStayed": "دیگر برای این حرکت پیشنهاد پیشرفت نمی‌دهیم",
+  "levelHintsSetting": "پیشنهاد قدم بعدی",
+  "heatmapLabelsSetting": "روزها و ماه‌ها روی نقشهٔ فعالیت"
 }

@@ -125,6 +125,7 @@ class _AppShellState extends State<AppShell> with WidgetsBindingObserver {
       subtitle: '${t.catalogName(ex.id, ex.name)} · $next',
       icon: PhosphorIconsFill.timer,
       accent: context.gc.sage,
+      sound: false,
     );
   }
 
@@ -225,7 +226,8 @@ class _AppShellState extends State<AppShell> with WidgetsBindingObserver {
                   backgroundColor: Colors.transparent,
                   body: Padding(
                     padding: EdgeInsets.only(
-                        bottom: MediaQuery.viewPaddingOf(context).bottom + (parked ? _pillSpace : 0)),
+                        bottom: (MediaQuery.viewInsetsOf(context).bottom > 0 ? 0 : MediaQuery.viewPaddingOf(context).bottom) +
+                            (parked ? _pillSpace : 0)),
                     child: NotificationListener<ScrollNotification>(
                       onNotification: _onScroll,
                       child: _animatedScreen(),

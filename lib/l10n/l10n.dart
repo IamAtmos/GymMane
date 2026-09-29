@@ -219,6 +219,9 @@ extension GymL10n on AppLocalizations {
   String monthInitial(int m) =>
       _dates((l) => DateFormat('', l)).dateSymbols.NARROWMONTHS[m - 1];
 
+  String monthShort(int m) =>
+      _capitalize(_dates(DateFormat.MMM).format(DateTime(2024, m)).replaceAll('.', ''));
+
   String monthName(int m) =>
       _capitalize(_dates(DateFormat.MMMM).format(DateTime(2024, m)));
 

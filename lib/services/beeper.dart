@@ -68,6 +68,85 @@ class Beeper {
     } catch (_) {}
   }
 
+  AudioPlayer? _soft;
+  String? _chime;
+  DateTime _lastChime = DateTime(2000);
+
+  Future<void> chime() async {
+    if (kIsWeb || _failed) return;
+    final now = DateTime.now();
+    if (now.difference(_lastChime) < const Duration(milliseconds: 700)) return;
+    _lastChime = now;
+    try {
+      if (_soft == null) {
+        final dir = await getTemporaryDirectory();
+        _chime = await _write(dir, 'gm_chime1.wav', chimeWav());
+        final p = AudioPlayer();
+        await p.setReleaseMode(ReleaseMode.stop);
+        await p.setAudioContext(AudioContext(
+          android: const AudioContextAndroid(
+            contentType: AndroidContentType.sonification,
+            usageType: AndroidUsageType.notification,
+            audioFocus: AndroidAudioFocus.none,
+          ),
+          iOS: AudioContextIOS(category: AVAudioSessionCategory.ambient, options: const {}),
+        ));
+        _soft = p;
+      }
+      await _soft!.stop();
+      await _soft!.play(DeviceFileSource(_chime!), volume: 0.55);
+    } catch (_) {}
+  }
+
+  static Uint8List chimeWav() {
+    const rate = 44100;
+    const secs = 0.95;
+    final n = (rate * secs).round();
+    final samples = List<double>.filled(n, 0);
+    void note(double hz, double at, double gain, double decay) {
+      final start = (at * rate).round();
+      for (var i = start; i < n; i++) {
+        final t = (i - start) / rate;
+        final a = math.min(1.0, t / 0.012);
+        final attack = a * a * (3 - 2 * a);
+        final body = math.exp(-t * decay);
+        final shine = math.exp(-t * decay * 2.6);
+        final wave = math.sin(2 * math.pi * hz * t) +
+            math.sin(2 * math.pi * hz * 2 * t) * 0.18 * shine +
+            math.sin(2 * math.pi * hz * 3 * t) * 0.05 * shine;
+        samples[i] += wave * gain * attack * body;
+      }
+    }
+
+    note(1046.5, 0, 0.42, 5.2);
+    note(1568.0, 0.085, 0.34, 4.4);
+    final data = ByteData(44 + n * 2);
+    void text(int at, String s) {
+      for (var i = 0; i < s.length; i++) {
+        data.setUint8(at + i, s.codeUnitAt(i));
+      }
+    }
+
+    text(0, 'RIFF');
+    data.setUint32(4, 36 + n * 2, Endian.little);
+    text(8, 'WAVE');
+    text(12, 'fmt ');
+    data.setUint32(16, 16, Endian.little);
+    data.setUint16(20, 1, Endian.little);
+    data.setUint16(22, 1, Endian.little);
+    data.setUint32(24, rate, Endian.little);
+    data.setUint32(28, rate * 2, Endian.little);
+    data.setUint16(32, 2, Endian.little);
+    data.setUint16(34, 16, Endian.little);
+    text(36, 'data');
+    data.setUint32(40, n * 2, Endian.little);
+    for (var i = 0; i < n; i++) {
+      final fade = i > n - 2205 ? (n - i) / 2205 : 1.0;
+      data.setInt16(44 + i * 2, (samples[i].clamp(-1.0, 1.0) * fade * 32767).round(), Endian.little);
+    }
+    return data.buffer.asUint8List();
+  }
+
   static Future<String> _write(Directory dir, String name, Uint8List bytes) async {
     final file = File('${dir.path}/$name');
     if (!await file.exists() || await file.length() != bytes.length) {

@@ -23,6 +23,7 @@ import '../services/beeper.dart';
 import '../services/exercise_match.dart';
 import '../services/local_store.dart';
 import '../services/media_store.dart';
+import '../services/merged_ids.dart';
 import '../services/progress_reminder.dart';
 import '../services/plan_share.dart';
 import '../services/rest_alarm.dart';
@@ -46,7 +47,7 @@ part 'workout_state.dart';
 class FitState extends FitCore
     with ToolsState, LibraryState, SettingsState, NotesState, PlacesState, MeasuresState, MomentsState, TimelineState, StatsState, AwardsState, RoutinesState, WorkoutState {
   void loadFromStore() {
-    final data = Store.instance.load();
+    final data = withMergedExercises(Store.instance.load());
     _loading = true;
     if (data['language'] == null) _adoptDeviceLanguage();
     if (data.isNotEmpty) {
@@ -159,6 +160,16 @@ class FitState extends FitCore
     archived
       ..clear()
       ..addAll(((data['archived'] as List?) ?? const []).cast<String>());
+    levelStay
+      ..clear()
+      ..addAll(((data['levelStay'] as List?) ?? const []).cast<String>());
+    levelSeen
+      ..clear()
+      ..addAll(((data['levelSeen'] as Map?) ?? const {}).map((k, v) => MapEntry(k as String, (v as num).toInt())));
+    levelShown
+      ..clear()
+      ..addAll(((data['levelShown'] as Map?) ?? const {})
+          .map((k, v) => MapEntry(k as String, (v as List).map((x) => (x as num).toInt()).toList())));
     exerciseBar
       ..clear()
       ..addAll(((data['barKg'] as Map?) ?? const {})
@@ -176,6 +187,8 @@ class FitState extends FitCore
     bgDim = (data['bgDim'] as num?)?.toDouble() ?? 0.55;
     showFocus = data['showFocus'] as bool? ?? true;
     showRecommended = data['showRecs'] as bool? ?? true;
+    levelHints = data['levelHints'] as bool? ?? true;
+    heatmapLabels = data['heatLabels'] as bool? ?? true;
     multiPlan = data['multiPlan'] as bool? ?? false;
     final weekStart = data['weekStart'];
     weekStartDay = SettingsState.weekStarts.contains(weekStart) ? weekStart as int : DateTime.monday;
@@ -345,6 +358,8 @@ class FitState extends FitCore
         'bgDim': bgDim,
         'showFocus': showFocus,
         'showRecs': showRecommended,
+        'levelHints': levelHints,
+        'heatLabels': heatmapLabels,
         'weekStart': weekStartDay,
         'autoAdvance': autoAdvance,
         'keepAwake': keepScreenOn,
@@ -356,6 +371,9 @@ class FitState extends FitCore
         'alarmStyle': alarmStyle,
         'noSuggest': noSuggest.toList(),
         'archived': archived.toList(),
+        'levelStay': levelStay.toList(),
+        'levelSeen': Map.of(levelSeen),
+        'levelShown': Map.of(levelShown),
         'barKg': exerciseBar,
         'marks': videoMarks.map((k, v) => MapEntry(k, v.map((i, ms) => MapEntry('$i', ms)))),
         'exMode': modeOverride,
@@ -433,6 +451,9 @@ class FitState extends FitCore
     autoWarmup.clear();
     noSuggest.clear();
     archived.clear();
+    levelStay.clear();
+    levelSeen.clear();
+    levelShown.clear();
     videoMarks.clear();
     exerciseBar.clear();
     modeOverride.clear();
@@ -444,6 +465,8 @@ class FitState extends FitCore
     profile = Profile();
     showFocus = true;
     showRecommended = true;
+    levelHints = true;
+    heatmapLabels = true;
     weekStartDay = DateTime.monday;
     autoAdvance = true;
     startCountdown = true;
@@ -478,11 +501,13 @@ class FitState extends FitCore
     return true;
   }
 
-  void applyBackup(Map<String, dynamic> map,
+  void applyBackup(Map<String, dynamic> backup,
       {Map<String, String>? restoredMedia,
       Map<String, String>? restoredNoteMedia,
       Map<String, String>? restoredShots,
       Map<String, String>? restoredMoments}) {
+    final map = withMergedExercises(backup);
+    if (restoredMedia != null) restoredMedia = withMergedExercises(restoredMedia).cast<String, String>();
     _loading = true;
     profile = Profile.fromJson((map['profile'] as Map?)?.cast<String, dynamic>() ?? {});
     themePref = _themeFrom(map, fallback: themePref);

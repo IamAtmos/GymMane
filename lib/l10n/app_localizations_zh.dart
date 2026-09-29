@@ -3065,6 +3065,42 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get tplRr => 'r/bodyweightfitness 的经典计划:每周三天全身训练。变轻松了就进阶到下一级。';
+
+  @override
+  String get levelUpKicker => '下一步';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '$name 连续两次训练完成 3×$reps。准备好进阶了吗?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return '在$routine中替换';
+  }
+
+  @override
+  String get levelUpSee => '看看怎么做';
+
+  @override
+  String get levelUpLater => '以后再说';
+
+  @override
+  String get levelUpStay => '继续做这个';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$name 已加入$routine';
+  }
+
+  @override
+  String get levelUpStayed => '不再为这个动作提示进阶';
+
+  @override
+  String get levelHintsSetting => '提示下一步进阶';
+
+  @override
+  String get heatmapLabelsSetting => '在活动图上显示星期和月份';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
@@ -6151,4 +6187,40 @@ class AppLocalizationsZhHant extends AppLocalizationsZh {
 
   @override
   String get tplRr => 'r/bodyweightfitness 的經典計畫:每週三天全身訓練。變輕鬆了就進階到下一級。';
+
+  @override
+  String get levelUpKicker => '下一步';
+
+  @override
+  String levelUpBody(int reps, String name) {
+    return '$name 連續兩次訓練完成 3×$reps。準備好進階了嗎?';
+  }
+
+  @override
+  String levelUpSwap(String routine) {
+    return '在$routine中替換';
+  }
+
+  @override
+  String get levelUpSee => '看看怎麼做';
+
+  @override
+  String get levelUpLater => '以後再說';
+
+  @override
+  String get levelUpStay => '繼續做這個';
+
+  @override
+  String levelUpSwapped(String name, String routine) {
+    return '$name 已加入$routine';
+  }
+
+  @override
+  String get levelUpStayed => '不再為這個動作提示進階';
+
+  @override
+  String get levelHintsSetting => '提示下一步進階';
+
+  @override
+  String get heatmapLabelsSetting => '在活動圖上顯示星期和月份';
 }

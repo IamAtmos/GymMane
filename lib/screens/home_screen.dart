@@ -56,8 +56,10 @@ class HomeScreen extends StatelessWidget {
               radius: 22,
               padding: const EdgeInsets.fromLTRB(18, 18, 18, 16),
               child: Heatmap(
-                levels: fit.heatmapLevels,
-                onTapDay: (i) => showDaySheet(context, fit.heatmapDate(i)),
+                levels: fit.heatmapWeeks,
+                firstDay: fit.heatmapWeekDate(0),
+                labels: fit.heatmapLabels,
+                onTapDay: (i) => showDaySheet(context, fit.heatmapWeekDate(i)),
               ),
             ),
             if (fit.showRecommended && recommended.isNotEmpty) ...[

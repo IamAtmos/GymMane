@@ -979,5 +979,15 @@
   "groupDeleteAll": "删除分组及其计划",
   "groupDeleteTitle": "删除“{name}”?",
   "groupDeleteBody": "将删除{count}。训练记录会保留。",
-  "tplRr": "r/bodyweightfitness 的经典计划:每周三天全身训练。变轻松了就进阶到下一级。"
+  "tplRr": "r/bodyweightfitness 的经典计划:每周三天全身训练。变轻松了就进阶到下一级。",
+  "levelUpKicker": "下一步",
+  "levelUpBody": "{name} 连续两次训练完成 3×{reps}。准备好进阶了吗?",
+  "levelUpSwap": "在{routine}中替换",
+  "levelUpSee": "看看怎么做",
+  "levelUpLater": "以后再说",
+  "levelUpStay": "继续做这个",
+  "levelUpSwapped": "{name} 已加入{routine}",
+  "levelUpStayed": "不再为这个动作提示进阶",
+  "levelHintsSetting": "提示下一步进阶",
+  "heatmapLabelsSetting": "在活动图上显示星期和月份"
 }

@@ -67,6 +67,12 @@ abstract class FitCore extends ChangeNotifier {
 
   final Set<String> archived = {};
 
+  final Set<String> levelStay = {};
+
+  final Map<String, int> levelSeen = {};
+
+  final Map<String, List<int>> levelShown = {};
+
   final Map<String, Map<int, int>> videoMarks = {};
 
   final Map<String, double> exerciseBar = {};
