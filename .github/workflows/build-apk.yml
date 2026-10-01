@@ -1,13 +1,16 @@
 name: Build & Release
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
     inputs:
       tag:
         description: 'Release tag / version, e.g. v1.0.0'
-        required: true
+        required: false
+        default: 'v1.0.0'
         type: string
 
 permissions:
@@ -76,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     # Only when manually dispatched with a tag. The release body is left empty
     # on purpose so it can be filled in by hand after publishing.
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && secrets.KEYSTORE_BASE64 != ''
 
     # Reproducible build: keep the pub cache at a fixed path inside the workspace
     # (/home/runner/work/GymMane/GymMane/.pub-cache). F-Droid relocates its build
