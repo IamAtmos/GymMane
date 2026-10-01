@@ -7153,7 +7153,7 @@ const List<Exercise> kExercises = [
   ),
 
   Exercise(
-    id: 'OZakvl6',
+    id: 'oM3sdhr',
     name: 'Ab Crunch Machine',
     primary: 'abdomen',
     secondary: [],
@@ -7168,7 +7168,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wX72A71',
+    id: 'ptduxUb',
     name: 'Alternate Hammer Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -7185,7 +7185,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '4jdKHcY',
+    id: '3U8WhYu',
     name: 'Alternate Incline Dumbbell Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -7201,7 +7201,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EXwm1kY',
+    id: 'mEjMsiG',
     name: 'Alternating Cable Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -7216,7 +7216,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Tp7jXGr',
+    id: 'Bm6wKQh',
     name: 'Alternating Deltoid Raise',
     primary: 'shoulders',
     secondary: [],
@@ -7232,7 +7232,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Y4d6dKf',
+    id: 'aY0JvBv',
     name: 'Anti-Gravity Press',
     primary: 'shoulders',
     secondary: ['back', 'trapezius', 'triceps'],
@@ -7247,7 +7247,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hPfLTHo',
+    id: 'SFfujwj',
     name: 'Arnold Dumbbell Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -7263,7 +7263,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Zl9nJQR',
+    id: 'Y8rSHJv',
     name: 'Around The Worlds',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -7277,7 +7277,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'b2ru6GW',
+    id: 'wEt0LdV',
     name: 'Barbell Ab Rollout',
     primary: 'abdomen',
     secondary: ['back', 'shoulders'],
@@ -7292,7 +7292,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'snhXAHz',
+    id: 'AEMama1',
     name: 'Barbell Ab Rollout - On Knees',
     primary: 'abdomen',
     secondary: ['back', 'shoulders'],
@@ -7307,7 +7307,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'NXLG165',
+    id: '51o1CWC',
     name: 'Barbell Bench Press - Medium Grip',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -7323,7 +7323,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Zs1iPO8',
+    id: 'qhGN9eV',
     name: 'Barbell Curls Lying Against An Incline',
     primary: 'biceps',
     secondary: [],
@@ -7338,7 +7338,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eN0Pxmh',
+    id: 'vyoatks',
     name: 'Barbell Guillotine Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -7354,7 +7354,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '1pJsZBE',
+    id: 'UTs93Y1',
     name: 'Barbell Hip Thrust',
     primary: 'glutes',
     secondary: ['calves', 'hamstrings'],
@@ -7368,7 +7368,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HAGFtp7',
+    id: 'VE0ZHcB',
     name: 'Barbell Incline Bench Press - Medium Grip',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -7384,7 +7384,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'bvO1PVc',
+    id: 'mccD4oJ',
     name: 'Barbell Incline Shoulder Raise',
     primary: 'shoulders',
     secondary: ['chest'],
@@ -7399,7 +7399,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Ld4uXwv',
+    id: 'pGa4702',
     name: 'Barbell Rollout from Bench',
     primary: 'abdomen',
     secondary: ['glutes', 'hamstrings', 'back', 'shoulders'],
@@ -7413,7 +7413,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ErmPBZG',
+    id: 'nVTONQk',
     name: 'Barbell Shoulder Press',
     primary: 'shoulders',
     secondary: ['chest', 'triceps'],
@@ -7429,7 +7429,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '3dw3lKe',
+    id: 't1xButs',
     name: 'Barbell Shrug Behind The Back',
     primary: 'trapezius',
     secondary: ['forearm', 'back'],
@@ -7444,7 +7444,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'VdRmFBi',
+    id: 'mWMC6tD',
     name: 'Barbell Side Bend',
     primary: 'abdomen',
     secondary: ['back'],
@@ -7459,7 +7459,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WxpgsTT',
+    id: 'hbXoT4d',
     name: 'Barbell Side Split Squat',
     primary: 'quads',
     secondary: ['calves', 'hamstrings', 'back'],
@@ -7474,7 +7474,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hYCscvB',
+    id: 'tvuBP0g',
     name: 'Barbell Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -7491,7 +7491,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XA9xHfa',
+    id: 'lgcxpPx',
     name: 'Barbell Squat To A Bench',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -7510,7 +7510,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ja2EO2B',
+    id: 'U2c82hy',
     name: 'Barbell Step Ups',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -7525,7 +7525,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YTeEEXz',
+    id: '2bDxsxs',
     name: 'Barbell Walking Lunge',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -7540,7 +7540,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'peGRkVY',
+    id: 'NAy5FJ2',
     name: 'Bench Press - Powerlifting',
     primary: 'triceps',
     secondary: ['chest', 'forearm', 'back', 'shoulders'],
@@ -7555,7 +7555,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '81w7Ut2',
+    id: 'gleDRcw',
     name: 'Bench Press with Chains',
     primary: 'triceps',
     secondary: ['chest', 'back', 'shoulders'],
@@ -7570,7 +7570,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wkm3MJE',
+    id: 'Z3l7Rqd',
     name: 'Bent-Arm Barbell Pullover',
     primary: 'back',
     secondary: ['chest', 'shoulders', 'triceps'],
@@ -7586,7 +7586,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hJr6weu',
+    id: 'D1c7fUH',
     name: 'Bent-Arm Dumbbell Pullover',
     primary: 'chest',
     secondary: ['back', 'shoulders', 'triceps'],
@@ -7603,7 +7603,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '86oB7vT',
+    id: '9EnoYtm',
     name: 'Bent Over Barbell Row',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -7618,7 +7618,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'PxEjNr2',
+    id: 'tcYvMai',
     name: 'Bent Over Dumbbell Rear Delt Raise With Head On Bench',
     primary: 'shoulders',
     secondary: [],
@@ -7634,7 +7634,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '2FDUXhG',
+    id: 'DwVKUzr',
     name: 'Bent Over Low-Pulley Side Lateral',
     primary: 'shoulders',
     secondary: ['back', 'trapezius'],
@@ -7650,7 +7650,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EJL057R',
+    id: '2nL2s62',
     name: 'Bent Over One-Arm Long Bar Row',
     primary: 'back',
     secondary: ['biceps', 'trapezius'],
@@ -7667,7 +7667,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'H3wsNG4',
+    id: 'DEGEgzv',
     name: 'Bent Over Two-Arm Long Bar Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -7684,7 +7684,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '80JhQYO',
+    id: 'Py0i2Gi',
     name: 'Bent Over Two-Dumbbell Row',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -7699,7 +7699,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AYMnsTq',
+    id: 'qk5GFr2',
     name: 'Bent Over Two-Dumbbell Row With Palms In',
     primary: 'back',
     secondary: ['biceps'],
@@ -7714,7 +7714,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '0kHdzWD',
+    id: 'to26qRj',
     name: 'Bicycling, Stationary',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -7728,7 +7728,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6B41dUW',
+    id: 'XX1F0fc',
     name: 'Board Press',
     primary: 'triceps',
     secondary: ['chest', 'forearm', 'back', 'shoulders'],
@@ -7743,7 +7743,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'P2N1CEi',
+    id: '56vUVUh',
     name: 'Bodyweight Flyes',
     primary: 'chest',
     secondary: ['abdomen', 'shoulders', 'triceps'],
@@ -7759,7 +7759,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QaoXP26',
+    id: 'brDnSUj',
     name: 'Bosu Ball Cable Crunch With Side Bends',
     primary: 'abdomen',
     secondary: [],
@@ -7780,7 +7780,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ShwSmJL',
+    id: 'wcvio7g',
     name: 'Box Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -7795,7 +7795,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XJwEU2M',
+    id: 'odPPqfO',
     name: 'Box Squat with Bands',
     primary: 'quads',
     secondary: ['glutes', 'calves', 'hamstrings', 'back'],
@@ -7810,7 +7810,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HNIlOZO',
+    id: 'LGLggmp',
     name: 'Box Squat with Chains',
     primary: 'quads',
     secondary: ['glutes', 'calves', 'hamstrings', 'back'],
@@ -7826,7 +7826,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'O6SmKtF',
+    id: 'qhlMwNN',
     name: 'Bradford/Rocky Presses',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -7843,7 +7843,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gy3W5CA',
+    id: 'dLwF5I2',
     name: 'Butterfly',
     primary: 'chest',
     secondary: [],
@@ -7859,7 +7859,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'mMPuYvz',
+    id: 'SDeUeRy',
     name: 'Cable Chest Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -7874,7 +7874,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hVkJtco',
+    id: 'CTyLYK0',
     name: 'Cable Crunch',
     primary: 'abdomen',
     secondary: [],
@@ -7891,7 +7891,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'G1TuHhA',
+    id: 'gbUD4eW',
     name: 'Cable Deadlifts',
     primary: 'quads',
     secondary: ['forearm', 'glutes', 'hamstrings', 'back'],
@@ -7906,7 +7906,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'czYHFH3',
+    id: '99BLu7v',
     name: 'Cable Hammer Curls - Rope Attachment',
     primary: 'biceps',
     secondary: [],
@@ -7923,7 +7923,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'UntQdEp',
+    id: 'fTo4nvD',
     name: 'Cable Incline Pushdown',
     primary: 'back',
     secondary: [],
@@ -7939,7 +7939,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'nDA6I76',
+    id: 'oksV8SN',
     name: 'Cable Iron Cross',
     primary: 'chest',
     secondary: [],
@@ -7955,7 +7955,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'k8V4dVb',
+    id: 'QfNvBgi',
     name: 'Cable Judo Flip',
     primary: 'abdomen',
     secondary: [],
@@ -7971,7 +7971,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ZYwK31V',
+    id: 'RFQR8gc',
     name: 'Cable One Arm Tricep Extension',
     primary: 'triceps',
     secondary: [],
@@ -7988,7 +7988,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EA2Kf5N',
+    id: '22pHEOk',
     name: 'Cable Rear Delt Fly',
     primary: 'shoulders',
     secondary: [],
@@ -8003,7 +8003,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LtpU2Jh',
+    id: 'V607oF8',
     name: 'Cable Reverse Crunch',
     primary: 'abdomen',
     secondary: [],
@@ -8020,7 +8020,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '0IuCUxd',
+    id: 'J38J4gM',
     name: 'Cable Rope Overhead Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -8036,7 +8036,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 't6muejg',
+    id: 'Rhs83Ld',
     name: 'Cable Rope Rear-Delt Rows',
     primary: 'shoulders',
     secondary: ['biceps', 'back'],
@@ -8053,7 +8053,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xZAOXQg',
+    id: 'gR2dizA',
     name: 'Cable Russian Twists',
     primary: 'abdomen',
     secondary: [],
@@ -8071,7 +8071,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hEWzBH8',
+    id: 'QKOvzvg',
     name: 'Cable Seated Crunch',
     primary: 'abdomen',
     secondary: [],
@@ -8087,7 +8087,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XinOHAX',
+    id: '9RhZCcd',
     name: 'Cable Seated Lateral Raise',
     primary: 'shoulders',
     secondary: ['back', 'trapezius'],
@@ -8105,7 +8105,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cTntpl2',
+    id: 'l3zkmFC',
     name: 'Cable Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -8120,7 +8120,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'k7BwDoA',
+    id: 'OOSMfVG',
     name: 'Cable Shrugs',
     primary: 'trapezius',
     secondary: [],
@@ -8136,7 +8136,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '7vrWpwZ',
+    id: 'EFDBbjE',
     name: 'Cable Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -8153,7 +8153,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cy8XtQl',
+    id: 'MYT66L5',
     name: 'Calf-Machine Shoulder Shrug',
     primary: 'trapezius',
     secondary: [],
@@ -8168,7 +8168,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'CS5eyQv',
+    id: 'zGzXz7b',
     name: 'Calf Press',
     primary: 'calves',
     secondary: [],
@@ -8183,7 +8183,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xAf1IkO',
+    id: 'hDzpoSw',
     name: 'Calf Press On The Leg Press Machine',
     primary: 'calves',
     secondary: [],
@@ -8199,7 +8199,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'lqTzxyu',
+    id: 'ndHZvtZ',
     name: 'Calf Raise On A Dumbbell',
     primary: 'calves',
     secondary: [],
@@ -8215,7 +8215,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LSByMaD',
+    id: 'RFHeOK7',
     name: 'Car Drivers',
     primary: 'shoulders',
     secondary: ['forearm'],
@@ -8230,7 +8230,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MwPeeGI',
+    id: 'vBXQ56p',
     name: 'Chair Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -8247,7 +8247,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'aBXkmxO',
+    id: 'yZcPvIb',
     name: 'Clean',
     primary: 'hamstrings',
     secondary: ['calves', 'forearm', 'glutes', 'back', 'quads', 'shoulders', 'trapezius'],
@@ -8264,7 +8264,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '7JxdS9I',
+    id: 'chuAhG4',
     name: 'Clean Deadlift',
     primary: 'hamstrings',
     secondary: ['forearm', 'glutes', 'back', 'quads', 'trapezius'],
@@ -8278,7 +8278,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Xo2FkKF',
+    id: 'Ks7RDcO',
     name: 'Clean Pull',
     primary: 'quads',
     secondary: ['forearm', 'glutes', 'hamstrings', 'back', 'trapezius'],
@@ -8292,7 +8292,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'OUg7Sxq',
+    id: '2QZk02s',
     name: 'Clean Shrug',
     primary: 'trapezius',
     secondary: ['forearm', 'shoulders'],
@@ -8306,7 +8306,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'zpnj5D5',
+    id: 'NuCUuMY',
     name: 'Clean and Jerk',
     primary: 'shoulders',
     secondary: ['abdomen', 'glutes', 'hamstrings', 'back', 'quads', 'trapezius', 'triceps'],
@@ -8325,7 +8325,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Oqrb95S',
+    id: 'PSv3Xxc',
     name: 'Clean and Press',
     primary: 'shoulders',
     secondary: ['abdomen', 'calves', 'glutes', 'hamstrings', 'back', 'quads', 'trapezius', 'triceps'],
@@ -8343,7 +8343,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'bHMRShy',
+    id: 'SPpuIOB',
     name: 'Clean from Blocks',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'shoulders', 'trapezius'],
@@ -8358,7 +8358,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gV1JfXw',
+    id: 'Oj2pMoc',
     name: 'Close-Grip Barbell Bench Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -8374,7 +8374,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'A6O6M0t',
+    id: 'DevPkIv',
     name: 'Close-Grip Dumbbell Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -8390,7 +8390,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QEKujx4',
+    id: 'NwTM71A',
     name: 'Close-Grip EZ-Bar Curl with Band',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8406,7 +8406,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'epx7sIp',
+    id: '60EvADH',
     name: 'Close-Grip EZ-Bar Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -8422,7 +8422,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'm97IIkK',
+    id: 'wi32ikz',
     name: 'Close-Grip EZ Bar Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8438,7 +8438,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Tf6pDTa',
+    id: 'x7c6U8n',
     name: 'Close-Grip Front Lat Pulldown',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -8455,7 +8455,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gbcrFjD',
+    id: 'aW7Ln88',
     name: 'Close-Grip Standing Barbell Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8471,7 +8471,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ign8YrI',
+    id: 'ovvCkOx',
     name: 'Concentration Curls',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8487,7 +8487,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'CLSYRb6',
+    id: 'RASWSZi',
     name: 'Cross Body Hammer Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8502,7 +8502,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Jx8qdkH',
+    id: 'go922up',
     name: 'Cuban Press',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -8518,7 +8518,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '8knwp1t',
+    id: '9sxMBz9',
     name: 'Deadlift with Bands',
     primary: 'back',
     secondary: ['forearm', 'glutes', 'hamstrings', 'quads', 'trapezius'],
@@ -8532,7 +8532,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'qn8RAB1',
+    id: 'HdgvJHz',
     name: 'Deadlift with Chains',
     primary: 'back',
     secondary: ['forearm', 'glutes', 'hamstrings', 'quads', 'trapezius'],
@@ -8547,7 +8547,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'yUrfOph',
+    id: 'tBLtXZp',
     name: 'Decline Barbell Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -8564,7 +8564,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'RxV9AKc',
+    id: 'sx3cadn',
     name: 'Decline Close-Grip Bench To Skull Crusher',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -8582,7 +8582,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'f938x0m',
+    id: '2jQIQIN',
     name: 'Decline Dumbbell Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -8599,7 +8599,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'c4QASq6',
+    id: 'uJfyiTm',
     name: 'Decline Dumbbell Flyes',
     primary: 'chest',
     secondary: [],
@@ -8615,7 +8615,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wQnFQqn',
+    id: 'ulSEzoy',
     name: 'Decline Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -8631,7 +8631,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gdG8llB',
+    id: 'l2k3jPC',
     name: 'Decline EZ Bar Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -8647,7 +8647,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xODpjCF',
+    id: '3EIedkB',
     name: 'Decline Smith Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -8663,7 +8663,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HbG9n42',
+    id: 'oNZkihl',
     name: 'Deficit Deadlift',
     primary: 'back',
     secondary: ['forearm', 'glutes', 'hamstrings', 'quads', 'trapezius'],
@@ -8677,7 +8677,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '5bZnxX4',
+    id: 'UXohUBO',
     name: 'Dip Machine',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -8693,7 +8693,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'RMdImgw',
+    id: 'fPOKsOK',
     name: 'Drag Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8708,7 +8708,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YiNBZKf',
+    id: 'Cmv9qOw',
     name: 'Dumbbell Alternate Bicep Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8724,7 +8724,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'nroN8by',
+    id: 'tKOWQ34',
     name: 'Dumbbell Bench Press with Neutral Grip',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -8739,7 +8739,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'UuAsuRA',
+    id: 'vtXMD1C',
     name: 'Dumbbell Bicep Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -8754,7 +8754,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '07q9Rnh',
+    id: 'g5tfCkI',
     name: 'Dumbbell Clean',
     primary: 'hamstrings',
     secondary: ['calves', 'forearm', 'glutes', 'back', 'quads', 'shoulders', 'trapezius'],
@@ -8770,7 +8770,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '9f7Yedh',
+    id: 'x3yog79',
     name: 'Dumbbell Floor Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -8784,7 +8784,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LR3JUX1',
+    id: 'fxm3RO4',
     name: 'Dumbbell Flyes',
     primary: 'chest',
     secondary: [],
@@ -8800,7 +8800,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6zbBqrK',
+    id: 'BkeRmrN',
     name: 'Dumbbell Incline Shoulder Raise',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -8816,7 +8816,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EmTJMTO',
+    id: 'Xcss2ff',
     name: 'Dumbbell Lunges',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -8831,7 +8831,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'yinocko',
+    id: 'X44NUnd',
     name: 'Dumbbell Lying One-Arm Rear Lateral Raise',
     primary: 'shoulders',
     secondary: ['back'],
@@ -8847,7 +8847,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'uOyuLXg',
+    id: 'mxYU72j',
     name: 'Dumbbell Lying Pronation',
     primary: 'forearm',
     secondary: [],
@@ -8864,7 +8864,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KkJlVQs',
+    id: 'RD6zu4T',
     name: 'Dumbbell Lying Rear Lateral Raise',
     primary: 'shoulders',
     secondary: [],
@@ -8880,7 +8880,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'uxRTrCX',
+    id: 'uS18W42',
     name: 'Dumbbell Lying Supination',
     primary: 'forearm',
     secondary: [],
@@ -8897,7 +8897,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WtZQ3da',
+    id: 'wNaqRcd',
     name: 'Dumbbell One-Arm Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -8914,7 +8914,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MXhzV2e',
+    id: '8kAMbFt',
     name: 'Dumbbell One-Arm Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -8931,7 +8931,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ANMgpDI',
+    id: 'EooDpXZ',
     name: 'Dumbbell One-Arm Upright Row',
     primary: 'shoulders',
     secondary: ['biceps', 'trapezius'],
@@ -8947,7 +8947,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'edENqvi',
+    id: 'gM0CE1q',
     name: 'Dumbbell Prone Incline Curl',
     primary: 'biceps',
     secondary: [],
@@ -8964,7 +8964,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YZ2o3G0',
+    id: 'VupNtaC',
     name: 'Dumbbell Raise',
     primary: 'shoulders',
     secondary: ['biceps'],
@@ -8979,7 +8979,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ZA52jpM',
+    id: 'zzUoOhH',
     name: 'Dumbbell Rear Lunge',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -8994,7 +8994,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'rhkQ4GH',
+    id: 'rLJ4Wsp',
     name: 'Dumbbell Scaption',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -9008,7 +9008,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HA4xJxP',
+    id: 'lO95FuU',
     name: 'Dumbbell Seated Box Jump',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -9023,7 +9023,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ef7uYmd',
+    id: '2oBtBZ1',
     name: 'Dumbbell Seated One-Leg Calf Raise',
     primary: 'calves',
     secondary: [],
@@ -9040,7 +9040,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'olezYio',
+    id: 'M8Tu4cc',
     name: 'Dumbbell Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -9057,7 +9057,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '8vhqWZo',
+    id: 'jAVqBHR',
     name: 'Dumbbell Squat To A Bench',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -9073,7 +9073,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Bx68So7',
+    id: 's0veNdT',
     name: 'Dumbbell Step Ups',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -9088,7 +9088,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eQmyIVL',
+    id: 'TGWQfhn',
     name: 'Dumbbell Tricep Extension -Pronated Grip',
     primary: 'triceps',
     secondary: [],
@@ -9103,7 +9103,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Doqlqel',
+    id: '3JR50LB',
     name: 'EZ-Bar Curl',
     primary: 'biceps',
     secondary: [],
@@ -9119,7 +9119,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QS1EBRh',
+    id: 's05YrTc',
     name: 'EZ-Bar Skullcrusher',
     primary: 'triceps',
     secondary: ['forearm'],
@@ -9134,7 +9134,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '1f151Um',
+    id: '6NIVIfc',
     name: 'Elevated Back Lunge',
     primary: 'quads',
     secondary: ['glutes', 'hamstrings'],
@@ -9149,7 +9149,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'p3GT3Or',
+    id: 'xes6cAE',
     name: 'Elevated Cable Rows',
     primary: 'back',
     secondary: ['trapezius'],
@@ -9167,7 +9167,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'DpHLxwa',
+    id: '7tuCEfT',
     name: 'External Rotation',
     primary: 'shoulders',
     secondary: [],
@@ -9184,7 +9184,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'FhREpvu',
+    id: 'gT7SWx2',
     name: 'External Rotation with Cable',
     primary: 'shoulders',
     secondary: [],
@@ -9199,7 +9199,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'lvbWwtG',
+    id: '8zAxfEf',
     name: 'Finger Curls',
     primary: 'forearm',
     secondary: [],
@@ -9214,7 +9214,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'V7NXXmn',
+    id: 'JrW67HH',
     name: 'Flat Bench Cable Flyes',
     primary: 'chest',
     secondary: [],
@@ -9232,7 +9232,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'FqKktys',
+    id: 'gKUpUY4',
     name: 'Flexor Incline Dumbbell Curls',
     primary: 'biceps',
     secondary: [],
@@ -9249,7 +9249,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6NTOrQl',
+    id: 'Whkkk92',
     name: 'Floor Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -9263,7 +9263,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'i544p6z',
+    id: '6Qi3MSi',
     name: 'Floor Press with Chains',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -9278,7 +9278,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'FibR3n5',
+    id: 'Bt5CJIn',
     name: 'Frankenstein Squat',
     primary: 'quads',
     secondary: ['abdomen', 'calves', 'glutes', 'hamstrings'],
@@ -9293,7 +9293,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '98vgX5M',
+    id: 'ItLEKiV',
     name: 'Front Barbell Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -9310,7 +9310,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HI8sllT',
+    id: 'CBHNwFt',
     name: 'Front Barbell Squat To A Bench',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -9327,7 +9327,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'j8nLaMY',
+    id: 'GQSIkgz',
     name: 'Front Cable Raise',
     primary: 'shoulders',
     secondary: [],
@@ -9343,7 +9343,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '72scPFI',
+    id: 'GZREBfp',
     name: 'Front Dumbbell Raise',
     primary: 'shoulders',
     secondary: [],
@@ -9358,7 +9358,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'iXUbWuy',
+    id: '9kOdc58',
     name: 'Front Incline Dumbbell Raise',
     primary: 'shoulders',
     secondary: [],
@@ -9374,7 +9374,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hj2SPEM',
+    id: 'Q2mEdof',
     name: 'Front Raise And Pullover',
     primary: 'chest',
     secondary: ['back', 'shoulders', 'triceps'],
@@ -9390,7 +9390,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Nh6jOhC',
+    id: 'Wa2f9EN',
     name: 'Front Squat (Clean Grip)',
     primary: 'quads',
     secondary: ['abdomen', 'glutes', 'hamstrings'],
@@ -9405,7 +9405,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '0OjL14b',
+    id: 'pau0xHf',
     name: 'Front Two-Dumbbell Raise',
     primary: 'shoulders',
     secondary: [],
@@ -9420,7 +9420,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'doBofY1',
+    id: 'y4loCxV',
     name: 'Full Range-Of-Motion Lat Pulldown',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -9434,7 +9434,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pP5IzYL',
+    id: '4hLiEIz',
     name: 'Glute Ham Raise',
     primary: 'hamstrings',
     secondary: ['calves', 'glutes'],
@@ -9448,7 +9448,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QDSPDUe',
+    id: 'mRSBLIF',
     name: 'Good Morning',
     primary: 'hamstrings',
     secondary: ['abdomen', 'glutes', 'back'],
@@ -9462,7 +9462,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'J1Qrl5a',
+    id: 'NxSPQ0c',
     name: 'Good Morning off Pins',
     primary: 'hamstrings',
     secondary: ['abdomen', 'glutes', 'back'],
@@ -9476,7 +9476,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'nZopsMd',
+    id: 'jo2WHwi',
     name: 'Hammer Curls',
     primary: 'biceps',
     secondary: [],
@@ -9492,7 +9492,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'JvMeEiN',
+    id: 'ItMmJoB',
     name: 'Hammer Grip Incline DB Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -9510,7 +9510,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '3nu5ziN',
+    id: 'MkhUTyg',
     name: 'Hang Clean',
     primary: 'quads',
     secondary: ['calves', 'forearm', 'glutes', 'hamstrings', 'back', 'shoulders', 'trapezius'],
@@ -9524,7 +9524,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YBzI2yq',
+    id: 'yY6e4K7',
     name: 'Hang Clean - Below the Knees',
     primary: 'quads',
     secondary: ['calves', 'forearm', 'glutes', 'hamstrings', 'back', 'shoulders', 'trapezius'],
@@ -9539,7 +9539,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '4XJk9Ta',
+    id: 'C82rzJm',
     name: 'Hang Snatch',
     primary: 'hamstrings',
     secondary: ['abdomen', 'calves', 'forearm', 'glutes', 'back', 'quads', 'shoulders', 'trapezius'],
@@ -9554,7 +9554,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eQ6M04D',
+    id: 'HOQ6pTV',
     name: 'Hang Snatch - Below Knees',
     primary: 'hamstrings',
     secondary: ['abdomen', 'calves', 'forearm', 'glutes', 'back', 'quads', 'shoulders', 'trapezius'],
@@ -9569,7 +9569,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'IX3sxGu',
+    id: 'nVV593v',
     name: 'Hanging Bar Good Morning',
     primary: 'hamstrings',
     secondary: ['abdomen', 'glutes', 'back'],
@@ -9584,7 +9584,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eL25QWH',
+    id: '1toqYBY',
     name: 'Heaving Snatch Balance',
     primary: 'quads',
     secondary: ['abdomen', 'forearm', 'glutes', 'hamstrings', 'shoulders', 'triceps'],
@@ -9598,7 +9598,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eWESKZq',
+    id: 'EbcRywz',
     name: 'High Cable Curls',
     primary: 'biceps',
     secondary: [],
@@ -9613,7 +9613,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Also3Pr',
+    id: '3WpBVpx',
     name: 'Incline Barbell Triceps Extension',
     primary: 'triceps',
     secondary: ['forearm'],
@@ -9630,7 +9630,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vlZBfj8',
+    id: 'HFMYP0k',
     name: 'Incline Bench Pull',
     primary: 'back',
     secondary: ['shoulders'],
@@ -9648,7 +9648,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '5qwI1mX',
+    id: 'MPPRfN7',
     name: 'Incline Cable Chest Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -9662,7 +9662,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'myGJ8Hq',
+    id: 'AjIkxV1',
     name: 'Incline Cable Flye',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -9679,7 +9679,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'K5mkHFr',
+    id: 'B7Z8lvW',
     name: 'Incline Dumbbell Bench With Palms Facing In',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -9697,7 +9697,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '90C3OXJ',
+    id: 'uam9FjZ',
     name: 'Incline Dumbbell Flyes',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -9714,7 +9714,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hGqytDM',
+    id: 'RhHArBq',
     name: 'Incline Dumbbell Flyes - With A Twist',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -9731,7 +9731,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'TyoXe7B',
+    id: 'ShuXPVB',
     name: 'Incline Dumbbell Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -9749,7 +9749,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'R4Lwi6v',
+    id: 'PMX0mdQ',
     name: 'Incline Hammer Curls',
     primary: 'biceps',
     secondary: [],
@@ -9763,7 +9763,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pjdQxU4',
+    id: 'Ag5yOyS',
     name: 'Incline Inner Biceps Curl',
     primary: 'biceps',
     secondary: [],
@@ -9779,7 +9779,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KIhQx0o',
+    id: 'wUKGtAk',
     name: 'Iron Cross',
     primary: 'shoulders',
     secondary: ['chest', 'glutes', 'hamstrings', 'back', 'quads', 'trapezius'],
@@ -9793,7 +9793,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'iNg25mJ',
+    id: 'rmCkIyY',
     name: 'Jefferson Squats',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back', 'trapezius'],
@@ -9811,7 +9811,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '0OQCgUf',
+    id: 'h8iDBfZ',
     name: 'Jerk Balance',
     primary: 'shoulders',
     secondary: ['glutes', 'hamstrings', 'quads', 'triceps'],
@@ -9825,7 +9825,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'E9K66Hn',
+    id: '90E114x',
     name: 'Jerk Dip Squat',
     primary: 'quads',
     secondary: ['abdomen', 'calves'],
@@ -9839,7 +9839,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'bxhpOMC',
+    id: 'dCA2Of4',
     name: 'Jogging, Treadmill',
     primary: 'quads',
     secondary: ['glutes', 'hamstrings'],
@@ -9853,7 +9853,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'tBLrUwq',
+    id: 'R2SKNsM',
     name: 'Kneeling Cable Crunch With Alternating Oblique Twists',
     primary: 'abdomen',
     secondary: [],
@@ -9873,7 +9873,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Tj2YeDg',
+    id: 'rsIhXdQ',
     name: 'Kneeling Cable Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -9891,7 +9891,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WHuTzn4',
+    id: 'kfb2heB',
     name: 'Kneeling High Pulley Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -9905,7 +9905,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LoRcpGh',
+    id: 'JDxo6lK',
     name: 'Kneeling Jump Squat',
     primary: 'glutes',
     secondary: ['calves', 'hamstrings', 'quads'],
@@ -9920,7 +9920,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'yTm63Vu',
+    id: 'JOawwwt',
     name: 'Kneeling Single-Arm High Pulley Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -9935,7 +9935,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Gb6E3zI',
+    id: 'JWN9yuK',
     name: 'Kneeling Squat',
     primary: 'glutes',
     secondary: ['abdomen', 'hamstrings', 'back'],
@@ -9949,7 +9949,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'zyEf2sn',
+    id: 'vvXDWsv',
     name: 'Landmine 180\'s',
     primary: 'abdomen',
     secondary: ['glutes', 'back', 'shoulders'],
@@ -9965,7 +9965,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'FYCGyUY',
+    id: '1AIzbiZ',
     name: 'Landmine Linear Jammer',
     primary: 'shoulders',
     secondary: ['abdomen', 'calves', 'chest', 'hamstrings', 'quads', 'triceps'],
@@ -9981,7 +9981,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'R3HwCWA',
+    id: 'yPZWyLd',
     name: 'Leg Extensions',
     primary: 'quads',
     secondary: [],
@@ -9996,7 +9996,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6dcbqzY',
+    id: 'djsPM7R',
     name: 'Leverage Chest Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -10011,7 +10011,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '9T9GIwg',
+    id: 'UPYoJZv',
     name: 'Leverage Deadlift',
     primary: 'quads',
     secondary: ['glutes', 'hamstrings'],
@@ -10025,7 +10025,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'yw9hoAw',
+    id: 'wiAaVJB',
     name: 'Leverage Decline Chest Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -10039,7 +10039,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wLu3yuB',
+    id: 'mF0h388',
     name: 'Leverage High Row',
     primary: 'back',
     secondary: [],
@@ -10054,7 +10054,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'dndlUUV',
+    id: 'MiLlYtn',
     name: 'Leverage Incline Chest Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -10068,7 +10068,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wLknb3p',
+    id: '2B8F1qf',
     name: 'Leverage Iso Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -10082,7 +10082,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KP6HwSO',
+    id: 'rTcsYeQ',
     name: 'Leverage Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -10096,7 +10096,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'u5mjZPG',
+    id: 'CEbj0Nf',
     name: 'Leverage Shrug',
     primary: 'trapezius',
     secondary: ['forearm'],
@@ -10112,7 +10112,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Kb6Dvf5',
+    id: 'yhPxwAg',
     name: 'Low Cable Crossover',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -10127,7 +10127,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'b0E8TtP',
+    id: 'vpjEBy6',
     name: 'Low Cable Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -10144,7 +10144,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'qpsb0Hb',
+    id: 'tFfIpe7',
     name: 'Low Pulley Row To Neck',
     primary: 'shoulders',
     secondary: ['biceps', 'back', 'trapezius'],
@@ -10160,7 +10160,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pobqyLY',
+    id: 'voCsne2',
     name: 'Lunge Sprint',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -10175,7 +10175,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'lAgRCRh',
+    id: 'AjynwaR',
     name: 'Lying Cable Curl',
     primary: 'biceps',
     secondary: [],
@@ -10192,7 +10192,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '9IhB905',
+    id: '9HXnQAs',
     name: 'Lying Cambered Barbell Row',
     primary: 'back',
     secondary: ['biceps', 'trapezius'],
@@ -10207,7 +10207,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eOVOLDL',
+    id: 'ENytzW9',
     name: 'Lying Close-Grip Bar Curl On High Pulley',
     primary: 'biceps',
     secondary: [],
@@ -10225,7 +10225,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'nJcyRf8',
+    id: 'Af8XVn9',
     name: 'Lying Close-Grip Barbell Triceps Extension Behind The Head',
     primary: 'triceps',
     secondary: [],
@@ -10241,7 +10241,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'qxtd9or',
+    id: '5vJtkUO',
     name: 'Lying Close-Grip Barbell Triceps Press To Chin',
     primary: 'triceps',
     secondary: [],
@@ -10257,7 +10257,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cTG9muZ',
+    id: '0S3vOVV',
     name: 'Lying Dumbbell Tricep Extension',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -10272,7 +10272,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'qoMFhTy',
+    id: 'vdZhlDO',
     name: 'Lying High Bench Barbell Curl',
     primary: 'biceps',
     secondary: [],
@@ -10287,7 +10287,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Tk1N1UF',
+    id: 'KZ4TRx6',
     name: 'Lying Leg Curls',
     primary: 'hamstrings',
     secondary: [],
@@ -10302,7 +10302,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MEVuuXR',
+    id: 'ZmxJ7uL',
     name: 'Lying Machine Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -10319,7 +10319,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QxOhRmD',
+    id: 'sW50qBk',
     name: 'Lying One-Arm Lateral Raise',
     primary: 'shoulders',
     secondary: [],
@@ -10335,7 +10335,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'phlVPwu',
+    id: 'DMOTZGT',
     name: 'Lying Rear Delt Raise',
     primary: 'shoulders',
     secondary: [],
@@ -10351,7 +10351,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'i4MZOqP',
+    id: 'LNJZ9lr',
     name: 'Lying Supine Dumbbell Curl',
     primary: 'biceps',
     secondary: [],
@@ -10367,7 +10367,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'UqzWoTW',
+    id: 't2nsmer',
     name: 'Lying T-Bar Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -10384,7 +10384,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'iXlQka4',
+    id: 'XekyUbe',
     name: 'Lying Triceps Press',
     primary: 'triceps',
     secondary: [],
@@ -10400,7 +10400,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '7ofGkcq',
+    id: 'd9hpiKc',
     name: 'Machine Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -10418,7 +10418,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'OPFz7RL',
+    id: 'uLs497D',
     name: 'Machine Bicep Curl',
     primary: 'biceps',
     secondary: [],
@@ -10433,7 +10433,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'RCNuRoW',
+    id: 'metrrOr',
     name: 'Machine Preacher Curls',
     primary: 'biceps',
     secondary: [],
@@ -10449,7 +10449,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '7YAsVPl',
+    id: 'cz1F1UC',
     name: 'Machine Shoulder (Military) Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -10465,7 +10465,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'GExXRge',
+    id: '7Jj488c',
     name: 'Middle Back Shrug',
     primary: 'back',
     secondary: [],
@@ -10480,7 +10480,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'NPiBfVA',
+    id: 'TsLtPFl',
     name: 'Muscle Snatch',
     primary: 'hamstrings',
     secondary: ['glutes', 'back', 'quads', 'shoulders', 'triceps'],
@@ -10494,7 +10494,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xIYCmD6',
+    id: 'F2NhGaP',
     name: 'Narrow Stance Hack Squats',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -10512,7 +10512,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vqivRwG',
+    id: '5qzYxyZ',
     name: 'Narrow Stance Leg Press',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -10528,7 +10528,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '1i9g12f',
+    id: 'cF9tjcj',
     name: 'Narrow Stance Squats',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -10545,7 +10545,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vCueSH0',
+    id: '2AK4PhH',
     name: 'Neck Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -10561,7 +10561,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HEaz8f8',
+    id: 'S0aS0bU',
     name: 'Olympic Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -10575,7 +10575,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'q5ucBqQ',
+    id: 'Qfg9XX3',
     name: 'One-Arm Flat Bench Dumbbell Flye',
     primary: 'chest',
     secondary: [],
@@ -10592,7 +10592,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'DDAaZ4F',
+    id: 'IAGXAYK',
     name: 'One-Arm High-Pulley Cable Side Bends',
     primary: 'abdomen',
     secondary: [],
@@ -10611,7 +10611,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'uAxrBmt',
+    id: 'eU2KwY4',
     name: 'One-Arm Incline Lateral Raise',
     primary: 'shoulders',
     secondary: [],
@@ -10628,7 +10628,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WNzBcYo',
+    id: 'NJ0S5wx',
     name: 'One-Arm Long Bar Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -10644,7 +10644,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'RVurmyH',
+    id: 'IX6uMhz',
     name: 'One-Arm Side Deadlift',
     primary: 'quads',
     secondary: ['abdomen', 'calves', 'glutes', 'hamstrings', 'back', 'trapezius'],
@@ -10661,7 +10661,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eSRKzQJ',
+    id: '6Z8dPN8',
     name: 'One-Arm Side Laterals',
     primary: 'shoulders',
     secondary: [],
@@ -10678,7 +10678,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cpGp7Ii',
+    id: 'ThMrgoq',
     name: 'One-Legged Cable Kickback',
     primary: 'glutes',
     secondary: ['hamstrings'],
@@ -10695,7 +10695,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XWmiFl9',
+    id: 'x4qfqgT',
     name: 'One Arm Dumbbell Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -10713,7 +10713,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'PXtV5LY',
+    id: 'ZsP0n9K',
     name: 'One Arm Dumbbell Preacher Curl',
     primary: 'biceps',
     secondary: [],
@@ -10729,7 +10729,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Y36LubR',
+    id: 'hBiHyDc',
     name: 'One Arm Floor Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -10747,7 +10747,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'B33Q9XA',
+    id: 'KWxv9ry',
     name: 'One Arm Lat Pulldown',
     primary: 'back',
     secondary: ['biceps'],
@@ -10762,7 +10762,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'PmuDLMU',
+    id: 'KjEsbI7',
     name: 'One Arm Pronated Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -10779,7 +10779,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'o7PLAo3',
+    id: 'jAXQONm',
     name: 'One Arm Supinated Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -10797,7 +10797,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'DYkC1so',
+    id: 'HPRgklR',
     name: 'One Leg Barbell Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -10815,7 +10815,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'z52ktO8',
+    id: 'lPjrBai',
     name: 'Overhead Cable Curl',
     primary: 'biceps',
     secondary: [],
@@ -10832,7 +10832,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'z9X2CHc',
+    id: 'fjlourI',
     name: 'Overhead Squat',
     primary: 'quads',
     secondary: ['abdomen', 'calves', 'glutes', 'hamstrings', 'back', 'shoulders', 'triceps'],
@@ -10849,7 +10849,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QWwJmkO',
+    id: 'Mm3Nebv',
     name: 'Pallof Press With Rotation',
     primary: 'abdomen',
     secondary: ['chest', 'shoulders', 'triceps'],
@@ -10869,7 +10869,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cPvwhGq',
+    id: 'ojRvG8O',
     name: 'Palms-Down Dumbbell Wrist Curl Over A Bench',
     primary: 'forearm',
     secondary: [],
@@ -10887,7 +10887,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KHsamPS',
+    id: 'U0z6iV5',
     name: 'Palms-Down Wrist Curl Over A Bench',
     primary: 'forearm',
     secondary: [],
@@ -10905,7 +10905,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'BhV7H6y',
+    id: 'dAe8IDy',
     name: 'Palms-Up Barbell Wrist Curl Over A Bench',
     primary: 'forearm',
     secondary: [],
@@ -10923,7 +10923,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'bDUmY0k',
+    id: 'kWN27aM',
     name: 'Palms-Up Dumbbell Wrist Curl Over A Bench',
     primary: 'forearm',
     secondary: [],
@@ -10941,7 +10941,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'G2pY1DQ',
+    id: 'k69fVwu',
     name: 'Pin Presses',
     primary: 'triceps',
     secondary: ['chest', 'forearm', 'back', 'shoulders'],
@@ -10958,7 +10958,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'PVLJNrP',
+    id: 'eCjTwp7',
     name: 'Plie Dumbbell Squat',
     primary: 'quads',
     secondary: ['abdomen', 'calves', 'glutes', 'hamstrings'],
@@ -10974,7 +10974,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LZY50uC',
+    id: '6uXfYrs',
     name: 'Power Clean',
     primary: 'hamstrings',
     secondary: ['calves', 'forearm', 'glutes', 'back', 'quads', 'shoulders', 'trapezius', 'triceps'],
@@ -11009,7 +11009,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'BCrh1QC',
+    id: 'BFQ7MIN',
     name: 'Power Clean from Blocks',
     primary: 'hamstrings',
     secondary: ['quads'],
@@ -11025,7 +11025,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KKxqgEi',
+    id: 'ptHJg22',
     name: 'Power Jerk',
     primary: 'quads',
     secondary: ['abdomen', 'calves', 'glutes', 'hamstrings', 'shoulders', 'triceps'],
@@ -11041,7 +11041,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Nm6ToYq',
+    id: 'w7xvERa',
     name: 'Power Partials',
     primary: 'shoulders',
     secondary: [],
@@ -11057,7 +11057,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'yOSttBr',
+    id: 'eB1XpT7',
     name: 'Power Snatch',
     primary: 'hamstrings',
     secondary: ['calves', 'glutes', 'back', 'quads', 'shoulders', 'trapezius', 'triceps'],
@@ -11073,7 +11073,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'K50LWOy',
+    id: 'AKG0ZEZ',
     name: 'Power Snatch from Blocks',
     primary: 'quads',
     secondary: ['calves', 'forearm', 'glutes', 'hamstrings', 'back', 'shoulders', 'trapezius', 'triceps'],
@@ -11089,23 +11089,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 't3QVm7K',
-    name: 'Preacher Curl',
-    primary: 'biceps',
-    secondary: [],
-    equipment: 'Barbell',
-    difficulty: 'Beginner',
-    art: '',
-    steps: [
-      'To perform this movement you will need a preacher bench and an E-Z bar. Grab the E-Z curl bar at the close inner handle (either have someone hand you the bar which is preferable or grab the bar from the front bar rest provided by most preacher benches). The palm of your hands should be facing forward and they should be slightly tilted inwards due to the shape of the bar.',
-      'With the upper arms positioned against the preacher bench pad and the chest against it, hold the E-Z Curl Bar at shoulder length. This will be your starting position.',
-      'As you breathe in, slowly lower the bar until your upper arm is extended and the biceps is fully stretched.',
-      'As you exhale, use the biceps to curl the weight up until your biceps is fully contracted and the bar is at shoulder height. Squeeze the biceps hard and hold this position for a second.',
-      'Repeat for the recommended amount of repetitions.'
-    ],
-  ),
-  Exercise(
-    id: 'tvP0mTL',
+    id: 'aUmEErR',
     name: 'Preacher Hammer Dumbbell Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -11120,7 +11104,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AfUYjVI',
+    id: 'OyvJCdu',
     name: 'Press Sit-Up',
     primary: 'abdomen',
     secondary: ['chest', 'shoulders', 'triceps'],
@@ -11135,7 +11119,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'VvbkLLf',
+    id: 'C9CWFbU',
     name: 'Pull Through',
     primary: 'glutes',
     secondary: ['hamstrings', 'back'],
@@ -11149,7 +11133,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Le19nyH',
+    id: 'UTQ7Efc',
     name: 'Push Press',
     primary: 'shoulders',
     secondary: ['quads', 'triceps'],
@@ -11163,7 +11147,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '8bzHFvT',
+    id: 'xUyXFWD',
     name: 'Push Press - Behind the Neck',
     primary: 'shoulders',
     secondary: ['calves', 'quads', 'triceps'],
@@ -11177,7 +11161,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gW4taGD',
+    id: 'aVM1KaP',
     name: 'Rack Delivery',
     primary: 'shoulders',
     secondary: ['forearm', 'trapezius'],
@@ -11191,7 +11175,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 's3eUruz',
+    id: 'DmI36OE',
     name: 'Rack Pull with Bands',
     primary: 'back',
     secondary: ['forearm', 'glutes', 'hamstrings', 'quads', 'trapezius'],
@@ -11205,7 +11189,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ZHGAXd5',
+    id: 'xueXozr',
     name: 'Rack Pulls',
     primary: 'back',
     secondary: ['forearm', 'glutes', 'hamstrings', 'trapezius'],
@@ -11219,7 +11203,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MXy4Ryp',
+    id: 'qezzzSF',
     name: 'Recumbent Bike',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -11233,7 +11217,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WVhv95A',
+    id: 'nQNj342',
     name: 'Reverse Band Bench Press',
     primary: 'triceps',
     secondary: ['chest', 'forearm', 'back', 'shoulders'],
@@ -11248,7 +11232,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'UDx20Bc',
+    id: 'N9Hz5Gr',
     name: 'Reverse Band Box Squat',
     primary: 'quads',
     secondary: ['glutes', 'calves', 'forearm', 'hamstrings', 'back'],
@@ -11263,7 +11247,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gfflIVM',
+    id: 'YiSXuLN',
     name: 'Reverse Band Deadlift',
     primary: 'back',
     secondary: ['glutes', 'quads', 'calves', 'hamstrings'],
@@ -11279,7 +11263,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'SptxU3a',
+    id: 'yCgNDL8',
     name: 'Reverse Band Power Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -11294,7 +11278,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'qRYPjU1',
+    id: 'Ci1bl4y',
     name: 'Reverse Band Sumo Deadlift',
     primary: 'hamstrings',
     secondary: ['glutes', 'quads', 'calves', 'forearm', 'back', 'trapezius'],
@@ -11310,7 +11294,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WghwlBH',
+    id: 'iNzU2mN',
     name: 'Reverse Barbell Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -11325,7 +11309,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'zgqyy4n',
+    id: 'rkrtLfn',
     name: 'Reverse Barbell Preacher Curls',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -11341,7 +11325,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gbMX60z',
+    id: 'ryU490H',
     name: 'Reverse Cable Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -11356,7 +11340,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'E8V4hvE',
+    id: 'kvZmBVt',
     name: 'Reverse Flyes',
     primary: 'shoulders',
     secondary: [],
@@ -11373,7 +11357,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'BaQ4wXJ',
+    id: '3uMPwAx',
     name: 'Reverse Flyes With External Rotation',
     primary: 'shoulders',
     secondary: [],
@@ -11391,7 +11375,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'UWsZipx',
+    id: 'rHsOGlc',
     name: 'Reverse Grip Bent-Over Rows',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -11407,7 +11391,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'GxxRSkV',
+    id: '1LsNf9V',
     name: 'Reverse Grip Triceps Pushdown',
     primary: 'triceps',
     secondary: [],
@@ -11423,7 +11407,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'nOFvMGl',
+    id: 'EzCobLQ',
     name: 'Reverse Machine Flyes',
     primary: 'shoulders',
     secondary: [],
@@ -11438,7 +11422,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xM53td6',
+    id: 'w8iGzBM',
     name: 'Reverse Triceps Bench Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -11454,7 +11438,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'atYpJcl',
+    id: 'v7AHEF1',
     name: 'Rocking Standing Calf Raise',
     primary: 'calves',
     secondary: [],
@@ -11473,7 +11457,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AwO2hCa',
+    id: 'J7B9E0s',
     name: 'Romanian Deadlift',
     primary: 'hamstrings',
     secondary: ['calves', 'glutes', 'back'],
@@ -11489,7 +11473,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'jQoHyQC',
+    id: 'byVQQ4I',
     name: 'Romanian Deadlift from Deficit',
     primary: 'hamstrings',
     secondary: ['forearm', 'glutes', 'back', 'trapezius'],
@@ -11503,7 +11487,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'z2dp9FX',
+    id: '4uz3rtu',
     name: 'Rope Crunch',
     primary: 'abdomen',
     secondary: [],
@@ -11519,7 +11503,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Jl0ZgtS',
+    id: 'fcEj7F6',
     name: 'Rope Straight-Arm Pulldown',
     primary: 'back',
     secondary: [],
@@ -11534,7 +11518,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'FaKblYo',
+    id: 'CxPFiJy',
     name: 'Rowing, Stationary',
     primary: 'quads',
     secondary: ['biceps', 'calves', 'glutes', 'hamstrings', 'back'],
@@ -11548,7 +11532,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'tu9bQJf',
+    id: 'mhz4mdf',
     name: 'Running, Treadmill',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -11562,7 +11546,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'uAJSqDw',
+    id: 'Ycsc9fj',
     name: 'Seated Barbell Military Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -11578,7 +11562,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WoyMlmF',
+    id: 'OmTTMNL',
     name: 'Seated Barbell Twist',
     primary: 'abdomen',
     secondary: [],
@@ -11595,7 +11579,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xUUljyz',
+    id: '0TTRjWA',
     name: 'Seated Bent-Over One-Arm Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -11613,7 +11597,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '2Jz881r',
+    id: 'f2tFB4P',
     name: 'Seated Bent-Over Rear Delt Raise',
     primary: 'shoulders',
     secondary: [],
@@ -11630,7 +11614,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'oDnYvSR',
+    id: 'PSZnCMQ',
     name: 'Seated Bent-Over Two-Arm Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -11647,7 +11631,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'PcenwYL',
+    id: '8o1V9wg',
     name: 'Seated Cable Rows',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -11663,7 +11647,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KPhCbaE',
+    id: 'POWUs8N',
     name: 'Seated Cable Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -11678,7 +11662,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'IO373xy',
+    id: 'oERwAjv',
     name: 'Seated Calf Raise',
     primary: 'calves',
     secondary: [],
@@ -11695,7 +11679,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'fwiXn4e',
+    id: 'wVERukq',
     name: 'Seated Close-Grip Concentration Barbell Curl',
     primary: 'biceps',
     secondary: [],
@@ -11711,7 +11695,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AOI3UPy',
+    id: 'NKaBD5I',
     name: 'Seated Dumbbell Inner Biceps Curl',
     primary: 'biceps',
     secondary: [],
@@ -11728,7 +11712,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'fF4NA4z',
+    id: 'kFDa5Y0',
     name: 'Seated Dumbbell Palms-Down Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11746,7 +11730,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'do0jnZQ',
+    id: 'MeQs7p5',
     name: 'Seated Dumbbell Palms-Up Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11764,7 +11748,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XGanFQf',
+    id: '8GxZHoa',
     name: 'Seated Dumbbell Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -11781,7 +11765,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '1ywlGaP',
+    id: 'i3LRIgf',
     name: 'Seated Good Mornings',
     primary: 'back',
     secondary: ['glutes'],
@@ -11796,7 +11780,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '7uGBgKc',
+    id: 'ZLrMJGx',
     name: 'Seated One-Arm Dumbbell Palms-Down Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11813,7 +11797,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vOCPx6Y',
+    id: 'e608veU',
     name: 'Seated One-Arm Dumbbell Palms-Up Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11830,7 +11814,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Uz78wxy',
+    id: 'rLKB1yw',
     name: 'Seated One-arm Cable Pulley Rows',
     primary: 'back',
     secondary: ['biceps', 'trapezius'],
@@ -11847,7 +11831,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wBDDqfF',
+    id: '4Jva2l1',
     name: 'Seated Palm-Up Barbell Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11863,7 +11847,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LWGuR81',
+    id: 'H0lI7oF',
     name: 'Seated Palms-Down Barbell Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11879,7 +11863,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'TEin0i8',
+    id: 'zUBluPT',
     name: 'Seated Side Lateral Raise',
     primary: 'shoulders',
     secondary: [],
@@ -11894,7 +11878,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'goO5zN9',
+    id: 'ctV0QIl',
     name: 'Seated Triceps Press',
     primary: 'triceps',
     secondary: [],
@@ -11909,7 +11893,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '5KdKcdP',
+    id: 'fxSoUYz',
     name: 'Seated Two-Arm Palms-Up Low-Pulley Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -11929,7 +11913,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'f5zmBxV',
+    id: 'mOYQxCC',
     name: 'See-Saw Press (Alternating Side Press)',
     primary: 'shoulders',
     secondary: ['abdomen', 'triceps'],
@@ -11945,7 +11929,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'a9KL84V',
+    id: '5gjvfl9',
     name: 'Shotgun Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -11960,7 +11944,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'mSarNCe',
+    id: 'lCOaKs9',
     name: 'Side Lateral Raise',
     primary: 'shoulders',
     secondary: [],
@@ -11975,7 +11959,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'f2yc9yi',
+    id: 'Tg4qWKp',
     name: 'Side Laterals to Front Raise',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -11992,7 +11976,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'fPEkK4I',
+    id: 'dGhasy3',
     name: 'Single-Arm Cable Crossover',
     primary: 'chest',
     secondary: [],
@@ -12008,7 +11992,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'hbPlT5E',
+    id: 'EzHsUzX',
     name: 'Single-Arm Linear Jammer',
     primary: 'shoulders',
     secondary: ['chest', 'triceps'],
@@ -12023,7 +12007,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'oZH3POC',
+    id: '9SkSHAB',
     name: 'Single-Leg Leg Extension',
     primary: 'quads',
     secondary: [],
@@ -12038,7 +12022,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '050kf48',
+    id: 'rha2cm9',
     name: 'Single Dumbbell Raise',
     primary: 'shoulders',
     secondary: ['forearm', 'trapezius'],
@@ -12052,7 +12036,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pjQc9sf',
+    id: 'sxK5pWZ',
     name: 'Smith Incline Shoulder Raise',
     primary: 'shoulders',
     secondary: ['chest'],
@@ -12069,7 +12053,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '2u4rD4D',
+    id: 'Nmj2inm',
     name: 'Smith Machine Behind the Back Shrug',
     primary: 'trapezius',
     secondary: ['shoulders'],
@@ -12085,7 +12069,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6HaDewq',
+    id: 'xKfnVVf',
     name: 'Smith Machine Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -12101,7 +12085,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '0jAlgxC',
+    id: 'mYpl29i',
     name: 'Smith Machine Bent Over Row',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -12118,7 +12102,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Xal7XX5',
+    id: 's1SQVpV',
     name: 'Smith Machine Calf Raise',
     primary: 'calves',
     secondary: [],
@@ -12134,7 +12118,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Ow4oTrF',
+    id: 'BbSykVm',
     name: 'Smith Machine Close-Grip Bench Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -12150,7 +12134,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ucuKpUz',
+    id: 'sjUsyKa',
     name: 'Smith Machine Decline Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -12166,7 +12150,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '84802zg',
+    id: 'tje6Pxm',
     name: 'Smith Machine Hang Power Clean',
     primary: 'hamstrings',
     secondary: ['glutes', 'back', 'quads', 'shoulders', 'trapezius'],
@@ -12183,7 +12167,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '4lwHxFd',
+    id: 'dPkevAU',
     name: 'Smith Machine Hip Raise',
     primary: 'abdomen',
     secondary: [],
@@ -12198,7 +12182,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xxfQmnb',
+    id: 'WWpFbij',
     name: 'Smith Machine Incline Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -12214,7 +12198,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'e4Gy47s',
+    id: '2jeTI4w',
     name: 'Smith Machine Leg Press',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -12228,7 +12212,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'VCwk8LI',
+    id: 'KmbuDhe',
     name: 'Smith Machine One-Arm Upright Row',
     primary: 'shoulders',
     secondary: ['biceps', 'trapezius'],
@@ -12244,7 +12228,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6YnhCRp',
+    id: 'nqjw1NI',
     name: 'Smith Machine Overhead Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -12260,7 +12244,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'gYTac6d',
+    id: 'BsQYarl',
     name: 'Smith Machine Pistol Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -12276,7 +12260,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Hna7DC0',
+    id: '67isuX8',
     name: 'Smith Machine Reverse Calf Raises',
     primary: 'calves',
     secondary: [],
@@ -12293,7 +12277,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XlT8Dfb',
+    id: 'ReNWA8A',
     name: 'Smith Machine Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -12310,7 +12294,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'JVqE1xz',
+    id: '3tRlY5c',
     name: 'Smith Machine Stiff-Legged Deadlift',
     primary: 'hamstrings',
     secondary: ['glutes', 'back'],
@@ -12326,7 +12310,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'esybVCz',
+    id: 'N38Dr27',
     name: 'Smith Machine Upright Row',
     primary: 'trapezius',
     secondary: ['biceps', 'back', 'shoulders'],
@@ -12342,7 +12326,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pd4dJD8',
+    id: '2x3Q4am',
     name: 'Smith Single-Leg Split Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -12360,7 +12344,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'TwPDjTR',
+    id: 'vfP8HGo',
     name: 'Snatch',
     primary: 'quads',
     secondary: ['biceps', 'glutes', 'hamstrings', 'back', 'shoulders', 'trapezius', 'triceps'],
@@ -12378,7 +12362,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'O3fec5G',
+    id: 'mcMEvAM',
     name: 'Snatch Balance',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'shoulders', 'triceps'],
@@ -12393,7 +12377,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Se80HUT',
+    id: 'adKT1KH',
     name: 'Snatch Deadlift',
     primary: 'hamstrings',
     secondary: ['forearm', 'glutes', 'back', 'quads', 'trapezius'],
@@ -12407,7 +12391,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'iKBF0nO',
+    id: 'QOGCXfv',
     name: 'Snatch Pull',
     primary: 'hamstrings',
     secondary: ['calves', 'glutes', 'back', 'quads', 'trapezius'],
@@ -12422,7 +12406,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cKWxbSl',
+    id: 'k3zHld4',
     name: 'Snatch Shrug',
     primary: 'trapezius',
     secondary: ['forearm', 'shoulders'],
@@ -12436,7 +12420,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Ab3bVuH',
+    id: 'jEMqlSp',
     name: 'Snatch from Blocks',
     primary: 'quads',
     secondary: ['calves', 'forearm', 'glutes', 'hamstrings', 'back', 'shoulders', 'trapezius', 'triceps'],
@@ -12452,7 +12436,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'H1GVh8u',
+    id: '6HX7pbh',
     name: 'Speed Box Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -12468,7 +12452,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'arGSn8G',
+    id: 'x0tlpVI',
     name: 'Speed Squats',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -12485,7 +12469,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '5rPGLRx',
+    id: 'VAEdv5r',
     name: 'Spell Caster',
     primary: 'abdomen',
     secondary: ['glutes', 'shoulders'],
@@ -12500,7 +12484,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '38J6Wfk',
+    id: 'sJl77X7',
     name: 'Spider Curl',
     primary: 'biceps',
     secondary: [],
@@ -12518,7 +12502,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WFcqYJP',
+    id: 'w6Kt1Bw',
     name: 'Split Clean',
     primary: 'quads',
     secondary: ['calves', 'forearm', 'glutes', 'hamstrings', 'back', 'shoulders', 'trapezius'],
@@ -12535,7 +12519,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'mSavbOd',
+    id: 'MhCtEfR',
     name: 'Split Jerk',
     primary: 'quads',
     secondary: ['glutes', 'hamstrings', 'shoulders', 'triceps'],
@@ -12550,7 +12534,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Cdn61TM',
+    id: 'tXDUskR',
     name: 'Split Snatch',
     primary: 'hamstrings',
     secondary: ['calves', 'forearm', 'glutes', 'back', 'quads', 'shoulders', 'trapezius', 'triceps'],
@@ -12567,7 +12551,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pdYEqJA',
+    id: '7ZnNqcG',
     name: 'Split Squat with Dumbbells',
     primary: 'quads',
     secondary: ['glutes', 'hamstrings'],
@@ -12582,7 +12566,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'bc3QX13',
+    id: 'cJxedh2',
     name: 'Squat Jerk',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'shoulders', 'triceps'],
@@ -12596,7 +12580,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '4J4bog1',
+    id: 'Ue01K96',
     name: 'Squat with Bands',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -12611,7 +12595,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'D3lcM8B',
+    id: 'U7u1ppi',
     name: 'Squat with Chains',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -12626,7 +12610,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'E0Q4HgC',
+    id: 'MJDXjKS',
     name: 'Squat with Plate Movers',
     primary: 'quads',
     secondary: ['glutes', 'calves', 'hamstrings'],
@@ -12645,7 +12629,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'n9AtsiD',
+    id: 'MdKtD44',
     name: 'Stairmaster',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -12659,7 +12643,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'l0rkAIT',
+    id: 'l9rlArA',
     name: 'Standing Alternating Dumbbell Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -12674,7 +12658,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HHv82a6',
+    id: 'mm3p39c',
     name: 'Standing Barbell Calf Raise',
     primary: 'calves',
     secondary: [],
@@ -12691,7 +12675,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '3kgLywd',
+    id: 'xT3ch34',
     name: 'Standing Barbell Press Behind Neck',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -12708,7 +12692,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EEoP3na',
+    id: 'XdFv5Fi',
     name: 'Standing Bent-Over One-Arm Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: ['shoulders'],
@@ -12725,7 +12709,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'B4Wcr0f',
+    id: '9Ig4CQF',
     name: 'Standing Bent-Over Two-Arm Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -12740,7 +12724,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AipN627',
+    id: 'QiRPQKs',
     name: 'Standing Biceps Cable Curl',
     primary: 'biceps',
     secondary: [],
@@ -12755,7 +12739,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'pZHBxGo',
+    id: 'sHHM7oH',
     name: 'Standing Bradford Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -12772,7 +12756,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'a5OIO3d',
+    id: 'dAyDW5K',
     name: 'Standing Cable Chest Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -12787,7 +12771,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'KikgZX5',
+    id: 'yFii9qU',
     name: 'Standing Cable Lift',
     primary: 'abdomen',
     secondary: ['shoulders'],
@@ -12806,7 +12790,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '2QJhbu0',
+    id: 'TIdVMe6',
     name: 'Standing Cable Wood Chop',
     primary: 'abdomen',
     secondary: ['shoulders'],
@@ -12825,7 +12809,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '6i3BECN',
+    id: 'jVmVNlk',
     name: 'Standing Calf Raises',
     primary: 'calves',
     secondary: [],
@@ -12841,7 +12825,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'dAjXhQ5',
+    id: 'cQ0sSpD',
     name: 'Standing Concentration Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -12856,7 +12840,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ex6W4b8',
+    id: 'RkpuD2g',
     name: 'Standing Dumbbell Calf Raise',
     primary: 'calves',
     secondary: [],
@@ -12871,7 +12855,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '40hwHMe',
+    id: 'tyxdgu1',
     name: 'Standing Dumbbell Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -12885,7 +12869,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '8JKLUf5',
+    id: '1Bl2ACk',
     name: 'Standing Dumbbell Reverse Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -12900,7 +12884,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AIVuK8L',
+    id: 'KRfr5tu',
     name: 'Standing Dumbbell Straight-Arm Front Delt Raise Above Head',
     primary: 'shoulders',
     secondary: [],
@@ -12916,7 +12900,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'en9LXao',
+    id: 'xqFrk8l',
     name: 'Standing Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: [],
@@ -12932,7 +12916,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Vfxws8F',
+    id: 'FxoAulN',
     name: 'Standing Dumbbell Upright Row',
     primary: 'trapezius',
     secondary: ['biceps', 'shoulders'],
@@ -12947,7 +12931,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xyiCI5Q',
+    id: 'UeJ1Tjb',
     name: 'Standing Front Barbell Raise Over Head',
     primary: 'shoulders',
     secondary: [],
@@ -12963,7 +12947,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'HEC7rNJ',
+    id: 'CxF4XVw',
     name: 'Standing Inner-Biceps Curl',
     primary: 'biceps',
     secondary: [],
@@ -12981,7 +12965,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'W7sqEU6',
+    id: '5MKe2Pu',
     name: 'Standing Leg Curl',
     primary: 'hamstrings',
     secondary: [],
@@ -12997,7 +12981,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'sA2CW7p',
+    id: 'JrRT93o',
     name: 'Standing Low-Pulley Deltoid Raise',
     primary: 'shoulders',
     secondary: ['forearm'],
@@ -13014,7 +12998,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WXwlj8x',
+    id: 'EUKiZEF',
     name: 'Standing Low-Pulley One-Arm Triceps Extension',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -13030,7 +13014,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '1IlqWGI',
+    id: '9icppeg',
     name: 'Standing Military Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -13047,7 +13031,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'ZOLo8Ka',
+    id: 'FJ2kKvc',
     name: 'Standing One-Arm Cable Curl',
     primary: 'biceps',
     secondary: [],
@@ -13064,7 +13048,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Rys1VXw',
+    id: 'P6GN5Fn',
     name: 'Standing One-Arm Dumbbell Curl Over Incline Bench',
     primary: 'biceps',
     secondary: [],
@@ -13081,7 +13065,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'OoKeDrD',
+    id: 'R4iTw2R',
     name: 'Standing One-Arm Dumbbell Triceps Extension',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -13098,7 +13082,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'L8aH00w',
+    id: 'DKOyDx0',
     name: 'Standing Overhead Barbell Triceps Extension',
     primary: 'triceps',
     secondary: ['shoulders'],
@@ -13114,7 +13098,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'iOxeRil',
+    id: 'Uv8pP9K',
     name: 'Standing Palm-In One-Arm Dumbbell Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -13132,7 +13116,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'n1496YG',
+    id: 'LW1BEPa',
     name: 'Standing Palms-In Dumbbell Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -13147,7 +13131,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'c4mcGJj',
+    id: 'SdydO5z',
     name: 'Standing Palms-Up Barbell Behind The Back Wrist Curl',
     primary: 'forearm',
     secondary: [],
@@ -13164,7 +13148,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'VP0q5yn',
+    id: 'nMQFtkM',
     name: 'Standing Rope Crunch',
     primary: 'abdomen',
     secondary: [],
@@ -13179,7 +13163,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EKSQ3NX',
+    id: '54rpqfc',
     name: 'Step Mill',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -13193,7 +13177,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'NVgtZjB',
+    id: 'czkJ1H5',
     name: 'Stiff-Legged Barbell Deadlift',
     primary: 'hamstrings',
     secondary: ['glutes', 'back'],
@@ -13209,7 +13193,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'e5xK5QM',
+    id: 'oMpVe0q',
     name: 'Stiff-Legged Dumbbell Deadlift',
     primary: 'hamstrings',
     secondary: ['glutes', 'back'],
@@ -13225,7 +13209,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vKpYaeZ',
+    id: '4sjwBMY',
     name: 'Stiff Leg Barbell Good Morning',
     primary: 'back',
     secondary: ['glutes', 'hamstrings'],
@@ -13242,7 +13226,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'WzsrIO6',
+    id: 'vQXj37E',
     name: 'Straight-Arm Dumbbell Pullover',
     primary: 'chest',
     secondary: ['back', 'shoulders', 'triceps'],
@@ -13259,7 +13243,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Fj5pQg0',
+    id: 'CmJIGqY',
     name: 'Straight Bar Bench Mid Rows',
     primary: 'back',
     secondary: ['biceps'],
@@ -13273,7 +13257,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'P04pR0L',
+    id: 'Hpq2QCJ',
     name: 'Straight Raises on Incline Bench',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -13288,7 +13272,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '3tHvwB8',
+    id: 'gE41AQM',
     name: 'Sumo Deadlift',
     primary: 'hamstrings',
     secondary: ['quads', 'forearm', 'glutes', 'back', 'trapezius'],
@@ -13303,7 +13287,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'PLdphAr',
+    id: '9oeFL7w',
     name: 'Sumo Deadlift with Bands',
     primary: 'hamstrings',
     secondary: ['quads', 'forearm', 'glutes', 'back', 'trapezius'],
@@ -13319,7 +13303,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'CGSRoMq',
+    id: 'gBYgpXe',
     name: 'Sumo Deadlift with Chains',
     primary: 'hamstrings',
     secondary: ['glutes', 'quads', 'forearm', 'back', 'trapezius'],
@@ -13335,7 +13319,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XlMva57',
+    id: 'cmxzjuz',
     name: 'T-Bar Row with Handle',
     primary: 'back',
     secondary: ['biceps'],
@@ -13351,7 +13335,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'juSWYA4',
+    id: '0OPTqke',
     name: 'Tate Press',
     primary: 'triceps',
     secondary: ['chest', 'shoulders'],
@@ -13367,7 +13351,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'JQCDTkB',
+    id: 'y8wS7Qk',
     name: 'Thigh Abductor',
     primary: 'glutes',
     secondary: [],
@@ -13382,7 +13366,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'm2iLhFj',
+    id: 'yt6ZOVN',
     name: 'Thigh Adductor',
     primary: 'quads',
     secondary: ['glutes', 'hamstrings'],
@@ -13397,7 +13381,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'fIoo5yZ',
+    id: 'RVRcVHg',
     name: 'Tricep Dumbbell Kickback',
     primary: 'triceps',
     secondary: [],
@@ -13412,7 +13396,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MJcxCw0',
+    id: '3JKCKhU',
     name: 'Triceps Overhead Extension with Rope',
     primary: 'triceps',
     secondary: [],
@@ -13427,7 +13411,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'xq1LNlQ',
+    id: '8tLB0KX',
     name: 'Triceps Pushdown',
     primary: 'triceps',
     secondary: [],
@@ -13443,7 +13427,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '0jYpDKr',
+    id: 'Fed5pXm',
     name: 'Triceps Pushdown - Rope Attachment',
     primary: 'triceps',
     secondary: [],
@@ -13459,7 +13443,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vH70InQ',
+    id: 'DXOA7aw',
     name: 'Triceps Pushdown - V-Bar Attachment',
     primary: 'triceps',
     secondary: [],
@@ -13475,7 +13459,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'aXr0EiJ',
+    id: 'OsSE4lV',
     name: 'Two-Arm Dumbbell Preacher Curl',
     primary: 'biceps',
     secondary: [],
@@ -13490,7 +13474,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MEDF84z',
+    id: 'wyENb0G',
     name: 'Underhand Cable Pulldowns',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -13507,7 +13491,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'XWRH1Js',
+    id: 'W8eOJ1f',
     name: 'Upright Barbell Row',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -13522,7 +13506,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'nG9v8pG',
+    id: '1IH14yr',
     name: 'Upright Cable Row',
     primary: 'trapezius',
     secondary: ['shoulders'],
@@ -13537,7 +13521,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'cFp73L6',
+    id: '7YDGyoD',
     name: 'V-Bar Pulldown',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -13554,7 +13538,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'AUOPN9U',
+    id: 'NTAurow',
     name: 'Vertical Swing',
     primary: 'hamstrings',
     secondary: ['glutes', 'quads', 'shoulders'],
@@ -13569,7 +13553,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YAdLDAp',
+    id: 'JAgy6Xt',
     name: 'Walking, Treadmill',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -13583,7 +13567,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'BsMVx2E',
+    id: 'A0BBIt6',
     name: 'Weighted Jump Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -13598,7 +13582,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Jl4JoxC',
+    id: 'rp5gv6S',
     name: 'Wide-Grip Barbell Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -13613,7 +13597,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Dv6xjoN',
+    id: '0HA7q8M',
     name: 'Wide-Grip Decline Barbell Bench Press',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -13628,7 +13612,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Hg3FuE9',
+    id: 'fDFyKL2',
     name: 'Wide-Grip Decline Barbell Pullover',
     primary: 'chest',
     secondary: ['shoulders', 'triceps'],
@@ -13645,7 +13629,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'y9A1QFN',
+    id: 'AOnyxvD',
     name: 'Wide-Grip Pulldown Behind The Neck',
     primary: 'back',
     secondary: ['biceps', 'shoulders'],
@@ -13662,7 +13646,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'DIea8Yx',
+    id: '5sKzAIW',
     name: 'Wide-Grip Standing Barbell Curl',
     primary: 'biceps',
     secondary: [],
@@ -13678,7 +13662,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'aoSDEiH',
+    id: 'WuhY3lN',
     name: 'Wide Stance Barbell Squat',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings', 'back'],
@@ -13695,7 +13679,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'lmjVwOQ',
+    id: 'uA8rFuC',
     name: 'Wide Stance Stiff Legs',
     primary: 'hamstrings',
     secondary: ['quads', 'glutes', 'back'],
@@ -13709,7 +13693,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'eepwC0r',
+    id: 'HqtXTyt',
     name: 'Wrist Rotations with Straight Bar',
     primary: 'forearm',
     secondary: [],
@@ -13723,7 +13707,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'vXP4h7o',
+    id: 'adcSdo6',
     name: 'Zercher Squats',
     primary: 'quads',
     secondary: ['calves', 'glutes', 'hamstrings'],
@@ -13740,7 +13724,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'kjrWEpR',
+    id: 'bPBHMzZ',
     name: 'Zottman Preacher Curl',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -13757,7 +13741,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '8HsfW3i',
+    id: 'qsUxTL5',
     name: 'Smith Machine Flat Bench Press',
     primary: 'chest',
     secondary: ['triceps', 'shoulders'],
@@ -13771,7 +13755,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'tO4ZjcE',
+    id: 'uk92TN5',
     name: 'Smith Machine Decline Bench Press',
     primary: 'chest',
     secondary: ['triceps'],
@@ -13785,7 +13769,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'TQnJ6Rb',
+    id: 'rGUyrNR',
     name: 'Low-to-High Cable Fly',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -13799,7 +13783,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'kFR1Ydy',
+    id: 'cGTcoW6',
     name: 'High-to-Low Cable Fly',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -13813,7 +13797,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'EHjXVOM',
+    id: 'hyQtcNK',
     name: 'Middle Cable Crossover',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -13827,7 +13811,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'dSFmfPT',
+    id: 'w1jt3bA',
     name: 'Seated Cable Chest Press',
     primary: 'chest',
     secondary: ['triceps', 'shoulders'],
@@ -13841,7 +13825,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'QeSV64e',
+    id: 'xW3pgce',
     name: 'Incline Dumbbell Fly (30 Degrees)',
     primary: 'chest',
     secondary: ['shoulders'],
@@ -13855,7 +13839,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'MGPPvWJ',
+    id: 'ZWe7gxt',
     name: 'Neutral Grip Lat Pulldown',
     primary: 'back',
     secondary: ['biceps'],
@@ -13870,7 +13854,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'OnaF8Zr',
+    id: 'dUtt5i0',
     name: 'Close Grip Seated Cable Row',
     primary: 'back',
     secondary: ['biceps'],
@@ -13884,7 +13868,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'bryvh78',
+    id: 'icZL1Un',
     name: 'Wide Grip Seated Cable Row',
     primary: 'back',
     secondary: ['trapezius', 'biceps'],
@@ -13898,7 +13882,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'iWLmS3L',
+    id: 'NLVe66L',
     name: 'Chest-Supported T-Bar Row',
     primary: 'back',
     secondary: ['biceps', 'trapezius'],
@@ -13912,7 +13896,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'OxAEBRW',
+    id: 'gPcndg2',
     name: 'Single-Arm Cable Lat Pulldown',
     primary: 'back',
     secondary: ['biceps'],
@@ -13926,7 +13910,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'LIwK9sy',
+    id: 'KuYmT3U',
     name: 'Straight-Arm Cable Lat Pushdown',
     primary: 'back',
     secondary: ['triceps'],
@@ -13940,7 +13924,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'N1uQIG7',
+    id: 'yKgHHO4',
     name: 'Behind-the-Back Cable Lateral Raise',
     primary: 'shoulders',
     secondary: [],
@@ -13954,7 +13938,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YTFg8Xq',
+    id: 'TEplqUy',
     name: 'Machine Shoulder Press',
     primary: 'shoulders',
     secondary: ['triceps'],
@@ -13968,7 +13952,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'Gy7sf8u',
+    id: 'jAaVVR7',
     name: 'Reverse Pec Deck (Rear Delt Fly)',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -13982,7 +13966,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'mOfkGU9',
+    id: 'swFV7Mk',
     name: 'Dumbbell Lu Raises',
     primary: 'shoulders',
     secondary: ['trapezius'],
@@ -13996,7 +13980,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'mozZPai',
+    id: 'bYWgYwh',
     name: 'Cable Triceps Rope Pushdown',
     primary: 'triceps',
     secondary: [],
@@ -14010,7 +13994,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'niYChCN',
+    id: 'buheJJ2',
     name: 'Overhead Cable Tricep Extension',
     primary: 'triceps',
     secondary: [],
@@ -14024,7 +14008,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '5ZLBuB3',
+    id: 'nqivZka',
     name: 'Straight Bar Cable Tricep Pushdown',
     primary: 'triceps',
     secondary: [],
@@ -14038,7 +14022,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'TMNgxnj',
+    id: '6urZRPj',
     name: 'Bayesian Cable Bicep Curl',
     primary: 'biceps',
     secondary: [],
@@ -14052,7 +14036,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'YVj49Y2',
+    id: '7ch8K6U',
     name: 'Incline Dumbbell Bicep Curl',
     primary: 'biceps',
     secondary: [],
@@ -14066,7 +14050,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'wF7id1x',
+    id: '0NwMNzo',
     name: 'Preacher Curl Machine',
     primary: 'biceps',
     secondary: ['forearm'],
@@ -14080,7 +14064,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: '9EZOzK3',
+    id: 'EEAq8MA',
     name: 'Leg Press (High & Wide Stance)',
     primary: 'glutes',
     secondary: ['hamstrings', 'quads'],
@@ -14094,7 +14078,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'V6TBlcm',
+    id: 'vS2bist',
     name: 'Leg Press (Low & Close Stance)',
     primary: 'quads',
     secondary: ['calves'],
@@ -14108,7 +14092,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'VNIRvqK',
+    id: 'i9bsmxk',
     name: 'Pendulum Squat',
     primary: 'quads',
     secondary: ['glutes'],
@@ -14122,7 +14106,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'jgondY0',
+    id: 't9J4XCa',
     name: 'Seated Leg Curl Machine',
     primary: 'hamstrings',
     secondary: ['calves'],
@@ -14136,7 +14120,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'prqghvF',
+    id: 'bmIjJP6',
     name: 'Lying Leg Curl Machine',
     primary: 'hamstrings',
     secondary: ['calves'],
@@ -14150,7 +14134,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'kEp089R',
+    id: 'sqlf6g2',
     name: 'Seated Calf Raise Machine',
     primary: 'calves',
     secondary: [],
@@ -14164,7 +14148,7 @@ const List<Exercise> kExercises = [
     ],
   ),
   Exercise(
-    id: 'faP2Um8',
+    id: 'EczxOrM',
     name: 'Standing Calf Raise Machine',
     primary: 'calves',
     secondary: [],
